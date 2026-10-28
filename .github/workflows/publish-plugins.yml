@@ -54,6 +54,13 @@ jobs:
           cache: maven
           cache-dependency-path: source/**/pom.xml
 
+      - name: Set up Node.js for management plugin UIs
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: source/dramatrix-management-plugin/**/ui/package-lock.json
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -67,23 +74,25 @@ jobs:
           set -euo pipefail
           mkdir -p source/release/build
           catalog="source/release/build/catalog-${CHANNEL}.current.json"
-          curl --fail --location --retry 3 --silent --show-error \
-            "https://github.com/${GITHUB_REPOSITORY}/releases/download/plugin-catalog-${CHANNEL}/catalog-${CHANNEL}.json" \
-            --output "$catalog"
-          key_id="$(jq -r '.signature.keyId // empty' "$catalog")"
-          case "$key_id" in
-            dramatrix-release-2026-10)
-              public_key="source/doc/plugin-publish/trust-anchors/dramatrix-release-2026-10.pub.pem"
-              ;;
-            dramatrix-plugins-2026-10)
-              public_key="source/doc/plugin-publish/trust-anchors/dramatrix-plugins-2026-10.pub.pem"
-              ;;
-            *)
-              echo "active catalog uses an untrusted key ID: $key_id" >&2
-              exit 1
-              ;;
-          esac
-          generation="$(python3 - "$catalog" "$public_key" "$CHANNEL" <<'PY'
+          status="$(curl --location --retry 3 --silent --show-error \
+            --output "$catalog" --write-out '%{http_code}' \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/plugin-catalog-${CHANNEL}/catalog-${CHANNEL}.json")"
+          case "$status" in
+            200)
+              key_id="$(jq -r '.signature.keyId // empty' "$catalog")"
+              case "$key_id" in
+                dramatrix-release-2026-10)
+                  public_key="$GITHUB_WORKSPACE/source/doc/plugin-publish/trust-anchors/dramatrix-release-2026-10.pub.pem"
+                  ;;
+                dramatrix-plugins-2026-10)
+                  public_key="$GITHUB_WORKSPACE/source/doc/plugin-publish/trust-anchors/dramatrix-plugins-2026-10.pub.pem"
+                  ;;
+                *)
+                  echo "active catalog uses an untrusted key ID: $key_id" >&2
+                  exit 1
+                  ;;
+              esac
+              generation="$(python3 - "$catalog" "$public_key" "$CHANNEL" <<'PY'
           import pathlib
           import sys
           sys.path.insert(0, "source/release")
@@ -95,6 +104,16 @@ jobs:
           print(payload["generation"] + 1)
           PY
           )"
+              ;;
+            404)
+              generation=1
+              public_key=""
+              ;;
+            *)
+              echo "unexpected catalog download status: $status" >&2
+              exit 1
+              ;;
+          esac
           echo "generation=$generation" >> "$GITHUB_OUTPUT"
           echo "public_key=$public_key" >> "$GITHUB_OUTPUT"
 
@@ -122,16 +141,19 @@ jobs:
           PREVIOUS_CATALOG: ${{ steps.catalog.outputs.public_key }}
         run: |
           set -euo pipefail
-          python3 release/plugin_release.py create-plan \
+          plan_args=(create-plan \
             --packages-dir release/build/plugin-packages \
             --destinations release/plugin-destinations.example.json \
             --catalog-destination dramatrix-github \
             --channel "$CATALOG_CHANNEL" \
             --generation "$CATALOG_GENERATION" \
             --key-id "$DRAMATRIX_PLUGIN_SIGNING_KEY_ID" \
-            --previous-catalog "release/build/catalog-${CATALOG_CHANNEL}.current.json" \
-            --previous-catalog-public-key "$PREVIOUS_CATALOG" \
-            --output release/build/plugin-release-plan.json
+            --output release/build/plugin-release-plan.json)
+          if [[ -n "$PREVIOUS_CATALOG" ]]; then
+            plan_args+=(--previous-catalog "release/build/catalog-${CATALOG_CHANNEL}.current.json" \
+              --previous-catalog-public-key "$PREVIOUS_CATALOG")
+          fi
+          python3 release/plugin_release.py "${plan_args[@]}"
           python3 release/plugin_release.py run --plan release/build/plugin-release-plan.json
 
       - name: Preserve the release record
