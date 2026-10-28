@@ -38,10 +38,10 @@ jobs:
             echo "source_sha must be a full Git commit SHA" >&2
             exit 2
           }
-          git clone --branch main https://github.com/helei2742/dramatrix.git source
+          git clone --branch dev_1.8 https://github.com/helei2742/dramatrix.git source
           git -C source fetch --no-tags origin "$SOURCE_SHA"
-          git -C source merge-base --is-ancestor "$SOURCE_SHA" refs/remotes/origin/main || {
-            echo "source_sha is not reachable from dramatrix/main" >&2
+          git -C source merge-base --is-ancestor "$SOURCE_SHA" refs/remotes/origin/dev_1.8 || {
+            echo "source_sha is not reachable from dramatrix/dev_1.8" >&2
             exit 1
           }
           git -C source checkout --detach "$SOURCE_SHA"
