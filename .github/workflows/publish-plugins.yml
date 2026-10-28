@@ -29,7 +29,18 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Check out the selected Dramatrix source commit
+      - name: Check out the dev_1.8 source branch
+        uses: actions/checkout@v4
+        with:
+          repository: helei2742/dramatrix
+          ref: dev_1.8
+          token: ${{ secrets.DRAMATRIX_SOURCE_READ_TOKEN }}
+          path: source
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Validate and select the source commit
+        working-directory: source
         env:
           SOURCE_SHA: ${{ inputs.source_sha }}
         run: |
@@ -38,13 +49,15 @@ jobs:
             echo "source_sha must be a full Git commit SHA" >&2
             exit 2
           }
-          git clone --branch dev_1.8 https://github.com/helei2742/dramatrix.git source
-          git -C source fetch --no-tags origin "$SOURCE_SHA"
-          git -C source merge-base --is-ancestor "$SOURCE_SHA" refs/remotes/origin/dev_1.8 || {
+          git rev-parse --verify "${SOURCE_SHA}^{commit}" >/dev/null || {
+            echo "source_sha is not present in dramatrix/dev_1.8" >&2
+            exit 1
+          }
+          git merge-base --is-ancestor "$SOURCE_SHA" refs/remotes/origin/dev_1.8 || {
             echo "source_sha is not reachable from dramatrix/dev_1.8" >&2
             exit 1
           }
-          git -C source checkout --detach "$SOURCE_SHA"
+          git checkout --detach "$SOURCE_SHA"
 
       - name: Set up Java
         uses: actions/setup-java@v4
