@@ -1,5 +1,7 @@
 # Dramatrix Plugins
 
-This repository hosts independent Dramatrix plugin releases and is the destination for their signed package and catalog assets.
+This repository is the GitHub Releases destination for Dramatrix plugin ZIPs, signatures, catalogs and channel pointers. Plugin source of truth remains in [`helei2742/dramatrix`](https://github.com/helei2742/dramatrix).
 
-The initial release workflow builds signed plugin ZIPs from the Dramatrix main repository and publishes immutable GitHub Releases. Plugin source migration will follow the API and SDK versioning prerequisites in the main repository's `doc/plugin-publish/execution-plan.md`.
+The `publish-plugins.yml` workflow accepts a source commit SHA from `dramatrix/dev_1.8`, verifies it is reachable from that branch, then builds and signs that checkout. It publishes immutable version assets, reads them back, and activates the signed catalog only after verification succeeds.
+
+The publisher secret `DRAMATRIX_PLUGIN_SIGNING_KEY_PEM` and variable `DRAMATRIX_PLUGIN_SIGNING_KEY_ID` belong in this repository's Actions settings. Do not commit private keys or publishing tokens here.

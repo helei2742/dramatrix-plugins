@@ -1,0 +1,168 @@
+name: Publish Dramatrix plugins
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Commit from helei2742/dramatrix to build
+        required: true
+        type: string
+      channel:
+        description: Release channel
+        required: true
+        type: choice
+        options:
+          - stable
+          - beta
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dramatrix-plugin-release-${{ inputs.channel }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the selected Dramatrix source commit
+        env:
+          SOURCE_SHA: ${{ inputs.source_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]] || {
+            echo "source_sha must be a full Git commit SHA" >&2
+            exit 2
+          }
+          git clone --branch dev_1.8 https://github.com/helei2742/dramatrix.git source
+          git -C source fetch --no-tags origin "$SOURCE_SHA"
+          git -C source merge-base --is-ancestor "$SOURCE_SHA" refs/remotes/origin/dev_1.8 || {
+            echo "source_sha is not reachable from dramatrix/dev_1.8" >&2
+            exit 1
+          }
+          git -C source checkout --detach "$SOURCE_SHA"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+          cache-dependency-path: source/**/pom.xml
+
+      - name: Set up Node.js for management plugin UIs
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: source/dramatrix-management-plugin/**/ui/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve and verify the active catalog
+        id: catalog
+        env:
+          CHANNEL: ${{ inputs.channel }}
+        run: |
+          set -euo pipefail
+          mkdir -p source/release/build
+          catalog="source/release/build/catalog-${CHANNEL}.current.json"
+          status="$(curl --location --retry 3 --silent --show-error \
+            --output "$catalog" --write-out '%{http_code}' \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/plugin-catalog-${CHANNEL}/catalog-${CHANNEL}.json")"
+          case "$status" in
+            200)
+              key_id="$(jq -r '.signature.keyId // empty' "$catalog")"
+              case "$key_id" in
+                dramatrix-release-2026-10)
+                  public_key="$GITHUB_WORKSPACE/source/doc/plugin-publish/trust-anchors/dramatrix-release-2026-10.pub.pem"
+                  ;;
+                dramatrix-plugins-2026-10)
+                  public_key="$GITHUB_WORKSPACE/source/doc/plugin-publish/trust-anchors/dramatrix-plugins-2026-10.pub.pem"
+                  ;;
+                *)
+                  echo "active catalog uses an untrusted key ID: $key_id" >&2
+                  exit 1
+                  ;;
+              esac
+              generation="$(python3 - "$catalog" "$public_key" "$CHANNEL" <<'PY'
+          import pathlib
+          import sys
+          sys.path.insert(0, "source/release")
+          import plugin_release
+
+          payload = plugin_release.verify_catalog(pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]))
+          if payload["channel"] != sys.argv[3]:
+              raise SystemExit("active catalog channel does not match the requested channel")
+          print(payload["generation"] + 1)
+          PY
+          )"
+              ;;
+            404)
+              generation=1
+              public_key=""
+              ;;
+            *)
+              echo "unexpected catalog download status: $status" >&2
+              exit 1
+              ;;
+          esac
+          echo "generation=$generation" >> "$GITHUB_OUTPUT"
+          echo "public_key=$public_key" >> "$GITHUB_OUTPUT"
+
+      - name: Build and sign plugin packages from Dramatrix source
+        working-directory: source
+        env:
+          DRAMATRIX_PLUGIN_SIGNING_KEY_PEM: ${{ secrets.DRAMATRIX_PLUGIN_SIGNING_KEY_PEM }}
+          DRAMATRIX_PLUGIN_SIGNING_KEY_ID: ${{ vars.DRAMATRIX_PLUGIN_SIGNING_KEY_ID }}
+        run: |
+          set -euo pipefail
+          test -n "$DRAMATRIX_PLUGIN_SIGNING_KEY_PEM"
+          test "$DRAMATRIX_PLUGIN_SIGNING_KEY_ID" = "dramatrix-plugins-2026-10"
+          release/build-plugin-packages.sh --type all \
+            --output-dir release/build/plugin-packages \
+            --key-id "$DRAMATRIX_PLUGIN_SIGNING_KEY_ID"
+
+      - name: Publish, verify, and activate the catalog
+        working-directory: source
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRAMATRIX_PLUGIN_SIGNING_KEY_PEM: ${{ secrets.DRAMATRIX_PLUGIN_SIGNING_KEY_PEM }}
+          DRAMATRIX_PLUGIN_SIGNING_KEY_ID: ${{ vars.DRAMATRIX_PLUGIN_SIGNING_KEY_ID }}
+          CATALOG_CHANNEL: ${{ inputs.channel }}
+          CATALOG_GENERATION: ${{ steps.catalog.outputs.generation }}
+          PREVIOUS_CATALOG: ${{ steps.catalog.outputs.public_key }}
+        run: |
+          set -euo pipefail
+          plan_args=(create-plan \
+            --packages-dir release/build/plugin-packages \
+            --destinations release/plugin-destinations.example.json \
+            --catalog-destination dramatrix-github \
+            --channel "$CATALOG_CHANNEL" \
+            --generation "$CATALOG_GENERATION" \
+            --key-id "$DRAMATRIX_PLUGIN_SIGNING_KEY_ID" \
+            --output release/build/plugin-release-plan.json)
+          if [[ -n "$PREVIOUS_CATALOG" ]]; then
+            plan_args+=(--previous-catalog "release/build/catalog-${CATALOG_CHANNEL}.current.json" \
+              --previous-catalog-public-key "$PREVIOUS_CATALOG")
+          fi
+          python3 release/plugin_release.py "${plan_args[@]}"
+          python3 release/plugin_release.py run --plan release/build/plugin-release-plan.json
+
+      - name: Preserve the release record
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin-release-${{ inputs.channel }}-g${{ steps.catalog.outputs.generation }}
+          path: |
+            source/release/build/catalog-${{ inputs.channel }}-*.json
+            source/release/build/plugin-release-plan.json
+            source/release/build/plugin-release-record-${{ inputs.channel }}-g${{ steps.catalog.outputs.generation }}.json
+          if-no-files-found: error
+          retention-days: 90
