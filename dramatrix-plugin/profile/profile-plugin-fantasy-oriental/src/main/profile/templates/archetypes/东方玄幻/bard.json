@@ -1,0 +1,30 @@
+{
+  "archetype": "bard",
+  "name": "游吟诗人",
+  "visualTags": "琴瑟,歌谣,行囊,流浪风雅",
+  "description": "游历四方的吟唱者，以音律动人，亦能以曲御敌",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","hat"],
+    "defaultWeapon": ["fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"willowy":2.5,"slender_tall":2.0,"medium":1.5},
+    "temperament": {"free_spirit":3.0,"warm":3.0,"cunning":1.5,"lazy":1.5,"gentle":1.0},
+    "hairStyle": {"half_up":3.0,"flowing_long":2.5,"topknot_loose":2.0,"side_part_long":1.5},
+    "hairColor": {"chestnut":2.5,"dark_brown":2.5,"auburn":2.0,"honey_blond":1.5,"black":1.0},
+    "defaultClothes": {"dark_cloak":3.0,"hemp_cloth":2.0,"linen_simple":2.0,"blue_robe":1.5},
+    "eyeColor": {"hazel":3.0,"dark_brown":2.5,"honey":2.0,"amber":1.5},
+    "eyeShape": {"swallow":3.0,"peach_blossom":2.5,"almond":2.0,"fox":1.5},
+    "eyebrowShape": {"feathered":2.5,"crescent":2.5,"curved_fine":2.0,"lazy_brow":1.5},
+    "faceShape": {"oval":2.5,"wind_face":2.5,"bird_face":2.0,"willow_leaf_face":1.5},
+    "faceFeature": {"none":3.0,"dimples":1.5,"freckles":1.0},
+    "impression": {"free_spirit":3.0,"refined":2.5,"delicate":2.0,"handsome":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","staff_monk","hoe"],
+    "defaultAccessories": ["abacus","buddha_beads"],
+    "hairStyle": ["bald","buzz_cut"],
+    "defaultClothes": ["golden_armor","leather_armor"]
+  },
+  "templateFluxPrompt": "a {gender} wandering bard, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, holding a musical instrument, wandering minstrel"
+}

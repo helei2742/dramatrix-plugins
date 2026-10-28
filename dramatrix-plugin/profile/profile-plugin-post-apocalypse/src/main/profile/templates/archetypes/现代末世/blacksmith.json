@@ -1,0 +1,33 @@
+{
+  "archetype": "blacksmith",
+  "name": "铁匠",
+  "visualTags": "wasteland blacksmith, metalworker, forge, anvil, hammer, scrap metal recycling, muscular, heat, post-apocalyptic workshop",
+  "description": "末世铁匠，熔炼废墟中的废铁铸造工具与武器，火光中的锻造者，力量与技艺的结合",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"barrel_chested":3.0,"stocky_strong":3.0,"broad_shouldered":3.0,"chiseled_fit":2.5,"tall_athletic":2.0,"heroic_figure":2.0,"bulky_massive":2.0},
+    "temperament": {"hardened":3.0,"patient":3.0,"stoic":3.0,"meticulous":2.5,"steadfast":2.5,"simple":2.5,"pragmatic":2.5,"silent":2.5,"stubborn":2.5,"honor_bound":2.0,"fierce":2.0},
+    "hairStyle": {"buzz_cut":3.0,"short_crop":3.0,"bandana_wrap":3.0,"tied_back_loose":2.0,"choppy_short":2.5,"slicked_back":2.0,"shaved_sides":2.5,"low_ponytail":2.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"gray_streaked":2.5,"charcoal":2.5,"dusty_brown":2.0,"salt_pepper":2.0,"faded_black":2.0},
+    "defaultClothes": {"heavy_work_apron":3.0,"leather_armor_improvised":3.0,"patched_coveralls":3.0,"scrap_metal_armor":2.5,"tattered_jacket":2.0,"patched_denim_suit":2.0,"survivor_hoodie_worn":1.5,"scavenger_harness":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.0,"steel_gray":2.5,"amber":2.0,"smoky_quartz":2.5,"forge_orange":2.0,"gray":2.0},
+    "skinColor": {"weathered_tan":3.0,"soot_stained":3.0,"tan":2.5,"olive":2.5,"sun_kissed":2.5,"leathery_tan":2.5,"light_tan":1.5,"dusty_tan":2.0},
+    "eyeShape": {"deep_set":3.0,"tiger":2.5,"almond":2.5,"narrow":2.5,"sharp_phoenix":2.0,"round":2.0,"eagle":2.5,"dragon":2.0},
+    "eyebrowShape": {"thick":3.0,"rugged":3.0,"steel_brow":3.0,"straight":2.5,"hero_eyebrow":2.0,"knitted":2.0,"furrowed":2.0,"sword":2.0},
+    "faceShape": {"square":3.0,"stone_face":3.0,"chiseled":3.0,"round":2.0,"strong_jawline":3.0,"pentagon":2.5,"rectangular":2.5,"angular":2.5},
+    "faceFeature": {"scar":2.5,"beard_stubble":3.0,"soot_smudge":3.0,"strong_jaw":3.0,"none":1.5,"ruddy":2.5,"broken_nose":2.0,"weathered":2.5},
+    "impression": {"hardened":3.0,"imposing":2.5,"stoic":2.5,"tough":3.0,"simple":2.5,"weathered":2.5,"reliable":2.5,"strong":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns","wild_mane"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","silk_embroider"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","wistful","tranquil","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly","slim"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland blacksmith, {ageDesc}, {bodyType} powerful muscular build, {faceDesc}, wearing heavy leather work apron, hammer in hand, standing at forge anvil, scrap metal recycling, {hairStyle} {hairColor} singed hair, {eyeColor} fire-lit focused eyes, {skinColor} soot-stained skin, {temperament} aura, makeshift forge workshop, glowing embers, scrap metal piles, sparks flying, photorealistic, heat, masterpiece"
+}

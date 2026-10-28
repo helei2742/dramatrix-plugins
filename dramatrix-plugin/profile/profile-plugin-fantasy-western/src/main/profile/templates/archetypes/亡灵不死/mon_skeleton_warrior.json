@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_skeleton_warrior",
+  "name": "骷髅战士",
+  "visualTags": "白骨嶙峋,锈蚀铁剑,空洞眼窝,咔咔作响",
+  "description": "被死灵之力驱动的白骨士兵，无血无肉，只剩下挥剑的本能",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"several_centuries":2.5,"century_old":2.0,"thousand_years":1.5,"immortal_ancient":1.5},
+    "hairColor": {"none":3.5,"white":2.5,"ash_blond":2.0,"gray":2.0,"charcoal":1.5},
+    "skinColor": {"ghostly_pale":3.0,"chalk_white":3.5,"pale_ash":2.0,"stone_gray":1.5,"age_spotted":1.5},
+    "eyeColor": {"white_opaque":3.0,"blood_red":2.5,"shadow_black":2.0,"moonlight":1.5,"pearl_gray":1.5},
+    "defaultClothes": {"corpse_robe":3.0,"patchwork_rags":2.5,"dark_cloak":2.0,"charcoal_hooded_cloak":1.5,"chainmail":2.5,"russet_leather_armor":1.5},
+    "temperament": {"desolate":3.0,"cold":2.0,"grim":2.5,"sinister":2.0,"stoic":3.0},
+    "impression": {"ghostly":3.0,"cold":2.0,"lonely":2.0,"sinister":1.5,"ancient_soul":1.5},
+    "eyebrowShape": {"faint":2.5,"ghost_brow":2.5,"wispy_brow":2.0,"broken_brow":1.5},
+    "bodyType": {"thin_bony":3.5,"pin_thin":2.5,"gangly":2.0,"delicate_frail":1.5},
+    "heightDesc": {"lean_height":2.5,"average_man":2.0,"bamboo_slender":1.5},
+    "faceShape": {"ghost_face":3.0,"seed_face":2.0,"long":1.5},
+    "eyeShape": {"empty_eye":3.5,"white_eye":2.5,"deep_set":1.5},
+    "faceFeature": {"gaunt_face":3.5,"veins":1.5,"none":1.5},
+    "lipShape": {"toothed_lip":2.5,"dry_cracked":2.0,"shut_lip":1.5},
+    "noseShape": {"bony":3.0,"ghost_nose":2.5,"flat":1.5},
+    "hairStyle": {"bald":3.5,"buzz_cut":1.5},
+    "defaultWeapon": {"iron_sword":3.0,"spear":3.0,"axe":3.0},
+    "defaultAccessories": {"bracer_iron":2.5,"armor_pauldron":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["head_flower","phoenix_hairpin","hair_ribbon","hairpin","head_flower","veil","hair_ribbon"],
+    "temperament": ["cheerful","jovial","warm","innocent"],
+    "faceFeature": ["dimples","ruddy","freckles"],
+    "hairStyle": ["flowing_long","wavy_long","updo_elegant"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; bare skeletal frame, hollow eye sockets with faint soul glow, rusted armor; dark fantasy undead art, necrotic gloom"
+}

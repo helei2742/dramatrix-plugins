@@ -1,0 +1,44 @@
+{
+  "archetype": "bounty_hunter",
+  "category": "赛博朋克",
+  "name": "赏金猎人",
+  "visualTags": "猎人, 追踪, 赏金",
+  "description": "循着信用点气味追踪目标的冷面猎手。",
+  "defaults": {
+    "defaultWeapon": [
+      "railgun",
+      "heavy_smg"
+    ],
+    "cyberImplant": [
+      "reflex_booster",
+      "optic_visor"
+    ],
+    "temperament": [
+      "ruthless"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "railgun": 2.5,
+      "heavy_smg": 2.0
+    },
+    "cyberImplant": {
+      "reflex_booster": 2.5,
+      "optic_visor": 2.0
+    },
+    "impression": {
+      "hunter_locked": 2.5,
+      "corp_predator": 2.0
+    },
+    "temperament": {
+      "ruthless": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "playful",
+      "zen"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

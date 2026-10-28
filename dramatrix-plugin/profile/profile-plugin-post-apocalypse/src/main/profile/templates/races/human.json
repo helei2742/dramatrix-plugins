@@ -1,0 +1,20 @@
+{
+  "race": "human",
+  "displayName": "人族",
+  "description": "凡人界最常见种族，寿命有限但可塑性极强，遍布诸界",
+  "defaults": {
+    "skinColor": ["wheat","fair","pale_yellow","ruddy","olive","porcelain"],
+    "eyeColor": ["dark_brown","black","amber","deep_blue","hazel","gray"],
+    "hairColor": ["black","dark_brown","gray","chestnut","auburn","light_brown","salt_pepper"],
+    "bodyType": ["slender_tall","slim","medium","lean_fit","tall_athletic","curvy"]
+  },
+  "weightBias": {
+    "skinColor": {"wheat":1.5,"fair":1.3,"pale_yellow":1.5,"olive":1.3},
+    "hairColor": {"black":1.8,"dark_brown":1.5,"gray":1.2,"chestnut":1.0}
+  },
+  "exclude": {
+    "eyeColor": ["heterochromia"],
+    "skinColor": ["pale_blue","rocky"]
+  },
+  "templateFluxPrompt": "a {gender} human {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

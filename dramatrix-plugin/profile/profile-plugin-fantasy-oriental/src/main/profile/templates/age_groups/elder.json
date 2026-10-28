@@ -1,0 +1,24 @@
+{
+  "ageGroup": "elder",
+  "displayName": "老年",
+  "ageRange": "50岁以上",
+  "defaults": {
+    "ageDesc": ["五旬左右","六旬老者","须发皆白","面若弱冠"],
+    "heightDesc": ["中等身材","身形颀长"],
+    "bodyType": ["ethereal_light","slim","medium"]
+  },
+  "weightBias": {
+    "hairColor": {"white":3.0,"gray":3.0},
+    "faceFeature": {"beard_full":2.5,"nasolabial_folds":2.0,"beard_goatee":1.0},
+    "bodyType": {"ethereal_light":2.5,"slim":2.0,"tall_athletic":0.2},
+    "temperament": {"calm":2.5,"majestic":2.0,"stoic":1.5,"warm":1.0},
+    "impression": {"weathered":3.0,"majestic":2.5,"ethereal":1.5},
+    "eyeShape": {"crane":2.0,"sharp_phoenix":1.5}
+  },
+  "exclude": {
+    "bodyType": ["muscular_broad"],
+    "temperament": ["innocent","sharp","wild"],
+    "faceFeature": ["freckles","dimples"]
+  },
+  "fluxAgeDesc": "elderly"
+}

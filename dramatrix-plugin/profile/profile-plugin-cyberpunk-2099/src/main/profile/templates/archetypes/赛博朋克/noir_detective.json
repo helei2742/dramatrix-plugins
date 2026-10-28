@@ -1,0 +1,52 @@
+{
+  "archetype": "noir_detective",
+  "category": "赛博朋克",
+  "name": "黑色侦探",
+  "visualTags": "侦探, 黑色, 独行",
+  "description": "在雨夜与谎言中追真相、只剩 cynicism 的独行侦探。",
+  "defaults": {
+    "defaultClothes": [
+      "trench_coat"
+    ],
+    "cyberImplant": [
+      "optic_visor",
+      "data_jack"
+    ],
+    "eyeColor": [
+      "optic_red"
+    ],
+    "temperament": [
+      "cynical"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "trench_coat": 3.0
+    },
+    "cyberImplant": {
+      "optic_visor": 2.5,
+      "data_jack": 2.0
+    },
+    "eyeColor": {
+      "optic_red": 2.0
+    },
+    "impression": {
+      "noir_jaded": 3.0,
+      "steel_cold": 2.0
+    },
+    "temperament": {
+      "cynical": 3.0
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "latex_catsuit",
+      "neon_kimono"
+    ],
+    "temperament": [
+      "charismatic",
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,42 @@
+{
+  "archetype": "ai_researcher",
+  "category": "赛博朋克",
+  "name": "AI研究员",
+  "visualTags": "AI, 研究, 造物",
+  "description": "在伦理边缘豢养数字意识的造物者。",
+  "defaults": {
+    "defaultClothes": [
+      "holographic_suit"
+    ],
+    "cyberImplant": [
+      "neural_coprocessor",
+      "data_jack"
+    ],
+    "temperament": [
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "holographic_suit": 2.5
+    },
+    "cyberImplant": {
+      "neural_coprocessor": 2.5,
+      "data_jack": 2.0
+    },
+    "impression": {
+      "surgeon_precise": 2.5,
+      "data_trance": 2.0
+    },
+    "temperament": {
+      "calm": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "reckless",
+      "feral_edge"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

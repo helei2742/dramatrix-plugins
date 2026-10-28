@@ -1,0 +1,33 @@
+{
+  "archetype": "doctor_modern",
+  "name": "医生",
+  "visualTags": "modern doctor, physician, white coat, stethoscope, hospital, professional, caring",
+  "description": "现代医生，救死扶伤的白衣天使，冷静专业，仁心仁术",
+  "defaults": {
+    "defaultAccessories": ["ring","none","goggles"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"slim":2.5,"medium":2.0,"slender_tall":2.0,"athletic_toned":1.5,"lean_wiry":1.0,"svelte_elegant":1.5,"soft_round":1.0},
+    "temperament": {"calm":3.0,"subdued":3.0,"gentle":2.5,"scholarly":2.5,"tranquil":2.5,"pragmatic":2.5,"altruistic":2.5,"disciplined":2.0,"sincere":2.0,"steadfast":2.0,"kind_heart":2.0,"meticulous":2.5},
+    "hairStyle": {"short_crop":2.5,"simple_tie":2.0,"bound_up":2.5,"half_up":2.0,"side_part_long":2.0,"low_ponytail":2.0,"slicked_back":1.5,"bangs_short":2.0,"center_part_long":1.5,"choppy_short":1.5,"loose_half_up":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.0,"salt_pepper":1.5,"gray":1.5,"charcoal":1.5,"light_brown":1.0,"chestnut":1.5},
+    "defaultClothes": {"white_robe":3.0,"blue_robe":2.5,"cotton_hanfu":2.0,"linen_simple":2.0,"navy_silk_hanfu":1.5,"ivory_white_gown":2.0,"mint_green_robe":1.5,"ink_wash_robe":1.0,"indigo_dyed_cotton":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.0,"deep_blue":1.5,"gray":1.5,"jade_green":1.0,"honey":1.0,"amber":1.0},
+    "skinColor": {"fair":2.5,"ivory":2.0,"pale_porcelain":2.0,"light_tan":1.5,"rose_white":1.5,"tan":1.0,"jade":1.0},
+    "eyeShape": {"sharp_phoenix":2.5,"almond":3.0,"round":2.0,"peach_blossom":1.5,"deep_set":1.5,"scholar_eye":2.0,"downturned":1.0,"fish":1.0},
+    "eyebrowShape": {"straight":2.5,"willow":2.5,"silkworm":2.0,"long_eyebrow":2.0,"auspicious_brow":2.0,"crescent":1.5,"curved_fine":1.5,"distant_mountain":1.5},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"bamboo_leaf_face":2.0,"round":1.5,"long":1.5,"square":1.0,"jade_mirror":1.5,"heart":1.5},
+    "faceFeature": {"none":3.0,"spectacles":2.5,"beauty_mark":1.0,"dimples":1.5,"clean_shaven":2.0,"nasolabial_folds":1.0,"high_cheekbones":1.0},
+    "impression": {"intellectual":3.0,"gentle":3.0,"refined":2.5,"delicate":2.0,"resolute":2.0,"dignified":2.0,"scholarly":2.5,"calm":2.0,"warm":1.5,"humble":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword","dagger"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal","mask","wine_gourd"],
+    "hairStyle": ["bald","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","leather_armor","golden_armor","plate_armor","chainmail","bamboo_hat_cape","wild_beast_skin","dark_cloak","black_night","thief_garb"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad"]
+  },
+  "templateFluxPrompt": "a {gender} modern doctor physician, {ageDesc}, {bodyType} build, {faceDesc}, wearing a white lab coat over scrubs, stethoscope around neck, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern hospital hallway, medical equipment, clean bright lighting, photorealistic, masterpiece"
+}

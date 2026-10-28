@@ -1,0 +1,44 @@
+{
+  "archetype": "bioengineer",
+  "category": "赛博朋克",
+  "name": "生物工程师",
+  "visualTags": "生物, 基因, 培育",
+  "description": "改写生命密码、培育新形态的基因巫师。",
+  "defaults": {
+    "skinColor": [
+      "iridescent",
+      "tattooed_neon"
+    ],
+    "cyberImplant": [
+      "cyber_lung"
+    ],
+    "temperament": [
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "iridescent": 2.5,
+      "tattooed_neon": 2.0
+    },
+    "cyberImplant": {
+      "cyber_lung": 2.5
+    },
+    "impression": {
+      "surgeon_precise": 2.5,
+      "feral_edge": 2.0
+    },
+    "temperament": {
+      "calm": 2.5
+    }
+  },
+  "exclude": {
+    "skinColor": [
+      "chrome_skin"
+    ],
+    "temperament": [
+      "reckless"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

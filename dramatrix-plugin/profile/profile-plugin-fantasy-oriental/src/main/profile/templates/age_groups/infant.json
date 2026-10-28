@@ -1,0 +1,29 @@
+{
+  "ageGroup": "infant",
+  "displayName": "婴儿",
+  "ageRange": "0-2岁",
+  "defaults": {
+    "ageDesc": ["襁褓之中","未满周岁","牙牙学语","蹒跚学步","初生稚子","嗷嗷待哺"],
+    "heightDesc": ["小小一团","臂弯可抱","不足两尺"],
+    "bodyType": ["petite","plump"]
+  },
+  "weightBias": {
+    "faceShape": {"round":4.0,"oval":1.0},
+    "eyeShape": {"round":4.0,"almond":1.0},
+    "lipShape": {"cherry":3.0,"pouty":2.0},
+    "noseShape": {"upturned":3.0,"button":3.0,"water_drop":1.5},
+    "faceFeature": {"none":3.0,"ruddy":1.5},
+    "impression": {"innocent":4.0,"delicate":2.0},
+    "temperament": {"innocent":4.0,"warm":1.0,"gentle":1.0},
+    "hairColor": {"dark_brown":0.5,"black":0.5},
+    "bodyType": {"petite":3.0,"plump":2.5}
+  },
+  "exclude": {
+    "temperament": ["sinister","cold","shrewd","stoic","wild","sharp","aloof","arrogant","cunning","ruthless","majestic","fierce","passionate","reckless","sly","ferocious","obsessive","ambitious"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","nasolabial_folds","wrinkles","scar","rosacea"],
+    "bodyType": ["muscular_broad","hulking","stocky","tall_athletic"],
+    "impression": ["weathered","heroic","shrewd","majestic","resolute","fierce"],
+    "hairColor": ["white","gray","silver","frost_white","ash_gray"]
+  },
+  "fluxAgeDesc": "newborn infant"
+}

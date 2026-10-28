@@ -1,0 +1,47 @@
+{
+  "archetype": "tower_sniper",
+  "category": "赛博朋克",
+  "name": "高塔狙击手",
+  "visualTags": "狙击, 高塔, 沉默",
+  "description": "藏身天际、一枪定生死的沉默猎手。",
+  "defaults": {
+    "defaultWeapon": [
+      "railgun"
+    ],
+    "cyberImplant": [
+      "optic_visor",
+      "reflex_booster"
+    ],
+    "temperament": [
+      "cold",
+      "stoic"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "railgun": 3.0
+    },
+    "cyberImplant": {
+      "optic_visor": 3.0,
+      "reflex_booster": 2.0
+    },
+    "impression": {
+      "hunter_locked": 3.0,
+      "steel_cold": 2.5
+    },
+    "temperament": {
+      "cold": 2.5,
+      "stoic": 2.5
+    }
+  },
+  "exclude": {
+    "defaultWeapon": [
+      "mantis_blade_w",
+      "heavy_smg"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

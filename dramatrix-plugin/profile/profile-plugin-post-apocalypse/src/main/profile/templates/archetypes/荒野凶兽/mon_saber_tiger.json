@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_saber_tiger",
+  "name": "剑齿虎",
+  "visualTags": "剑齿外露,斑纹皮毛,伏低前扑,咬穿颅骨",
+  "description": "上颚剑齿长过手掌的猛虎，一扑之下颅骨立碎，从不给猎物第二次机会",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"prime_age":2.0,"thirty_mid":1.5,"century_old":1.5},
+    "hairColor": {"dark_brown":2.0,"charcoal":2.0,"sand_blond":3.0,"silver":1.5,"auburn":2.5,"jet_black":1.5,"orange":1.5},
+    "skinColor": {"bark_brown":2.5,"weathered_tan":2.5,"swarthy":2.0,"scaly_green":1.5,"clay_brown":1.5,"golden_tan":2.5,"sun_kissed":1.5},
+    "eyeColor": {"slit_pupil_gold":2.5,"amber":3.0,"sunflower":2.5,"forest_green":1.5,"copper":1.5},
+    "defaultClothes": {"wild_beast_skin":3.0,"hunters_garb":2.0,"patchwork_rags":1.5,"feather_cloak":1.5,"leather_armor":1.5},
+    "temperament": {"wild":2.5,"fierce":3.5,"brutal":2.5,"volatile":2.0,"paranoid":1.5},
+    "impression": {"wild":2.0,"fierce":3.5,"bloodthirsty":2.5,"lynx_eye":1.5},
+    "eyebrowShape": {"tiger_eyebrow":3.5,"rugged":2.0,"thick":2.0,"wire_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "faceShape": {"wolf_face":2.5,"tiger_face":3.5,"bear_face":1.5,"broad":2.0,"cat_face":1.5},
+    "eyeShape": {"beast_eye":2.5,"vertical_pupil_eye":2.0,"wolf":2.0,"triangle":1.5,"tiger":3.0,"cat_eye":2.5},
+    "faceFeature": {"fur_face":3.0,"broad_jaw":2.0,"thick_neck":1.5},
+    "lipShape": {"beast_lip":3.0,"toothed_lip":2.5,"fanged_lip":3.5},
+    "noseShape": {"wolf_nose":2.5,"wide_nostrils":2.0,"broad_flat":1.5},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":2.0,"warrior_braid":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"bone_necklace":2.5,"bell_collar":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","folding_fan","scroll_tube"],
+    "temperament": ["scholarly","eloquent","dignified","demure"],
+    "hairStyle": ["updo_elegant","phoenix_crown","braid_crown"],
+    "defaultWeapon": ["guqin","ink_brush","crossbow"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; huge striped feline body, two enormous saber fangs, crouched pounce stance; wild beast monster concept art, savage wilderness"
+}

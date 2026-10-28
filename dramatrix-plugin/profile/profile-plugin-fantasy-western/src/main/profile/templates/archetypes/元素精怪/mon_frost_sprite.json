@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_frost_sprite",
+  "name": "冰霜精",
+  "visualTags": "冰晶结体,霜雾缭绕,寒气逼人,棱角透光",
+  "description": "极寒之地凝结出的冰晶精怪，行经之处水汽立刻结成白霜",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":2.0,"frost_white":3.5,"flame_red":2.0,"cyan":1.5,"none":1.5,"ice_blue":3.0,"silver_blue":2.5},
+    "skinColor": {"translucent":3.5,"luminous_blue":3.0,"phosphor_white":2.0,"amber_glow":2.0,"rocky":1.5,"snow_white":2.0},
+    "eyeColor": {"star_silver":1.5,"cosmic":2.5,"moonlight":2.0,"topaz":1.5,"aquamarine":2.5,"ice_blue":3.5,"pearl_gray":2.0},
+    "defaultClothes": {"spirit_silk":2.0,"spirit_leaf_dress":2.0,"cloud_pattern_robe":2.0,"moonlight_gown":2.5,"water_silk":1.5,"ice_silk_dress":3.0},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":1.5,"serene":2.5,"cold":3.5,"reserved":1.5},
+    "impression": {"ethereal":3.0,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":1.5},
+    "eyebrowShape": {"faint":2.0,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":1.5,"frost_brow":3.5,"curved_fine":1.5},
+    "noseShape": {"elemental_nose":3.0,"delicate":1.5,"straight":1.5},
+    "bodyType": {"ethereal_light":3.5,"floating_light":3.0,"willowy":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "hairStyle": {"ethereal_floating":3.0,"flowing_long":2.0,"drifting_cloud":2.0},
+    "faceFeature": {"icy_face":3.5,"glowing_face":2.0,"none":1.5},
+    "lipShape": {"frost_lip":3.5,"pale_lip":2.0,"jade_pearl_lip":1.5},
+    "faceShape": {"snow_face":3.0,"diamond":2.0,"sharp":1.5},
+    "defaultWeapon": {"none":3.0,"poison_needle":3.0,"spirit_seal":3.0},
+    "defaultAccessories": {"none":2.5,"spirit_stone":2.5,"silver_ear_cuff":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent","passionate","volatile","flamboyant"],
+    "defaultWeapon": ["war_hammer","axe","halberd"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; crystalline ice body refracting light, swirling frost mist, sharp glacial facets; elemental spirit art, glowing energy body"
+}

@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_wind_wisp",
+  "name": "风灵",
+  "visualTags": "无形气旋,叶屑环绕,倏忽来去,啸声不绝",
+  "description": "只在气流扭曲中显形的风之精怪，来去无踪，抓不住也留不下",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":2.0,"frost_white":2.0,"flame_red":2.0,"cyan":3.0,"none":1.5,"mint_green":2.5,"silver":1.5},
+    "skinColor": {"translucent":3.5,"luminous_blue":2.5,"phosphor_white":2.5,"amber_glow":2.0,"rocky":1.5,"pale_blue":2.0},
+    "eyeColor": {"star_silver":2.5,"cosmic":2.5,"moonlight":2.0,"topaz":1.5,"aquamarine":3.0,"turquoise":2.0},
+    "defaultClothes": {"spirit_silk":2.5,"spirit_leaf_dress":2.0,"cloud_pattern_robe":3.0,"moonlight_gown":1.5,"water_silk":1.5,"smoke_gauze":2.0},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":1.5,"serene":1.5,"free_spirited":3.5,"whimsical":3.0,"eccentric":2.0},
+    "impression": {"ethereal":3.5,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":1.5,"carefree":2.5,"free_spirit":2.5},
+    "eyebrowShape": {"faint":2.5,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":1.5},
+    "noseShape": {"elemental_nose":2.5,"delicate":1.5,"straight":1.5,"wind_nose":3.0},
+    "bodyType": {"ethereal_light":3.5,"floating_light":3.0,"willowy":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "hairStyle": {"ethereal_floating":3.5,"drifting_cloud":2.5,"flying_sky":2.0},
+    "faceFeature": {"none":3.0,"glowing_face":2.0},
+    "faceShape": {"wind_face":3.5,"cloud_face":2.5,"oval":1.5},
+    "eyeShape": {"water_light_eye":2.5,"moon_eye":2.0,"empty_eye":1.5},
+    "defaultWeapon": {"none":3.0,"fan":3.0,"soul_flute":3.0},
+    "defaultAccessories": {"none":2.5,"flute":2.5,"ankle_bell":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent"],
+    "defaultWeapon": ["war_hammer","axe","halberd","two_hand_sword"],
+    "bodyType": ["bulky_massive","barrel_chested","muscular_broad"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; barely visible swirling vortex form, leaves and dust caught in the current; elemental spirit art, glowing energy body"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "chemist",
+  "name": "化学师",
+  "visualTags": "wasteland chemist, makeshift laboratory, vials, beakers, chemical compounds, gas mask, pharmacist, post-apocalyptic alchemist",
+  "description": "末世化学师，在简陋实验室中调配药品与化合物，废土中的炼金术士，知识即力量",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"lean_wiry":3.0,"slender_tall":2.5,"lean_fit":2.5,"medium":2.5,"gangly":2.0,"lanky":2.0,"pin_thin":2.0},
+    "temperament": {"analytical":3.0,"meticulous":3.0,"obsessive":3.0,"cold":2.5,"calculating":2.5,"eccentric":2.5,"scholarly":2.5,"cautious":2.5,"calm":2.0,"curious":2.5,"sinister":1.5},
+    "hairStyle": {"messy_medium":2.5,"choppy_short":2.5,"unkempt_long":2.5,"tied_back_loose":2.5,"half_up":2.0,"short_crop":2.0,"low_ponytail":2.5,"slicked_back":2.0},
+    "hairColor": {"dark_brown":2.5,"black":2.5,"gray_streaked":2.5,"dusty_brown":2.5,"bleached_chemical":2.5,"ash_brown":2.0,"faded_black":2.0,"white":2.0},
+    "defaultClothes": {"wasteland_lab_coat":3.0,"gas_mask_hooded_poncho":3.0,"radiation_suit_worn":2.5,"scavenger_harness":2.5,"survivor_hoodie_worn":2.0,"tattered_jacket":2.0,"wasteland_medic_vest":2.0,"patched_denim_suit":1.5},
+    "eyeColor": {"pale_blue":3.0,"gray":3.0,"green":2.5,"hazel":2.5,"dark_brown":2.0,"amber":2.0,"keen_green":2.5,"black":1.5},
+    "skinColor": {"pale_porcelain":3.0,"fair":3.0,"chemical_stained":3.0,"ivory":2.5,"light_tan":2.0,"weathered_tan":1.5,"jade":2.0,"tan":1.0},
+    "eyeShape": {"narrow":3.0,"keen":3.0,"deep_set":2.5,"scholar_eye":3.0,"sharp_phoenix":2.5,"almond":2.0,"round":2.0,"tired":2.0},
+    "eyebrowShape": {"thin":2.5,"furrowed":3.0,"straight":2.5,"angular":2.5,"knitted":2.5,"long_eyebrow":2.0,"silkworm":1.5,"crescent":1.5},
+    "faceShape": {"gaunt":3.0,"angular":2.5,"long":2.5,"seed_face":2.0,"oval":2.0,"bamboo_leaf_face":2.5,"heart":2.0,"jade_mirror":1.5},
+    "faceFeature": {"spectacles":2.5,"hollow_cheeks":3.0,"chemical_burn":2.0,"none":2.0,"sharp_features":2.5,"clean_shaven":2.0,"beard_stubble":1.5,"pale_complexion":2.5},
+    "impression": {"eccentric":3.0,"cold":2.5,"scholarly":3.0,"analytical":2.5,"sinister":2.0,"mysterious":2.5,"obsessive":2.5,"intellectual":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","fan","jade_ruyi","war_hammer","axe"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","bone_necklace"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun","warrior_topknot"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","jovial","carefree","heroic","gallant","reckless","brutal"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","muscular_broad","heroic_figure","bulky_massive","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland chemist, {ageDesc}, {bodyType} lean gaunt build, {faceDesc}, wearing stained lab coat and gas mask hood, glass vials and beakers, chemical compounds, {hairStyle} {hairColor} disheveled hair, {eyeColor} intense analytical eyes, {skinColor} chemical-stained skin, {temperament} aura, makeshift laboratory, bubbling flasks, chemical fumes, dim lighting, photorealistic, eerie, masterpiece"
+}

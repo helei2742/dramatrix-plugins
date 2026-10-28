@@ -1,0 +1,53 @@
+{
+  "archetype": "holo_idol",
+  "category": "赛博朋克",
+  "name": "全息偶像",
+  "visualTags": "偶像, 表演, 虚拟",
+  "description": "用完美皮囊与合成歌声收割信仰的虚拟巨星。",
+  "defaults": {
+    "defaultClothes": [
+      "latex_catsuit",
+      "neon_kimono"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "violet"
+    ],
+    "cyberImplant": [
+      "skin_weave",
+      "voice_modulator"
+    ],
+    "temperament": [
+      "charismatic"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "latex_catsuit": 2.5,
+      "neon_kimono": 2.0
+    },
+    "hairColor": {
+      "neon_pink": 2.5,
+      "violet": 2.0
+    },
+    "cyberImplant": {
+      "skin_weave": 2.5,
+      "voice_modulator": 2.0
+    },
+    "impression": {
+      "idol_radiance": 3.0,
+      "neon_glam": 2.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "cargo_punk",
+      "ragged_poncho"
+    ],
+    "temperament": [
+      "stoic",
+      "cold"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

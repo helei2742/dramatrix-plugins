@@ -1,0 +1,33 @@
+{
+  "archetype": "streamer",
+  "name": "主播",
+  "visualTags": "modern live streamer, influencer, ring light, trendy, charismatic, social media, stylish",
+  "description": "现代主播/网红，镜头前的魅力焦点，以才华和个性吸引万千粉丝",
+  "defaults": {
+    "defaultAccessories": ["ring","earring","none","hair_ribbon"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"willowy":2.5,"slender_tall":2.5,"lean_fit":2.0,"svelte_elegant":2.5,"athletic_toned":2.0,"medium":2.0,"ethereal_light":1.5},
+    "temperament": {"charismatic":3.0,"flamboyant":3.0,"eloquent":3.0,"cheerful":2.5,"passionate":2.5,"radiant":2.5,"whimsical":2.0,"crafty":2.0,"seductive":2.0,"free_spirited":2.0,"bold":1.5,"cunning":1.5,"decadent":1.0,"gallant":2.0},
+    "hairStyle": {"flowing_long":2.5,"wavy_long":3.0,"loose_curls":3.0,"bangs_short":2.5,"side_bangs_long":2.5,"silver_flow":2.5,"high_ponytail":2.5,"twin_tails":2.5,"messy_bun":2.0,"updo_elegant":2.0,"center_part_long":2.0,"half_up":2.5},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"chestnut":2.0,"honey_blond":2.5,"ash_blond":2.5,"platinum_blond":2.0,"silver":2.0,"auburn":2.0,"rose_gold":2.0,"pink":1.5,"lavender":1.5,"jet_black":2.5},
+    "defaultClothes": {"silk_embroider":3.0,"brocade_hanfu":2.5,"cotton_hanfu":2.5,"navy_silk_hanfu":2.0,"spirit_silk":2.0,"red_dress":2.5,"ice_silk_dress":2.0,"coral_pink_dress":2.5,"ivory_white_gown":2.0,"pearl_embroidered_dress":2.5,"mint_green_robe":2.0,"sapphire_silk_gown":2.0},
+    "eyeColor": {"dark_brown":2.5,"black":2.5,"hazel":2.0,"amber":2.0,"honey":2.5,"deep_blue":1.5,"sapphire":2.0,"violet":1.5,"emerald":1.5,"turquoise":1.5,"silver":1.0},
+    "skinColor": {"fair":3.0,"pale_porcelain":3.0,"ivory":2.5,"moon_white":2.0,"rose_white":2.5,"light_tan":1.5,"pearl":2.5,"jade":1.5},
+    "eyeShape": {"peach_blossom":3.0,"phoenix":3.0,"fox":2.5,"almond":2.5,"round":2.5,"upturned":2.5,"swallow":2.5,"sharp_phoenix":2.0,"laughter_eye":2.0},
+    "eyebrowShape": {"willow":3.0,"arched":2.5,"distant_mountain":2.5,"peach_blossom_brow":3.0,"crescent":2.5,"curved_fine":2.5,"feathered":2.0,"straight":2.0,"moth_antenna":2.0},
+    "faceShape": {"seed_face":3.0,"oval":3.0,"heart":3.0,"peach_face":2.5,"almond":2.5,"crescent_face":2.0,"diamond":2.0,"phoenix_face":2.0},
+    "faceFeature": {"none":2.0,"beauty_mark":2.5,"dimples":2.5,"delicate_features":3.0,"high_cheekbones":2.0,"freckles":1.5,"tear_mole":1.5,"clean_shaven":2.5},
+    "impression": {"handsome":3.0,"refined":3.0,"charming":3.0,"elegant":2.5,"radiant":2.5,"charismatic":3.0,"delicate":2.5,"ethereal":2.0,"free_spirit":2.0,"seductive":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun","child_tuft"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","golden_armor","plate_armor","chainmail","leather_armor","bamboo_hat_cape","wild_beast_skin","training_gear","ochre_hemp_tunic","alchemist_apron","scale_armor"],
+    "temperament": ["sinister","brutal","reckless","overbearing","unhinged","haughty","vicious","grim","weary","desolate"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","stocky_strong","plump","gnarled_tough"]
+  },
+  "templateFluxPrompt": "a {gender} modern live streamer influencer, {ageDesc}, {bodyType} build, {faceDesc}, wearing trendy fashionable streetwear or chic outfit, ring light glow, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern streaming setup with ring light and microphone, stylish room background, social media aesthetic, photorealistic, masterpiece"
+}

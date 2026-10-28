@@ -1,0 +1,30 @@
+{
+  "archetype": "smith",
+  "name": "锻造师",
+  "visualTags": "铁砧,熔炉,巨锤,烈火淬炼",
+  "description": "打造神兵利器的匠师，以火与铁铸造传世之作",
+  "defaults": {
+    "defaultAccessories": ["ring","belt_jade"],
+    "defaultWeapon": ["axe","iron_sword","none"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"tall_athletic":3.0,"sturdy":2.5,"medium":1.5},
+    "temperament": {"stoic":3.0,"calm":2.5,"obsessive":2.5,"warm":1.5},
+    "hairStyle": {"buzz_cut":3.0,"short_crop":2.5,"warrior_braid":2.0,"simple_tie":2.0},
+    "hairColor": {"copper":3.0,"dark_brown":2.5,"black":2.0,"charcoal":2.0},
+    "defaultClothes": {"leather_armor":3.0,"hemp_cloth":2.5,"linen_simple":2.0},
+    "eyeColor": {"copper":3.0,"smoky_quartz":2.5,"dark_brown":2.0,"deep_orange":1.5},
+    "eyeShape": {"tiger":2.5,"round":2.5,"almond":2.0,"fish":1.5},
+    "eyebrowShape": {"steel_brow":3.0,"wire_brow":3.0,"thick":2.5,"shuttle_brow":2.0},
+    "faceShape": {"stone_face":3.0,"square":3.0,"bronze_mirror":2.5,"water_chestnut":2.0},
+    "faceFeature": {"beard_stubble":2.5,"ruddy":2.5,"scar":1.5,"none":1.5},
+    "impression": {"resolute":3.0,"loyal":3.0,"weathered":2.5,"heroic":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["whisk","jade_ruyi","fan"],
+    "defaultAccessories": ["abacus","hairpin","earring","mask"],
+    "hairStyle": ["bald","cloud_bun","double_bun","phoenix_crown"],
+    "temperament": ["innocent","sinister"]
+  },
+  "templateFluxPrompt": "a {gender} smith blacksmith, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, forging weapons at an anvil with blazing fire,"
+}

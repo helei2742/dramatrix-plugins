@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_chaos_spawn",
+  "name": "混沌造物",
+  "visualTags": "肢体错位,形态崩坏,多口嘶鸣,无常畸变",
+  "description": "被混沌之力反复扭曲的失败造物，肢体数量与位置每时每刻都在变",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":2.5,"crimson":2.5,"cosmic":2.5,"deep_purple":2.0,"none":2.0,"dual_color":3.0,"hot_pink":1.5},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":1.5,"ebony":2.0,"chalk_white":1.5,"reddish_bronze":1.5,"pale_violet":2.5,"scaly_green":2.0},
+    "eyeColor": {"blood_red":3.0,"slit_pupil_red":2.5,"shadow_black":2.0,"cosmic":2.0,"sunset_gold":1.5,"heterochromia":3.5,"dual_hue":3.0,"one_red_one_purple":2.5},
+    "defaultClothes": {"black_night":2.5,"dark_cloak":2.5,"golden_armor":2.0,"war_general_armor":2.0,"burgundy_velvet_cloak":1.5},
+    "temperament": {"overbearing":3.0,"sinister":2.5,"majestic":2.0,"ruthless":2.0,"fanatical":1.5,"unhinged":3.5,"volatile":3.0,"eccentric":2.0,"vicious":2.0},
+    "impression": {"demonic_majesty":3.0,"domineering":2.5,"sinister":2.5,"majestic":1.5,"mysterious":2.5,"wild":2.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5,"gangly":2.5,"hunched":2.5,"ape_like":2.0},
+    "heightDesc": {"giant_towering":2.0,"towering_2m":2.5,"cloud_reaching":1.5,"hunched_short":1.5},
+    "hairStyle": {"wild_mane":3.0,"messy_bun":2.0,"bald":1.5},
+    "faceFeature": {"third_eye":3.0,"scale_face":2.5,"horn":2.5,"veins":2.0},
+    "faceShape": {"demon_face":2.5,"diamond":2.0,"inverted_triangle":1.5},
+    "eyeShape": {"double_pupil":3.0,"abyss_eye":2.5,"beast_eye":2.0},
+    "lipShape": {"warped_lip":3.5,"toothed_lip":2.5,"open_lip":2.0},
+    "defaultWeapon": {"claws":3.0,"none":3.0,"iron_hook":3.0},
+    "defaultAccessories": {"none":2.5,"spirit_stone":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart","dignified","disciplined","serene"],
+    "defaultWeapon": ["guqin","ink_brush","fan"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; asymmetric warped limbs, extra mouths opening across the torso, constantly shifting form; abyssal demon lord art, hellfire and ruin"
+}

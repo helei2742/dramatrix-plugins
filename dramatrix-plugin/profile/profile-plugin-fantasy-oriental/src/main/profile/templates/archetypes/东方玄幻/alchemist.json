@@ -1,0 +1,29 @@
+{
+  "archetype": "alchemist",
+  "name": "炼丹师",
+  "visualTags": "炼丹炉,丹药,火炎,药香缭绕",
+  "description": "以炉火炼制灵丹妙药的修行者，半学半匠，精通药石之道",
+  "defaults": {
+    "defaultAccessories": ["storage_bag","ring","jade_pendant"],
+    "defaultWeapon": ["none","pole","hoe"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.5,"slim":2.0,"slender_tall":1.5,"plump":1.5},
+    "temperament": {"calm":3.0,"shrewd":2.5,"stoic":2.0,"cunning":1.5,"gentle":1.0},
+    "hairStyle": {"simple_tie":3.0,"half_up":2.5,"bound_up":2.0,"short_crop":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.0,"gray":1.5,"salt_pepper":1.5,"white":1.0},
+    "defaultClothes": {"green_robe":3.0,"blue_robe":2.5,"linen_simple":2.0,"hemp_cloth":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.0,"amber":1.5,"mercury":1.0},
+    "eyeShape": {"sharp_phoenix":2.5,"round":2.0,"almond":2.0,"narrow":1.5},
+    "eyebrowShape": {"silkworm_brow":2.5,"shuttle_brow":2.0,"long_eyebrow":1.5,"thick":1.0},
+    "faceShape": {"round":2.5,"oval":2.0,"gourd_face":2.0,"pear":1.5},
+    "faceFeature": {"none":3.0,"beard_goatee":1.5,"high_cheekbones":1.0},
+    "impression": {"shrewd":3.0,"refined":2.5,"delicate":2.0,"loyal":1.5,"weathered":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff"],
+    "defaultAccessories": ["mask","tattoo"],
+    "hairStyle": ["bald","wild_mane"]
+  },
+  "templateFluxPrompt": "a {gender} alchemist, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, surrounded by cauldron and pill furnace"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_goblin_raider",
+  "name": "哥布林劫掠者",
+  "visualTags": "尖耳绿皮,破烂皮甲,生锈短刀,成群结队",
+  "description": "个头矮小却成群出没的绿皮劫掠者，贪婪狡猾，专挑落单者下手",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5},
+    "skinColor": {"moss_green":3.5,"pale_green":2.5,"stone_gray":2.0,"clay_brown":1.5,"swarthy":1.5},
+    "eyeColor": {"amber":2.0,"blood_red":1.5,"sunflower":3.0,"dark_brown":1.5,"smoky_quartz":1.5},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":3.0,"wild":2.5,"gruff":2.0,"reckless":2.0,"cunning":3.0,"crafty":2.5,"paranoid":1.5},
+    "impression": {"fierce":3.0,"wild":1.5,"weathered":2.0,"domineering":1.5,"greedy":3.0,"devious":2.5,"cowardly":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"short_stout":3.0,"compact_dense":2.5,"gangly":2.0,"lean_wiry":1.5},
+    "heightDesc": {"dwarf_short":3.0,"short_small":2.5,"half_height":2.0},
+    "faceShape": {"goblin_face":2.5,"square":2.5,"broad":2.0,"pentagon":1.5},
+    "eyeShape": {"triangle":2.5,"narrow":2.0,"deep_set":2.0,"toad_eye":1.5},
+    "faceFeature": {"broad_jaw":3.0,"scar":2.5,"thick_neck":2.0,"pointed_ear":1.5},
+    "lipShape": {"toothed_lip":3.0,"wide_lip":2.5,"thick":1.5},
+    "noseShape": {"goblin_nose":3.0,"broad_flat":2.5,"wide_nostrils":2.0},
+    "hairStyle": {"messy_bun":2.5,"choppy_short":2.5,"wolf_tail":1.5,"bald":1.5},
+    "defaultWeapon": {"dagger":3.0,"folding_blade":3.0,"throwing_knives":3.0},
+    "defaultAccessories": {"leather_belt":2.5,"eye_patch":2.5,"bone_necklace":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure"],
+    "defaultWeapon": ["two_hand_sword","halberd","war_hammer"],
+    "bodyType": ["towering_giant","bulky_massive","muscular_broad"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; small wiry green-skinned body, oversized pointed ears, rusted crude blade; western dark fantasy monster art"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "raider",
+  "name": "掠夺者",
+  "visualTags": "wasteland raider, bandit, spiked armor, menacing, scavenger gang, road warrior, brutal, intimidating, post-apocalyptic marauder",
+  "description": "末世掠夺者，横行废土劫掠弱小，以暴力为法则的荒野暴徒，凶悍而疯狂",
+  "defaults": {
+    "defaultAccessories": ["none","bone_necklace","eye_patch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"stocky_strong":3.0,"barrel_chested":2.5,"chiseled_fit":2.5,"broad_shouldered":3.0,"bulky_massive":2.5,"tall_athletic":2.0,"athletic_toned":2.0},
+    "temperament": {"brutal":3.0,"unhinged":3.0,"ruthless":3.0,"fierce":3.0,"intimidating":2.5,"chaotic":2.5,"savage":3.0,"reckless":2.5,"defiant":2.5,"sinister":2.0,"greedy":2.0},
+    "hairStyle": {"wild_mane":3.0,"savage_bun":3.0,"mohawk":3.0,"unkempt_long":2.5,"shaved_sides":3.0,"warrior_braid":2.5,"messy_medium":2.0,"buzz_cut":2.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"faded_black":2.5,"dyed_red":2.5,"dusty_brown":2.0,"bleached_blonde":2.0,"jet_black":2.0,"charcoal":2.0},
+    "defaultClothes": {"scrap_metal_armor":3.0,"road_warrior_gear":3.0,"biker_leather_armor":3.0,"leather_armor_improvised":3.0,"ammo_belt_bandolier":2.0,"tattered_jacket":2.0,"military_fatigues":1.5,"scavenger_harness":1.5},
+    "eyeColor": {"wild_yellow":3.0,"dark_brown":2.5,"amber":2.5,"bloodshot":3.0,"black":2.0,"steel_gray":2.0,"pale_blue":2.0,"hazel":1.5},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":2.5,"scarred_tan":3.0,"dusty_tan":2.5,"olive":2.0,"tan":2.5,"leathery_tan":2.5,"light_tan":1.5},
+    "eyeShape": {"tiger":3.0,"dragon":2.5,"deep_set":2.5,"narrow":2.5,"eagle":2.5,"hunter":2.5,"sharp_phoenix":2.0,"round":2.0},
+    "eyebrowShape": {"wild_brow":3.0,"thick":3.0,"rugged":3.0,"knitted":2.5,"furrowed":2.5,"angular":2.0,"steel_brow":2.5,"hero_eyebrow":1.5},
+    "faceShape": {"square":3.0,"stone_face":3.0,"weathered":3.0,"angular":2.5,"chiseled":2.5,"pentagon":2.5,"rectangular":2.0,"round":1.5},
+    "faceFeature": {"scar":3.0,"broken_nose":2.5,"scarification":3.0,"beard_stubble":2.5,"missing_teeth":2.5,"dirt_smudge":3.0,"war_paint":3.0,"none":0.5},
+    "impression": {"intimidating":3.0,"savage":3.0,"unhinged":3.0,"dangerous":3.0,"fierce":2.5,"brutal":3.0,"feral":2.5,"chaotic":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","slicked_back","side_part_long"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","silk_embroider","ivory_white_gown"],
+    "temperament": ["innocent","naive","seductive","gentle","kind_heart","scholarly","calm","tranquil","wistful","altruistic"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","slim","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland raider marauder, {ageDesc}, {bodyType} brutal intimidating build, {faceDesc}, wearing spiked scrap metal armor and leather, war paint on face, battle scars, {hairStyle} {hairColor} wild hair, {eyeColor} crazed fierce eyes, {skinColor} scarred dirty skin, {temperament} aura, burning wreckage background, ruined highway, post-apocalyptic gang, dust storm, photorealistic, menacing, masterpiece"
+}

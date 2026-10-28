@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_demon_lord",
+  "name": "深渊魔将",
+  "visualTags": "巨角王冠,熔岩裂纹,魔纹重甲,压城之威",
+  "description": "统御一方深渊的魔将，肌体裂缝中透出熔岩红光，抬眼便是万军俯首",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":2.5,"crimson":3.0,"cosmic":2.0,"deep_purple":2.0,"none":1.5},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":3.0,"ebony":2.5,"chalk_white":1.5,"reddish_bronze":2.0},
+    "eyeColor": {"blood_red":3.0,"slit_pupil_red":2.5,"shadow_black":2.0,"cosmic":2.0,"sunset_gold":1.5},
+    "defaultClothes": {"black_night":2.0,"dark_cloak":1.5,"golden_armor":2.5,"war_general_armor":3.0,"burgundy_velvet_cloak":1.5},
+    "temperament": {"overbearing":3.5,"sinister":2.5,"majestic":3.0,"ruthless":2.5,"fanatical":1.5,"arrogant":2.0},
+    "impression": {"demonic_majesty":3.5,"domineering":3.0,"sinister":2.0,"majestic":2.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "faceShape": {"demon_face":3.0,"sharp":2.0,"inverted_triangle":1.5},
+    "eyeShape": {"crimson_eye":2.5,"vertical_pupil_eye":2.5,"abyss_eye":2.0,"narrow":1.5},
+    "faceFeature": {"double_horn":3.5,"demon_mark":3.0,"horn":2.0,"gold_mark":2.0,"glowing_face":2.0},
+    "lipShape": {"demon_lip":3.0,"fanged_lip":2.5,"sneer_lip":1.5},
+    "noseShape": {"demon_nose":3.0,"aquiline":1.5},
+    "hairStyle": {"wild_mane":2.5,"slicked_back":2.0,"warrior_topknot":2.0,"bald":1.5},
+    "defaultWeapon": {"two_hand_sword":3.0,"halberd":3.0,"samsara_sword":3.0},
+    "defaultAccessories": {"armor_pauldron":2.5,"hair_crown":2.5,"blood_stone_amulet":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart"],
+    "defaultWeapon": ["hoe","guqin","ink_brush"],
+    "bodyType": ["petite_curvy","delicate_frail","pin_thin","child_plump"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; crown of massive horns, molten cracks glowing across the skin, rune-etched black armor; abyssal demon lord art, hellfire and ruin"
+}

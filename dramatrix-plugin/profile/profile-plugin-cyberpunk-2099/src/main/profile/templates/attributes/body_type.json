@@ -1,0 +1,163 @@
+{
+  "attribute": "bodyType",
+  "displayName": "体型",
+  "options": [
+    {
+      "id": "slim",
+      "value": "精瘦",
+      "description": "线条利落、便于潜行的瘦长身形",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "精瘦"
+      ]
+    },
+    {
+      "id": "athletic",
+      "value": "健硕",
+      "description": "长期格斗训练出的紧实肌肉",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "健硕",
+        " 战斗"
+      ]
+    },
+    {
+      "id": "bulky",
+      "value": "壮硕",
+      "description": "厚实宽阔的躯干，皮下藏装甲",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "壮硕"
+      ]
+    },
+    {
+      "id": "lithe",
+      "value": "柔韧",
+      "description": "舞者般的柔软与平衡感",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "柔韧",
+        " 灵动"
+      ]
+    },
+    {
+      "id": "wiry",
+      "value": "筋肉型",
+      "description": "瘦但极具爆发力的筋肉体质",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "筋肉",
+        " 爆发"
+      ]
+    },
+    {
+      "id": "augmented_bulk",
+      "value": "义体增肌",
+      "description": "靠全身义体撑起夸张体积的重装体型",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义体",
+        " 重装"
+      ]
+    },
+    {
+      "id": "slender",
+      "value": "纤细",
+      "description": "脆弱但优雅的纤细骨架",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "纤细"
+      ]
+    },
+    {
+      "id": "heavy_frame",
+      "value": "重型骨架",
+      "description": "为承载军用义体而强化的粗重骨骼",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "骨架",
+        " 军用"
+      ]
+    },
+    {
+      "id": "petite",
+      "value": "娇小",
+      "description": "体型小巧、适合伪装与潜入",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "娇小",
+        " 潜入"
+      ]
+    },
+    {
+      "id": "towering",
+      "value": "高大",
+      "description": "义体拉高后的压迫感巨人",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "高大",
+        " 压迫"
+      ]
+    }
+  ]
+}

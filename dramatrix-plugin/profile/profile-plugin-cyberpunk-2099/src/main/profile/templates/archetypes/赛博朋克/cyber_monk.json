@@ -1,0 +1,46 @@
+{
+  "archetype": "cyber_monk",
+  "category": "赛博朋克",
+  "name": "赛博僧",
+  "visualTags": "僧侣, 禅, 修行",
+  "description": "在服务器佛前禅定的义体修行者。",
+  "defaults": {
+    "defaultClothes": [
+      "neon_kimono"
+    ],
+    "cyberImplant": [
+      "pain_editor",
+      "kerenzikov"
+    ],
+    "temperament": [
+      "zen"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "neon_kimono": 3.0
+    },
+    "cyberImplant": {
+      "pain_editor": 2.5,
+      "kerenzikov": 2.0
+    },
+    "impression": {
+      "monk_serene_wire": 3.0,
+      "chrome_aloof": 2.0
+    },
+    "temperament": {
+      "zen": 3.0
+    }
+  },
+  "exclude": {
+    "defaultWeapon": [
+      "railgun",
+      "heavy_smg"
+    ],
+    "temperament": [
+      "reckless",
+      "manic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

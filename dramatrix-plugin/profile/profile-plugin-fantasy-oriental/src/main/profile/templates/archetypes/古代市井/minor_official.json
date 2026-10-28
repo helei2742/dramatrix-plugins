@@ -1,0 +1,29 @@
+{
+  "archetype": "minor_official",
+  "name": "小官",
+  "visualTags": "minor official, clerk, bureaucrat",
+  "description": "县衙小吏，掌管文书账簿，位卑权重，为人圆滑",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","ring","none"],
+    "defaultWeapon": ["none","fan","ink_brush"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.5,"plump":2.0,"soft_round":1.5,"lean_fit":1.5},
+    "temperament": {"calculating":3.0,"subdued":2.5,"dignified":2.0,"cunning":1.5,"sincere":1.0},
+    "hairStyle": {"bound_up":3.0,"slicked_back":1.5,"simple_tie":1.5,"short_crop":1.0},
+    "hairColor": {"black":2.5,"dark_brown":2.0,"salt_pepper":1.5,"gray":1.0},
+    "defaultClothes": {"blue_robe":3.0,"brocade_hanfu":2.5,"jade_belt_robe":2.0,"cotton_hanfu":1.5,"linen_simple":1.0},
+    "eyeColor": {"dark_brown":2.5,"black":2.0,"hazel":1.5},
+    "eyeShape": {"triangle":2.0,"narrow":1.5,"sharp_phoenix":1.5,"almond":1.0},
+    "eyebrowShape": {"silkworm":2.0,"straight":2.0,"short_eyebrow":1.5,"raised":1.5},
+    "faceShape": {"oval":2.5,"round":2.0,"pear":1.5,"jade_plate":1.0},
+    "faceFeature": {"none":2.0,"beard_goatee":2.0,"beard_mustache":1.5,"nasolabial_folds":1.0},
+    "impression": {"shrewd":2.5,"humble":2.5,"dignified":2.0,"cunning":1.5,"intellectual":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","war_hammer","claws","meteor_hammer"],
+    "defaultAccessories": ["tattoo","bone_necklace","eye_patch","war_paint"],
+    "hairStyle": ["bald","wild_mane","buzz_cut"]
+  },
+  "templateFluxPrompt": "a {gender} minor official, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, ancient chinese government office, scrolls and seals, song dynasty aesthetic, masterpiece"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "builder",
+  "name": "建筑工",
+  "visualTags": "wasteland builder, settlement construction, fortification, scaffold, tools, hardworking, practical, post-apocalyptic reconstruction",
+  "description": "末世建筑工，用废墟中的材料加固聚落防线和建造庇护所，以双手重塑文明根基",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"stocky_strong":3.0,"barrel_chested":3.0,"muscular_broad":3.0,"broad_shouldered":3.0,"athletic_toned":2.5,"chiseled_fit":2.5,"medium":2.5,"tall_athletic":2.5},
+    "temperament": {"steadfast":3.0,"hardworking":3.0,"simple":3.0,"pragmatic":3.0,"jovial":2.5,"disciplined":2.5,"stoic":2.5,"resilient":2.5,"loyal":2.0,"stubborn":2.0,"patient":2.0},
+    "hairStyle": {"short_crop":3.0,"bandana_wrap":3.0,"buzz_cut":3.0,"tied_back_loose":2.5,"choppy_short":2.5,"messy_medium":2.0,"low_ponytail":2.0,"slicked_back":1.5},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"dusty_brown":3.0,"dirty_blonde":2.5,"gray":2.0,"salt_pepper":2.0,"ash_brown":2.5,"faded_black":2.0},
+    "defaultClothes": {"patched_coveralls":3.0,"heavy_work_apron":3.0,"patched_denim_suit":3.0,"scrap_metal_armor":2.0,"tattered_jacket":2.5,"survivor_hoodie_worn":2.0,"scavenger_harness":2.0,"dust_cloak_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.5,"gray":2.5,"green":2.0,"amber":1.5,"deep_blue":2.0,"smoky_quartz":2.0},
+    "skinColor": {"weathered_tan":3.0,"tan":3.0,"sun_kissed":3.0,"dusty_tan":2.5,"olive":2.5,"light_tan":2.5,"fair":1.5,"honey_tan":2.0},
+    "eyeShape": {"almond":2.5,"deep_set":2.5,"round":2.5,"tiger":2.0,"sharp_phoenix":2.0,"narrow":2.0,"eagle":1.5,"downturned":2.0},
+    "eyebrowShape": {"thick":3.0,"straight":3.0,"rugged":2.5,"hero_eyebrow":2.5,"chivalrous_brow":2.0,"steel_brow":2.5,"knitted":2.0,"furrowed":1.5},
+    "faceShape": {"square":3.0,"round":3.0,"stone_face":3.0,"rectangular":2.5,"strong_jawline":2.5,"angular":2.0,"oval":2.0,"chiseled":2.0},
+    "faceFeature": {"none":2.5,"dirt_smudge":3.0,"beard_stubble":2.5,"ruddy":2.5,"scar":2.0,"weathered":2.5,"strong_jaw":2.5,"clean_shaven":2.0},
+    "impression": {"reliable":3.0,"hardworking":3.0,"simple":3.0,"jovial":2.5,"stalwart":2.5,"weathered":2.5,"strong":3.0,"approachable":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","sinister","unhinged","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly","slim"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland builder, {ageDesc}, {bodyType} strong sturdy build, {faceDesc}, wearing patched coveralls and heavy work apron, carrying construction tools, reinforced gloves, {hairStyle} {hairColor} dusty hair, {eyeColor} practical eyes, {skinColor} cement-dusted skin, {temperament} aura, settlement fortification under construction, scaffold, scrap metal walls, teamwork, dusty sky, photorealistic, industrial, masterpiece"
+}

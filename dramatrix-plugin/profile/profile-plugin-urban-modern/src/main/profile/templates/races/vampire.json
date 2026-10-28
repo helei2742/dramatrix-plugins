@@ -1,0 +1,35 @@
+{
+  "race": "vampire",
+  "displayName": "血族",
+  "description": "以血为生的不死贵族，肤色苍白如月，举止优雅而危险，拥有永恒的青春",
+  "defaults": {
+    "skinColor": ["porcelain","pale_yellow","moon_pale","alabaster","ivory"],
+    "eyeColor": ["crimson","ruby","obsidian","purple","ice_blue"],
+    "hairColor": ["black","silver","white","platinum","ink_black"],
+    "bodyType": ["slender_tall","slim","willowy","ethereal_light","lean_fit"]
+  },
+  "weightBias": {
+    "skinColor": {"porcelain":2.5,"moon_pale":2.5,"alabaster":2.0},
+    "eyeColor": {"crimson":2.5,"ruby":2.5,"purple":2.0},
+    "hairColor": {"black":2.5,"silver":2.5,"platinum":2.5},
+    "bodyType": {"slender_tall":2.5,"willowy":2.5},
+    "eyeShape": {"sharp_phoenix":2.5,"deep_set":2.5,"upturned":2.5},
+    "eyebrowShape": {"sword":2.5,"raised":2.5,"distant_mountain":2.0},
+    "noseShape": {"greek":2.5,"aquiline":2.5},
+    "faceShape": {"diamond":2.5,"oval":2.5,"heart":2.0},
+    "impression": {"noble":2.5,"cold":2.5,"sinister":2.5,"delicate":2.0},
+    "temperament": {"cold":2.5,"noble":2.5,"sinister":2.0}
+  },
+  "exclude": {
+    "skinColor": ["wheat","ruddy","bronze","tan","sun_kissed"],
+    "eyeColor": ["amber","gold","fiery_orange"],
+    "hairColor": ["auburn","chestnut","honey","golden"],
+    "bodyType": ["muscular_broad","hulking","plump","stocky"],
+    "temperament": ["warm","innocent"]
+  },
+  "faceDescOverride": {
+    "prepend": "pale face, subtle fangs, ",
+    "append": ""
+  },
+  "templateFluxPrompt": "a vampire {gender}, {ageDesc}, {bodyType}, {faceDesc} with pale skin and subtle fangs, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

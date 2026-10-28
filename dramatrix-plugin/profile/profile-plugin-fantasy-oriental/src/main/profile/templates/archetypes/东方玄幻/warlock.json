@@ -1,0 +1,30 @@
+{
+  "archetype": "warlock",
+  "name": "术士",
+  "visualTags": "禁术,邪能,契约,黑暗魔法",
+  "description": "钻研禁忌之术的术士，以灵魂为契，御使邪能之力",
+  "defaults": {
+    "defaultAccessories": ["ring","mask","tattoo"],
+    "defaultWeapon": ["staff","dagger"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"ethereal_light":2.5,"willowy":2.5,"slender_tall":2.0},
+    "temperament": {"sinister":3.0,"obsessive":3.0,"cold":2.5,"cunning":2.0},
+    "hairStyle": {"spirit_snake":3.0,"wolf_tail":2.0,"flowing_long":2.0,"choppy_short":1.5},
+    "hairColor": {"deep_purple":3.0,"obsidian":2.5,"crimson":2.0,"flame_red":2.0,"midnight_blue":1.5},
+    "defaultClothes": {"dark_cloak":3.0,"purple_robe":3.0,"black_night":2.5},
+    "eyeColor": {"one_red_one_purple":3.0,"blood_red":2.5,"shadow_black":2.5,"heterochromia":2.0},
+    "eyeShape": {"heterochromia":3.0,"fox":2.5,"deep_set":2.5,"wolf":2.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"ghost_brow":2.5,"flame_brow":2.5,"triangular_brow":2.0},
+    "faceShape": {"demon_face":3.0,"snake_face":2.5,"blood_face":2.5,"fox_face":1.5},
+    "faceFeature": {"pale_face":2.5,"tattoo":2.0,"scar":1.5},
+    "impression": {"sinister":3.0,"cold":3.0,"ethereal":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","green_bamboo_sword"],
+    "defaultAccessories": ["abacus","buddha_beads","wine_gourd","hairpin"],
+    "hairStyle": ["bald","child_tuft","two_horns","double_bun"],
+    "temperament": ["innocent","warm","cheerful"]
+  },
+  "templateFluxPrompt": "a {gender} warlock dark mage, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, forbidden dark magic swirling around"
+}

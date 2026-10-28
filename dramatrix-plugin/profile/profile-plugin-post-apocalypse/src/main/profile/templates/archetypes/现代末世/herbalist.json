@@ -1,0 +1,33 @@
+{
+  "archetype": "herbalist",
+  "name": "草药师",
+  "visualTags": "wasteland herbalist, plant gatherer, medicinal herbs, mortar and pestle, botanical knowledge, natural healer, dried plants, post-apocalyptic apothecary",
+  "description": "末世草药师，在废土荒原中采集药草炼制天然药剂，以古老智慧弥补现代医学的缺失",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"lean_wiry":2.5,"slender_tall":2.0,"medium":2.5,"svelte_elegant":2.0,"lean_fit":2.0,"willowy":2.0,"ethereal_light":1.5},
+    "temperament": {"gentle":3.0,"patient":3.0,"observant":3.0,"kind_heart":3.0,"calm":2.5,"tranquil":2.5,"nature_loving":3.0,"altruistic":2.5,"humble":2.5,"wise":2.5,"scholarly":2.0},
+    "hairStyle": {"long_loose":2.5,"low_ponytail":2.5,"half_up":2.5,"loose_half_up":3.0,"side_part_long":2.5,"simple_tie":2.5,"bound_up":2.0,"bangs_short":2.0},
+    "hairColor": {"light_brown":3.0,"chestnut":2.5,"auburn":2.5,"dark_brown":2.5,"ash_brown":2.0,"silver_gray":2.0,"honey_blonde":2.0,"moss_brown":2.5},
+    "defaultClothes": {"dust_cloak_worn":3.0,"nomad_wraps":3.0,"wasteland_ranger_coat":2.5,"scavenger_harness":2.5,"gas_mask_hooded_poncho":2.0,"survivor_hoodie_worn":2.0,"wasteland_medic_vest":2.5,"makeshift_ghillie_suit":2.0},
+    "eyeColor": {"green":3.0,"hazel":3.0,"honey":2.5,"amber":2.5,"dark_brown":2.0,"moss_green":3.0,"jade_green":2.5,"gray":2.0},
+    "skinColor": {"sun_kissed":3.0,"honey_tan":2.5,"light_tan":2.5,"olive":2.5,"fair":2.0,"weathered_tan":2.0,"rose_white":2.0,"dusty_tan":2.0},
+    "eyeShape": {"almond":3.0,"peach_blossom":2.5,"sharp_phoenix":2.5,"deep_set":2.0,"round":2.5,"scholar_eye":2.5,"downturned":2.0,"hunter":2.5},
+    "eyebrowShape": {"willow":3.0,"curved_fine":2.5,"crescent":2.5,"distant_mountain":3.0,"long_eyebrow":2.5,"silkworm":2.0,"auspicious_brow":2.0,"straight":2.0},
+    "faceShape": {"seed_face":3.0,"oval":3.0,"bamboo_leaf_face":2.5,"heart":2.5,"jade_mirror":2.5,"round":2.0,"long":2.0,"angular":1.5},
+    "faceFeature": {"none":3.0,"beauty_mark":2.0,"dimples":2.5,"freckles":2.5,"clean_shaven":2.5,"sharp_features":2.0,"high_cheekbones":2.0,"weathered":1.5},
+    "impression": {"gentle":3.0,"nature_loving":3.0,"humble":2.5,"warm":2.5,"kind":3.0,"tranquil":2.5,"wise":3.0,"simple":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","war_hammer","axe","flail","staff_monk"],
+    "defaultAccessories": ["eye_patch","spirit_beast_bag","military_seal","mask","bone_necklace"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","buzz_cut","savage_bun"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","biker_leather_armor","ammo_belt_bandolier"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","feral","cold","ruthless"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","plump_soft","muscular_broad"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland herbalist, {ageDesc}, {bodyType} gentle build, {faceDesc}, wearing natural fabric cloak and wrapped clothing, carrying basket of dried herbs, mortar and pestle, botanical specimens, {hairStyle} {hairColor} hair, {eyeColor} kind observant eyes, {skinColor} sun-kissed skin, {temperament} aura, makeshift apothecary with hanging dried plants, herbal jars, warm natural light, photorealistic, serene, masterpiece"
+}

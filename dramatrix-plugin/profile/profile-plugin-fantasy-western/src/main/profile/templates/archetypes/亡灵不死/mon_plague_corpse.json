@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_plague_corpse",
+  "name": "疫尸",
+  "visualTags": "脓疮遍体,蝇群环绕,瘟毒扩散,肿胀腐烂",
+  "description": "承载瘟疫的行尸，一路播散毒雾，凡沾染者七日必亡",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"several_centuries":2.5,"century_old":2.0,"thousand_years":1.5,"immortal_ancient":1.5},
+    "hairColor": {"none":3.0,"white":2.5,"ash_blond":2.0,"gray":2.0,"charcoal":1.5},
+    "skinColor": {"ghostly_pale":3.0,"chalk_white":2.5,"pale_ash":2.0,"stone_gray":1.5,"age_spotted":1.5,"pale_green":3.0,"moss_green":2.5,"blue_gray":1.5},
+    "eyeColor": {"white_opaque":3.0,"blood_red":2.5,"shadow_black":2.0,"moonlight":1.5,"pearl_gray":1.5},
+    "defaultClothes": {"corpse_robe":3.0,"patchwork_rags":2.5,"dark_cloak":2.0,"charcoal_hooded_cloak":1.5,"chainmail":1.5},
+    "temperament": {"desolate":2.5,"cold":2.5,"grim":1.5,"sinister":2.0,"stoic":1.5,"unhinged":2.5,"vicious":2.0},
+    "impression": {"ghostly":2.0,"cold":2.0,"lonely":2.0,"sinister":1.5,"ancient_soul":1.5,"sickness":3.5,"bitter":1.5},
+    "eyebrowShape": {"faint":2.5,"ghost_brow":2.5,"wispy_brow":2.0,"broken_brow":1.5},
+    "faceShape": {"long":2.5,"seed_face":2.0,"sharp":1.5},
+    "eyeShape": {"empty_eye":2.5,"white_eye":2.5,"deep_set":2.0},
+    "faceFeature": {"gaunt_face":3.0,"veins":3.0,"burn_scar":2.5,"pale_face":2.0,"plump_face":2.0,"age_spots":1.5},
+    "lipShape": {"warped_lip":3.0,"dry_cracked":2.5,"toothed_lip":2.0},
+    "noseShape": {"flat":2.5,"bony":2.0,"ghost_nose":1.5},
+    "bodyType": {"plump_soft":2.5,"soft_round":2.5,"hunched":2.0,"gnarled_tough":1.5},
+    "heightDesc": {"medium_short":2.5,"hunched_short":2.0,"average_man":1.5},
+    "hairStyle": {"bald":2.5,"messy_bun":2.0,"choppy_short":1.5},
+    "defaultWeapon": {"none":3.0,"sickle":3.0,"claws":3.0},
+    "defaultAccessories": {"none":2.5,"talisman_pouch":2.5,"leather_belt":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["head_flower","phoenix_hairpin","hair_ribbon"],
+    "temperament": ["cheerful","jovial","warm","innocent","scholarly","noble","dignified","radiant"],
+    "faceFeature": ["dimples","ruddy","freckles"],
+    "defaultWeapon": ["flying_sword","guqin","ink_brush","bow"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; bloated pustule-covered body, swarming flies, seeping plague miasma; dark fantasy undead art, necrotic gloom"
+}

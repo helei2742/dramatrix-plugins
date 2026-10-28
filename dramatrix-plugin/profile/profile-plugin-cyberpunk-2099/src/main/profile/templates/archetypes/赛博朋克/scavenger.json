@@ -1,0 +1,47 @@
+{
+  "archetype": "scavenger",
+  "category": "赛博朋克",
+  "name": "拾荒者",
+  "visualTags": "拾荒, 废墟, 幸存",
+  "description": "在废墟与垃圾场里淘金的底层幸存者。",
+  "defaults": {
+    "defaultClothes": [
+      "foil_wrap",
+      "ragged_poncho"
+    ],
+    "skinColor": [
+      "tan",
+      "dark"
+    ],
+    "temperament": [
+      "cynical"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "foil_wrap": 2.5,
+      "ragged_poncho": 2.0
+    },
+    "skinColor": {
+      "tan": 2.0,
+      "dark": 2.0
+    },
+    "impression": {
+      "scrap_shrewd": 3.0,
+      "gutter_grit": 2.0
+    },
+    "temperament": {
+      "cynical": 2.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "holographic_suit",
+      "corp_armor"
+    ],
+    "temperament": [
+      "charismatic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

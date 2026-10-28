@@ -1,0 +1,47 @@
+{
+  "archetype": "mech_pilot",
+  "category": "赛博朋克",
+  "name": "机甲驾驶员",
+  "visualTags": "机甲, 重装, 驾驶",
+  "description": "驾驭钢铁巨兽、碾碎战线的重装王牌。",
+  "defaults": {
+    "bodyType": [
+      "heavy_frame",
+      "augmented_bulk"
+    ],
+    "cyberImplant": [
+      "gorilla_arms"
+    ],
+    "defaultClothes": [
+      "corp_armor"
+    ],
+    "temperament": [
+      "stoic"
+    ]
+  },
+  "weightBias": {
+    "bodyType": {
+      "heavy_frame": 3.0,
+      "augmented_bulk": 2.5
+    },
+    "cyberImplant": {
+      "gorilla_arms": 2.5
+    },
+    "defaultClothes": {
+      "corp_armor": 2.5
+    },
+    "impression": {
+      "war_hardened": 2.5
+    }
+  },
+  "exclude": {
+    "bodyType": [
+      "slender",
+      "petite"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

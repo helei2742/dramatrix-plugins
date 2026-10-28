@@ -1,0 +1,70 @@
+{
+  "race": "genemod",
+  "displayName": "基因改造人",
+  "description": "通过基因编辑强化或异化的个体，皮肤上浮现生物荧光，形态介于人与异种之间。",
+  "defaults": {
+    "skinColor": [
+      "iridescent",
+      "tattooed_neon",
+      "pale_cyan"
+    ],
+    "eyeColor": [
+      "snake_gold",
+      "emerald"
+    ],
+    "faceShape": [
+      "feral_muzzle_face",
+      "narrow_wedge"
+    ],
+    "bodyType": [
+      "lithe",
+      "wiry"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "iridescent": 2.5,
+      "tattooed_neon": 2.0
+    },
+    "eyeColor": {
+      "snake_gold": 2.5,
+      "emerald": 2.0
+    },
+    "faceShape": {
+      "feral_muzzle_face": 2.0,
+      "narrow_wedge": 2.0
+    },
+    "bodyType": {
+      "lithe": 2.0,
+      "wiry": 2.0
+    },
+    "impression": {
+      "feral_edge": 2.0,
+      "beast_wary": 2.0
+    }
+  },
+  "exclude": {
+    "chromeSignature": [
+      "full_chrome_mask",
+      "half_skull_plate",
+      "serial_barcode_face"
+    ],
+    "impression": [
+      "corporate_polish",
+      "idol_radiance"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "genetically altered features with bioluminescent skin",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "以生物改造为主，排斥重型机械 chrome"
+    },
+    {
+      "description": "可具兽化特征"
+    }
+  ]
+}

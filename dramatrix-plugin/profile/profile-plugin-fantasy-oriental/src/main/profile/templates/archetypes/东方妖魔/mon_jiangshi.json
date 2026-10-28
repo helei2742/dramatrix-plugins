@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_jiangshi",
+  "name": "僵尸",
+  "visualTags": "官服尸装,僵直跳跃,乌黑指甲,额贴符纸",
+  "description": "尸气不散而起尸的僵硬怪物，指甲乌黑、獠牙外露，只识生人气息",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"thousand_years":2.0,"unknown_age":2.0,"immortal_ancient":1.5},
+    "hairColor": {"jet_black":3.0,"inky_blue":2.0,"crimson":2.0,"white":1.5,"silver":1.5},
+    "skinColor": {"pale_porcelain":2.5,"moon_white":2.0,"pale_ash":3.0,"jade":1.5,"fox_fur":1.5,"blue_gray":2.5,"ghostly_pale":2.0},
+    "eyeColor": {"slit_pupil_gold":3.0,"blood_red":2.5,"amber":2.0,"crimson":2.0,"obsidian":1.5,"white_opaque":3.5,"shadow_black":2.0,"pearl_gray":1.5},
+    "defaultClothes": {"smoke_gauze":2.5,"black_night":2.0,"blood_dress":2.0,"dark_cloak":1.5,"wild_beast_skin":1.5},
+    "temperament": {"sinister":2.5,"seductive":2.0,"vicious":2.0,"mysterious":2.0,"brutal":1.5,"stoic":2.5,"cold":2.0,"unhinged":1.5},
+    "impression": {"demon_charm":3.0,"sinister":2.0,"demonic_majesty":2.0,"mysterious":1.5,"ghostly":3.0,"cold":1.5},
+    "eyebrowShape": {"demon_eyebrow":3.0,"sword":2.0,"raised":1.5,"hook_brow":1.5},
+    "faceShape": {"long":2.5,"seed_face":2.0,"sharp":1.5},
+    "eyeShape": {"empty_eye":2.5,"white_eye":2.5,"deep_set":2.0},
+    "faceFeature": {"gaunt_face":3.0,"veins":2.5,"burn_scar":2.0,"pale_face":2.0},
+    "lipShape": {"warped_lip":3.0,"dry_cracked":2.5,"toothed_lip":2.0},
+    "noseShape": {"flat":2.5,"bony":2.0,"ghost_nose":1.5},
+    "bodyType": {"solid_robust":2.5,"compact_dense":2.0,"gnarled_tough":2.0,"thin_bony":1.5},
+    "heightDesc": {"average_man":2.5,"medium_170":2.0,"hunched_short":1.5},
+    "hairStyle": {"bound_up":2.5,"topknot_loose":2.0,"messy_bun":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0},
+    "defaultAccessories": {"talisman_pouch":2.5,"hat":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["innocent","kind_heart","pure_heart","eloquent","charismatic","seductive"],
+    "defaultWeapon": ["guqin","ink_brush","fan","bow"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; stiff rigid hopping posture, long blackened claws, paper talisman on forehead; oriental yaoguai demon art, ink and mist atmosphere"
+}

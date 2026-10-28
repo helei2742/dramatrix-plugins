@@ -1,0 +1,30 @@
+{
+  "archetype": "guardian",
+  "name": "守护者",
+  "visualTags": "巨盾,重铠,坚不可摧,守护誓言",
+  "description": "坚如磐石的守护者，以身躯和巨盾守护身后的一切",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","ring"],
+    "defaultWeapon": ["iron_sword","spear","staff_monk"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"tall_athletic":3.0,"sturdy":2.5},
+    "temperament": {"stoic":3.0,"loyal":3.0,"calm":2.5,"warm":1.5,"resolute":2.0},
+    "hairStyle": {"buzz_cut":2.5,"short_crop":2.5,"warrior_topknot":2.5,"bound_up":2.0,"simple_tie":1.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"charcoal":1.5,"gray":1.0},
+    "defaultClothes": {"golden_armor":3.0,"leather_armor":2.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"copper":2.0,"smoky_quartz":1.5},
+    "eyeShape": {"round":2.5,"tiger":2.5,"almond":2.0,"dragon":1.5},
+    "eyebrowShape": {"steel_brow":3.0,"wide_spaced":2.5,"thick":2.5,"straight":2.0},
+    "faceShape": {"stone_face":3.0,"pagoda_face":3.0,"square":2.5,"rectangular":2.0,"bronze_mirror":2.0},
+    "faceFeature": {"none":2.5,"ruddy":2.0,"scar":1.5},
+    "impression": {"loyal":3.0,"resolute":3.0,"weathered":2.0,"heroic":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","fan","whisk","none"],
+    "defaultAccessories": ["abacus","earring","hairpin"],
+    "hairStyle": ["bald","cloud_bun","double_bun","child_tuft"],
+    "temperament": ["innocent","sinister"]
+  },
+  "templateFluxPrompt": "a {gender} guardian protector, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, holding a massive shield, defensive warrior"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_serpent_demon",
+  "name": "蛇妖",
+  "visualTags": "半人半蛇,蛇鳞冷光,毒信吐雾,盘绕缠杀",
+  "description": "下半身化为巨蟒的蛇族妖物，鳞甲泛着冷光，一口毒信足以蚀骨",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"thousand_years":2.0,"unknown_age":2.0,"immortal_ancient":1.5},
+    "hairColor": {"jet_black":3.0,"inky_blue":2.0,"crimson":2.0,"white":1.5,"silver":1.5},
+    "skinColor": {"pale_porcelain":2.5,"moon_white":2.0,"pale_ash":2.0,"jade":1.5,"fox_fur":1.5,"scaly_green":3.5,"pale_green":2.0},
+    "eyeColor": {"slit_pupil_gold":3.0,"blood_red":2.5,"amber":2.0,"crimson":2.0,"obsidian":1.5},
+    "defaultClothes": {"smoke_gauze":2.5,"black_night":2.0,"blood_dress":2.0,"dark_cloak":1.5,"wild_beast_skin":1.5},
+    "temperament": {"sinister":3.0,"seductive":2.0,"vicious":2.0,"mysterious":2.0,"brutal":1.5},
+    "impression": {"demon_charm":3.0,"sinister":2.5,"demonic_majesty":2.0,"mysterious":1.5},
+    "eyebrowShape": {"demon_eyebrow":3.0,"sword":2.0,"raised":1.5,"hook_brow":1.5},
+    "bodyType": {"serpentine":3.5,"willowy":2.0,"lithe_agile":1.5},
+    "heightDesc": {"willowy_tall":2.5,"tall_lithe":2.0},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "faceShape": {"snake_face":3.0,"sharp":2.0,"long":1.5},
+    "eyeShape": {"snake_eye":3.5,"vertical_pupil_eye":2.5,"narrow":1.5},
+    "lipShape": {"snake_lip":3.0,"thin":2.0,"fanged_lip":1.5},
+    "noseShape": {"snake_nose":3.0,"flat":2.0},
+    "faceFeature": {"scale_face":3.5,"pale_face":1.5},
+    "defaultWeapon": {"poison_needle":3.0,"chain_whip":3.0,"forked_spear":3.0},
+    "defaultAccessories": {"earring":2.5,"necklace_amber":2.5,"anklet_silver":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["innocent","kind_heart","pure_heart"],
+    "defaultWeapon": ["war_hammer","axe","two_hand_sword"],
+    "bodyType": ["short_stout","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; serpentine lower body covered in scales, forked tongue; oriental yaoguai demon art, ink and mist atmosphere"
+}

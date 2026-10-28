@@ -1,0 +1,36 @@
+{
+  "race": "werewolf",
+  "displayName": "狼人",
+  "description": "拥有狼之血统的变身种族，可在人形与狼形之间切换，毛发浓密，野性十足",
+  "defaults": {
+    "skinColor": ["tan","ruddy","dark","wheat","swarthy"],
+    "eyeColor": ["amber","gold","dark_brown","crimson","emerald"],
+    "hairColor": ["dark_brown","black","gray","auburn","chestnut"],
+    "bodyType": ["muscular_broad","tall_athletic","lean_fit","hulking"]
+  },
+  "weightBias": {
+    "skinColor": {"tan":2.5,"ruddy":2.5,"dark":2.0},
+    "eyeColor": {"amber":2.5,"gold":2.5},
+    "hairColor": {"dark_brown":2.5,"black":2.5,"gray":2.0},
+    "bodyType": {"muscular_broad":2.5,"tall_athletic":2.5,"lean_fit":2.5},
+    "eyeShape": {"wolf":2.5,"deep_set":2.5,"tiger":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"sword":2.0},
+    "faceShape": {"rectangular":2.5,"square":2.5},
+    "faceFeature": {"beard_stubble":2.5,"scar":2.5,"beard_full":2.0},
+    "impression": {"wild":2.5,"resolute":2.5,"heroic_open":2.0},
+    "temperament": {"wild":2.5,"warm":2.0,"stoic":2.0}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","fair","peach","moon_pale"],
+    "eyeColor": ["pearl","starry","silver"],
+    "hairColor": ["platinum","golden","light_pink","honey"],
+    "bodyType": ["slender_tall","petite","willowy","ethereal_light","slim"],
+    "lipShape": ["rose_petal","cherry","thin"],
+    "temperament": ["refined","delicate","innocent","ethereal"]
+  },
+  "faceDescOverride": {
+    "prepend": "sharp wolf eyes, thick mane, ",
+    "append": ""
+  },
+  "templateFluxPrompt": "a werewolf {gender}, {ageDesc}, {bodyType}, {faceDesc} with wolf-like features and thick mane, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} wolf eyes, {skinColor} skin, {temperament} aura"
+}

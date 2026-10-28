@@ -1,0 +1,24 @@
+{
+  "archetype": "scholar",
+  "name": "书生",
+  "visualTags": "书生,文士",
+  "description": "饱读诗书的文人墨客，温文尔雅",
+  "defaults": {
+    "defaultAccessories": ["jade_pendant","fan"],
+    "defaultWeapon": ["fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":2.0,"medium":1.5,"tall_athletic":0.1},
+    "temperament": {"gentle":3.0,"refined":3.0,"calm":2.0,"cunning":0.2},
+    "hairStyle": {"bound_up":3.0,"half_up":1.5},
+    "hairColor": {"black":3.0,"dark_brown":1.0,"gray":0.5},
+    "defaultClothes": {"blue_robe":3.0,"white_robe":2.5,"green_robe":1.5,"linen_simple":1.5},
+    "eyeShape": {"sharp_phoenix":2.5,"phoenix":2.0,"downturned":1.0},
+    "eyebrowShape": {"crescent":2.0,"straight":2.0,"distant_mountain":2.0},
+    "impression": {"refined":3.0,"gentle":3.0,"delicate":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","hoe"]
+  },
+  "templateFluxPrompt": "a {gender} scholar, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

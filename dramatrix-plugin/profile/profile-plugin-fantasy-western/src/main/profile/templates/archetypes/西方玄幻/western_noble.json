@@ -1,0 +1,34 @@
+{
+  "archetype": "western_noble",
+  "name": "西方贵族",
+  "visualTags": "western noble, aristocratic, regal",
+  "description": "欧洲贵族，出身显赫，举手投足间尽显华贵与威严",
+  "defaults": {
+    "defaultAccessories": ["ring","sash_belt","hair_crown","earring"],
+    "defaultWeapon": ["rapier","fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":2.5,"slim":2.5,"svelte_elegant":2.5,"willowy":1.5,"lean_fit":1.5,"athletic_toned":1.5,"medium":1.0,"plump_soft":1.0},
+    "temperament": {"noble":3.0,"haughty":2.5,"majestic":2.5,"calm":2.0,"arrogant":2.0,"calculating":2.0,"flamboyant":1.5,"eloquent":1.5,"decadent":1.5,"reserved":2.0,"overbearing":1.5,"cold":1.0},
+    "hairStyle": {"wavy_long":2.5,"loose_curls":2.5,"updo_elegant":2.5,"flowing_long":2.0,"braid_crown":2.0,"side_part_long":2.0,"slicked_back":1.5,"center_part_long":1.5,"low_ponytail":1.5,"loose_half_up":1.0,"silver_flow":1.0},
+    "hairColor": {"silver":2.5,"golden":2.5,"platinum_blond":2.5,"honey_blond":2.0,"ash_blond":2.0,"auburn":1.5,"chestnut":1.5,"jet_black":1.0,"dark_brown":1.0,"frost_white":1.0,"rose_gold":1.0},
+    "eyeColor": {"sapphire":3.0,"deep_blue":2.5,"emerald":2.5,"violet":1.5,"hazel":1.5,"jade_green":1.5,"amber":1.0,"gray":1.0,"ice_blue":1.5,"moonlight":1.0},
+    "skinColor": {"fair":3.0,"pale_porcelain":3.0,"ivory":2.5,"rose_white":2.0,"moon_white":1.5,"pearl":1.5,"jade":1.0},
+    "defaultClothes": {"velvet_doublet":3.0,"ermine_cloak":2.5,"silk_embroider":2.5,"brocade_hanfu":2.0,"merchant_robe":2.0,"palace_dress":2.0,"fox_fur_coat":1.5,"moonlight_gown":1.5,"spirit_silk":1.0,"red_dress":1.0,"ice_silk_dress":1.0},
+    "faceFeature": {"none":2.5,"beauty_mark":2.0,"clean_shaven":2.0,"dimples":1.5,"high_cheekbones":2.0,"delicate_features":1.5},
+    "faceShape": {"oval":3.0,"heart":2.5,"almond":2.5,"angular":2.0,"refined":1.5,"round":1.0},
+    "eyeShape": {"almond":3.0,"round":2.0,"deep_set":1.5,"phoenix":1.0,"peach_blossom":1.0,"upturned":1.5},
+    "eyebrowShape": {"arched":2.5,"straight":2.0,"thin":2.0,"well_groomed":2.5,"distant_mountain":1.0,"moth_antenna":1.0},
+    "impression": {"noble":3.0,"refined":3.0,"majestic":2.5,"elegant":2.5,"handsome":2.0,"dignified":2.0,"proud":1.5,"graceful":1.5,"cold":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","sickle","meteor_hammer","axe","claws","halberd","war_hammer"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","bandolier","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","warrior_topknot","dao_bun","child_tuft","wolf_tail"],
+    "temperament": ["brutal","wild","reckless","lazy","sincere","jovial"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","chainmail","plate_armor","bamboo_hat_cape","training_gear","wild_beast_skin"],
+    "bodyType": ["muscular_broad","bulky_massive","towering_giant","barrel_chested","stocky_strong"],
+    "faceFeature": ["scar","beard_full","ruddy","weathered"]
+  },
+  "templateFluxPrompt": "a {gender} western noble aristocrat, {ageDesc}, {bodyType} build, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, medieval european aristocrat, grand castle interior, chandelier, velvet drapes, heraldic crest, high fantasy art, masterpiece"
+}

@@ -1,0 +1,35 @@
+{
+  "race": "oni",
+  "displayName": "鬼族-东瀛",
+  "description": "东瀛之地的鬼族，头生鬼角，体格魁梧，嗜酒好战，充满蛮荒之力",
+  "defaults": {
+    "skinColor": ["crimson","ruddy","dark","obsidian","pale_blue"],
+    "eyeColor": ["gold","crimson","black","amber","purple"],
+    "hairColor": ["white","black","red","silver","blue_black"],
+    "bodyType": ["muscular_broad","hulking","tall_athletic","stocky"]
+  },
+  "weightBias": {
+    "skinColor": {"crimson":2.5,"ruddy":2.5,"obsidian":2.0},
+    "eyeColor": {"gold":2.5,"crimson":2.5},
+    "hairColor": {"white":2.5,"black":2.5,"red":2.5},
+    "bodyType": {"muscular_broad":2.5,"hulking":2.5},
+    "eyeShape": {"deep_set":2.5,"tiger":2.5,"upturned":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"sword":2.5},
+    "faceShape": {"square":2.5,"rectangular":2.5},
+    "faceFeature": {"scar":2.5,"tattoo":2.5,"beard_stubble":2.0},
+    "impression": {"wild":2.5,"overbearing":2.5,"sinister":2.5},
+    "temperament": {"wild":2.5,"overbearing":2.5,"stoic":1.5}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","fair","ivory","peach"],
+    "eyeColor": ["pearl","starry","moonlit"],
+    "hairColor": ["golden","platinum","honey","light_pink"],
+    "bodyType": ["slender_tall","petite","willowy","ethereal_light","slim"],
+    "temperament": ["innocent","gentle","delicate"]
+  },
+  "faceDescOverride": {
+    "prepend": "oni horns, ",
+    "append": ", tusks visible"
+  },
+  "templateFluxPrompt": "an oni {gender}, {ageDesc}, {bodyType}, {faceDesc} with oni horns and sharp fangs, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

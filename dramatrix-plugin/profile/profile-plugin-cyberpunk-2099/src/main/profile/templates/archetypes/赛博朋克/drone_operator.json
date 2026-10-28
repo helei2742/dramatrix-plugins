@@ -1,0 +1,43 @@
+{
+  "archetype": "drone_operator",
+  "category": "赛博朋克",
+  "name": "无人机手",
+  "visualTags": "无人机, 远程, 控场",
+  "description": "以蜂群代之眼、代之手的远程控场者。",
+  "defaults": {
+    "defaultAccessories": [
+      "data_glove"
+    ],
+    "cyberImplant": [
+      "neural_coprocessor"
+    ],
+    "temperament": [
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "defaultAccessories": {
+      "data_glove": 3.0
+    },
+    "cyberImplant": {
+      "neural_coprocessor": 2.5
+    },
+    "impression": {
+      "data_trance": 2.5,
+      "surgeon_precise": 2.0
+    },
+    "temperament": {
+      "calm": 2.5
+    }
+  },
+  "exclude": {
+    "bodyType": [
+      "bulky",
+      "augmented_bulk"
+    ],
+    "temperament": [
+      "manic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

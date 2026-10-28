@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_blood_fiend",
+  "name": "血魔",
+  "visualTags": "血雾缭绕,獠牙滴血,猩红瞳孔,饮血愈伤",
+  "description": "以鲜血为食也以鲜血为甲的魔物，每饮一口伤口便愈合一分",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":2.5,"crimson":3.5,"cosmic":2.0,"deep_purple":1.5,"none":1.5},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":2.5,"ebony":2.0,"chalk_white":3.0,"reddish_bronze":2.0,"pale_ash":2.5},
+    "eyeColor": {"blood_red":3.5,"slit_pupil_red":3.0,"shadow_black":2.0,"cosmic":2.0,"sunset_gold":1.5,"ruby":2.0},
+    "defaultClothes": {"black_night":2.0,"dark_cloak":2.5,"golden_armor":2.0,"war_general_armor":2.0,"burgundy_velvet_cloak":2.5,"blood_dress":3.0,"crimson_brocade_robe":1.5},
+    "temperament": {"overbearing":3.0,"sinister":2.5,"majestic":2.0,"ruthless":2.5,"fanatical":2.0,"decadent":3.0,"seductive":2.5},
+    "impression": {"demonic_majesty":3.0,"domineering":2.5,"sinister":2.0,"majestic":1.5,"bloodthirsty":3.5,"demon_charm":2.5},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "faceShape": {"demon_face":3.0,"sharp":2.0,"inverted_triangle":1.5},
+    "eyeShape": {"crimson_eye":2.5,"vertical_pupil_eye":2.5,"abyss_eye":2.0,"narrow":1.5},
+    "faceFeature": {"double_horn":3.0,"demon_mark":2.5,"horn":1.5,"veins":2.5,"pale_face":2.5},
+    "lipShape": {"demon_lip":3.0,"fanged_lip":3.5,"sneer_lip":2.0,"red_lip":3.0},
+    "noseShape": {"demon_nose":3.0,"aquiline":1.5},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "defaultWeapon": {"claws":3.0,"whip_dagger":3.0,"chain_whip":3.0},
+    "defaultAccessories": {"blood_stone_amulet":2.5,"gold_chain":2.5,"ring":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart","humble","innocent","altruistic"],
+    "defaultWeapon": ["hoe","pole"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; swirling blood mist, dripping fangs, crimson slit pupils, wounds sealing as it feeds; abyssal demon lord art, hellfire and ruin"
+}

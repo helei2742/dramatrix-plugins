@@ -1,0 +1,28 @@
+{
+  "attribute": "skinColor",
+  "displayName": "肤色",
+  "options": [
+    {"id":"wheat","value":"小麦色","genderBias":{"男":2.0,"女":1.0},"raceTags":["人族","妖族"],"archetypeTags":[],"ageTags":[],"tags":["小麦","健康","阳刚"]},
+    {"id":"fair","value":"白皙","genderBias":{"男":1.0,"女":2.5},"raceTags":["人族","精灵","灵族"],"archetypeTags":[],"ageTags":[],"tags":["白皙","细腻","高贵"]},
+    {"id":"bronze","value":"古铜色","genderBias":{"男":2.0,"女":0.2},"raceTags":["人族","矮人","妖族"],"archetypeTags":[],"ageTags":[],"tags":["古铜","粗犷","阳刚"]},
+    {"id":"pale_yellow","value":"黄白","genderBias":{"男":1.0,"女":1.0},"raceTags":["人族"],"archetypeTags":[],"ageTags":[],"tags":["黄白","普通","常见"]},
+    {"id":"ruddy","value":"红润","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","妖族","矮人"],"archetypeTags":[],"ageTags":["child","teen"],"tags":["红润","健康","活力"]},
+    {"id":"dark","value":"黝黑","genderBias":{"男":2.0,"女":0.3},"raceTags":["人族","妖族","魔族"],"archetypeTags":[],"ageTags":[],"tags":["黝黑","粗犷","劳作"]},
+    {"id":"pale_porcelain","value":"瓷白","genderBias":{"男":0.5,"女":3.0},"raceTags":["人族","灵族","精灵"],"archetypeTags":[],"ageTags":["teen","young_adult"],"tags":["瓷白","细腻","精致"]},
+    {"id":"honey_tan","value":"蜜色","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","妖族","半精灵"],"archetypeTags":[],"ageTags":["young_adult","adult"],"tags":["蜜色","温暖","健康"]},
+    {"id":"olive","value":"橄榄色","genderBias":{"男":1.5,"女":1.0},"raceTags":["人族","半精灵","妖族"],"archetypeTags":[],"ageTags":[],"tags":["橄榄","自然","健康"]},
+    {"id":"rose_white","value":"白里透红","genderBias":{"男":0.3,"女":3.0},"raceTags":["人族","精灵","灵族"],"archetypeTags":[],"ageTags":["child","teen","young_adult"],"tags":["白里透红","粉嫩","娇美"]},
+    {"id":"pale_ash","value":"灰白","genderBias":{"男":1.0,"女":0.5},"raceTags":["人族","灵族","鬼族"],"archetypeTags":[],"ageTags":["elder"],"tags":["灰白","苍老","沧桑"]},
+    {"id":"ebony","value":"乌木色","genderBias":{"男":1.0,"女":1.0},"raceTags":["魔族","妖族","鬼族"],"archetypeTags":[],"ageTags":[],"tags":["乌木","深沉","神秘"]},
+    {"id":"deep_purple_hue","value":"暗紫肤色","genderBias":{"男":1.0,"女":0.5},"raceTags":["魔族","鬼族","元素族"],"archetypeTags":[],"ageTags":[],"tags":["暗紫","妖异","黑暗"]},
+    {"id":"ghostly_pale","value":"惨白","genderBias":{"男":0.5,"女":0.5},"raceTags":["鬼族","鬼族-东瀛","魔族"],"archetypeTags":[],"ageTags":[],"tags":["惨白","鬼魅","可怖"]},
+    {"id":"sun_kissed","value":"日晒棕","genderBias":{"男":2.0,"女":0.5},"raceTags":["人族","妖族"],"archetypeTags":[],"ageTags":[],"tags":["日晒","健康","阳光"]},
+    {"id":"golden_tan","value":"金棕色","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","精灵","半精灵"],"archetypeTags":[],"ageTags":["young_adult","adult"],"tags":["金棕","温暖","光芒"]},
+    {"id":"chalk_white","value":"粉笔白","genderBias":{"男":0.5,"女":0.5},"raceTags":["魔族","鬼族","灵族"],"archetypeTags":[],"ageTags":[],"tags":["粉笔白","病态","不死"]},
+    {"id":"translucent","value":"半透明","genderBias":{"男":0.3,"女":0.5},"raceTags":["灵族","元素族","仙灵","鬼族"],"archetypeTags":[],"ageTags":[],"tags":["半透","虚幻","灵体"]},
+    {"id":"age_spotted","value":"苍老斑驳","genderBias":{"男":1.0,"女":0.5},"raceTags":["人族","矮人","灵族"],"archetypeTags":[],"ageTags":["elder","ancient"],"tags":["斑驳","衰老","暮年"]},
+    {"id":"scarred_bronze","value":"古铜带伤疤","genderBias":{"男":2.5,"女":0.1},"raceTags":["人族","魔族","妖族"],"archetypeTags":[],"ageTags":["adult","mature"],"tags":["伤疤","战痕","老练"]},
+    {"id":"phosphor_white","value":"磷光白","genderBias":{"男":0.3,"女":0.5},"raceTags":["鬼族","鬼族-东瀛","元素族"],"archetypeTags":[],"ageTags":[],"tags":["磷光","幽明","鬼魅"]},
+    {"id":"weathered_tan","value":"风霜色","genderBias":{"男":2.0,"女":0.3},"raceTags":["人族","妖族","矮人"],"archetypeTags":[],"ageTags":["adult","elder"],"tags":["风霜","沧桑","历练"]}
+  ]
+}

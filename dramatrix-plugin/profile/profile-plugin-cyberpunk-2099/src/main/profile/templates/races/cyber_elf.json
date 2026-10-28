@@ -1,0 +1,77 @@
+{
+  "race": "cyber_elf",
+  "displayName": "义体精灵",
+  "description": "精灵族与义体改造的融合体，尖耳嵌有数据接口，长生且冷峻，兼具优雅与科技。",
+  "defaults": {
+    "skinColor": [
+      "pale_cyan",
+      "synthetic_pale"
+    ],
+    "eyeColor": [
+      "emerald",
+      "ice_blue"
+    ],
+    "hairColor": [
+      "silver_white",
+      "neon_pink"
+    ],
+    "bodyType": [
+      "slender",
+      "slim"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "pale_cyan": 2.5,
+      "synthetic_pale": 2.0
+    },
+    "hairColor": {
+      "silver_white": 2.5,
+      "neon_pink": 2.0
+    },
+    "eyeColor": {
+      "emerald": 2.5,
+      "ice_blue": 2.0
+    },
+    "bodyType": {
+      "slender": 2.5,
+      "slim": 2.0
+    },
+    "faceShape": {
+      "clean_oval": 2.5,
+      "soft_diamond": 2.0
+    },
+    "impression": {
+      "chrome_aloof": 2.5,
+      "synthetic_perfect": 2.0
+    }
+  },
+  "exclude": {
+    "skinColor": [
+      "dark",
+      "tan"
+    ],
+    "bodyType": [
+      "bulky",
+      "heavy_frame",
+      "augmented_bulk"
+    ],
+    "faceShape": [
+      "brutal_slab",
+      "boxy_jaw"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "pointed ears with embedded data jacks",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "尖耳为标志性特征，强制 prepend 数据接口描述"
+    },
+    {
+      "description": "排斥粗犷体型与暗肤色"
+    }
+  ]
+}

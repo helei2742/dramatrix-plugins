@@ -1,0 +1,210 @@
+{
+  "attribute": "defaultWeapon",
+  "displayName": "默认武器",
+  "options": [
+    {
+      "id": "smart_pistol",
+      "value": "智能手枪",
+      "description": "自动锁敌的制导手枪",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "手枪",
+        " 智能",
+        " 远程"
+      ]
+    },
+    {
+      "id": "monokatana",
+      "value": "单分子刀",
+      "description": "刃口单分子厚的斩切武士刀",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "刀",
+        " 单分子",
+        " 近战"
+      ]
+    },
+    {
+      "id": "mantis_blade_w",
+      "value": "螳螂刃",
+      "description": "内藏前臂的弹出利刃",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "刃",
+        " 义体",
+        " 近战"
+      ]
+    },
+    {
+      "id": "tech_shotgun",
+      "value": "科技霰弹",
+      "description": "穿透护甲的智能霰弹枪",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "霰弹",
+        " 科技",
+        " 近战"
+      ]
+    },
+    {
+      "id": "railgun",
+      "value": "磁轨炮",
+      "description": "肩扛式电磁狙击炮",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "磁轨",
+        " 狙击",
+        " 重型"
+      ]
+    },
+    {
+      "id": "cyber_claws",
+      "value": "义体爪",
+      "description": "十指弹出的猎杀利爪",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "爪",
+        " 义体",
+        " 猎杀"
+      ]
+    },
+    {
+      "id": "emp_grenade",
+      "value": "EMP手雷",
+      "description": "瘫痪义体与网络的脉冲雷",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "EMP",
+        " 手雷",
+        " 脉冲"
+      ]
+    },
+    {
+      "id": "net_hacker",
+      "value": "入侵模块",
+      "description": "皮下植入的网络破解器",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "黑客",
+        " 植入",
+        " 网络"
+      ]
+    },
+    {
+      "id": "plasma_rifle",
+      "value": "等离子步枪",
+      "description": "高温等离子射流的步枪",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "等离子",
+        " 步枪",
+        " 能量"
+      ]
+    },
+    {
+      "id": "grapple_hook",
+      "value": "抓钩",
+      "description": "快速位移的腕部抓钩",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "抓钩",
+        " 位移",
+        " 机动"
+      ]
+    },
+    {
+      "id": "thrown_shuriken",
+      "value": "投刃",
+      "description": "义体弹射的致命飞刃",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "飞刃",
+        " 投掷",
+        " 暗器"
+      ]
+    },
+    {
+      "id": "heavy_smg",
+      "value": "重型冲锋枪",
+      "description": "高射速镇压用冲锋枪",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "冲锋枪",
+        " 高射速",
+        " 镇压"
+      ]
+    }
+  ]
+}

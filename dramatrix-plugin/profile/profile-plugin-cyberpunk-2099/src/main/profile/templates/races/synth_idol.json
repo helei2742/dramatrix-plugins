@@ -1,0 +1,87 @@
+{
+  "race": "synth_idol",
+  "displayName": "合成偶像",
+  "description": "为舞台与媒体打造的合成偶像，面容完美无瑕，全身嵌满投影与霓虹，是流量与欲望的化身。",
+  "defaults": {
+    "skinColor": [
+      "porcelain_shell",
+      "synthetic_pale"
+    ],
+    "faceShape": [
+      "idol_perfect_face",
+      "porcelain_shell"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "violet"
+    ],
+    "chromeSignature": [
+      "idol_star_projection",
+      "neon_contour_face",
+      "gold_chrome_filigree"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "porcelain_shell": 2.5,
+      "synthetic_pale": 2.0
+    },
+    "faceShape": {
+      "idol_perfect_face": 3.0,
+      "porcelain_shell": 2.0
+    },
+    "hairColor": {
+      "neon_pink": 2.5,
+      "violet": 2.0
+    },
+    "chromeSignature": {
+      "idol_star_projection": 3.0,
+      "neon_contour_face": 2.5,
+      "gold_chrome_filigree": 2.0
+    },
+    "impression": {
+      "idol_radiance": 3.0,
+      "neon_glam": 2.5,
+      "magnetic_charm": 2.0
+    },
+    "bodyType": {
+      "slender": 2.5,
+      "lithe": 2.0
+    },
+    "defaultClothes": {
+      "latex_catsuit": 2.5,
+      "neon_kimono": 2.0
+    }
+  },
+  "exclude": {
+    "faceShape": [
+      "feral_muzzle_face",
+      "brutal_slab",
+      "scrapyard_face"
+    ],
+    "chromeSignature": [
+      "full_chrome_mask",
+      "serial_barcode_face",
+      "beast_chrome_muzzle"
+    ],
+    "impression": [
+      "gutter_grit",
+      "war_hardened",
+      "feral_edge",
+      "clone_blank"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "flawless idol-perfect face with projected starlight",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "强制完美偶像面容与霓虹投影"
+    },
+    {
+      "description": "排斥粗粝、战场与量产气质"
+    }
+  ]
+}

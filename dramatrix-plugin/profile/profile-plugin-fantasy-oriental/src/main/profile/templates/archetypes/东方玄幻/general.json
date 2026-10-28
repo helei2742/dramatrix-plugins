@@ -1,0 +1,30 @@
+{
+  "archetype": "general",
+  "name": "将军",
+  "visualTags": "铠甲,令旗,战马,运筹帷幄",
+  "description": "统领千军万马的将领，运筹帷幄之中，决胜千里之外",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","ring"],
+    "defaultWeapon": ["spear","iron_sword","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":3.0,"slender_tall":2.0,"lean_fit":1.5},
+    "temperament": {"overbearing":3.0,"calm":2.5,"stoic":2.5,"noble":2.0,"sharp":1.5},
+    "hairStyle": {"high_crown_bound":3.0,"warrior_topknot":3.0,"slicked_back":2.5,"high_ponytail":1.5},
+    "hairColor": {"black":3.0,"jet_black":2.5,"dark_brown":1.5,"gray":1.0},
+    "defaultClothes": {"golden_armor":3.0,"leather_armor":2.5,"black_night":1.5},
+    "eyeColor": {"black":2.5,"dark_brown":2.5,"golden":1.5,"sapphire":1.0},
+    "eyeShape": {"dragon":3.0,"tiger":3.0,"eagle":2.5,"narrow":1.0},
+    "eyebrowShape": {"hero_eyebrow":3.0,"swept_brow":3.0,"sword":2.5,"dragon_eyebrow":2.0},
+    "faceShape": {"dragon_face":3.0,"rectangular":3.0,"square":2.5,"lion_face":2.0},
+    "faceFeature": {"beard_full":2.0,"none":2.0,"scar":1.5,"nasolabial_folds":1.5},
+    "impression": {"majestic":3.0,"heroic":3.0,"resolute":2.5,"weathered":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","whisk","fan","none"],
+    "defaultAccessories": ["abacus","hairpin","earring"],
+    "hairStyle": ["bald","double_bun","child_tuft","two_horns"],
+    "temperament": ["innocent","lazy"]
+  },
+  "templateFluxPrompt": "a {gender} general commander, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, standing on battlefield, military commander"
+}

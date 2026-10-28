@@ -1,0 +1,29 @@
+{
+  "archetype": "assassin",
+  "name": "刺客",
+  "visualTags": "暗影,利刃,夜行衣,杀意凛然",
+  "description": "暗夜中的致命利刃，潜行匿踪，一击必杀",
+  "defaults": {
+    "defaultAccessories": ["mask","ring"],
+    "defaultWeapon": ["dagger","iron_sword","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"slim":3.0,"slender_tall":2.0,"short_stout":1.0},
+    "temperament": {"cold":3.0,"sinister":3.0,"sharp":2.5,"cunning":2.0},
+    "hairStyle": {"short_crop":3.0,"topknot_loose":2.5,"choppy_short":2.5,"half_up":1.5},
+    "hairColor": {"black":3.0,"obsidian":2.5,"dark_brown":1.5,"midnight_blue":1.0},
+    "defaultClothes": {"black_night":3.0,"dark_cloak":3.0,"leather_armor":1.5},
+    "eyeColor": {"shadow_black":3.0,"black":2.5,"dark_brown":1.5,"obsidian":1.5},
+    "eyeShape": {"eagle":3.0,"narrow":3.0,"wolf":2.5,"fox":1.5},
+    "eyebrowShape": {"needle_brow":3.0,"broken_brow":2.5,"hook_brow":2.0,"sharp_straight_brow":2.5},
+    "faceShape": {"sharp":3.0,"hunter_face":3.0,"wolf_face":2.5,"snake_face":1.5},
+    "faceFeature": {"scar":2.0,"none":2.5},
+    "impression": {"cold":3.0,"sinister":3.0,"shrewd":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","hairpin","buddha_beads"],
+    "defaultWeapon": ["hoe","pole","whisk"],
+    "hairStyle": ["bald","double_bun","cloud_bun"]
+  },
+  "templateFluxPrompt": "a {gender} assassin, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, lurking in shadow"
+}

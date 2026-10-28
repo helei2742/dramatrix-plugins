@@ -1,0 +1,33 @@
+{
+  "archetype": "scavenger",
+  "name": "拾荒者",
+  "visualTags": "post-apocalyptic scavenger, wasteland, salvaging, makeshift gear, backpack, multi-pocket harness, worn boots, gritty, resourceful",
+  "description": "末世拾荒者，穿梭废墟搜寻物资，靠捡拾文明残骸维生，机敏而务实",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"lean_fit":2.5,"slim":2.5,"medium":2.5,"gangly":2.0,"athletic_toned":2.0,"lanky":2.0,"runner_lean":2.5},
+    "temperament": {"pragmatic":3.0,"shrewd":3.0,"wary":3.0,"cautious":2.5,"patient":2.5,"loner":2.5,"observant":2.5,"stubborn":2.0,"nervous":2.0,"greedy":1.5,"adaptable":2.0},
+    "hairStyle": {"messy_medium":2.5,"choppy_short":2.5,"tied_back_loose":2.5,"unkempt_long":2.5,"buzz_cut":2.0,"half_up":2.0,"short_crop":2.0,"bandana_wrap":2.5},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":2.5,"dirty_blonde":2.5,"ash_brown":2.5,"black":2.0,"gray_streaked":2.0,"faded_black":2.0,"mousy_brown":2.5},
+    "defaultClothes": {"scavenger_harness":3.0,"tattered_jacket":3.0,"patched_denim_suit":3.0,"dust_cloak_worn":2.5,"wasteland_duster":2.0,"survivor_hoodie_worn":2.5,"gas_mask_hooded_poncho":1.5,"makeshift_ghillie_suit":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"green":2.0,"amber":2.0,"black":2.0,"weary_blue":1.5,"dull_blue":1.5},
+    "skinColor": {"weathered_tan":3.0,"dusty_tan":3.0,"sun_kissed":2.5,"olive":2.0,"tan":2.0,"light_tan":1.5,"fair":1.0,"honey_tan":1.5},
+    "eyeShape": {"narrow":3.0,"deep_set":2.5,"tired":2.5,"almond":2.0,"sharp_phoenix":2.0,"hunter":2.5,"eagle":2.0,"round":1.0},
+    "eyebrowShape": {"furrowed":3.0,"rugged":2.5,"thin":2.5,"straight":2.0,"angular":2.0,"knitted":2.5,"thick":1.5,"steel_brow":1.5},
+    "faceShape": {"gaunt":3.0,"angular":2.5,"weathered":2.5,"long":2.5,"rectangular":2.0,"seed_face":2.0,"oval":1.5,"bamboo_leaf_face":1.5},
+    "faceFeature": {"dirt_smudge":3.0,"beard_stubble":2.5,"hollow_cheeks":2.5,"scar":2.0,"weathered":3.0,"chapped_lips":2.0,"none":1.5,"sharp_features":1.5},
+    "impression": {"shrewd":3.0,"weathered":3.0,"survivor":3.0,"shadowed":2.5,"wary":2.5,"gritty":2.5,"cynical":2.0,"hungry":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","noble","gallant","seductive","flamboyant","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","chiseled_fit","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} post-apocalyptic scavenger, {ageDesc}, {bodyType} lean agile build, {faceDesc}, wearing makeshift scavenging gear with multiple pouches and worn backpack, salvaged items, {hairStyle} {hairColor} hair, {eyeColor} sharp searching eyes, {skinColor} dust-covered skin, {temperament} aura, ruined cityscape, collapsed buildings, scattered debris, picking through rubble, photorealistic, gritty, masterpiece"
+}

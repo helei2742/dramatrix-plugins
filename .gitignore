@@ -1,0 +1,8 @@
+target/
+**/target/
+release/build/
+plugin-release-record-*.json
+plugin-catalog-generation-ledger.json
+release/release-plan*.json
+release/plugin-destinations.local.json
+.DS_Store

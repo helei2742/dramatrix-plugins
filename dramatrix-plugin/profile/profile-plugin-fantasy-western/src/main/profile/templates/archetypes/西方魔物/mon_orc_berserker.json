@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_orc_berserker",
+  "name": "兽人狂战士",
+  "visualTags": "獠牙外突,战纹刺青,双手巨斧,狂暴嘶吼",
+  "description": "以战死为荣的兽人狂战士，痛觉迟钝，越是重伤下手越狠",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5,"auburn":1.5,"jet_black":1.5},
+    "skinColor": {"moss_green":3.0,"pale_green":2.5,"stone_gray":1.5,"clay_brown":2.5,"swarthy":2.0},
+    "eyeColor": {"amber":2.5,"blood_red":2.0,"sunflower":2.0,"dark_brown":1.5,"smoky_quartz":1.5},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":3.5,"wild":2.5,"gruff":2.0,"reckless":3.0,"cunning":1.5,"fierce":2.5,"volatile":2.0},
+    "impression": {"fierce":3.5,"wild":2.5,"weathered":2.0,"domineering":2.5},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "faceShape": {"goblin_face":2.5,"square":2.5,"broad":2.0,"pentagon":1.5},
+    "eyeShape": {"triangle":2.5,"narrow":2.0,"deep_set":2.0,"toad_eye":1.5},
+    "faceFeature": {"broad_jaw":2.5,"scar":2.5,"thick_neck":2.0,"pointed_ear":1.5,"war_paint":3.0,"tattoo_face":2.5},
+    "lipShape": {"toothed_lip":3.0,"wide_lip":2.5,"thick":1.5},
+    "noseShape": {"goblin_nose":3.0,"broad_flat":2.5,"wide_nostrils":2.0},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":2.0,"warrior_braid":1.5},
+    "defaultWeapon": {"axe":3.0,"two_hand_sword":3.0,"war_hammer":3.0},
+    "defaultAccessories": {"bone_necklace":2.5,"bracer_iron":2.5,"armor_pauldron":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure"],
+    "defaultWeapon": ["ink_brush","guqin","fan","poison_needle"],
+    "bodyType": ["delicate_frail","pin_thin","petite_curvy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; protruding tusks, war-painted green skin, massive two-handed axe; western dark fantasy monster art"
+}

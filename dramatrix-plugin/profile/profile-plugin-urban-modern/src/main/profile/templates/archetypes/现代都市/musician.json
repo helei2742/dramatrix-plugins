@@ -1,0 +1,33 @@
+{
+  "archetype": "musician",
+  "name": "音乐人",
+  "visualTags": "modern musician, singer, guitar, stage, music studio, headphones, cool, expressive",
+  "description": "现代音乐人，以旋律和节奏触动灵魂，舞台上的光芒，用音乐表达自我",
+  "defaults": {
+    "defaultAccessories": ["ring","earring","none","hair_ribbon","flute"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"willowy":2.5,"lean_fit":2.5,"slender_tall":2.5,"ethereal_light":2.0,"svelte_elegant":2.5,"athletic_toned":2.0,"medium":2.0,"lean_wiry":1.5},
+    "temperament": {"passionate":3.0,"free_spirited":3.0,"flamboyant":3.0,"charismatic":3.0,"melancholy":2.5,"eloquent":2.5,"whimsical":2.5,"eccentric":2.5,"radiant":2.5,"wild":2.0,"cheerful":2.5,"brooding":2.0,"volatile":1.5,"defiant":2.0},
+    "hairStyle": {"wild_mane":2.5,"wavy_long":3.0,"loose_curls":3.0,"silver_flow":2.5,"side_bangs_long":2.5,"wolf_tail":2.0,"half_up":2.5,"center_part_long":2.5,"topknot_loose":2.5,"choppy_short":2.5,"high_ponytail":2.0,"loose_half_up":2.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"silver":2.5,"jet_black":2.5,"auburn":2.0,"chestnut":2.0,"platinum_blond":2.0,"ash_blond":2.0,"purple":1.5,"copper":2.0,"midnight_blue":1.5,"honey_blond":2.0},
+    "defaultClothes": {"black_night":3.0,"leather_armor":2.5,"linen_simple":2.5,"slate_gray_cloak":2.0,"charcoal_hooded_cloak":2.0,"cotton_hanfu":2.0,"indigo_dyed_cotton":2.0,"red_dress":2.5,"silk_embroider":2.0,"studded_leather_vest":2.0,"burgundy_velvet_cloak":2.0,"ink_wash_robe":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.5,"deep_blue":2.0,"amber":2.0,"forest_green":2.0,"sapphire":2.0,"gray":2.0,"emerald":1.5,"honey":2.0,"midnight_blue":1.5},
+    "skinColor": {"fair":2.5,"light_tan":2.5,"ivory":2.5,"pale_porcelain":2.0,"tan":2.0,"olive":2.0,"sun_kissed":2.0,"rose_white":1.5},
+    "eyeShape": {"phoenix":2.5,"fox":2.5,"peach_blossom":2.5,"almond":2.5,"deep_set":2.5,"sharp_phoenix":2.5,"narrow":2.0,"round":2.0,"upturned":2.0,"swallow":2.5},
+    "eyebrowShape": {"willow":2.5,"straight":2.0,"distant_mountain":2.0,"feathered":2.5,"crescent":2.5,"curved_fine":2.0,"arched":2.5,"wispy_brow":2.0,"raised":2.0},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"heart":3.0,"diamond":2.5,"sharp":2.5,"fox_face":2.5,"almond":2.5,"crescent_face":2.0},
+    "faceFeature": {"none":2.5,"beauty_mark":2.0,"scar":1.0,"sharp_features":2.5,"freckles":1.5,"high_cheekbones":2.0,"tattoo":1.5,"dimples":1.5,"delicate_features":2.5},
+    "impression": {"free_spirit":3.0,"handsome":3.0,"refined":2.5,"ethereal":2.5,"sharp":2.0,"delicate":2.5,"charming":3.0,"cold":1.5,"wild":2.0,"charismatic":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal","abacus"],
+    "hairStyle": ["bald","buzz_cut","dao_bun","warrior_topknot","warrior_braid","savage_bun","child_tuft","immortal_bun","phoenix_crown"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scale_armor","bamboo_hat_cape","wild_beast_skin","patchwork_rags","crusader_white_surcoat","war_general_armor","polished_plate_armor"],
+    "temperament": ["innocent","naive","unhinged","haughty","vicious","brutal","cynical"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","stocky_strong","plump"]
+  },
+  "templateFluxPrompt": "a {gender} modern musician, {ageDesc}, {bodyType} build, {faceDesc}, wearing cool modern streetwear or stage outfit, headphones around neck, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, music studio with instruments, microphone, stage lights, creative atmosphere, photorealistic, masterpiece"
+}

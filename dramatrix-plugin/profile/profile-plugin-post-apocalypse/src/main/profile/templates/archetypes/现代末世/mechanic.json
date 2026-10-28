@@ -1,0 +1,33 @@
+{
+  "archetype": "mechanic",
+  "name": "机械师",
+  "visualTags": "wasteland mechanic, vehicle repair, greasy, welder, tool belt, garage, practical, post-apocalyptic, makeshift workshop",
+  "description": "末世机械师，在废车场中用残骸拼凑运转的引擎，化腐朽为神奇的铁锈炼金术士",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"stocky_strong":3.0,"medium":2.5,"barrel_chested":2.5,"athletic_toned":2.5,"lean_wiry":2.0,"broad_shouldered":2.5,"muscular_broad":2.0,"chiseled_fit":1.5},
+    "temperament": {"pragmatic":3.0,"tinkerer":3.0,"patient":3.0,"obsessive":2.5,"hardened":2.5,"stubborn":2.5,"adaptable":2.5,"calm":2.0,"meticulous":2.5,"silent":2.0,"shrewd":2.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":2.5,"bandana_wrap":3.0,"messy_medium":2.5,"tied_back_loose":2.5,"choppy_short":2.5,"half_up":2.0,"low_ponytail":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"dusty_brown":2.5,"gray_streaked":2.5,"dirty_blonde":2.5,"ash_brown":2.0,"salt_pepper":2.0,"charcoal":2.0},
+    "defaultClothes": {"patched_coveralls":3.0,"heavy_work_apron":3.0,"scavenger_harness":2.5,"tattered_jacket":2.5,"leather_armor_improvised":1.5,"patched_denim_suit":2.0,"survivor_hoodie_worn":2.0,"dust_cloak_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"green":2.0,"black":2.0,"amber":1.5,"smoky_quartz":2.0,"deep_blue":1.5},
+    "skinColor": {"weathered_tan":3.0,"tan":2.5,"olive":2.5,"dusty_tan":2.5,"light_tan":2.0,"sun_kissed":2.0,"fair":1.5,"grease_stained":3.0},
+    "eyeShape": {"almond":2.5,"deep_set":2.5,"sharp_phoenix":2.0,"narrow":2.5,"round":2.0,"tiger":2.0,"eagle":2.0,"tired":2.0},
+    "eyebrowShape": {"thick":2.5,"straight":2.5,"rugged":2.5,"knitted":2.5,"furrowed":2.0,"angular":1.5,"hero_eyebrow":1.5,"steel_brow":2.0},
+    "faceShape": {"square":2.5,"round":2.5,"rectangular":2.5,"angular":2.0,"oval":2.0,"stone_face":2.5,"weathered":2.0,"chiseled":1.5},
+    "faceFeature": {"dirt_smudge":3.0,"grease_stain":3.0,"beard_stubble":2.5,"scar":2.0,"none":1.5,"weathered":2.5,"chapped_lips":1.5,"strong_jaw":1.5},
+    "impression": {"hardened":3.0,"tinkerer":3.0,"pragmatic":2.5,"reliable":2.5,"gruff":2.0,"simple":2.0,"stubborn":2.5,"weathered":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe","dragon_robe","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","lazy","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland mechanic, {ageDesc}, {bodyType} sturdy build, {faceDesc}, wearing grease-stained coveralls and heavy work apron, welding goggles on forehead, tool belt, {hairStyle} {hairColor} greasy hair, {eyeColor} focused eyes, {skinColor} oil-stained skin, {temperament} aura, makeshift garage workshop, scrap vehicles, welding sparks, engine parts scattered, photorealistic, industrial, masterpiece"
+}

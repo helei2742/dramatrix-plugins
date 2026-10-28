@@ -1,0 +1,29 @@
+{
+  "archetype": "beast_tamer",
+  "name": "驭兽师",
+  "visualTags": "驭兽师,猎手",
+  "description": "与灵兽为伴的自然之子，穿梭山林之间",
+  "defaults": {
+    "defaultAccessories": ["spirit_beast_bag","wine_gourd"],
+    "defaultWeapon": ["bow","spear","dagger"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"tall_athletic":2.0,"muscular_broad":1.5,"slender_tall":1.0},
+    "temperament": {"wild":3.0,"warm":2.0,"free_spirit":2.5,"cunning":0.5},
+    "hairStyle": {"wild_mane":2.5,"braided":2.0,"half_up":2.0,"topknot_loose":1.5},
+    "hairColor": {"dark_brown":2.5,"black":2.0,"emerald":1.5,"red":1.0},
+    "eyeColor": {"amber":3.0,"emerald":2.5,"dark_brown":1.0},
+    "defaultClothes": {"leather_armor":3.0,"hemp_cloth":2.0,"black_night":1.0},
+    "eyeShape": {"round":2.0,"swallow":2.5,"fox":1.5,"tiger":1.5},
+    "eyebrowShape": {"curved_thick":3.0,"rugged":2.5,"thick":1.5},
+    "faceShape": {"broad":2.5,"oval":1.5,"pentagon":2.0,"round":1.5},
+    "faceFeature": {"beard_stubble":2.0,"scar":1.5,"tattoo":2.0,"none":1.0},
+    "impression": {"heroic_open":3.0,"wild":3.0,"free_spirit":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","jade_pendant"],
+    "defaultWeapon": ["fan","whisk"],
+    "temperament": ["noble","refined"]
+  },
+  "templateFluxPrompt": "a {gender} beast tamer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

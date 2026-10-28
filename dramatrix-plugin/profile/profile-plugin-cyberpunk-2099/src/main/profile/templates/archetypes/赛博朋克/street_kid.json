@@ -1,0 +1,45 @@
+{
+  "archetype": "street_kid",
+  "category": "赛博朋克",
+  "name": "街头小子",
+  "visualTags": "街头, 少年, 机灵",
+  "description": "在霓虹夹缝中长大的机灵鬼，什么都偷得来。",
+  "defaults": {
+    "defaultClothes": [
+      "cargo_punk"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "split_dye"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "cargo_punk": 2.5
+    },
+    "hairColor": {
+      "neon_pink": 2.0,
+      "split_dye": 2.0
+    },
+    "impression": {
+      "underground_defiant": 2.5,
+      "gutter_grit": 2.0
+    },
+    "temperament": {
+      "playful": 2.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "holographic_suit",
+      "corp_armor"
+    ],
+    "temperament": [
+      "cold"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,44 @@
+{
+  "archetype": "nomad",
+  "category": "赛博朋克",
+  "name": "游牧民",
+  "visualTags": "游牧, 荒野, 家族",
+  "description": "离开城市、在荒野公路上游荡的家族旅人。",
+  "defaults": {
+    "defaultClothes": [
+      "ragged_poncho",
+      "foil_wrap"
+    ],
+    "temperament": [
+      "reckless"
+    ],
+    "hairColor": [
+      "natural_black",
+      "toxic_green"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "ragged_poncho": 2.5,
+      "foil_wrap": 2.0
+    },
+    "impression": {
+      "underground_defiant": 2.5,
+      "gutter_grit": 2.0
+    },
+    "hairColor": {
+      "toxic_green": 2.0,
+      "natural_black": 1.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "holographic_suit",
+      "corp_armor"
+    ],
+    "temperament": [
+      "cold"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

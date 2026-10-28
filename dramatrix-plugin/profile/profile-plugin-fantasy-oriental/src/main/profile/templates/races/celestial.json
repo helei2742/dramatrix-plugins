@@ -1,0 +1,35 @@
+{
+  "race": "celestial",
+  "displayName": "天族",
+  "description": "诞生于天界的神圣种族，周身散发柔和光芒，被视为诸界中最接近神的存在",
+  "defaults": {
+    "skinColor": ["porcelain","alabaster","ivory","golden","moon_pale"],
+    "eyeColor": ["gold","silver","sapphire","pearl","ice_blue"],
+    "hairColor": ["golden","platinum","silver","white","honey"],
+    "bodyType": ["slender_tall","ethereal_light","willowy","lean_fit"]
+  },
+  "weightBias": {
+    "skinColor": {"porcelain":2.5,"alabaster":2.5,"golden":2.0},
+    "eyeColor": {"gold":2.5,"silver":2.5,"sapphire":2.0},
+    "hairColor": {"golden":2.5,"platinum":2.5,"silver":2.5},
+    "bodyType": {"slender_tall":2.5,"ethereal_light":2.5},
+    "eyeShape": {"sharp_phoenix":2.5,"crane":2.0,"almond":2.0},
+    "eyebrowShape": {"distant_mountain":2.5,"long_eyebrow":2.5,"phoenix_eyebrow":2.0},
+    "noseShape": {"greek":2.5,"water_drop":2.0},
+    "impression": {"ethereal":2.5,"noble":2.5,"gentle":2.0},
+    "temperament": {"ethereal":2.5,"calm":2.5,"noble":2.0}
+  },
+  "exclude": {
+    "skinColor": ["dark","swarthy","ruddy","rocky"],
+    "eyeColor": ["dark_brown","black"],
+    "hairColor": ["gray","ash_gray"],
+    "bodyType": ["plump","muscular_broad","hulking","stocky"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","scar"],
+    "temperament": ["wild","overbearing","sinister","cold"]
+  },
+  "faceDescOverride": {
+    "prepend": "light mark on forehead, ",
+    "append": ""
+  },
+  "templateFluxPrompt": "a celestial {gender}, {ageDesc}, {bodyType}, {faceDesc} with radiant holy light, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

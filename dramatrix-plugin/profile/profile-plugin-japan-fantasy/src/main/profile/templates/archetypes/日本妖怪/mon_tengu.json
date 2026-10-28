@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_tengu",
+  "name": "天狗",
+  "visualTags": "赤面长鼻,黑羽大翼,山伏装束,羽扇生风",
+  "description": "盘踞深山的赤面长鼻妖怪，背生黑翼，羽扇一挥可起狂风",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":3.0,"white":2.0,"crimson":2.0,"silver":1.5,"midnight_blue":1.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.5,"snow_white":2.0,"fiery_red":3.0,"pale_ash":1.5,"reddish_bronze":2.5,"weathered_tan":1.5},
+    "eyeColor": {"blood_red":2.5,"golden":2.5,"slit_pupil_gold":2.0,"obsidian":1.5,"ice_blue":1.5},
+    "defaultClothes": {"indigo_kimono":2.5,"white_haori_overcoat":2.0,"crimson_hakama_pants":2.0,"straw_mino_cape":2.5,"onmyoji_hunting_robe":2.5,"warrior_jinbaori":1.5},
+    "temperament": {"mysterious":2.0,"vicious":2.0,"cold":2.0,"melancholy":2.0,"unhinged":1.5,"arrogant":3.0,"haughty":2.5,"disciplined":2.0},
+    "impression": {"demon_charm":2.5,"ghostly":2.5,"mysterious":2.5,"cold_beauty":1.5,"domineering":2.5,"dashing":1.5},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":1.5},
+    "bodyType": {"lithe_agile":3.5,"lean_wiry":2.5,"runner_lean":2.0,"slim":1.5},
+    "heightDesc": {"tall_lithe":2.5,"moderate_tall":2.0,"lean_height":1.5},
+    "hairStyle": {"warrior_topknot":2.5,"topknot_loose":2.5,"wild_mane":1.5},
+    "noseShape": {"aquiline":3.5,"hump":3.0,"pointed":2.0},
+    "faceShape": {"long":2.5,"sharp":2.5,"bird_face":2.0},
+    "eyeShape": {"eagle":3.0,"sharp_phoenix":2.0,"narrow":1.5},
+    "faceFeature": {"beard_full":2.0,"war_paint":1.5,"high_cheekbones":1.5},
+    "defaultWeapon": {"iron_fan":3.0,"moon_blade":3.0,"staff_with_rings":3.0},
+    "defaultAccessories": {"hat":2.5,"talisman_pouch":2.5,"meditation_beads":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["hoe","guqin"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; crimson face with a long nose, huge black feathered wings, feather fan; japanese yokai ukiyo-e inspired art"
+}

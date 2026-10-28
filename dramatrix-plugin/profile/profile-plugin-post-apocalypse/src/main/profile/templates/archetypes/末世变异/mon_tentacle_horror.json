@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_tentacle_horror",
+  "name": "触手怪",
+  "visualTags": "触须蠕动,吸盘密布,黏液滴落,无面之躯",
+  "description": "从裂隙深处爬出的无面肉块，数十条触须各自蠕动，被缠住便再无挣脱可能",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":3.5,"charcoal":2.0,"salt_pepper":2.0,"ash_blond":1.5,"orange":1.5,"deep_purple":1.5},
+    "skinColor": {"pale_ash":2.5,"scarred_bronze":2.5,"phosphor_white":2.0,"moss_green":2.0,"clay_brown":1.5,"pale_violet":3.0,"luminous_blue":2.0,"translucent":1.5},
+    "eyeColor": {"white_opaque":3.0,"sunflower":2.0,"deep_orange":2.0,"blood_red":1.5,"heterochromia":1.5,"obsidian":2.5,"cosmic":2.0},
+    "defaultClothes": {"tattered_jacket":2.5,"radiation_suit_worn":2.0,"scrap_metal_armor":2.0,"nomad_wraps":1.5,"gas_mask_hooded_poncho":1.5},
+    "temperament": {"unhinged":2.5,"volatile":2.5,"brutal":2.0,"paranoid":2.0,"jaded":1.5,"enigmatic":2.5,"cold":2.5,"vicious":2.0},
+    "impression": {"sickness":2.5,"wild":2.5,"weathered":2.0,"bloodthirsty":1.5,"mysterious":2.5,"ghostly":2.0},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5,"soft_round":2.5,"serpentine":2.0,"gangly":1.5},
+    "heightDesc": {"giant_towering":2.0,"towering_2m":2.5,"cloud_reaching":1.5,"barrel_frame":1.5},
+    "hairStyle": {"bald":3.5},
+    "faceFeature": {"veins":3.0,"gills":2.5,"shadow_face":2.0,"none":1.5},
+    "faceShape": {"round":2.5,"fish_face":2.0,"broad":1.5},
+    "eyeShape": {"empty_eye":3.0,"abyss_eye":2.5,"double_pupil":2.0},
+    "lipShape": {"warped_lip":3.0,"toothed_lip":2.5,"open_lip":2.0},
+    "noseShape": {"flat":3.0,"water_nose":1.5},
+    "defaultWeapon": {"none":3.0,"vine_whip":3.0,"chain_whip":3.0},
+    "defaultAccessories": {"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified"],
+    "defaultWeapon": ["bow","crossbow","flying_sword","guqin"],
+    "bodyType": ["svelte_elegant","petite_curvy","pin_thin","lithe_agile"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; faceless bulk sprouting dozens of writhing suckered tentacles, dripping slime; post-apocalyptic mutant creature art, radioactive wasteland"
+}

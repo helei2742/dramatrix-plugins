@@ -1,0 +1,30 @@
+{
+  "archetype": "doctor",
+  "name": "医师",
+  "visualTags": "药箱,银针,草药,悬壶济世",
+  "description": "悬壶济世的医者，精通草药与针灸之术，妙手仁心",
+  "defaults": {
+    "defaultAccessories": ["storage_bag","ring","jade_pendant"],
+    "defaultWeapon": ["none","whisk"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"medium":2.5,"slender_tall":2.0,"ethereal_light":1.5},
+    "temperament": {"gentle":3.0,"calm":3.0,"warm":2.5,"benevolent":2.0},
+    "hairStyle": {"bound_up":2.5,"simple_tie":2.5,"half_up":2.5,"side_part_long":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"gray":1.5,"salt_pepper":1.0,"white":1.0},
+    "defaultClothes": {"white_robe":3.0,"blue_robe":2.5,"green_robe":2.5,"linen_simple":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.0,"jade_green":1.0},
+    "eyeShape": {"sharp_phoenix":3.0,"almond":2.5,"round":2.0,"crane":1.5},
+    "eyebrowShape": {"long_eyebrow":2.5,"auspicious_brow":2.5,"crescent":2.0,"willow":1.5},
+    "faceShape": {"oval":2.5,"sheep_face":2.5,"bamboo_leaf_face":2.0,"long":1.5},
+    "faceFeature": {"none":3.0,"beard_goatee":1.0,"nasolabial_folds":1.0},
+    "impression": {"gentle":3.0,"refined":3.0,"delicate":2.5,"loyal":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","iron_sword","dagger"],
+    "defaultAccessories": ["mask","tattoo"],
+    "hairStyle": ["bald","wild_mane"],
+    "temperament": ["sinister","overbearing","wild"]
+  },
+  "templateFluxPrompt": "a {gender} doctor healer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, carrying medicine box"
+}

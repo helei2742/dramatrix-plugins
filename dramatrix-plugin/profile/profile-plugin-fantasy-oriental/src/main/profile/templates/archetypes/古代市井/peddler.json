@@ -1,0 +1,28 @@
+{
+  "archetype": "peddler",
+  "name": "小贩",
+  "visualTags": "street vendor, peddler, hawker",
+  "description": "沿街叫卖的小贩，肩挑货担走街串巷，口齿伶俐",
+  "defaults": {
+    "defaultAccessories": ["hat","abacus","none"],
+    "defaultWeapon": ["none","pole","staff"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"slim":2.0,"medium":2.0,"lean_wiry":1.5},
+    "temperament": {"eloquent":3.0,"warm":2.5,"crafty":2.0,"cunning":1.5,"cheerful":1.5},
+    "hairStyle": {"half_up":2.5,"short_crop":2.0,"simple_tie":2.0,"choppy_short":1.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"light_brown":1.5,"chestnut":1.0},
+    "defaultClothes": {"linen_simple":3.0,"hemp_cloth":2.5,"cotton_hanfu":2.0,"indigo_dyed_cotton":1.5,"travelers_cloak":1.5,"woolen_travel_cloak":1.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":1.5,"honey":1.0},
+    "eyeShape": {"round":2.0,"laughter_eye":2.0,"almond":1.5,"fish":1.0},
+    "eyebrowShape": {"silkworm":2.0,"straight":1.5,"short_eyebrow":1.5,"raised":1.0},
+    "faceShape": {"oval":2.5,"round":2.5,"pear":1.5,"seed_face":1.0},
+    "faceFeature": {"none":2.5,"freckles":2.0,"ruddy":1.5,"dimples":1.0},
+    "impression": {"cunning":2.5,"sunny":2.0,"affable":2.0,"loyal":1.5,"simple":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","war_hammer","two_hand_sword","halberd"],
+    "defaultAccessories": ["jade_pendant","belt_jade","hair_crown","phoenix_hairpin"]
+  },
+  "templateFluxPrompt": "a {gender} street peddler, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, carrying goods on a shoulder pole, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, ancient chinese street market, bustling crowd, song dynasty, masterpiece"
+}

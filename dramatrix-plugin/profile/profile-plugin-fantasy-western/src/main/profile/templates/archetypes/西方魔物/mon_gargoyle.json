@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_gargoyle",
+  "name": "石像鬼",
+  "visualTags": "灰岩肌体,蝠翼卷曲,昼伏夜动,雕像伪装",
+  "description": "白日伏于檐角伪作雕像的守卫魔物，入夜展翼扑击，爪如凿石",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":3.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5},
+    "skinColor": {"moss_green":3.0,"pale_green":2.5,"stone_gray":3.5,"clay_brown":2.0,"swarthy":1.5,"rocky":3.0,"sandstone":2.0,"chalk_white":1.5},
+    "eyeColor": {"amber":2.5,"blood_red":2.0,"sunflower":2.0,"dark_brown":1.5,"smoky_quartz":1.5,"amber_gold":2.5,"white_opaque":2.0},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":3.0,"wild":2.5,"gruff":2.0,"reckless":2.0,"cunning":1.5,"stoic":3.5,"cold":2.5,"paranoid":2.0,"steadfast":1.5},
+    "impression": {"fierce":3.0,"wild":2.5,"weathered":2.0,"domineering":1.5,"cold":3.0,"unyielding":2.5,"ghostly":1.5},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"gnarled_tough":3.0,"bulky_massive":2.5,"solid_robust":2.5,"compact_dense":1.5},
+    "heightDesc": {"barrel_frame":2.5,"towering_2m":2.0,"solid_build":2.0},
+    "hairStyle": {"bald":3.5},
+    "faceFeature": {"horn":3.0,"double_horn":2.5,"bark_skin":1.5,"shadow_face":1.5},
+    "faceShape": {"stone_face":3.5,"demon_face":2.0,"broad":1.5},
+    "eyeShape": {"empty_eye":2.5,"triangle":2.5,"narrow":2.0},
+    "lipShape": {"fanged_lip":2.5,"shut_lip":2.0,"wide_lip":1.5},
+    "noseShape": {"stone_nose":3.0,"broad_flat":2.0},
+    "defaultWeapon": {"claws":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"armor_pauldron":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure","passionate","flamboyant","cheerful"],
+    "defaultWeapon": ["guqin","ink_brush","bow","crossbow"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; grey carved stone hide, folded bat-like wings, chiseled claws; western dark fantasy monster art"
+}

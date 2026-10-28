@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_spider_queen",
+  "name": "蛛后",
+  "visualTags": "八足巨躯,银丝罗网,复眼幽绿,腹囊卵群",
+  "description": "盘踞洞穴深处的巨型蛛后，八目并睁，脚下银网层层叠叠尽是白骨",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"prime_age":2.0,"thirty_mid":1.5,"century_old":1.5},
+    "hairColor": {"dark_brown":2.5,"charcoal":2.5,"sand_blond":2.0,"silver":1.5,"auburn":1.5,"jet_black":3.0,"deep_purple":1.5},
+    "skinColor": {"bark_brown":2.5,"weathered_tan":2.5,"swarthy":2.0,"scaly_green":1.5,"clay_brown":1.5,"pale_ash":2.5,"ebony":2.5,"blue_gray":2.0},
+    "eyeColor": {"slit_pupil_gold":3.0,"amber":2.5,"sunflower":2.0,"forest_green":2.0,"copper":1.5,"obsidian":3.0,"blood_red":2.5},
+    "defaultClothes": {"wild_beast_skin":3.0,"hunters_garb":2.0,"patchwork_rags":1.5,"feather_cloak":1.5,"leather_armor":1.5},
+    "temperament": {"wild":3.0,"fierce":2.5,"brutal":2.5,"volatile":2.0,"paranoid":2.0,"calculating":2.5,"vicious":3.0,"cold":2.5},
+    "impression": {"wild":3.0,"fierce":2.5,"bloodthirsty":2.0,"lynx_eye":1.5,"devious":2.5,"sinister":2.5},
+    "eyebrowShape": {"tiger_eyebrow":2.5,"rugged":2.0,"thick":2.0,"wire_brow":1.5},
+    "bodyType": {"lithe_agile":3.5,"lean_wiry":2.5,"runner_lean":2.0,"slim":1.5,"bulky_massive":2.5,"gangly":2.0,"hunched":1.5},
+    "heightDesc": {"tall_lithe":2.5,"moderate_tall":2.0,"lean_height":1.5,"towering_2m":2.5,"broad_tall":2.0,"giant_towering":1.5},
+    "hairStyle": {"messy_bun":2.5,"flowing_long":2.0,"wild_mane":1.5},
+    "eyeShape": {"double_pupil":3.5,"beast_eye":2.5,"triangle":2.0},
+    "faceFeature": {"scale_face":2.0,"veins":2.0,"eye_tattoo":2.0,"fur_face":1.5},
+    "lipShape": {"toothed_lip":3.0,"fanged_lip":2.5,"thin":1.5},
+    "defaultWeapon": {"poison_needle":3.0,"hide_needles":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"bone_necklace":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","folding_fan","scroll_tube"],
+    "temperament": ["scholarly","eloquent","dignified","demure","jovial","cheerful","amiable"],
+    "hairStyle": ["updo_elegant","phoenix_crown","braid_crown"],
+    "defaultWeapon": ["two_hand_sword","halberd","war_hammer","axe"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; colossal eight-legged spider body, clusters of glowing eyes, silk-wrapped bone cocoons; wild beast monster concept art, savage wilderness"
+}

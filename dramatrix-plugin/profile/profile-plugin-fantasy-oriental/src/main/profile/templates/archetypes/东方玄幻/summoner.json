@@ -1,0 +1,30 @@
+{
+  "archetype": "summoner",
+  "name": "召唤师",
+  "visualTags": "召唤阵,契约,异界生灵,灵兽腾跃",
+  "description": "以契约之力召唤异界生灵的术士，麾下众兽听令而行",
+  "defaults": {
+    "defaultAccessories": ["spirit_beast_bag","ring","storage_bag"],
+    "defaultWeapon": ["staff","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"medium":2.5,"slender_tall":2.0,"ethereal_light":2.0},
+    "temperament": {"ethereal":3.0,"gentle":2.5,"cunning":2.0,"cheerful":2.0},
+    "hairStyle": {"half_up":2.5,"flowing_long":2.5,"loose_half_up":2.5,"braided":2.0},
+    "hairColor": {"black":2.0,"dark_brown":2.0,"teal":1.5,"cyan":1.5,"emerald":1.5},
+    "defaultClothes": {"blue_robe":2.5,"purple_robe":2.5,"spirit_silk":2.5,"green_robe":2.0},
+    "eyeColor": {"emerald":3.0,"forest_green":2.5,"turquoise":2.0,"amber":1.5},
+    "eyeShape": {"round":2.5,"swallow":2.5,"fox":2.0,"almond":2.0},
+    "eyebrowShape": {"feathered":2.5,"crescent":2.5,"curved_fine":2.0,"straight":1.5},
+    "faceShape": {"oval":2.5,"round":2.0,"cat_face":2.0,"bird_face":2.0},
+    "faceFeature": {"none":3.0,"dimples":1.0},
+    "impression": {"gentle":2.5,"ethereal":2.5,"free_spirit":2.5,"delicate":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","spear"],
+    "defaultAccessories": ["abacus","tattoo"],
+    "hairStyle": ["bald","buzz_cut","wild_mane"],
+    "temperament": ["sinister","overbearing"]
+  },
+  "templateFluxPrompt": "a {gender} summoner, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, summoning beasts from a magic circle"
+}

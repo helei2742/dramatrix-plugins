@@ -1,0 +1,31 @@
+{
+  "race": "giant",
+  "displayName": "巨人族",
+  "description": "体型远超常人的庞大种族，力大无穷，居于高山旷野之间",
+  "defaults": {
+    "skinColor": ["ruddy","bronze","wheat","swarthy","tan"],
+    "eyeColor": ["dark_brown","amber","black","gold","obsidian"],
+    "hairColor": ["dark_brown","black","auburn","red","gray"],
+    "bodyType": ["hulking","muscular_broad","tall_athletic","stocky","sturdy"]
+  },
+  "weightBias": {
+    "skinColor": {"ruddy":2.5,"bronze":2.5},
+    "eyeColor": {"dark_brown":2.5,"amber":2.5},
+    "hairColor": {"dark_brown":2.5,"red":2.0,"gray":1.5},
+    "bodyType": {"hulking":2.5,"muscular_broad":2.5},
+    "eyeShape": {"deep_set":2.5,"round":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5},
+    "faceShape": {"square":2.5,"rectangular":2.5,"round":2.0},
+    "faceFeature": {"beard_full":2.5,"beard_stubble":2.0,"scar":2.0},
+    "impression": {"overbearing":2.5,"resolute":2.5,"heroic_open":2.0},
+    "temperament": {"overbearing":2.5,"wild":2.5,"stoic":2.0}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","fair","peach"],
+    "eyeColor": ["pearl","moonlit"],
+    "hairColor": ["platinum","light_pink"],
+    "bodyType": ["petite","slender_tall","willowy","ethereal_light","slim"],
+    "temperament": ["delicate","innocent"]
+  },
+  "templateFluxPrompt": "a giant {gender}, {ageDesc}, towering {bodyType} build, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

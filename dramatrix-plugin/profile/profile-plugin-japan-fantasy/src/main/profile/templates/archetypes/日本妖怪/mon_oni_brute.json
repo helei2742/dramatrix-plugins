@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_oni_brute",
+  "name": "赤鬼",
+  "visualTags": "赤红肌肤,双角铁棍,虎皮腰裙,狂笑震天",
+  "description": "手持金棒的赤肤恶鬼，头生双角，一声狂笑震得山石滚落",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":2.0,"white":2.5,"crimson":3.0,"silver":1.5,"midnight_blue":1.5,"charcoal":2.0,"dark_brown":2.0,"auburn":1.5,"orange":1.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.5,"snow_white":2.0,"fiery_red":3.5,"pale_ash":1.5,"reddish_bronze":2.5,"deep_purple_hue":1.5},
+    "eyeColor": {"blood_red":2.5,"golden":2.5,"slit_pupil_gold":2.0,"obsidian":1.5,"ice_blue":1.5},
+    "defaultClothes": {"indigo_kimono":2.5,"white_haori_overcoat":2.0,"crimson_hakama_pants":2.0,"straw_mino_cape":1.5,"onmyoji_hunting_robe":1.5,"wild_beast_skin":3.0,"cotton_jinbei":1.5},
+    "temperament": {"mysterious":3.0,"vicious":2.0,"cold":2.0,"melancholy":2.0,"unhinged":1.5,"brutal":3.5,"volatile":2.5,"reckless":2.5,"jovial":1.5},
+    "impression": {"demon_charm":2.5,"ghostly":2.5,"mysterious":2.0,"cold_beauty":1.5,"fierce":3.0,"domineering":3.0,"demonic_majesty":2.0},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5},
+    "heightDesc": {"giant_towering":3.5,"towering_2m":2.5,"cloud_reaching":1.5},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":2.0,"warrior_braid":1.5},
+    "faceShape": {"goblin_face":2.5,"square":2.5,"broad":2.0,"pentagon":1.5},
+    "eyeShape": {"triangle":2.5,"narrow":2.0,"deep_set":2.0,"toad_eye":1.5},
+    "faceFeature": {"broad_jaw":2.5,"scar":2.5,"thick_neck":2.0,"pointed_ear":1.5,"double_horn":3.5},
+    "lipShape": {"toothed_lip":3.5,"wide_lip":2.0,"thick":1.5,"fanged_lip":3.0},
+    "noseShape": {"goblin_nose":3.0,"broad_flat":2.5,"wide_nostrils":2.0},
+    "defaultWeapon": {"meteor_hammer":3.0,"war_hammer":3.0,"pole":3.0},
+    "defaultAccessories": {"bracer_iron":2.5,"bone_necklace":2.5,"sash_belt":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["ink_brush","guqin","poison_needle"],
+    "bodyType": ["delicate_frail","pin_thin","petite_curvy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; bright red skin, two curved horns, tiger-skin loincloth, iron kanabo club; japanese yokai ukiyo-e inspired art"
+}

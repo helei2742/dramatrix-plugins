@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_hellhound",
+  "name": "地狱猎犬",
+  "visualTags": "焰口喘息,焦黑皮毛,余烬足印,穷追不舍",
+  "description": "从火狱奔出的三头猎犬，呼吸带火，踏过之处只余焦黑足印",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":3.0,"crimson":2.5,"cosmic":2.0,"deep_purple":2.0,"none":1.5,"charcoal":2.5,"flame_red":2.0},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":2.5,"ebony":3.0,"chalk_white":1.5,"reddish_bronze":1.5,"scarred_bronze":2.0},
+    "eyeColor": {"blood_red":3.5,"slit_pupil_red":2.5,"shadow_black":2.0,"cosmic":2.0,"sunset_gold":2.0,"deep_orange":3.0},
+    "defaultClothes": {"black_night":2.5,"dark_cloak":2.5,"golden_armor":2.0,"war_general_armor":2.0,"burgundy_velvet_cloak":1.5},
+    "temperament": {"overbearing":3.0,"sinister":2.5,"majestic":2.0,"ruthless":2.5,"fanatical":1.5,"fierce":3.5,"brutal":3.0,"disciplined":1.5},
+    "impression": {"demonic_majesty":2.0,"domineering":2.5,"sinister":2.0,"majestic":1.5,"bloodthirsty":3.0,"fierce":3.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "faceShape": {"wolf_face":3.5,"tiger_face":2.0,"bear_face":1.5,"broad":1.5,"demon_face":2.5,"long":1.5},
+    "eyeShape": {"beast_eye":2.5,"vertical_pupil_eye":2.0,"wolf":3.0,"triangle":1.5,"fiery_golden":2.5},
+    "faceFeature": {"fur_face":3.0,"broad_jaw":2.0,"thick_neck":1.5,"flaming_face":3.0,"demon_mark":2.0,"horn":1.5},
+    "lipShape": {"beast_lip":2.5,"toothed_lip":2.5,"fanged_lip":3.0,"flame_lip":3.0},
+    "noseShape": {"wolf_nose":2.5,"wide_nostrils":2.0,"broad_flat":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0},
+    "defaultAccessories": {"bell_collar":2.5,"bone_necklace":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart"],
+    "defaultWeapon": ["guqin","ink_brush","bow","crossbow"],
+    "bodyType": ["petite_curvy","delicate_frail","pin_thin","willowy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; three-headed charred hound, embers falling from its jaws, scorched pawprints; abyssal demon lord art, hellfire and ruin"
+}

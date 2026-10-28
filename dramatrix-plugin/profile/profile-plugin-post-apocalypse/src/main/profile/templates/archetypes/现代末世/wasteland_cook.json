@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_cook",
+  "name": "废土厨师",
+  "visualTags": "wasteland cook, makeshift kitchen, canned food, survival cuisine, stew pot, resourceful, hearty, post-apocalyptic cooking",
+  "description": "末世厨师，用有限的食材做出填饱肚子的废土料理，灶台前的创意生存艺术家",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"soft_round":2.5,"stocky_strong":2.5,"athletic_toned":2.0,"plump_soft":2.0,"lean_fit":2.0,"barrel_chested":2.0,"slim":2.0},
+    "temperament": {"jovial":3.0,"nurturing":3.0,"pragmatic":3.0,"patient":2.5,"humble":2.5,"cheerful":2.5,"hardened":2.0,"simple":2.5,"sincere":2.5,"kind_heart":3.0,"zealous":2.0},
+    "hairStyle": {"short_crop":2.5,"bandana_wrap":3.0,"bound_up":3.0,"tied_back_loose":2.5,"choppy_short":2.5,"half_up":2.5,"low_ponytail":2.5,"simple_tie":2.5},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"dusty_brown":2.5,"gray":2.5,"salt_pepper":2.5,"auburn":2.0,"chestnut":2.0,"light_brown":2.0},
+    "defaultClothes": {"heavy_work_apron":3.0,"patched_denim_suit":3.0,"survivor_hoodie_worn":3.0,"tattered_jacket":2.5,"patched_coveralls":2.5,"dust_cloak_worn":2.0,"merchant_patchwork_robe":2.0,"scavenger_harness":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"warm_brown":3.0,"black":2.0,"green":2.0,"honey":2.5,"amber":2.0,"gray":1.5},
+    "skinColor": {"light_tan":2.5,"tan":2.5,"fair":2.5,"olive":2.5,"rose_white":2.0,"honey_tan":2.5,"weathered_tan":2.0,"sun_kissed":2.0},
+    "eyeShape": {"almond":3.0,"round":2.5,"peach_blossom":2.5,"crescent":2.5,"sharp_phoenix":2.0,"deep_set":2.0,"downturned":2.0,"scholar_eye":2.0},
+    "eyebrowShape": {"crescent":2.5,"curved_fine":2.5,"straight":2.5,"willow":2.5,"silkworm":2.5,"auspicious_brow":2.0,"long_eyebrow":2.0,"distant_mountain":2.0},
+    "faceShape": {"round":3.0,"oval":3.0,"heart":2.0,"seed_face":2.5,"bamboo_leaf_face":2.0,"jade_mirror":2.5,"square":2.0,"long":1.5},
+    "faceFeature": {"dimples":2.5,"ruddy":2.5,"none":2.5,"beauty_mark":2.0,"clean_shaven":2.5,"dirt_smudge":2.0,"freckles":2.0,"nasolabial_folds":2.0},
+    "impression": {"warm":3.0,"jovial":3.0,"approachable":3.0,"simple":2.5,"kind_heart":3.0,"motherly":2.5,"cheerful":2.5,"nurturing":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","axe","flail"],
+    "defaultAccessories": ["eye_patch","spirit_beast_bag","military_seal","bone_necklace","mask"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier","biker_leather_armor"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","cold","ruthless","feral"],
+    "bodyType": ["bulky_massive","towering_giant","pin_thin","gangly","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland cook, {ageDesc}, {bodyType} hearty build, {faceDesc}, wearing stained work apron over patched clothes, stirring large stew pot, ladle in hand, {hairStyle} {hairColor} hair tied back, {eyeColor} warm kind eyes, {skinColor} skin, {temperament} aura, makeshift community kitchen, canned food supplies, steaming pot on fire, hungry survivors lining up, warm firelight, photorealistic, comforting, masterpiece"
+}

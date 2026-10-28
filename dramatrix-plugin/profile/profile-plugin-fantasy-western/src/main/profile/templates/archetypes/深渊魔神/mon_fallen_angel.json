@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_fallen_angel",
+  "name": "堕天使",
+  "visualTags": "残翼焦黑,断裂光环,神性剥落,悲悯与恨",
+  "description": "被逐出神座的堕落天使，羽翼焦黑残缺，眼中悲悯与恨意各占一半",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":1.5,"crimson":2.5,"cosmic":2.0,"deep_purple":2.0,"none":1.5,"platinum_blond":3.0,"frost_white":2.5,"ash_blond":2.0},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":2.5,"ebony":2.0,"chalk_white":2.5,"reddish_bronze":1.5,"pale_gold":2.5,"moon_white":2.0,"ivory":1.5},
+    "eyeColor": {"blood_red":2.0,"slit_pupil_red":2.5,"shadow_black":2.0,"cosmic":2.0,"sunset_gold":3.0,"moonlight":2.5,"star_silver":1.5},
+    "defaultClothes": {"black_night":2.5,"dark_cloak":2.5,"golden_armor":2.5,"war_general_armor":2.0,"burgundy_velvet_cloak":1.5,"ivory_white_gown":2.5,"charcoal_hooded_cloak":2.0,"silver_thread_robe":1.5},
+    "temperament": {"overbearing":3.0,"sinister":2.5,"majestic":2.5,"ruthless":2.0,"fanatical":2.5,"melancholy":3.0,"brooding":2.0},
+    "impression": {"demonic_majesty":2.0,"domineering":2.5,"sinister":2.0,"majestic":1.5,"immortal_grace":2.5,"melancholy":2.5,"lonely":2.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5,"tall_athletic":3.0,"chiseled_fit":2.5,"heroic_figure":2.5,"svelte_elegant":1.5},
+    "heightDesc": {"tall_190":2.5,"broad_tall":2.5,"towering":1.5,"tall_dignified":2.5,"graceful_stature":2.0},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "faceFeature": {"gold_mark":2.5,"tear_mole":2.5,"glowing_face":2.0,"shadow_face":2.0},
+    "faceShape": {"oval":2.5,"sharp":2.0,"immortal_face":2.0},
+    "eyeShape": {"deep_pool":2.5,"sharp_phoenix":2.0,"cold_star_eye":2.0},
+    "defaultWeapon": {"two_hand_sword":3.0,"rune_sword":3.0,"spear":3.0},
+    "defaultAccessories": {"hair_crown":2.5,"gold_chain":2.5,"blood_stone_amulet":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart"],
+    "defaultWeapon": ["hoe","pole","sickle"],
+    "bodyType": ["hunched","short_stout","ape_like","child_plump"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; charred broken feathered wings, cracked halo, divine light bleeding out; abyssal demon lord art, hellfire and ruin"
+}

@@ -1,0 +1,209 @@
+{
+  "attribute": "defaultAccessories",
+  "displayName": "默认配饰",
+  "options": [
+    {
+      "id": "smart_glasses",
+      "value": "智能眼镜",
+      "description": "叠加AR信息的战术眼镜",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "眼镜",
+        " AR",
+        " 智能"
+      ]
+    },
+    {
+      "id": "neural_port",
+      "value": "神经接口",
+      "description": "后颈暴露的数据接口",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "神经",
+        " 接口",
+        " 数据"
+      ]
+    },
+    {
+      "id": "cyber_arm",
+      "value": "机械义臂",
+      "description": "替换整条手臂的军用义体",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义体",
+        " 臂",
+        " 军用"
+      ]
+    },
+    {
+      "id": "optic_implant",
+      "value": "光学义眼",
+      "description": "一只眼被光学镜头取代",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义眼",
+        " 光学"
+      ]
+    },
+    {
+      "id": "breathing_mask",
+      "value": "呼吸面罩",
+      "description": "过滤毒气的半面面罩",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "面罩",
+        " 过滤",
+        " 毒气"
+      ]
+    },
+    {
+      "id": "chrome_collar",
+      "value": "铬项圈",
+      "description": "身份与装饰兼具的金属项圈",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "项圈",
+        " 铬",
+        " 装饰"
+      ]
+    },
+    {
+      "id": "holster_rig",
+      "value": "枪套背带",
+      "description": "十字交叉的武器携行带",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "枪套",
+        " 携行",
+        " 武器"
+      ]
+    },
+    {
+      "id": "data_glove",
+      "value": "数据手套",
+      "description": "隔空操控界面的触感手套",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "手套",
+        " 数据",
+        " 操控"
+      ]
+    },
+    {
+      "id": "led_choker",
+      "value": "LED颈环",
+      "description": "随心率变色的发光颈环",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "颈环",
+        " LED",
+        " 发光"
+      ]
+    },
+    {
+      "id": "mantis_blades",
+      "value": "螳螂刀",
+      "description": "前臂弹出的单分子刃",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义体",
+        " 刀",
+        " 武器"
+      ]
+    },
+    {
+      "id": "exo_spine",
+      "value": "外骨骼脊椎",
+      "description": "背部隆起的可动支撑脊",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义体",
+        " 脊椎",
+        " 支撑"
+      ]
+    },
+    {
+      "id": "subdermal_armor",
+      "value": "皮下装甲",
+      "description": "皮肤下铺开的轻质护甲",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "义体",
+        " 装甲",
+        " 皮下"
+      ]
+    }
+  ]
+}

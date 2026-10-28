@@ -1,0 +1,33 @@
+{
+  "archetype": "scout",
+  "name": "侦察兵",
+  "visualTags": "wasteland scout, reconnaissance, vigilant, binoculars, military surplus, agile, observant, post-apocalyptic, lookout",
+  "description": "末世侦察兵，为聚落探查周边威胁与资源，身手敏捷、目光锐利，废土中的前哨之眼",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"runner_lean":3.0,"lean_fit":3.0,"athletic_toned":3.0,"lean_wiry":2.5,"slim":2.5,"slender_tall":2.5,"medium":2.0,"chiseled_fit":2.0},
+    "temperament": {"vigilant":3.0,"observant":3.0,"stealthy":3.0,"cautious":2.5,"disciplined":2.5,"silent":2.5,"determined":2.5,"wary":2.0,"plucky":2.0,"adaptable":2.0,"calm":2.0},
+    "hairStyle": {"short_crop":3.0,"choppy_short":2.5,"tied_back_loose":2.5,"low_ponytail":2.5,"messy_medium":2.0,"buzz_cut":2.5,"half_up":2.0,"bandana_wrap":2.0},
+    "hairColor": {"dark_brown":3.0,"dusty_brown":2.5,"black":2.5,"ash_brown":2.5,"dirty_blonde":2.0,"faded_black":2.0,"jet_black":2.0,"charcoal":1.5},
+    "defaultClothes": {"tactical_vest_light":3.0,"military_fatigues":3.0,"wasteland_ranger_coat":3.0,"makeshift_ghillie_suit":2.5,"dust_cloak_worn":2.5,"leather_armor_improvised":2.0,"tattered_jacket":1.5,"scavenger_harness":2.0},
+    "eyeColor": {"keen_blue":3.0,"dark_brown":3.0,"hazel":2.5,"gray":2.5,"green":2.0,"amber":2.0,"hawk_yellow":2.0,"black":1.5},
+    "skinColor": {"weathered_tan":2.5,"olive":2.5,"tan":2.5,"dusty_tan":2.5,"sun_kissed":2.5,"light_tan":2.0,"fair":1.5,"honey_tan":2.0},
+    "eyeShape": {"eagle":3.0,"keen":3.0,"hunter":3.0,"sharp_phoenix":2.5,"deep_set":2.0,"almond":2.0,"narrow":2.0,"tiger":2.5},
+    "eyebrowShape": {"steel_brow":3.0,"hero_eyebrow":2.5,"straight":2.5,"thick":2.5,"angular":2.0,"chivalrous_brow":2.0,"rugged":1.5,"furrowed":1.5},
+    "faceShape": {"angular":2.5,"chiseled":2.5,"oval":2.0,"rectangular":2.5,"strong_jawline":2.5,"square":2.0,"stone_face":2.0,"seed_face":1.5},
+    "faceFeature": {"none":2.5,"sharp_features":2.5,"scar":2.0,"beard_stubble":2.0,"clean_shaven":2.5,"weathered":2.0,"high_cheekbones":2.0,"strong_jaw":2.0},
+    "impression": {"keen":3.0,"vigilant":3.0,"resolute":2.5,"stealthy":2.5,"focused":2.5,"heroic":2.0,"alert":3.0,"disciplined":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail"],
+    "temperament": ["innocent","naive","lazy","seductive","flamboyant","haughty","sinister","decadent","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump","bulky_massive"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland scout, {ageDesc}, {bodyType} athletic agile build, {faceDesc}, wearing military fatigues and light tactical vest, binoculars around neck, camouflaged cap, {hairStyle} {hairColor} hair, {eyeColor} keen vigilant eyes, {skinColor} camouflaged skin, {temperament} aura, rocky wasteland overlook, surveying landscape, crouching on ridge, overcast sky, photorealistic, intense, masterpiece"
+}

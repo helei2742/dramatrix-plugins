@@ -1,0 +1,30 @@
+{
+  "archetype": "illusionist",
+  "name": "幻术师",
+  "visualTags": "幻影迷离,镜花水月,虚幻真实,诡变莫测",
+  "description": "操纵幻术的术士，虚实相生，以假乱真，令人难辨真假",
+  "defaults": {
+    "defaultAccessories": ["ring","mask","jade_pendant"],
+    "defaultWeapon": ["fan","staff","jade_ruyi"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"willowy":2.5,"ethereal_light":2.5,"slender_tall":2.0},
+    "temperament": {"ethereal":3.0,"sinister":2.5,"cunning":2.5,"cold":1.5},
+    "hairStyle": {"silver_flow":3.0,"flowing_long":2.5,"wavy_long":2.0,"spirit_snake":2.0},
+    "hairColor": {"silver":3.0,"violet":2.5,"purple":2.0,"cosmic":1.5,"deep_purple":1.5},
+    "defaultClothes": {"purple_robe":3.0,"dark_cloak":2.5,"spirit_silk":2.5,"white_robe":1.5},
+    "eyeColor": {"purple":3.0,"violet":2.5,"heterochromia":2.0,"silver":2.0},
+    "eyeShape": {"fox":3.0,"deep_set":3.0,"upturned":2.5,"heterochromia":1.5},
+    "eyebrowShape": {"faint":3.0,"feathered":2.5,"wispy_brow":2.5,"raised":1.5},
+    "faceShape": {"fox_face":3.0,"diamond":2.5,"inverted_triangle":2.5,"crescent_face":2.0},
+    "faceFeature": {"beauty_mark":1.5,"none":2.5,"pale_face":1.5},
+    "impression": {"sinister":3.0,"ethereal":3.0,"shrewd":2.0,"cold":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","staff_monk"],
+    "defaultAccessories": ["abacus"],
+    "hairStyle": ["bald","buzz_cut"],
+    "temperament": ["innocent"]
+  },
+  "templateFluxPrompt": "a {gender} illusionist, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, illusion magic swirling around"
+}

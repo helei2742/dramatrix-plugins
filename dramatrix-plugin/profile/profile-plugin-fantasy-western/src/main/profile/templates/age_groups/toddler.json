@@ -1,0 +1,29 @@
+{
+  "ageGroup": "toddler",
+  "displayName": "幼儿",
+  "ageRange": "3-5岁",
+  "defaults": {
+    "ageDesc": ["三四岁稚童","五岁幼童","垂髫之年","稚子","黄口小儿","稚嫩孩童"],
+    "heightDesc": ["矮小可爱","不及成人腰际","小小身形"],
+    "bodyType": ["plump","petite"]
+  },
+  "weightBias": {
+    "faceShape": {"round":3.5,"oval":1.5,"almond":1.0},
+    "eyeShape": {"round":3.5,"almond":1.5,"peach_blossom":1.0},
+    "lipShape": {"cherry":2.5,"pouty":2.5,"rose":1.0},
+    "noseShape": {"upturned":2.5,"button":2.5,"water_drop":1.5},
+    "faceFeature": {"none":3.0,"dimples":2.0,"ruddy":2.0,"freckles":1.0},
+    "impression": {"innocent":4.0,"delicate":1.5,"gentle":1.0},
+    "temperament": {"innocent":3.5,"cheerful":1.5,"warm":1.5,"gentle":1.0},
+    "hairColor": {"dark_brown":1.0,"black":1.0,"chestnut":0.5},
+    "bodyType": {"plump":3.0,"petite":2.5,"medium":0.5}
+  },
+  "exclude": {
+    "temperament": ["sinister","cold","shrewd","stoic","sharp","aloof","arrogant","cunning","ruthless","majestic","fierce","reckless","sly","ferocious","obsessive","ambitious","wild"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","nasolabial_folds","wrinkles","scar","rosacea","birthmark"],
+    "bodyType": ["muscular_broad","hulking","lanky","tall_athletic","stocky"],
+    "impression": ["weathered","heroic","majestic","shrewd","cold","resolute","fierce"],
+    "hairColor": ["white","gray","silver","frost_white","ash_gray"]
+  },
+  "fluxAgeDesc": "toddler"
+}

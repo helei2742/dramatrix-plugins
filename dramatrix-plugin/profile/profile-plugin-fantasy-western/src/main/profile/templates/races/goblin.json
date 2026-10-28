@@ -1,0 +1,35 @@
+{
+  "race": "goblin",
+  "displayName": "哥布林",
+  "description": "绿肤尖耳的小型种族，生性狡黠机敏，善潜行与诡计",
+  "defaults": {
+    "skinColor": ["emerald","jade","olive","ruddy","dark"],
+    "eyeColor": ["amber","crimson","black","gold","emerald"],
+    "hairColor": ["dark_brown","black","red","ash_gray"],
+    "bodyType": ["compact","lanky","lean_fit","petite","lithe"]
+  },
+  "weightBias": {
+    "skinColor": {"emerald":2.5,"jade":2.5,"olive":2.0},
+    "eyeColor": {"amber":2.5,"crimson":2.5},
+    "hairColor": {"dark_brown":2.5,"black":2.5,"red":2.0},
+    "bodyType": {"lanky":2.5,"compact":2.5,"lean_fit":2.0},
+    "eyeShape": {"round":2.5,"upturned":2.0,"deep_set":2.0},
+    "eyebrowShape": {"raised":2.5,"rugged":2.0},
+    "noseShape": {"upturned":2.5},
+    "faceFeature": {"scar":2.0,"tattoo":1.5},
+    "impression": {"sinister":2.5,"wild":2.5,"free_spirit":2.0},
+    "temperament": {"wild":2.5,"sinister":2.5}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","fair","ivory","peach"],
+    "eyeColor": ["pearl","sapphire","silver"],
+    "hairColor": ["golden","platinum","silver","honey"],
+    "bodyType": ["slender_tall","tall_athletic","hulking","willowy","ethereal_light"],
+    "temperament": ["noble","refined","innocent","gentle"]
+  },
+  "faceDescOverride": {
+    "prepend": "pointed ears绿肤，",
+    "append": ""
+  },
+  "templateFluxPrompt": "a goblin {gender}, {ageDesc}, {bodyType}, {faceDesc} with pointed ears and green skin, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

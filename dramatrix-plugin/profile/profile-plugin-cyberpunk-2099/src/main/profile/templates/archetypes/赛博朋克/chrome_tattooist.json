@@ -1,0 +1,46 @@
+{
+  "archetype": "chrome_tattooist",
+  "category": "赛博朋克",
+  "name": "铬纹身师",
+  "visualTags": "纹身, 艺术, 电路",
+  "description": "把电路刺进皮肤、让身体成为画布的艺术家。",
+  "defaults": {
+    "skinColor": [
+      "tattooed_neon"
+    ],
+    "cyberImplant": [
+      "skin_weave",
+      "optic_camouflage"
+    ],
+    "temperament": [
+      "playful",
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "tattooed_neon": 3.0
+    },
+    "cyberImplant": {
+      "skin_weave": 2.5,
+      "optic_camouflage": 2.0
+    },
+    "impression": {
+      "neon_glam": 2.5,
+      "underground_defiant": 2.0
+    },
+    "temperament": {
+      "playful": 2.5,
+      "calm": 2.0
+    }
+  },
+  "exclude": {
+    "skinColor": [
+      "chrome_skin"
+    ],
+    "temperament": [
+      "stoic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

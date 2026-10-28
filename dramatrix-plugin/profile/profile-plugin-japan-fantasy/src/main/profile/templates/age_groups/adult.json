@@ -1,0 +1,20 @@
+{
+  "ageGroup": "adult",
+  "displayName": "中年",
+  "ageRange": "30-50岁",
+  "defaults": {
+    "ageDesc": ["三十出头","三十五六岁","四十来岁"],
+    "heightDesc": ["一米八左右","一米七五左右","魁梧高大"],
+    "bodyType": ["lean_fit","medium","tall_athletic","plump"]
+  },
+  "weightBias": {
+    "faceFeature": {"beard_goatee":1.5,"beard_mustache":1.0,"beard_full":1.0,"nasolabial_folds":1.5},
+    "bodyType": {"lean_fit":2.0,"tall_athletic":1.5},
+    "temperament": {"calm":2.5,"shrewd":1.5,"stoic":1.5,"majestic":1.5},
+    "impression": {"majestic":2.0,"shrewd":2.0,"resolute":2.0,"weathered":1.5}
+  },
+  "exclude": {
+    "temperament": ["innocent"]
+  },
+  "fluxAgeDesc": "middle-aged adult"
+}

@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_lich",
+  "name": "巫妖",
+  "visualTags": "枯槁法袍,灵魂宝石,亡灵法阵,寒骨手指",
+  "description": "以命匣锁住灵魂而永生的亡灵法师，通晓禁咒，视生死为可算之数",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"several_centuries":2.5,"century_old":2.0,"thousand_years":1.5,"immortal_ancient":1.5},
+    "hairColor": {"none":3.0,"white":2.5,"ash_blond":2.0,"gray":2.0,"charcoal":1.5},
+    "skinColor": {"ghostly_pale":3.0,"chalk_white":2.5,"pale_ash":2.5,"stone_gray":1.5,"age_spotted":1.5},
+    "eyeColor": {"white_opaque":1.5,"blood_red":2.5,"shadow_black":2.0,"moonlight":2.5,"pearl_gray":1.5,"cosmic":2.0},
+    "defaultClothes": {"corpse_robe":2.5,"patchwork_rags":2.5,"dark_cloak":2.0,"charcoal_hooded_cloak":2.0,"chainmail":1.5,"violet_mage_robe":2.5,"silver_thread_robe":1.5},
+    "temperament": {"desolate":3.0,"cold":2.5,"grim":2.0,"sinister":2.0,"stoic":1.5,"calculating":3.5,"enigmatic":2.5,"arrogant":2.0},
+    "impression": {"ghostly":2.0,"cold":2.0,"lonely":2.0,"sinister":2.5,"ancient_soul":3.0,"intellectual":2.0},
+    "eyebrowShape": {"faint":2.5,"ghost_brow":2.5,"wispy_brow":2.0,"broken_brow":1.5},
+    "bodyType": {"thin_bony":3.5,"pin_thin":2.5,"gangly":2.0,"delicate_frail":1.5},
+    "heightDesc": {"lean_height":2.5,"average_man":2.0,"bamboo_slender":1.5},
+    "faceFeature": {"gaunt_face":3.0,"veins":2.0,"shadow_face":2.0,"third_eye":1.5},
+    "eyeShape": {"abyss_eye":2.5,"deep_set":2.5,"narrow":1.5},
+    "faceShape": {"long":2.5,"seed_face":2.0,"sharp":1.5},
+    "defaultWeapon": {"staff":3.0,"staff_of_wisdom":3.0,"spirit_seal":3.0},
+    "defaultAccessories": {"crystal_ball":2.5,"gnarled_staff_ring":2.5,"scroll_tube":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["head_flower","phoenix_hairpin","hair_ribbon"],
+    "temperament": ["cheerful","jovial","warm","innocent"],
+    "faceFeature": ["dimples","ruddy","freckles"],
+    "defaultWeapon": ["axe","war_hammer","two_hand_sword","halberd"],
+    "bodyType": ["bulky_massive","muscular_broad","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; withered skeletal figure, floating soul gems, necromantic runes; dark fantasy undead art, necrotic gloom"
+}

@@ -1,0 +1,210 @@
+{
+  "attribute": "defaultClothes",
+  "displayName": "默认服装",
+  "options": [
+    {
+      "id": "trench_coat",
+      "value": "防弹风衣",
+      "description": "长及踝部的经典侦探风衣，内衬凯夫拉",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "风衣",
+        " 经典",
+        " 防弹"
+      ]
+    },
+    {
+      "id": "kevlar_vest",
+      "value": "防弹背心",
+      "description": "外露防弹层的实用装束",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "背心",
+        " 防弹",
+        " 实用"
+      ]
+    },
+    {
+      "id": "chrome_jacket",
+      "value": "铬光夹克",
+      "description": "反光材质拼接的街头外套",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "夹克",
+        " 铬",
+        " 街头"
+      ]
+    },
+    {
+      "id": "holographic_suit",
+      "value": "全息西装",
+      "description": "企业会议用的动态投影西装",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "西装",
+        " 全息",
+        " 企业"
+      ]
+    },
+    {
+      "id": "cargo_punk",
+      "value": "工装朋克",
+      "description": "满袋工具的破旧多袋工装",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "工装",
+        " 实用",
+        " 破旧"
+      ]
+    },
+    {
+      "id": "netrunner_suit",
+      "value": "网行者套装",
+      "description": "植入冷却管的紧身潜行服",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "紧身",
+        " 潜行",
+        " 冷却"
+      ]
+    },
+    {
+      "id": "biker_leathers",
+      "value": "机车皮衣",
+      "description": "铆钉与油渍的重机皮衣",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "皮衣",
+        " 机车",
+        " 重机"
+      ]
+    },
+    {
+      "id": "ragged_poncho",
+      "value": "破斗篷",
+      "description": "废土风格的拼布斗篷",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "斗篷",
+        " 废土",
+        " 拼布"
+      ]
+    },
+    {
+      "id": "corp_armor",
+      "value": "企业装甲",
+      "description": "高官随身的轻量化动力装甲",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "装甲",
+        " 企业",
+        " 动力"
+      ]
+    },
+    {
+      "id": "latex_catsuit",
+      "value": "乳胶战衣",
+      "description": "贴身第二层皮的战斗服",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "乳胶",
+        " 贴身",
+        " 战斗"
+      ]
+    },
+    {
+      "id": "neon_kimono",
+      "value": "霓虹和服",
+      "description": "传统和服的赛博发光变体",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "和服",
+        " 霓虹",
+        " 传统"
+      ]
+    },
+    {
+      "id": "foil_wrap",
+      "value": "锡纸保暖",
+      "description": "流浪者裹身的应急隔热层",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "锡纸",
+        " 流浪",
+        " 应急"
+      ]
+    }
+  ]
+}

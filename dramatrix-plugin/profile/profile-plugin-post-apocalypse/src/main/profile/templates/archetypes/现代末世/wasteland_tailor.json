@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_tailor",
+  "name": "废土裁缝",
+  "visualTags": "wasteland tailor, seamstress, fabric scraps, sewing machine, patching clothes, creative, resourceful, post-apocalyptic fashion",
+  "description": "末世裁缝，用碎布与旧衣拼凑修补出耐穿的衣物，以针线为废土保留文明的温度",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"svelte_elegant":2.5,"willowy":2.0,"lean_fit":2.5,"medium":2.5,"slender_tall":2.5,"ethereal_light":1.5,"lean_wiry":2.0},
+    "temperament": {"meticulous":3.0,"patient":3.0,"creative":3.0,"humble":2.5,"kind_heart":3.0,"simple":2.5,"gentle":2.5,"pragmatic":2.5,"adaptable":2.5,"calm":2.0,"observant":2.5},
+    "hairStyle": {"bound_up":2.5,"low_ponytail":2.5,"half_up":2.5,"loose_half_up":3.0,"simple_tie":3.0,"bangs_short":2.5,"side_part_long":2.0,"choppy_short":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"chestnut":2.5,"light_brown":2.5,"gray":2.0,"auburn":2.0,"salt_pepper":2.0,"silver_gray":1.5},
+    "defaultClothes": {"merchant_patchwork_robe":3.0,"patched_denim_suit":3.0,"survivor_hoodie_worn":2.5,"dust_cloak_worn":2.5,"tattered_jacket":2.5,"nomad_wraps":2.0,"scavenger_harness":2.0,"patched_coveralls":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"warm_brown":2.5,"green":2.0,"black":2.0,"gray":2.5,"honey":2.0,"deep_blue":1.5},
+    "skinColor": {"fair":3.0,"ivory":2.5,"light_tan":2.5,"rose_white":2.5,"tan":2.0,"pale_porcelain":2.0,"jade":2.0,"weathered_tan":1.0},
+    "eyeShape": {"almond":3.0,"peach_blossom":2.5,"downturned":2.5,"sharp_phoenix":2.5,"round":2.0,"scholar_eye":2.5,"tired":2.0,"deep_set":1.5},
+    "eyebrowShape": {"willow":3.0,"curved_fine":3.0,"crescent":2.5,"distant_mountain":2.5,"straight":2.0,"silkworm":2.5,"auspicious_brow":2.0,"long_eyebrow":2.0},
+    "faceShape": {"oval":3.0,"seed_face":3.0,"jade_mirror":2.5,"heart":2.5,"bamboo_leaf_face":2.5,"round":2.0,"long":1.5,"angular":1.0},
+    "faceFeature": {"none":3.0,"beauty_mark":2.0,"freckles":2.5,"dimples":2.0,"clean_shaven":2.5,"sharp_features":2.0,"high_cheekbones":2.0,"needle_prick":2.0},
+    "impression": {"delicate":3.0,"patient":3.0,"humble":3.0,"kind_heart":2.5,"creative":2.5,"warm":2.5,"simple":2.0,"meticulous":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk","claws","flail"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","mask"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut","warrior_braid"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier","biker_leather_armor","wild_beast_skin"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","feral","cold","ruthless"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","stocky_strong","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland tailor, {ageDesc}, {bodyType} slender graceful build, {faceDesc}, wearing patchwork fabric robe, sewing needle in hand, surrounded by fabric scraps and patched clothes, sewing machine made from scrap, {hairStyle} {hairColor} hair, {eyeColor} meticulous focused eyes, {skinColor} skin, {temperament} aura, cozy makeshift tailor workshop, fabric rolls, patched garments hanging, warm lamp light, photorealistic, craft, masterpiece"
+}

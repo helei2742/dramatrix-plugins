@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_thunder_eagle",
+  "name": "雷鹰",
+  "visualTags": "雷羽炸裂,钩喙利爪,展翼蔽日,电光风暴",
+  "description": "翼展遮天的雷禽，羽间常有电弧噼啪，俯冲时携雷霆之势",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"prime_age":2.0,"thirty_mid":1.5,"century_old":1.5},
+    "hairColor": {"dark_brown":2.5,"charcoal":2.5,"sand_blond":2.0,"silver":1.5,"auburn":1.5,"silver_blue":3.0,"cyan":2.0,"white":1.5},
+    "skinColor": {"bark_brown":2.5,"weathered_tan":2.0,"swarthy":2.0,"scaly_green":1.5,"clay_brown":1.5,"silver_luster":2.5,"blue_gray":2.0},
+    "eyeColor": {"slit_pupil_gold":3.0,"amber":2.5,"sunflower":2.0,"forest_green":1.5,"copper":1.5,"golden":3.0,"topaz":2.5,"amber_gold":2.0},
+    "defaultClothes": {"wild_beast_skin":3.0,"hunters_garb":2.0,"patchwork_rags":1.5,"feather_cloak":1.5,"leather_armor":1.5},
+    "temperament": {"wild":3.0,"fierce":3.0,"brutal":2.5,"volatile":2.5,"paranoid":1.5,"arrogant":2.5,"free_spirited":2.0},
+    "impression": {"wild":2.5,"fierce":2.5,"bloodthirsty":2.0,"lynx_eye":2.0,"dashing":2.0},
+    "eyebrowShape": {"tiger_eyebrow":2.5,"rugged":2.0,"thick":2.0,"wire_brow":1.5},
+    "bodyType": {"lithe_agile":2.5,"lean_wiry":3.0,"runner_lean":2.0,"slim":1.5,"tall_athletic":2.0},
+    "heightDesc": {"tall_lithe":2.5,"moderate_tall":2.0,"lean_height":1.5,"broad_tall":1.5},
+    "hairStyle": {"wild_mane":2.5,"high_ponytail":2.0,"flying_sky":2.0},
+    "faceShape": {"bird_face":3.5,"sharp":2.5,"inverted_triangle":1.5},
+    "eyeShape": {"eagle":3.5,"sharp_phoenix":2.0,"narrow":1.5},
+    "noseShape": {"bird_beak":3.5,"aquiline":2.0},
+    "faceFeature": {"none":2.0,"glowing_face":2.0,"high_cheekbones":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0,"bow":3.0},
+    "defaultAccessories": {"none":2.5,"headband":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","folding_fan","scroll_tube"],
+    "temperament": ["scholarly","eloquent","dignified","demure"],
+    "hairStyle": ["updo_elegant","phoenix_crown","braid_crown"],
+    "defaultWeapon": ["hoe","war_hammer","pole"],
+    "bodyType": ["bulky_massive","barrel_chested","short_stout","plump"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; vast crackling feathered wings, arcs of lightning between feathers, hooked beak and talons; wild beast monster concept art, savage wilderness"
+}

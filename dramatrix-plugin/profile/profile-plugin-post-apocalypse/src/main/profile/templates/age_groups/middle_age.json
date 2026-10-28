@@ -1,0 +1,29 @@
+{
+  "ageGroup": "middle_age",
+  "displayName": "中年",
+  "ageRange": "46-55岁",
+  "defaults": {
+    "ageDesc": ["四十六七岁","五十出头","知天命","五十上下","年近半百","五旬左右"],
+    "heightDesc": ["一米七五左右","身形敦实","中等身材","气度沉稳"],
+    "bodyType": ["medium","plump","stocky","lean_fit"]
+  },
+  "weightBias": {
+    "faceShape": {"square":2.5,"round":2.0,"rectangular":2.0,"oval":1.5,"broad":1.5},
+    "eyeShape": {"deep_set":2.0,"phoenix":1.5,"eagle":1.5,"crane":1.5,"sharp_phoenix":1.0,"narrow":1.0},
+    "lipShape": {"thin":2.0,"defined":2.0,"full":1.0,"downturned":0.5},
+    "noseShape": {"straight":2.0,"aquiline":2.0,"roman":2.0,"broad":1.5,"hawk":1.0},
+    "faceFeature": {"nasolabial_folds":3.0,"wrinkles":1.5,"beard_goatee":1.5,"beard_mustache":1.5,"beard_full":1.5,"beard_stubble":1.0,"rosacea":0.3},
+    "impression": {"dignified":3.0,"weathered":2.5,"majestic":2.0,"shrewd":2.0,"scholarly":1.5,"resolute":2.0},
+    "temperament": {"calm":2.5,"stoic":2.5,"shrewd":2.0,"majestic":1.5,"warm":1.0,"benevolent":1.0,"cunning":1.0,"sly":0.3},
+    "hairColor": {"gray":2.5,"ash_gray":2.0,"white":1.0,"silver":1.0,"dark_brown":1.0,"black":1.0,"frost_white":0.5},
+    "bodyType": {"medium":2.5,"plump":2.0,"stocky":1.5,"lean_fit":1.5,"tall_athletic":0.5}
+  },
+  "exclude": {
+    "temperament": ["innocent","free_spirited","cheerful","timid","wild"],
+    "faceFeature": ["freckles","dimples"],
+    "bodyType": ["petite","willowy","ethereal_light","slender_tall","lithe"],
+    "impression": ["innocent","delicate"],
+    "hairColor": ["golden","platinum","honey","copper"]
+  },
+  "fluxAgeDesc": "middle-aged adult"
+}

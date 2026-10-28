@@ -1,0 +1,44 @@
+{
+  "archetype": "combat_medic",
+  "category": "赛博朋克",
+  "name": "战地医师",
+  "visualTags": "战地, 急救, 双面",
+  "description": "火线急救、边缝合边还击的双面天使。",
+  "defaults": {
+    "defaultClothes": [
+      "kevlar_vest"
+    ],
+    "cyberImplant": [
+      "cyber_heart",
+      "cyber_lung",
+      "adrenal_pump"
+    ],
+    "temperament": [
+      "stoic"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "kevlar_vest": 2.5
+    },
+    "cyberImplant": {
+      "cyber_heart": 2.5,
+      "cyber_lung": 2.5,
+      "adrenal_pump": 2.0
+    },
+    "impression": {
+      "war_hardened": 2.5,
+      "surgeon_precise": 2.0
+    },
+    "temperament": {
+      "stoic": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "playful",
+      "manic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "dramatrix-github",
+    "downloadSourceId": "dramatrix-release-github",
+    "provider": "github-release",
+    "required": true,
+    "repository": "helei2742/dramatrix-plugins"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "race": "gnome",
+  "displayName": "地精",
+  "description": "矮小精悍的地下种族，擅长机械发明与宝石工艺，以智慧和巧手闻名",
+  "defaults": {
+    "skinColor": ["tan","ruddy","bronze","wheat","olive"],
+    "eyeColor": ["dark_brown","amber","emerald","black","gold"],
+    "hairColor": ["dark_brown","auburn","gray","chestnut","white"],
+    "bodyType": ["compact","stocky","petite","hefty"]
+  },
+  "weightBias": {
+    "skinColor": {"tan":2.5,"ruddy":2.5},
+    "eyeColor": {"dark_brown":2.5,"amber":2.5,"emerald":2.0},
+    "hairColor": {"dark_brown":2.5,"chestnut":2.0,"gray":2.0},
+    "bodyType": {"compact":2.5,"stocky":2.5},
+    "eyeShape": {"round":2.5,"almond":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.0},
+    "faceShape": {"round":2.5,"square":2.0},
+    "faceFeature": {"beard_full":2.0,"beard_mustache":1.5},
+    "impression": {"clever":2.5,"loyal":2.5,"free_spirit":2.0},
+    "temperament": {"warm":2.5,"gentle":2.0}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","pale_blue"],
+    "eyeColor": ["heterochromia","starry"],
+    "hairColor": ["platinum","golden","light_pink"],
+    "bodyType": ["slender_tall","tall_athletic","hulking","willowy","ethereal_light"],
+    "temperament": ["ethereal","sinister","cold"]
+  },
+  "templateFluxPrompt": "a gnome {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

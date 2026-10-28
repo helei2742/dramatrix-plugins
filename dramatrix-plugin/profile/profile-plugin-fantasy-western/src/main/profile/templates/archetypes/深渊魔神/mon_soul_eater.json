@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_soul_eater",
+  "name": "噬魂魔",
+  "visualTags": "无面黑洞,魂火吞噬,长指如钩,寂静逼近",
+  "description": "面部只有一片吸食魂魄的漩涡，指爪细长如钩，靠近时四周声音尽失",
+  "weightBias": {
+    "ageDesc": {"immortal_ancient":3.0,"thousand_years":2.5,"several_centuries":2.0,"unknown_age":2.0,"century_old":1.5},
+    "hairColor": {"obsidian":2.5,"crimson":2.5,"cosmic":1.5,"deep_purple":2.0,"none":3.0},
+    "skinColor": {"deep_purple_hue":2.5,"fiery_red":2.5,"ebony":3.0,"chalk_white":2.0,"reddish_bronze":1.5,"pale_violet":2.0},
+    "eyeColor": {"blood_red":3.0,"slit_pupil_red":2.5,"shadow_black":3.5,"cosmic":2.5,"sunset_gold":1.5,"white_opaque":1.5},
+    "defaultClothes": {"black_night":2.5,"dark_cloak":2.5,"golden_armor":2.0,"war_general_armor":2.0,"burgundy_velvet_cloak":1.5},
+    "temperament": {"overbearing":3.0,"sinister":2.5,"majestic":2.0,"ruthless":2.5,"fanatical":1.5,"cold":3.0,"enigmatic":3.0,"reserved":1.5},
+    "impression": {"demonic_majesty":3.0,"domineering":2.5,"sinister":3.0,"majestic":1.5,"ghostly":3.0,"mysterious":2.0},
+    "eyebrowShape": {"demon_eyebrow":3.0,"flame_brow":2.0,"sword":2.0,"lightning_brow":1.5},
+    "bodyType": {"thin_bony":3.5,"pin_thin":2.5,"gangly":2.0,"delicate_frail":1.5},
+    "heightDesc": {"lean_height":2.5,"average_man":2.0,"bamboo_slender":1.5},
+    "hairStyle": {"bald":2.5,"ethereal_floating":2.5,"drifting_cloud":1.5},
+    "faceFeature": {"shadow_face":3.5,"gaunt_face":2.5,"none":1.5},
+    "faceShape": {"ghost_face":3.0,"long":2.0,"demon_face":2.0},
+    "eyeShape": {"abyss_eye":3.5,"empty_eye":3.0},
+    "lipShape": {"silent_lip":3.0,"shut_lip":2.0,"warped_lip":1.5},
+    "defaultWeapon": {"scythe":3.0,"claws":3.0,"soul_flute":3.0},
+    "defaultAccessories": {"none":2.5,"black_veil_hat":2.5,"blood_stone_amulet":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["humble","innocent","naive","kind_heart","jovial","cheerful","amiable","warm"],
+    "defaultWeapon": ["war_hammer","axe","guqin","hoe"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; faceless void that devours soul-light, elongated hooked fingers, silence spreading around it; abyssal demon lord art, hellfire and ruin"
+}

@@ -1,0 +1,42 @@
+{
+  "archetype": "info_broker",
+  "category": "赛博朋克",
+  "name": "情报贩子",
+  "visualTags": "情报, 秘密, 权力",
+  "description": "记忆即货币、秘密即权力的暗网银行家。",
+  "defaults": {
+    "defaultClothes": [
+      "holographic_suit"
+    ],
+    "cyberImplant": [
+      "data_jack",
+      "voice_modulator"
+    ],
+    "temperament": [
+      "paranoid"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "holographic_suit": 2.5
+    },
+    "cyberImplant": {
+      "data_jack": 2.5,
+      "voice_modulator": 2.0
+    },
+    "impression": {
+      "broker_slick": 2.5,
+      "noir_jaded": 2.0
+    },
+    "temperament": {
+      "paranoid": 3.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "playful",
+      "charismatic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

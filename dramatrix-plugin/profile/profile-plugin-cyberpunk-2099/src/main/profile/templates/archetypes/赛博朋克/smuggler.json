@@ -1,0 +1,43 @@
+{
+  "archetype": "smuggler",
+  "category": "赛博朋克",
+  "name": "走私者",
+  "visualTags": "走私, 运输, 幽灵",
+  "description": "穿梭于关卡缝隙、运输禁品的幽灵商人。",
+  "defaults": {
+    "defaultClothes": [
+      "ragged_poncho"
+    ],
+    "cyberImplant": [
+      "optic_camouflage"
+    ],
+    "temperament": [
+      "cynical"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "ragged_poncho": 2.5,
+      "foil_wrap": 2.0
+    },
+    "cyberImplant": {
+      "optic_camouflage": 2.5
+    },
+    "impression": {
+      "noir_jaded": 2.5,
+      "underground_defiant": 2.0
+    },
+    "temperament": {
+      "cynical": 2.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "holographic_suit"
+    ],
+    "temperament": [
+      "charismatic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

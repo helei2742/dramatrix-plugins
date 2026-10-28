@@ -1,0 +1,34 @@
+{
+  "archetype": "techie",
+  "category": "赛博朋克",
+  "name": "技师",
+  "visualTags": "技师, 工程, 改造",
+  "description": "拆解一切、重组一切的机械诗人，义体出自其手。",
+  "defaults": {
+    "defaultClothes": [
+      "cargo_punk"
+    ],
+    "cyberImplant": [
+      "gorilla_arms",
+      "kerenzikov"
+    ],
+    "temperament": [
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "gorilla_arms": 2.5,
+      "kerenzikov": 2.0
+    },
+    "defaultClothes": {
+      "cargo_punk": 2.5
+    },
+    "impression": {
+      "surgeon_precise": 2.5,
+      "gutter_grit": 2.0
+    }
+  },
+  "exclude": {},
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

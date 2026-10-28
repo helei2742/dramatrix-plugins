@@ -1,0 +1,33 @@
+{
+  "archetype": "survivor",
+  "name": "幸存者",
+  "visualTags": "post-apocalyptic survivor, wasteland, rugged, worn clothes, determined, survival gear, dusty, gritty",
+  "description": "末世幸存者，在废土中挣扎求生，坚韧不拔，见证文明崩塌后的荒芜世界",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"lean_fit":3.0,"athletic_toned":2.5,"slim":2.5,"slender_tall":2.0,"medium":2.0,"stocky_strong":1.5,"runner_lean":2.5},
+    "temperament": {"survivor":3.0,"weary":3.0,"resilient":3.0,"pragmatic":2.5,"stoic":2.5,"cautious":2.0,"determined":2.0,"wary":2.5,"hardened":2.5,"adaptable":2.0,"loner":2.0},
+    "hairStyle": {"choppy_short":3.0,"messy_medium":3.0,"tied_back_loose":2.5,"short_crop":2.0,"unkempt_long":2.0,"buzz_cut":2.0,"half_up":1.5,"low_ponytail":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"dirty_blonde":2.5,"dusty_brown":2.5,"gray_streaked":2.0,"ash_brown":2.0,"charcoal":1.5,"faded_black":2.0},
+    "defaultClothes": {"tattered_jacket":3.0,"survivor_hoodie_worn":3.0,"patched_denim_suit":2.5,"dust_cloak_worn":2.5,"wasteland_duster":2.0,"scavenger_harness":2.0,"nomad_wraps":1.5,"cargo_pants":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"weary_blue":2.0,"gray":2.0,"black":2.0,"amber":1.5,"green":1.5,"dull_blue":2.0},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":2.5,"tan":2.5,"olive":2.0,"light_tan":2.0,"fair":1.5,"dusty_tan":2.5,"honey_tan":1.5},
+    "eyeShape": {"deep_set":3.0,"almond":2.5,"tired":3.0,"narrow":2.0,"sharp_phoenix":2.0,"round":1.5,"eagle":1.5,"hunter":2.0},
+    "eyebrowShape": {"rugged":3.0,"thick":2.5,"straight":2.5,"knitted":2.0,"steel_brow":2.0,"angular":1.5,"chivalrous_brow":1.5,"furrowed":2.0},
+    "faceShape": {"angular":2.5,"rectangular":2.5,"weathered":3.0,"gaunt":2.5,"square":2.0,"oval":1.5,"stone_face":2.0,"long":2.0},
+    "faceFeature": {"scar":2.5,"beard_stubble":3.0,"weathered":3.0,"dirt_smudge":2.5,"chapped_lips":2.0,"none":1.5,"hollow_cheeks":2.0,"strong_jaw":2.0},
+    "impression": {"weathered":3.0,"hardened":3.0,"survivor":3.0,"wary":2.5,"tough":2.5,"resilient":2.0,"shadowed":2.0,"gritty":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","jovial","carefree","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump"]
+  },
+  "templateFluxPrompt": "a {gender} post-apocalyptic survivor, {ageDesc}, {bodyType} lean weathered build, {faceDesc}, wearing worn tattered survival clothes, dust and grime, {hairStyle} {hairColor} hair, {eyeColor} tired eyes, {skinColor} sun-weathered skin, {temperament} aura, devastated urban ruins background, overcast sky, desolate wasteland, photorealistic, gritty, masterpiece"
+}

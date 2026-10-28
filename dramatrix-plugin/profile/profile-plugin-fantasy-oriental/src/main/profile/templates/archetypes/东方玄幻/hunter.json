@@ -1,0 +1,30 @@
+{
+  "archetype": "hunter",
+  "name": "猎人",
+  "visualTags": "长弓,猎鹰,捕兽夹,丛林追踪",
+  "description": "山林间的猎人，擅长追踪猎物，以弓箭和陷阱为生",
+  "defaults": {
+    "defaultAccessories": ["spirit_beast_bag","hat"],
+    "defaultWeapon": ["bow","dagger","spear"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"tall_athletic":2.5,"slender_tall":2.0,"medium":1.0},
+    "temperament": {"wild":3.0,"sharp":3.0,"cunning":2.5,"calm":1.5},
+    "hairStyle": {"warrior_braid":2.5,"half_up":2.5,"braided":2.0,"topknot_loose":2.0},
+    "hairColor": {"dark_brown":3.0,"auburn":2.5,"chestnut":2.0,"black":1.5},
+    "defaultClothes": {"leather_armor":3.0,"hemp_cloth":2.5,"dark_cloak":2.0},
+    "eyeColor": {"amber":3.0,"forest_green":2.5,"dark_brown":2.0,"hazel":1.5},
+    "eyeShape": {"eagle":3.0,"wolf":2.5,"swallow":2.0,"narrow":1.5},
+    "eyebrowShape": {"bow_eyebrow":3.0,"broken_brow":2.5,"rugged":2.0,"curved_thick":2.0},
+    "faceShape": {"hunter_face":3.0,"wolf_face":2.5,"sharp":2.0,"deer_face":1.5},
+    "faceFeature": {"beard_stubble":2.0,"scar":1.5,"tattoo":1.5,"ruddy":1.0},
+    "impression": {"heroic_open":3.0,"shrewd":2.5,"free_spirit":2.5,"weathered":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["whisk","jade_ruyi","fan","hoe"],
+    "defaultAccessories": ["abacus","hairpin","earring"],
+    "hairStyle": ["bald","phoenix_crown","immortal_bun"],
+    "defaultClothes": ["spirit_silk","red_dress"]
+  },
+  "templateFluxPrompt": "a {gender} hunter, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, carrying bow and arrow in wilderness, tracking prey"
+}

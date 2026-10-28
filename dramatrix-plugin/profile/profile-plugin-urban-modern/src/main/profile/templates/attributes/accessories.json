@@ -1,0 +1,7 @@
+{
+  "attribute": "defaultAccessories",
+  "displayName": "默认配饰",
+  "options": [
+    {"id":"ring","value":"乾坤戒","genderBias":{"男":1.5,"女":1.0},"raceTags":["人族","魔族"],"archetypeTags":["cultivator","mage"],"ageTags":[],"tags":["戒指","储物","法宝"]}
+  ]
+}

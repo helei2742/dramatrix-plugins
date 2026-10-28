@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_tree_sprite",
+  "name": "树妖",
+  "visualTags": "扭曲树身,藤蔓触须,苔藓斑驳,古木成精",
+  "description": "千年古木吸纳精气所化的妖物，躯干木质皲裂，藤蔓如手臂般绞杀来客",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"thousand_years":2.0,"unknown_age":2.0,"immortal_ancient":1.5},
+    "hairColor": {"jet_black":3.0,"inky_blue":2.0,"crimson":2.0,"white":1.5,"silver":1.5,"dark_green":3.0,"emerald":2.0,"dark_brown":2.0},
+    "skinColor": {"pale_porcelain":2.5,"moon_white":2.0,"pale_ash":2.0,"jade":1.5,"fox_fur":1.5,"bark_brown":3.5,"moss_green":2.5,"leaf_green":2.0},
+    "eyeColor": {"slit_pupil_gold":3.0,"blood_red":2.5,"amber":2.0,"crimson":2.0,"obsidian":1.5},
+    "defaultClothes": {"smoke_gauze":2.5,"black_night":2.0,"blood_dress":2.0,"dark_cloak":1.5,"wild_beast_skin":1.5},
+    "temperament": {"sinister":1.5,"seductive":2.0,"vicious":2.0,"mysterious":2.0,"brutal":1.5,"stoic":3.0,"desolate":2.0,"tranquil":1.5},
+    "impression": {"demon_charm":3.0,"sinister":2.5,"demonic_majesty":2.0,"mysterious":1.5},
+    "eyebrowShape": {"demon_eyebrow":3.0,"sword":2.0,"raised":1.5,"hook_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5},
+    "heightDesc": {"giant_towering":3.5,"towering_2m":2.5,"cloud_reaching":1.5},
+    "hairStyle": {"wild_mane":3.0,"ethereal_floating":1.5,"savage_bun":1.5},
+    "faceFeature": {"bark_skin":3.5,"wrinkled":2.0,"veins":1.5},
+    "faceShape": {"stone_face":2.5,"long":2.0,"broad":1.5},
+    "eyeShape": {"deep_pool":2.5,"empty_eye":2.0,"deep_set":1.5},
+    "defaultWeapon": {"vine_whip":3.0,"pole":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"head_flower":2.5,"spirit_stone":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["innocent","kind_heart","pure_heart"],
+    "defaultWeapon": ["throwing_knives","crossbow","wind_shuriken","flying_sword"],
+    "bodyType": ["petite_curvy","delicate_frail","svelte_elegant"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; bark-covered twisted trunk body, creeping vines and moss; oriental yaoguai demon art, ink and mist atmosphere"
+}

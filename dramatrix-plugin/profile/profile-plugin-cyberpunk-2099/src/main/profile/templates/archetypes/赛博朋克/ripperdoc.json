@@ -1,0 +1,45 @@
+{
+  "archetype": "ripperdoc",
+  "category": "赛博朋克",
+  "name": "改造医生",
+  "visualTags": "医师, 改造, 地下",
+  "description": "地下诊所里操刀的义体医师，买卖血肉与钢铁。",
+  "defaults": {
+    "defaultClothes": [
+      "cargo_punk"
+    ],
+    "cyberImplant": [
+      "gorilla_arms",
+      "skin_weave",
+      "neural_coprocessor"
+    ],
+    "temperament": [
+      "calm",
+      "cold"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "skin_weave": 2.5,
+      "gorilla_arms": 2.0,
+      "neural_coprocessor": 2.0
+    },
+    "defaultClothes": {
+      "cargo_punk": 2.5
+    },
+    "impression": {
+      "surgeon_precise": 2.5,
+      "deadpan_synth": 2.0
+    },
+    "temperament": {
+      "calm": 2.0,
+      "cold": 2.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "water_merchant",
+  "name": "净水商人",
+  "visualTags": "wasteland water merchant, water purification, clean water, precious resource, filters, barrels, essential trader, post-apocalyptic survival",
+  "description": "末世净水商人，掌握净水技术在废土中贩卖最珍贵的资源，掌握生命之源的守水人",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"stocky_strong":2.5,"lean_fit":2.5,"athletic_toned":2.5,"slim":2.0,"barrel_chested":2.0,"soft_round":2.0,"lean_wiry":2.0},
+    "temperament": {"pragmatic":3.0,"meticulous":3.0,"steadfast":3.0,"patient":2.5,"simple":2.5,"humble":2.5,"calm":2.5,"shrewd":2.0,"adaptable":2.5,"honor_bound":2.0,"altruistic":2.5},
+    "hairStyle": {"short_crop":3.0,"choppy_short":2.5,"tied_back_loose":2.5,"half_up":2.5,"low_ponytail":2.5,"bandana_wrap":2.5,"buzz_cut":2.0,"messy_medium":2.0},
+    "hairColor": {"dark_brown":3.0,"dusty_brown":3.0,"black":2.5,"gray":2.0,"ash_brown":2.5,"salt_pepper":2.5,"dirty_blonde":2.0,"faded_black":1.5},
+    "defaultClothes": {"patched_coveralls":3.0,"heavy_work_apron":3.0,"dust_cloak_worn":2.5,"merchant_patchwork_robe":2.5,"radiation_suit_worn":2.5,"scavenger_harness":2.5,"gas_mask_hooded_poncho":2.0,"tattered_jacket":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"clear_blue":3.0,"green":2.0,"black":2.0,"amber":2.0,"deep_blue":2.5},
+    "skinColor": {"weathered_tan":3.0,"tan":3.0,"sun_kissed":2.5,"dusty_tan":2.5,"light_tan":2.5,"olive":2.0,"fair":2.0,"honey_tan":2.0},
+    "eyeShape": {"almond":3.0,"round":2.5,"deep_set":2.5,"sharp_phoenix":2.0,"tiger":2.0,"keen":2.5,"narrow":1.5,"downturned":2.0},
+    "eyebrowShape": {"straight":3.0,"thick":2.5,"hero_eyebrow":2.5,"rugged":2.5,"chivalrous_brow":2.0,"silkworm":2.0,"willow":2.0,"steel_brow":2.0},
+    "faceShape": {"square":2.5,"oval":2.5,"round":2.5,"rectangular":2.5,"stone_face":2.0,"seed_face":2.0,"angular":1.5,"strong_jawline":2.0},
+    "faceFeature": {"none":2.5,"clean_shaven":2.5,"ruddy":2.5,"beard_stubble":2.5,"dirt_smudge":2.0,"weathered":2.5,"chapped_lips":2.0,"strong_jaw":2.0},
+    "impression": {"reliable":3.0,"simple":2.5,"humble":2.5,"hardened":2.5,"steadfast":2.5,"altruistic":2.5,"pragmatic":2.5,"essential":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","wild_mane","savage_bun","mohawk"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","unhinged","sinister","savage","reckless","haughty","decadent"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly","towering_giant"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland water purifier merchant, {ageDesc}, {bodyType} sturdy build, {faceDesc}, wearing work apron and coveralls, carrying water filtration equipment, precious clean water containers, {hairStyle} {hairColor} hair, {eyeColor} kind reliable eyes, {skinColor} sun-beaten skin, {temperament} aura, water purification station, makeshift filters and barrels, long line of thirsty survivors, harsh sunlight, photorealistic, essential, masterpiece"
+}

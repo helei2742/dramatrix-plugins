@@ -1,0 +1,33 @@
+{
+  "archetype": "journalist",
+  "name": "记者",
+  "visualTags": "modern journalist, reporter, press, camera, microphone, newsroom, inquisitive, sharp",
+  "description": "现代记者，追逐真相的新闻人，敏锐洞察，笔锋如刀，记录时代",
+  "defaults": {
+    "defaultAccessories": ["ring","none","folding_fan","book_pouch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"slim":2.5,"medium":2.5,"slender_tall":2.0,"athletic_toned":2.0,"lean_wiry":1.5,"runner_lean":2.0,"svelte_elegant":1.5},
+    "temperament": {"eloquent":3.0,"calculating":2.5,"crafty":2.5,"bold":2.5,"cynical":2.0,"pragmatic":2.5,"flamboyant":2.0,"cunning":2.0,"charismatic":2.5,"plucky":2.5,"zealous":2.0,"disciplined":1.5,"defiant":1.5},
+    "hairStyle": {"short_crop":2.5,"choppy_short":2.5,"half_up":2.0,"side_part_long":2.5,"topknot_loose":2.0,"simple_tie":2.0,"slicked_back":1.5,"bangs_short":2.0,"low_ponytail":2.0,"loose_half_up":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"chestnut":2.0,"charcoal":1.5,"light_brown":1.5,"auburn":1.5,"salt_pepper":1.0},
+    "defaultClothes": {"black_night":2.5,"cotton_hanfu":2.5,"linen_simple":2.5,"blue_robe":2.0,"indigo_dyed_cotton":2.0,"slate_gray_cloak":2.0,"navy_silk_hanfu":1.5,"charcoal_hooded_cloak":1.5,"travelers_cloak":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.5,"gray":2.0,"honey":1.5,"deep_blue":1.0,"amber":1.5,"smoky_quartz":1.5},
+    "skinColor": {"fair":2.5,"light_tan":2.5,"ivory":2.0,"tan":2.0,"olive":1.5,"sun_kissed":2.0,"weathered_tan":1.5,"rose_white":1.0},
+    "eyeShape": {"sharp_phoenix":3.0,"almond":2.5,"eagle":2.5,"fox":2.5,"narrow":2.0,"triangle":2.0,"round":1.5,"swallow":2.0},
+    "eyebrowShape": {"raised":2.5,"straight":2.5,"sword":2.0,"needle_brow":2.0,"angular":2.0,"sharp_straight_brow":2.5,"hook_brow":1.5,"thin":1.5},
+    "faceShape": {"oval":2.5,"sharp":3.0,"diamond":2.5,"seed_face":2.0,"angular":2.0,"rectangular":1.5,"heart":1.5,"inverted_triangle":1.5},
+    "faceFeature": {"none":2.5,"sharp_features":2.5,"high_cheekbones":2.0,"spectacles":2.0,"freckles":1.5,"beard_stubble":1.5,"clean_shaven":2.0,"nasolabial_folds":1.0},
+    "impression": {"shrewd":3.0,"intellectual":2.5,"cunning":2.5,"sharp":2.5,"resolute":2.0,"refined":2.0,"heroic":1.5,"handsome":2.0,"free_spirit":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","warrior_topknot","child_tuft","two_horns","savage_bun","immortal_bun","buzz_cut"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","golden_armor","plate_armor","chainmail","leather_armor","bamboo_hat_cape","wild_beast_skin","training_gear","ochre_hemp_tunic","scale_armor"],
+    "temperament": ["innocent","naive","unhinged","brutal","lazy","haughty","seductive"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","plump_soft"]
+  },
+  "templateFluxPrompt": "a {gender} modern journalist reporter, {ageDesc}, {bodyType} build, {faceDesc}, wearing smart casual clothing, press badge, holding a microphone or notepad, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern newsroom or urban street interview, camera equipment, breaking news atmosphere, photorealistic, masterpiece"
+}

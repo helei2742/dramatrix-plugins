@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_parasite_host",
+  "name": "寄生宿主",
+  "visualTags": "菌丝贯体,孢子喷吐,神志已失,躯壳听令",
+  "description": "被真菌寄生占据的人形躯壳，菌丝自眼耳钻出，死时爆开一团孢子云",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"salt_pepper":2.0,"ash_blond":1.5,"orange":1.5,"dark_green":2.5},
+    "skinColor": {"pale_ash":2.0,"scarred_bronze":2.5,"phosphor_white":2.0,"moss_green":3.0,"clay_brown":1.5,"pale_green":2.5,"bark_brown":1.5},
+    "eyeColor": {"white_opaque":3.5,"sunflower":2.0,"deep_orange":2.0,"blood_red":1.5,"heterochromia":1.5,"forest_green":2.0,"amber_gold":1.5},
+    "defaultClothes": {"tattered_jacket":2.5,"radiation_suit_worn":2.0,"scrap_metal_armor":2.0,"nomad_wraps":1.5,"gas_mask_hooded_poncho":1.5,"patched_coveralls":2.5},
+    "temperament": {"unhinged":3.0,"volatile":2.5,"brutal":2.0,"paranoid":2.0,"jaded":1.5,"subdued":2.5,"desolate":2.0,"grim":1.5},
+    "impression": {"sickness":3.5,"wild":2.5,"weathered":2.0,"bloodthirsty":1.5,"ghostly":2.5,"lonely":1.5},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "faceShape": {"long":2.5,"seed_face":2.0,"sharp":1.5},
+    "eyeShape": {"empty_eye":3.5,"white_eye":2.5,"deep_set":2.0},
+    "faceFeature": {"gaunt_face":2.0,"veins":3.0,"burn_scar":2.0,"pale_face":2.0,"bark_skin":3.0,"green_face":2.5},
+    "lipShape": {"warped_lip":3.0,"dry_cracked":2.5,"toothed_lip":2.0},
+    "noseShape": {"flat":2.5,"bony":2.0,"ghost_nose":1.5},
+    "bodyType": {"gangly":2.5,"thin_bony":2.5,"hunched":2.0,"gnarled_tough":1.5},
+    "heightDesc": {"average_man":2.5,"lean_height":2.0,"hunched_short":1.5},
+    "hairStyle": {"bald":2.5,"messy_bun":2.0,"choppy_short":1.5},
+    "defaultWeapon": {"none":3.0,"claws":3.0,"sickle":3.0},
+    "defaultAccessories": {"none":2.5,"leather_belt":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified","charismatic","eloquent","cheerful","radiant"],
+    "defaultWeapon": ["bow","crossbow","flying_sword","rune_sword"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; fungal tendrils bursting from eyes and mouth, cap-like growths on the shoulders, spore haze; post-apocalyptic mutant creature art, radioactive wasteland"
+}

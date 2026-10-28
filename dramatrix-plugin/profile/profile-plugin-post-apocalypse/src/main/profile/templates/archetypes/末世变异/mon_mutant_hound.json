@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_mutant_hound",
+  "name": "变异犬",
+  "visualTags": "皮开肉绽,双头嘶咬,脓疮遍布,追踪千里",
+  "description": "辐射带里进化出的猎犬，皮毛脱落露出溃烂肌肉，嗅觉能追出百里之外",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"salt_pepper":2.0,"ash_blond":1.5,"orange":1.5},
+    "skinColor": {"pale_ash":2.5,"scarred_bronze":3.0,"phosphor_white":2.0,"moss_green":2.0,"clay_brown":2.0},
+    "eyeColor": {"white_opaque":2.0,"sunflower":2.0,"deep_orange":3.0,"blood_red":2.5,"heterochromia":1.5},
+    "defaultClothes": {"tattered_jacket":2.5,"radiation_suit_worn":2.0,"scrap_metal_armor":2.0,"nomad_wraps":1.5,"gas_mask_hooded_poncho":1.5},
+    "temperament": {"unhinged":3.0,"volatile":3.0,"brutal":2.0,"paranoid":2.0,"jaded":1.5,"wild":3.0,"vicious":2.5},
+    "impression": {"sickness":2.0,"wild":2.5,"weathered":2.0,"bloodthirsty":3.0},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "faceShape": {"wolf_face":2.5,"tiger_face":2.0,"bear_face":1.5,"broad":1.5},
+    "eyeShape": {"beast_eye":3.0,"vertical_pupil_eye":2.0,"wolf":2.0,"triangle":1.5},
+    "faceFeature": {"fur_face":2.5,"broad_jaw":2.0,"thick_neck":1.5,"burn_scar":3.0,"veins":2.5,"scar":2.0},
+    "lipShape": {"beast_lip":3.0,"toothed_lip":2.5,"fanged_lip":2.0},
+    "noseShape": {"wolf_nose":2.5,"wide_nostrils":2.0,"broad_flat":1.5},
+    "hairStyle": {"messy_bun":2.5,"choppy_short":2.5,"wolf_tail":1.5,"bald":1.5},
+    "bodyType": {"lean_wiry":3.0,"gnarled_tough":2.5,"runner_lean":2.0,"compact_dense":1.5},
+    "heightDesc": {"medium_short":2.5,"compact_solid":2.0,"hunched_short":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0},
+    "defaultAccessories": {"bell_collar":2.5,"none":2.5,"leather_belt":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified","scholarly","dignified","serene"],
+    "defaultWeapon": ["guqin","ink_brush","staff_of_wisdom","flying_sword"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; mangy hound with exposed raw muscle, two snarling heads, oozing sores; post-apocalyptic mutant creature art, radioactive wasteland"
+}

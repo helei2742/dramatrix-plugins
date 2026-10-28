@@ -1,0 +1,29 @@
+{
+  "archetype": "lancer",
+  "name": "枪兵",
+  "visualTags": "长枪,狼烟,战阵,枪出如龙",
+  "description": "使长枪的武者，枪出如龙，游刃有余于战阵之间",
+  "defaults": {
+    "defaultAccessories": ["hat","wine_gourd"],
+    "defaultWeapon": ["spear","iron_sword","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":3.0,"lean_fit":3.0,"tall_athletic":2.5,"slim":1.0},
+    "temperament": {"sharp":3.0,"stoic":2.5,"calm":2.0,"brave":2.0,"ferocious":1.5},
+    "hairStyle": {"high_ponytail":3.0,"warrior_topknot":2.5,"simple_tie":2.0,"warrior_braid":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.0,"gray":1.0},
+    "defaultClothes": {"leather_armor":3.0,"golden_armor":2.0,"black_night":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"slit_pupil_gold":1.0,"amber":1.0},
+    "eyeShape": {"eagle":3.0,"narrow":2.5,"dragon":2.5,"wolf":1.5},
+    "eyebrowShape": {"sword":3.0,"straight":2.5,"sharp_straight_brow":2.5,"hero_eyebrow":1.5},
+    "faceShape": {"sharp":3.0,"horse_face":2.5,"long":2.5,"rectangular":1.5},
+    "faceFeature": {"scar":2.0,"none":2.5},
+    "impression": {"resolute":3.0,"heroic":3.0,"cold":2.0,"free_spirit":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","whisk","fan","staff"],
+    "defaultAccessories": ["abacus","hairpin","earring","buddha_beads"],
+    "hairStyle": ["bald","double_bun","cloud_bun","phoenix_crown"]
+  },
+  "templateFluxPrompt": "a {gender} lancer spear wielder, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, wielding a long spear, battlefield warrior"
+}

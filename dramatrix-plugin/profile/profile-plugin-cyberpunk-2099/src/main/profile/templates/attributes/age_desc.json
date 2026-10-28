@@ -1,0 +1,132 @@
+{
+  "attribute": "ageDesc",
+  "displayName": "年龄段",
+  "options": [
+    {
+      "id": "preteen",
+      "value": "未发育街头仔",
+      "description": "还没长开就混迹霓虹巷的孩童",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "幼龄",
+        " street"
+      ]
+    },
+    {
+      "id": "teen",
+      "value": "街头少年",
+      "description": "十五六岁，帮派与黑客学校之间游走的少年",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "少年"
+      ]
+    },
+    {
+      "id": "young_adult",
+      "value": "二十代青年",
+      "description": "刚接入网络的千禧一代，义体改造正流行",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "青年"
+      ]
+    },
+    {
+      "id": "adult",
+      "value": "三十代壮年",
+      "description": "在公司与街头间寻找出路的成熟个体",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "壮年"
+      ]
+    },
+    {
+      "id": "prime",
+      "value": "黄金年代四十代",
+      "description": "经验与火力兼具的老手，掌控一方网络",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "中年",
+        " 权威"
+      ]
+    },
+    {
+      "id": "elder",
+      "value": "老炮",
+      "description": "见过企业战争的老兵，皮下全是补丁",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "老年",
+        " 阅历"
+      ]
+    },
+    {
+      "id": "ancient_consciousness",
+      "value": "百岁意识上传者",
+      "description": "意识已上传数次、肉身只是容器的长者",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "老年",
+        " 上传",
+        " 意识"
+      ]
+    },
+    {
+      "id": "vat_grown",
+      "value": "培养舱成年体",
+      "description": "在工厂培养舱中加速成熟、直接成年的个体",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "克隆",
+        " 培养"
+      ]
+    }
+  ]
+}

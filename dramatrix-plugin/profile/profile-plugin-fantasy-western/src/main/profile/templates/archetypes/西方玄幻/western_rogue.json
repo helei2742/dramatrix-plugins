@@ -1,0 +1,33 @@
+{
+  "archetype": "western_rogue",
+  "name": "西方游荡者",
+  "visualTags": "western rogue, thief, hooded",
+  "description": "欧洲盗贼/游荡者/游侠，穿梭于暗巷与密林之间",
+  "defaults": {
+    "defaultAccessories": ["mask","leather_belt"],
+    "defaultWeapon": ["dagger","short_sword","crossbow"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"slim":2.5,"lithe_agile":2.5,"lean_wiry":2.5,"runner_lean":2.0,"medium":1.5,"wiry_sinewy":1.5,"slender_tall":1.5,"athletic_toned":1.5},
+    "temperament": {"cunning":3.0,"mysterious":2.5,"calculating":2.5,"crafty":2.0,"sharp":2.0,"cold":1.5,"flamboyant":1.5,"enigmatic":2.0,"paranoid":1.0,"free_spirited":1.5},
+    "hairStyle": {"short_crop":2.5,"choppy_short":2.5,"side_bangs_long":2.0,"half_up":2.0,"topknot_loose":2.0,"braided":1.5,"low_ponytail":1.5,"high_ponytail":1.5,"slicked_back":1.0,"messy_bun":1.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"jet_black":2.0,"obsidian":1.5,"auburn":1.5,"chestnut":1.0,"charcoal":1.0,"copper":1.0,"midnight_blue":1.0},
+    "eyeColor": {"forest_green":2.5,"hazel":2.5,"dark_brown":2.0,"gray":2.0,"black":1.5,"amber":1.5,"deep_blue":1.0,"emerald":1.0,"smoky_quartz":1.0,"shadow_black":1.0},
+    "skinColor": {"fair":2.0,"weathered_tan":2.0,"olive":2.0,"honey_tan":1.5,"sun_kissed":1.5,"swarthy":1.5,"wheat":1.0},
+    "defaultClothes": {"leather_hood":3.0,"travelers_cloak":2.5,"dark_cloak":2.5,"leather_armor":2.5,"thief_garb":2.5,"black_night":2.0,"hunters_garb":2.0,"rogue_tunic":1.5,"linen_simple":1.0},
+    "faceFeature": {"scar":2.5,"none":2.0,"beard_stubble":2.0,"masked":1.5,"freckles":1.0,"clean_shaven":1.5,"sharp_features":1.5},
+    "faceShape": {"angular":2.5,"narrow":2.5,"oval":2.0,"heart":2.0,"chiseled":1.5,"square":1.0,"seed_face":1.0},
+    "eyeShape": {"almond":2.5,"sharp":2.5,"deep_set":2.0,"hooded":2.0,"narrow":2.0,"round":1.0},
+    "eyebrowShape": {"straight":2.5,"angular":2.5,"thin":2.0,"arched":1.5,"thick":1.0,"furrowed":1.5},
+    "impression": {"cunning":3.0,"mysterious":2.5,"elusive":2.5,"sharp":2.0,"shadowy":2.0,"weathered":1.5,"calculating":1.5,"daring":1.5,"resolute":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","sickle","fan","jade_ruyi","halberd","war_hammer"],
+    "defaultAccessories": ["abacus","jade_pendant","buddha_beads","hairpin","phoenix_hairpin","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","cloud_bun","phoenix_crown","dao_bun","double_bun","twin_tails","updo_elegant","child_tuft"],
+    "temperament": ["noble","innocent","pure_heart","sincere","jovial","kind_heart"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","golden_armor","plate_armor","dragon_robe","palace_dress","jade_belt_robe","bamboo_hat_cape"],
+    "bodyType": ["bulky_massive","broad_shouldered","barrel_chested","towering_giant"]
+  },
+  "templateFluxPrompt": "a {gender} western rogue, {ageDesc}, {bodyType} build, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, medieval european rogue, shadowy cobblestone alley, moonlit rooftop, dark fantasy atmosphere, masterpiece"
+}

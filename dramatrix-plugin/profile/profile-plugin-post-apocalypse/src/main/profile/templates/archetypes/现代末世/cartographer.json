@@ -1,0 +1,33 @@
+{
+  "archetype": "cartographer",
+  "name": "制图师",
+  "visualTags": "wasteland cartographer, map maker, survey equipment, compass, navigating, explorer, detailed, post-apocalyptic geography",
+  "description": "末世制图师，绘制废土新地图标记安全路线与危险区域，用纸笔丈量破碎世界",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"slim":3.0,"slender_tall":2.5,"runner_lean":2.5,"lean_fit":2.5,"medium":2.5,"gangly":2.0,"athletic_toned":2.0},
+    "temperament": {"meticulous":3.0,"observant":3.0,"curious":3.0,"patient":2.5,"scholarly":2.5,"analytical":2.5,"cautious":2.5,"loner":2.0,"adaptable":2.5,"calm":2.0,"determined":2.5},
+    "hairStyle": {"messy_medium":2.5,"choppy_short":2.5,"tied_back_loose":2.5,"low_ponytail":2.5,"half_up":2.5,"short_crop":2.0,"bangs_short":2.0,"simple_tie":2.5},
+    "hairColor": {"dark_brown":3.0,"dusty_brown":2.5,"black":2.5,"ash_brown":2.5,"dirty_blonde":2.0,"gray_streaked":2.0,"light_brown":2.0,"chestnut":1.5},
+    "defaultClothes": {"scavenger_harness":3.0,"wasteland_ranger_coat":3.0,"wasteland_duster":3.0,"tactical_vest_light":2.5,"dust_cloak_worn":2.5,"tattered_jacket":2.0,"survivor_hoodie_worn":2.0,"patched_denim_suit":2.0},
+    "eyeColor": {"keen_blue":3.0,"hazel":3.0,"dark_brown":2.5,"gray":2.5,"green":2.5,"amber":2.0,"black":1.5,"deep_blue":2.0},
+    "skinColor": {"weathered_tan":3.0,"light_tan":2.5,"tan":2.5,"sun_kissed":2.5,"fair":2.0,"dusty_tan":2.5,"olive":2.0,"honey_tan":2.0},
+    "eyeShape": {"keen":3.0,"eagle":3.0,"sharp_phoenix":2.5,"scholar_eye":2.5,"deep_set":2.0,"almond":2.0,"narrow":2.0,"hunter":2.5},
+    "eyebrowShape": {"straight":2.5,"furrowed":2.5,"long_eyebrow":2.5,"thin":2.5,"silkworm":2.0,"angular":2.0,"chivalrous_brow":2.0,"crescent":1.5},
+    "faceShape": {"oval":3.0,"angular":2.5,"seed_face":2.5,"gaunt":2.0,"bamboo_leaf_face":2.0,"long":2.5,"heart":2.0,"chiseled":1.5},
+    "faceFeature": {"none":2.5,"spectacles":2.0,"sharp_features":2.5,"ink_stains":2.5,"beard_stubble":2.0,"clean_shaven":2.0,"high_cheekbones":2.0,"weathered":2.0},
+    "impression": {"perceptive":3.0,"focused":3.0,"scholarly":2.5,"meticulous":3.0,"calm":2.0,"intellectual":2.5,"observant":2.5,"determined":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","axe"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","mask","buddha_beads"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut","slicked_back"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","spirit_silk","dragon_robe","palace_dress"],
+    "temperament": ["brutal","savage","unhinged","reckless","seductive","flamboyant","jovial","carefree","lazy"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","plump_soft","heroic_figure","muscular_broad"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland cartographer, {ageDesc}, {bodyType} lean observant build, {faceDesc}, wearing survey gear with multi-pocket harness and dust coat, holding compass and hand-drawn map, survey instruments, {hairStyle} {hairColor} windswept hair, {eyeColor} sharp perceptive eyes, {skinColor} weathered skin, {temperament} aura, wasteland overlook, hand-drawn maps spread on rock, measuring distances, vast landscape behind, photorealistic, exploratory, masterpiece"
+}

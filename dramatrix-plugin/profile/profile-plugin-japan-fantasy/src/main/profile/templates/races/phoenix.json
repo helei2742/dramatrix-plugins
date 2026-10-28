@@ -1,0 +1,34 @@
+{
+  "race": "phoenix",
+  "displayName": "凤族",
+  "description": "凤凰血脉的传承者，天生火灵之体，浴火重生，羽衣华美如火焰",
+  "defaults": {
+    "skinColor": ["golden","bronze","sun_kissed","ruddy","copper"],
+    "eyeColor": ["fiery_orange","gold","crimson","amber","ruby"],
+    "hairColor": ["red","golden","honey","copper","auburn"],
+    "bodyType": ["slender_tall","lean_fit","tall_athletic","lithe","willowy"]
+  },
+  "weightBias": {
+    "skinColor": {"golden":2.5,"sun_kissed":2.5,"copper":2.0},
+    "eyeColor": {"fiery_orange":2.5,"gold":2.5,"crimson":2.5},
+    "hairColor": {"red":2.5,"golden":2.5,"copper":2.0},
+    "bodyType": {"slender_tall":2.5,"lean_fit":2.5,"lithe":2.0},
+    "eyeShape": {"sharp_phoenix":2.5,"fox":2.5,"upturned":2.0},
+    "eyebrowShape": {"phoenix_eyebrow":2.5,"long_eyebrow":2.5,"distant_mountain":2.0},
+    "noseShape": {"greek":2.5,"water_drop":2.0},
+    "impression": {"majestic":2.5,"noble":2.5,"ethereal":2.5},
+    "temperament": {"noble":2.5,"overbearing":2.5,"wild":2.0,"ethereal":2.0}
+  },
+  "exclude": {
+    "skinColor": ["pale_blue","dark","rocky","ash_gray"],
+    "eyeColor": ["dark_brown","ice_blue"],
+    "hairColor": ["gray","ash_gray","frost_white"],
+    "bodyType": ["plump","stocky","petite","hulking"],
+    "temperament": ["innocent","stoic","cold"]
+  },
+  "faceDescOverride": {
+    "prepend": "flame mark on forehead, ",
+    "append": "，发间有凤羽点缀"
+  },
+  "templateFluxPrompt": "a phoenix-blooded {gender}, {ageDesc}, {bodyType}, {faceDesc} with fiery phoenix aura, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

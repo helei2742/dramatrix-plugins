@@ -1,0 +1,44 @@
+{
+  "archetype": "braindancer",
+  "category": "赛博朋克",
+  "name": "脑舞制作人",
+  "visualTags": "脑舞, 艺术, 禁忌",
+  "description": "贩卖感官、编织梦境的禁忌艺术家。",
+  "defaults": {
+    "cyberImplant": [
+      "neural_coprocessor",
+      "optic_visor"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "violet"
+    ],
+    "temperament": [
+      "manic"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "neural_coprocessor": 2.5,
+      "optic_visor": 2.0
+    },
+    "hairColor": {
+      "neon_pink": 2.5,
+      "violet": 2.0
+    },
+    "impression": {
+      "overclock_manic": 2.5,
+      "neon_glam": 2.0
+    },
+    "temperament": {
+      "manic": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "stoic",
+      "cold"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

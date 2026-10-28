@@ -1,0 +1,33 @@
+{
+  "archetype": "athlete",
+  "name": "运动员",
+  "visualTags": "modern athlete, sports, athletic wear, fit physique, dynamic, energetic, stadium",
+  "description": "现代运动员，以体能与技巧挑战极限，汗水铸就荣耀，拼搏不息",
+  "defaults": {
+    "defaultAccessories": ["none","headband","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":3.0,"chiseled_fit":3.0,"lean_fit":2.5,"athletic_toned":3.0,"broad_shouldered":2.5,"runner_lean":2.5,"heroic_figure":2.0},
+    "temperament": {"bold":3.0,"passionate":3.0,"heroic":3.0,"gallant":2.5,"disciplined":3.0,"zealous":2.5,"steadfast":2.5,"plucky":2.5,"cheerful":2.0,"fierce":2.0,"defiant":2.0,"charismatic":2.5,"reckless":1.0,"jovial":1.5},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":2.5,"high_ponytail":2.5,"choppy_short":2.5,"slicked_back":2.0,"warrior_braid":2.0,"wolf_tail":1.5,"topknot_loose":2.0,"simple_tie":2.0,"loose_half_up":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"light_brown":1.5,"chestnut":1.5,"charcoal":1.5,"auburn":1.0,"copper":1.0},
+    "defaultClothes": {"training_gear":3.0,"black_night":2.5,"leather_armor":2.0,"cotton_hanfu":1.5,"linen_simple":2.0,"indigo_dyed_cotton":1.5,"slate_gray_cloak":1.0,"russet_leather_armor":1.0},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"hazel":1.5,"amber":1.5,"deep_blue":1.0,"forest_green":1.0,"copper":1.0,"smoky_quartz":1.5},
+    "skinColor": {"tan":3.0,"sun_kissed":3.0,"olive":2.5,"light_tan":2.5,"honey_tan":2.5,"weathered_tan":2.0,"fair":1.5,"bronze":2.0},
+    "eyeShape": {"tiger":2.5,"sharp_phoenix":2.5,"almond":2.5,"eagle":2.5,"round":2.0,"deep_set":2.0,"dragon":1.5,"narrow":1.0},
+    "eyebrowShape": {"thick":2.5,"sword":2.5,"hero_eyebrow":3.0,"straight":2.5,"steel_brow":2.0,"chivalrous_brow":2.0,"rugged":1.5,"curved_thick":2.0},
+    "faceShape": {"square":2.5,"chiseled":3.0,"angular":2.5,"rectangular":2.5,"strong_jawline":3.0,"oval":1.5,"round":1.0,"pentagon":2.0},
+    "faceFeature": {"none":2.5,"clean_shaven":2.5,"scar":1.5,"strong_jaw":3.0,"sharp_features":2.0,"ruddy":1.5,"beard_stubble":2.0,"high_cheekbones":2.0},
+    "impression": {"heroic":3.0,"resolute":3.0,"handsome":2.5,"fierce":2.0,"dignified":2.0,"gallant":2.0,"majestic":1.5,"loyal":2.0,"bold":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","hoe","pole","sickle","whisk","fan","jade_ruyi","staff_monk"],
+    "defaultAccessories": ["abacus","buddha_beads","spirit_beast_bag","bone_necklace","hairpin","phoenix_hairpin","hair_crown","jade_pendant","gold_chain","mask"],
+    "hairStyle": ["bald","dao_bun","cloud_bun","phoenix_crown","child_tuft","two_horns","double_bun","immortal_bun","savage_bun","startled_swan","flying_sky"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","bamboo_hat_cape","wild_beast_skin","golden_armor","plate_armor"],
+    "temperament": ["innocent","lazy","seductive","decadent","unhinged","sinister","wistful","naive"],
+    "bodyType": ["plump_soft","delicate_frail","willowy","ethereal_light","pin_thin","soft_round","plump"]
+  },
+  "templateFluxPrompt": "a {gender} modern athlete sports player, {ageDesc}, {bodyType} athletic build, {faceDesc}, wearing modern athletic sportswear, sport shoes, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, sports stadium or track field, dynamic action pose, sweat and determination, photorealistic, masterpiece"
+}

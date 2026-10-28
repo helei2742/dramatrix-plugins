@@ -1,0 +1,33 @@
+{
+  "archetype": "fisherman_waste",
+  "name": "废土渔夫",
+  "visualTags": "wasteland fisherman, contaminated water, fishing net, makeshift rod, patient, survival fishing, post-apocalyptic waterway",
+  "description": "末世渔夫，在被污染的河流湖泊中捕捞变异鱼获，以水为田的废土捕鱼人",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"slim":2.5,"athletic_toned":2.5,"medium":3.0,"stocky_strong":2.5,"lean_fit":2.5,"weathered_strong":2.5,"slender_tall":2.0},
+    "temperament": {"patient":3.0,"silent":3.0,"stoic":3.0,"pragmatic":2.5,"loner":3.0,"humble":2.5,"calm":2.5,"hardened":2.5,"observant":2.5,"adaptable":2.0,"simple":2.5},
+    "hairStyle": {"bandana_wrap":3.0,"short_crop":2.5,"messy_medium":2.5,"tied_back_loose":2.5,"choppy_short":2.5,"low_ponytail":2.5,"buzz_cut":2.0,"half_up":2.0},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":3.0,"gray_streaked":2.5,"dirty_blonde":2.5,"black":2.5,"ash_brown":2.5,"faded_black":2.0,"salt_pepper":2.5},
+    "defaultClothes": {"patched_coveralls":3.0,"dust_cloak_worn":3.0,"tattered_jacket":2.5,"survivor_hoodie_worn":2.5,"patched_denim_suit":2.5,"nomad_wraps":2.0,"scavenger_harness":2.0,"radiation_suit_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":3.0,"water_blue":3.0,"green":2.0,"amber":2.0,"black":2.0,"pale_blue":2.5},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":3.0,"leathery_tan":2.5,"tan":3.0,"dusty_tan":2.5,"olive":2.5,"light_tan":2.0,"honey_tan":2.0},
+    "eyeShape": {"deep_set":3.0,"narrow":3.0,"almond":2.5,"tired":2.5,"hunter":2.5,"round":2.0,"sharp_phoenix":2.0,"downturned":2.0},
+    "eyebrowShape": {"rugged":3.0,"thick":2.5,"straight":2.5,"furrowed":2.5,"knitted":2.0,"chivalrous_brow":2.0,"steel_brow":2.0,"hero_eyebrow":1.5},
+    "faceShape": {"weathered":3.0,"gaunt":2.5,"angular":2.5,"square":2.5,"rectangular":2.5,"oval":2.0,"stone_face":2.5,"long":2.5},
+    "faceFeature": {"weathered":3.0,"beard_stubble":2.5,"chapped_lips":2.5,"dirt_smudge":2.5,"squinting":2.5,"none":2.0,"scar":1.5,"sharp_features":2.0},
+    "impression": {"patient":3.0,"solitary":3.0,"humble":3.0,"quiet":3.0,"weathered":2.5,"hardened":2.0,"simple":2.5,"stoic":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","slicked_back","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","unhinged","reckless","carefree","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","heroic_figure","bulky_massive","towering_giant"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland fisherman, {ageDesc}, {bodyType} lean patient build, {faceDesc}, wearing patched coveralls and dust cloak, holding fishing net and makeshift rod, standing by contaminated water, {hairStyle} {hairColor} wind-tousled hair, {eyeColor} squinting patient eyes, {skinColor} deeply sun-baked skin, {temperament} aura, toxic riverbank, mutated fish, makeshift dock, overcast sky, photorealistic, desolate, masterpiece"
+}

@@ -1,0 +1,37 @@
+{
+  "archetype": "media",
+  "category": "赛博朋克",
+  "name": "媒体狗",
+  "visualTags": "媒体, 记录, 流量",
+  "description": "为流量不择手段的记录者，镜头即是武器。",
+  "defaults": {
+    "defaultAccessories": [
+      "smart_glasses"
+    ],
+    "temperament": [
+      "charismatic"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "electric_blue"
+    ]
+  },
+  "weightBias": {
+    "defaultAccessories": {
+      "smart_glasses": 3.0
+    },
+    "impression": {
+      "magnetic_charm": 2.5,
+      "neon_glam": 2.0
+    },
+    "temperament": {
+      "charismatic": 2.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "stoic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

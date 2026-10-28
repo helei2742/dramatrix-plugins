@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_doctor",
+  "name": "废土医生",
+  "visualTags": "wasteland doctor, post-apocalyptic physician, makeshift clinic, worn medical coat, stethoscope, resourceful, healer, survival medicine",
+  "description": "末世医生，在资源匮乏的废土中救死扶伤，用最简陋的工具施行最伟大的医术",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"medium":3.0,"slim":2.5,"slender_tall":2.5,"athletic_toned":2.5,"lean_wiry":2.0,"svelte_elegant":2.0,"chiseled_fit":1.5},
+    "temperament": {"altruistic":3.0,"calm":3.0,"gentle":3.0,"resilient":3.0,"steadfast":2.5,"scholarly":2.5,"sincere":2.5,"pragmatic":2.5,"compassionate":2.5,"disciplined":2.0,"tranquil":2.5},
+    "hairStyle": {"short_crop":2.5,"bound_up":3.0,"low_ponytail":2.5,"simple_tie":2.5,"half_up":2.5,"choppy_short":2.5,"loose_half_up":2.0,"side_part_long":2.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"gray":2.0,"salt_pepper":2.0,"chestnut":2.0,"charcoal":1.5,"light_brown":1.5},
+    "defaultClothes": {"wasteland_lab_coat":3.0,"wasteland_medic_vest":3.0,"gas_mask_hooded_poncho":2.0,"radiation_suit_worn":2.0,"survivor_hoodie_worn":2.0,"scavenger_harness":2.0,"tattered_jacket":1.5,"dust_cloak_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.5,"deep_blue":2.0,"gray":2.0,"green":2.0,"amber":1.5,"warm_brown":2.0},
+    "skinColor": {"fair":2.5,"ivory":2.5,"light_tan":2.5,"pale_porcelain":2.0,"tan":2.0,"rose_white":2.0,"weathered_tan":2.0,"jade":1.5},
+    "eyeShape": {"almond":3.0,"sharp_phoenix":2.5,"scholar_eye":3.0,"peach_blossom":2.0,"round":2.0,"deep_set":2.0,"downturned":1.5,"tired":2.0},
+    "eyebrowShape": {"straight":2.5,"willow":2.5,"silkworm":2.5,"long_eyebrow":2.5,"crescent":2.0,"auspicious_brow":2.0,"distant_mountain":2.0,"curved_fine":2.0},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"bamboo_leaf_face":2.5,"heart":2.0,"round":2.0,"jade_mirror":2.0,"long":2.0,"angular":1.5},
+    "faceFeature": {"none":2.5,"spectacles":2.0,"clean_shaven":2.5,"beauty_mark":1.5,"dimples":1.5,"sharp_features":2.0,"weathered":1.5,"high_cheekbones":2.0},
+    "impression": {"gentle":3.0,"intellectual":3.0,"altruistic":3.0,"calm":3.0,"dignified":2.5,"refined":2.5,"warm":2.5,"resolute":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk","claws","flail"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","mask"],
+    "hairStyle": ["bald","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun","mohawk"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","wild_beast_skin","scrap_metal_armor","road_warrior_gear"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","feral"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","plump_soft"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland doctor, {ageDesc}, {bodyType} build, {faceDesc}, wearing worn medical coat and medic vest, stethoscope, makeshift medical kit, {hairStyle} {hairColor} hair, {eyeColor} calm compassionate eyes, {skinColor} skin, {temperament} aura, makeshift clinic in ruined building, medical supplies on shelves, dim lantern light, photorealistic, hopeful, masterpiece"
+}

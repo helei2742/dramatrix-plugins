@@ -1,0 +1,32 @@
+{
+  "race": "elemental",
+  "displayName": "元素族",
+  "description": "由纯粹元素之力凝聚而成的种族，皮肤随自身元素属性呈现火水风土之色",
+  "defaults": {
+    "skinColor": ["pale_blue","ruddy","jade","ash_gray","golden"],
+    "eyeColor": ["fiery_orange","ice_blue","emerald","amber","silver"],
+    "hairColor": ["white","silver","red","emerald","ash_gray"],
+    "bodyType": ["willowy","ethereal_light","lean_fit","tall_athletic"]
+  },
+  "weightBias": {
+    "skinColor": {"pale_blue":2.0,"ruddy":2.0,"jade":2.0,"ash_gray":2.0},
+    "eyeColor": {"fiery_orange":2.5,"ice_blue":2.5,"emerald":2.0},
+    "hairColor": {"red":2.0,"silver":2.0,"emerald":2.0},
+    "bodyType": {"willowy":2.5,"ethereal_light":2.5},
+    "eyeShape": {"sharp_phoenix":2.5,"deep_set":2.0},
+    "impression": {"ethereal":2.5,"majestic":2.5,"wild":2.0},
+    "temperament": {"ethereal":2.5,"wild":2.5,"cold":1.5}
+  },
+  "exclude": {
+    "skinColor": ["fair","ivory","wheat"],
+    "eyeColor": ["dark_brown"],
+    "hairColor": ["dark_brown","chestnut","honey"],
+    "bodyType": ["plump","petite","stocky"],
+    "temperament": ["innocent"]
+  },
+  "faceDescOverride": {
+    "prepend": "elemental markings on face, ",
+    "append": "elemental glow surrounding body"
+  },
+  "templateFluxPrompt": "an elemental {gender}, {ageDesc}, {bodyType}, {faceDesc} with elemental markings, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

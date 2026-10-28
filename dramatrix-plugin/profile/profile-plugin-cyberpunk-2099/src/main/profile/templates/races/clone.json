@@ -1,0 +1,70 @@
+{
+  "race": "clone",
+  "displayName": "量产克隆体",
+  "description": "工厂流水线批量培育的克隆个体，面容标准化、后颈烙印序列号，常被当作可替换耗材。",
+  "defaults": {
+    "skinColor": [
+      "synthetic_pale",
+      "fair"
+    ],
+    "faceShape": [
+      "printed_face",
+      "doll_face_synth"
+    ],
+    "chromeSignature": [
+      "serial_barcode_face",
+      "serial_stamp"
+    ],
+    "eyeColor": [
+      "void_black"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "synthetic_pale": 2.0,
+      "fair": 1.5
+    },
+    "faceShape": {
+      "printed_face": 2.5,
+      "doll_face_synth": 2.0
+    },
+    "chromeSignature": {
+      "serial_barcode_face": 3.0,
+      "serial_stamp": 2.0
+    },
+    "impression": {
+      "clone_blank": 3.0,
+      "deadpan_synth": 2.0
+    },
+    "bodyType": {
+      "slim": 1.8,
+      "athletic": 1.8
+    }
+  },
+  "exclude": {
+    "chromeSignature": [
+      "idol_star_projection",
+      "neon_contour_face",
+      "gold_chrome_filigree"
+    ],
+    "impression": [
+      "idol_radiance",
+      "neon_glam",
+      "magnetic_charm",
+      "messiah_fervor"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "mass-produced clone features, serial-stamped on the neck",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "标准化量产面容，强制序列号烙印"
+    },
+    {
+      "description": "排斥独特炫彩与偶像光环"
+    }
+  ]
+}

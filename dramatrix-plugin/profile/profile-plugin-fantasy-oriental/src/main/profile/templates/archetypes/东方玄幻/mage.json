@@ -1,0 +1,25 @@
+{
+  "archetype": "mage",
+  "name": "法师",
+  "visualTags": "法师,术士",
+  "description": "钻研术法奥秘的施法者，掌控元素之力",
+  "defaults": {
+    "defaultAccessories": ["storage_bag","ring"],
+    "defaultWeapon": ["staff","jade_ruyi","fan"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"ethereal_light":2.5,"slender_tall":1.5,"tall_athletic":0.2},
+    "temperament": {"ethereal":3.0,"sinister":1.5,"cold":1.5,"gentle":1.5,"cunning":1.0},
+    "hairStyle": {"flowing_long":3.0,"bound_up":1.5,"silver_flow":2.0},
+    "hairColor": {"black":1.5,"white":2.0,"silver":2.5,"purple":1.5,"emerald":1.0},
+    "eyeColor": {"purple":2.0,"silver":2.0,"sky_blue":2.0,"heterochromia":1.5},
+    "defaultClothes": {"purple_robe":3.0,"white_robe":2.0,"dark_cloak":2.0,"spirit_silk":2.0},
+    "eyeShape": {"deep_set":3.0,"fox":2.0,"narrow":2.0,"heterochromia":1.5},
+    "impression": {"ethereal":3.0,"sinister":2.0,"cold":2.0,"refined":1.5},
+    "faceFeature": {"pale_face":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole"]
+  },
+  "templateFluxPrompt": "a {gender} mage, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

@@ -1,0 +1,32 @@
+{
+  "archetype": "lawyer",
+  "name": "律师",
+  "visualTags": "modern lawyer, attorney, formal suit, courtroom, confident, eloquent, sharp",
+  "description": "现代律师，法庭上的雄辩家，思维缜密，言辞犀利，以法律为武器",
+  "defaults": {
+    "defaultAccessories": ["ring","none","folding_fan"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"slender_tall":2.5,"slim":2.5,"tall_athletic":2.0,"medium":2.0,"svelte_elegant":2.0,"athletic_toned":2.0},
+    "temperament": {"eloquent":3.0,"calculating":3.0,"sharp":2.5,"dignified":2.5,"pragmatic":2.5,"disciplined":2.0,"charismatic":2.0,"arrogant":1.5,"cold":1.5,"crafty":1.5,"cynical":1.5,"subdued":1.0},
+    "hairStyle": {"slicked_back":3.0,"bound_up":2.5,"short_crop":2.5,"side_part_long":2.5,"half_up":2.0,"low_ponytail":2.0,"choppy_short":1.5,"center_part_long":1.5,"buzz_cut":1.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"charcoal":2.0,"gray":1.5,"salt_pepper":2.0,"silver":1.5,"light_brown":1.0},
+    "defaultClothes": {"black_night":3.0,"navy_silk_hanfu":2.5,"slate_gray_cloak":2.0,"merchant_robe":2.0,"ink_wash_robe":2.0,"charcoal_hooded_cloak":1.5,"brocade_hanfu":2.0,"blue_robe":1.5,"cotton_hanfu":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"gray":2.0,"deep_blue":1.5,"hazel":1.5,"sapphire":1.0,"smoky_quartz":1.5,"charcoal":1.5},
+    "skinColor": {"fair":2.5,"ivory":2.5,"light_tan":2.0,"pale_porcelain":1.5,"tan":1.5,"olive":1.5,"rose_white":1.0},
+    "eyeShape": {"sharp_phoenix":3.0,"almond":2.5,"narrow":2.5,"deep_set":2.0,"eagle":2.0,"triangle":2.0,"fox":1.5,"hooded":1.5},
+    "eyebrowShape": {"sword":2.5,"straight":2.5,"angular":2.5,"raised":2.0,"sharp_straight_brow":2.5,"thin":1.5,"thick":1.5,"needle_brow":1.5},
+    "faceShape": {"angular":3.0,"sharp":3.0,"oval":2.0,"rectangular":2.0,"chiseled":2.0,"diamond":2.0,"long":1.5,"seed_face":1.0},
+    "faceFeature": {"none":2.5,"clean_shaven":2.5,"sharp_features":2.5,"high_cheekbones":2.0,"beard_stubble":1.5,"spectacles":2.0,"nasolabial_folds":1.0},
+    "impression": {"shrewd":3.0,"intellectual":3.0,"dignified":2.5,"resolute":2.5,"refined":2.0,"sharp":2.5,"cunning":2.0,"cold":1.5,"calculating":2.0,"handsome":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","warrior_topknot","child_tuft","two_horns","savage_bun","double_bun"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","leather_armor","golden_armor","plate_armor","chainmail","bamboo_hat_cape","wild_beast_skin","training_gear","ochre_hemp_tunic"],
+    "temperament": ["innocent","naive","cheerful","brutal","lazy","reckless","unhinged","wild"]
+  },
+  "templateFluxPrompt": "a {gender} modern lawyer attorney, {ageDesc}, {bodyType} build, {faceDesc}, wearing a sharp tailored suit, white dress shirt, tie, leather briefcase, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern courtroom or law office, legal bookshelves, professional atmosphere, photorealistic, masterpiece"
+}

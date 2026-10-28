@@ -1,0 +1,45 @@
+{
+  "archetype": "gang_enforcer",
+  "category": "赛博朋克",
+  "name": "帮派打手",
+  "visualTags": "帮派, 打手, 统治",
+  "description": "用拳头和子弹说话的街区统治者。",
+  "defaults": {
+    "defaultWeapon": [
+      "heavy_smg",
+      "tech_shotgun"
+    ],
+    "bodyType": [
+      "bulky"
+    ],
+    "temperament": [
+      "reckless",
+      "ruthless"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "heavy_smg": 2.5,
+      "tech_shotgun": 2.0
+    },
+    "bodyType": {
+      "bulky": 2.5,
+      "augmented_bulk": 2.0
+    },
+    "impression": {
+      "gutter_grit": 2.5,
+      "feral_edge": 2.0
+    },
+    "temperament": {
+      "reckless": 2.5,
+      "ruthless": 2.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "calm",
+      "zen"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

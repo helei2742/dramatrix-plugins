@@ -1,0 +1,129 @@
+{
+  "attribute": "heightDesc",
+  "displayName": "身高",
+  "options": [
+    {
+      "id": "short",
+      "value": "矮小",
+      "description": "不足一米六的紧凑身形",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "矮小"
+      ]
+    },
+    {
+      "id": "below_avg",
+      "value": "略矮",
+      "description": "一米六到一米七之间",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "略矮"
+      ]
+    },
+    {
+      "id": "average",
+      "value": "中等",
+      "description": "一米七到一米八的标准身高",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "中等"
+      ]
+    },
+    {
+      "id": "tall",
+      "value": "高挑",
+      "description": "一米八以上的修长身形",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "高挑"
+      ]
+    },
+    {
+      "id": "very_tall",
+      "value": "很高",
+      "description": "逼近两米的醒目高度",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "很高"
+      ]
+    },
+    {
+      "id": "towering",
+      "value": "巨高",
+      "description": "义体拉伸后的两米开外巨人",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "巨高",
+        " 义体"
+      ]
+    },
+    {
+      "id": "compact",
+      "value": "紧凑",
+      "description": "被压缩到极致却仍机动的矮壮体型",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "紧凑",
+        " 机动"
+      ]
+    },
+    {
+      "id": "elongated",
+      "value": "义体拉长",
+      "description": "四肢经改造异常修长的异样比例",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "拉长",
+        " 改造"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "attribute": "defaultAccessories",
+  "displayName": "默认配饰",
+  "options": [
+    {"id":"goggles","value":"护目镜","genderBias":{"男":2.0,"女":0.5},"raceTags":["矮人","地精","人族"],"archetypeTags":["alchemist","smith"],"ageTags":[],"tags":["护目镜","工匠","实用"]}
+  ]
+}

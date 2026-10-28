@@ -1,0 +1,30 @@
+{
+  "archetype": "onmyoji",
+  "name": "阴阳师",
+  "visualTags": "onmyoji, yin yang master, shikigami, talisman",
+  "description": "Japanese onmyoji — yin-yang master who commands shikigami and uses talismans",
+  "defaults": {
+    "defaultAccessories": ["ofuda_talisman","shikigami_doll"],
+    "defaultWeapon": ["staff","fan","ofuda"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":3.0,"ethereal_light":3.0,"slim":2.5,"lean_fit":1.0},
+    "temperament": {"mysterious":3.0,"ethereal":3.0,"enigmatic":2.5,"scholarly":2.5,"serene":2.0,"calm":2.0,"calculating":2.0},
+    "hairStyle": {"flowing_long":3.0,"half_up":2.5,"bound_up":2.5,"straight_long":2.0},
+    "hairColor": {"black":3.0,"white":2.5,"silver":2.5,"dark_purple":1.5},
+    "eyeColor": {"brown":2.0,"dark_brown":2.5,"amber":2.0,"purple":2.0,"heterochromia":1.5},
+    "skinColor": {"fair":2.5,"pale":3.0,"porcelain":2.5,"light":2.0},
+    "defaultClothes": {"onmyoji_robe":3.0,"white_kariginu":2.5,"eboshi_hat":2.0,"flowing_kimono":2.5,"indigo_hakama":2.0},
+    "faceFeature": {"none":2.5,"beauty_mark":2.0},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"diamond":2.5},
+    "eyeShape": {"phoenix":3.0,"almond":2.5,"narrow":2.0},
+    "eyebrowShape": {"willow":2.5,"straight":2.0,"silkworm":2.0},
+    "impression": {"mysterious":3.0,"elegant":3.0,"scholarly":2.5,"ethereal":2.5,"otherworldly":3.0}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus"],
+    "defaultWeapon": ["hoe","pole","farming_sickle"],
+    "defaultClothes": ["yoroi_armor","jinbaori"]
+  },
+  "templateFluxPrompt": "a {gender} onmyoji, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, japanese onmyoji mystic, floating talismans, shikigami spirits, moon gate, heian period aesthetic, ukiyo-e art style, masterpiece"
+}

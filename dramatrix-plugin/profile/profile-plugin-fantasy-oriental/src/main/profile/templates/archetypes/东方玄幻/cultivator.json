@@ -1,0 +1,26 @@
+{
+  "archetype": "cultivator",
+  "name": "修仙者",
+  "visualTags": "修仙者",
+  "description": "修炼仙道的修行者，气质出尘，追求长生大道",
+  "defaults": {
+    "defaultAccessories": ["storage_bag","spirit_beast_bag","jade_pendant"],
+    "defaultWeapon": ["flying_sword","green_bamboo_sword","whisk","jade_ruyi"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":3.0,"ethereal_light":3.0,"slim":1.5,"tall_athletic":0.5},
+    "temperament": {"calm":3.0,"ethereal":3.0,"gentle":1.5,"sharp":0.5,"sinister":0.2},
+    "hairStyle": {"bound_up":3.0,"dao_bun":3.0,"flowing_long":2.0},
+    "hairColor": {"black":3.0,"white":1.5,"silver":1.0},
+    "defaultClothes": {"green_robe":3.0,"white_robe":3.0,"blue_robe":1.5,"spirit_silk":2.0},
+    "eyeShape": {"phoenix":3.0,"sharp_phoenix":3.0,"crane":2.0,"dragon":1.5},
+    "eyebrowShape": {"sword":2.5,"long_eyebrow":3.0,"dragon_eyebrow":1.5},
+    "impression": {"delicate":2.0,"ethereal":3.0,"cold":1.5,"refined":1.5}
+  },
+  "exclude": {
+    "hairStyle": ["bald"],
+    "defaultAccessories": ["abacus","hoe","fishing_net"],
+    "defaultWeapon": ["hoe","pole"]
+  },
+  "templateFluxPrompt": "a {gender} cultivator, {ageDesc}, {bodyType}, {faceDesc}, {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

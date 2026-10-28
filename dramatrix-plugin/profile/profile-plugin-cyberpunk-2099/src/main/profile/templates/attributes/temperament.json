@@ -1,0 +1,197 @@
+{
+  "attribute": "temperament",
+  "displayName": "气质",
+  "options": [
+    {
+      "id": "cold",
+      "value": "冷峻",
+      "description": "情感隔离，像机器一样冷静",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "冷",
+        " 隔离"
+      ]
+    },
+    {
+      "id": "reckless",
+      "value": "亡命",
+      "description": "肾上腺素驱动的不管不顾",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "亡命",
+        " 冲动"
+      ]
+    },
+    {
+      "id": "calm",
+      "value": "沉静",
+      "description": "风暴中心的平静",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "沉静"
+      ]
+    },
+    {
+      "id": "manic",
+      "value": "躁狂",
+      "description": "神经刺激下的高速亢奋",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "躁狂",
+        " 神经"
+      ]
+    },
+    {
+      "id": "cynical",
+      "value": "愤世",
+      "description": "看透企业谎言的讥讽",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "愤世",
+        " 讥讽"
+      ]
+    },
+    {
+      "id": "charismatic",
+      "value": "魅力",
+      "description": "人群中最耀眼的话术大师",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "魅力",
+        " 话术"
+      ]
+    },
+    {
+      "id": "paranoid",
+      "value": "多疑",
+      "description": "被追踪 paranoia 缠身的紧绷",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "多疑",
+        " 紧绷"
+      ]
+    },
+    {
+      "id": "zen",
+      "value": "禅定",
+      "description": "在喧嚣中入定的赛博僧",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "禅",
+        " 平静"
+      ]
+    },
+    {
+      "id": "ruthless",
+      "value": "冷酷",
+      "description": "目标至上、毫无怜悯",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "冷酷",
+        " 目标"
+      ]
+    },
+    {
+      "id": "playful",
+      "value": "玩世",
+      "description": "把生死当游戏的嬉皮",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "玩世",
+        " 嬉戏"
+      ]
+    },
+    {
+      "id": "stoic",
+      "value": "坚忍",
+      "description": "痛觉与情绪都被编辑过的忍耐",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "坚忍",
+        " 忍耐"
+      ]
+    },
+    {
+      "id": "wired",
+      "value": "神经紧绷",
+      "description": "长期在线、随时应激的紧绷感",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "紧绷",
+        " 应激"
+      ]
+    }
+  ]
+}

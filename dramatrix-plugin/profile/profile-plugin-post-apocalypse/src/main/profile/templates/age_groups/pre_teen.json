@@ -1,0 +1,29 @@
+{
+  "ageGroup": "pre_teen",
+  "displayName": "少儿",
+  "ageRange": "10-12岁",
+  "defaults": {
+    "ageDesc": ["十岁出头","十一二岁","稚气未脱","垂髫之年","总角之年","金钗之年"],
+    "heightDesc": ["一米四五左右","小巧可人","个头不高"],
+    "bodyType": ["slim","medium","petite"]
+  },
+  "weightBias": {
+    "faceShape": {"round":2.0,"oval":2.0,"almond":1.5,"seed_face":1.0},
+    "eyeShape": {"almond":2.5,"round":2.0,"peach_blossom":1.5,"swallow":1.0},
+    "lipShape": {"cherry":2.0,"pouty":1.5,"rose":1.0},
+    "noseShape": {"upturned":1.5,"water_drop":2.0,"straight":1.0,"delicate":1.5},
+    "faceFeature": {"none":2.5,"freckles":1.5,"dimples":2.0,"ruddy":1.5},
+    "impression": {"innocent":2.5,"delicate":2.0,"free_spirit":1.0,"gentle":1.0},
+    "temperament": {"innocent":3.0,"cheerful":1.5,"warm":1.5,"gentle":1.0,"sharp":0.5},
+    "hairColor": {"black":1.5,"dark_brown":1.5,"chestnut":0.5},
+    "bodyType": {"slim":2.5,"medium":2.0,"petite":1.5}
+  },
+  "exclude": {
+    "temperament": ["sinister","cold","shrewd","stoic","aloof","arrogant","cunning","ruthless","majestic","fierce","reckless","sly","ferocious","obsessive","ambitious"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","nasolabial_folds","wrinkles","rosacea"],
+    "bodyType": ["muscular_broad","hulking","tall_athletic"],
+    "impression": ["weathered","majestic","shrewd"],
+    "hairColor": ["white","gray","silver","frost_white","ash_gray"]
+  },
+  "fluxAgeDesc": "pre-teen child"
+}

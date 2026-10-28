@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_nurse",
+  "name": "废土护士",
+  "visualTags": "wasteland nurse, caregiver, makeshift clinic, worn uniform, bandages, compassionate, healing hands, post-apocalyptic care, female",
+  "description": "末世护士，在简陋诊所中照料伤病者，用温柔双手抚慰废土中的伤痛",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"svelte_elegant":2.5,"lean_fit":2.5,"slim":2.5,"athletic_toned":2.0,"medium":2.5,"slender_tall":2.0,"willowy":2.0,"lean_wiry":1.5},
+    "temperament": {"compassionate":3.0,"gentle":3.0,"patient":3.0,"nurturing":3.0,"resilient":2.5,"altruistic":2.5,"steadfast":2.5,"kind_heart":3.0,"sincere":2.5,"calm":2.5,"warm":2.5},
+    "hairStyle": {"bound_up":3.0,"low_ponytail":3.0,"simple_tie":2.5,"half_up":2.5,"bangs_short":2.5,"choppy_short":2.5,"loose_half_up":2.5,"side_part_long":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"chestnut":2.5,"light_brown":2.0,"auburn":2.5,"jet_black":2.0,"honey_blonde":1.5,"charcoal":1.5},
+    "defaultClothes": {"wasteland_medic_vest":3.0,"wasteland_lab_coat":3.0,"survivor_hoodie_worn":2.5,"scavenger_harness":2.0,"tattered_jacket":2.0,"patched_denim_suit":2.0,"dust_cloak_worn":1.5,"gas_mask_hooded_poncho":1.5},
+    "eyeColor": {"dark_brown":3.0,"warm_brown":3.0,"hazel":2.5,"deep_blue":2.0,"green":2.0,"black":2.0,"honey":2.5,"gray":1.5},
+    "skinColor": {"fair":2.5,"ivory":2.5,"light_tan":2.5,"rose_white":2.5,"tan":2.0,"weathered_tan":1.5,"pale_porcelain":2.0,"jade":2.0},
+    "eyeShape": {"almond":3.0,"peach_blossom":3.0,"round":2.5,"sharp_phoenix":2.5,"downturned":2.5,"scholar_eye":2.0,"tired":2.5,"deep_set":1.5},
+    "eyebrowShape": {"willow":3.0,"curved_fine":2.5,"crescent":2.5,"straight":2.5,"distant_mountain":2.5,"silkworm":2.0,"auspicious_brow":2.0,"long_eyebrow":2.0},
+    "faceShape": {"oval":3.0,"heart":2.5,"seed_face":2.5,"jade_mirror":2.5,"bamboo_leaf_face":2.5,"round":2.0,"long":2.0,"angular":1.0},
+    "faceFeature": {"none":2.5,"beauty_mark":2.0,"dimples":2.5,"freckles":2.0,"clean_shaven":2.5,"sharp_features":1.5,"high_cheekbones":2.0,"tired_eyes":2.0},
+    "impression": {"kind":3.0,"warm":3.0,"gentle":3.0,"motherly":3.0,"compassionate":3.0,"tired":2.0,"resolute":2.5,"altruistic":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk","claws","flail"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","mask","abacus"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut","warrior_braid"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","biker_leather_armor","ammo_belt_bandolier","wild_beast_skin"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","feral","cold","ruthless","intimidating"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland nurse, {ageDesc}, {bodyType} gentle caring build, {faceDesc}, wearing worn medical vest and caring expression, bandages and medical supplies in hands, {hairStyle} {hairColor} hair tied back, {eyeColor} warm compassionate eyes, {skinColor} skin, {temperament} aura, makeshift clinic ward, wounded patients on cots, dim warm light, tending to the sick, photorealistic, compassionate, masterpiece"
+}

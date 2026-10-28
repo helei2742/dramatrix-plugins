@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_yuki_onna",
+  "name": "雪女",
+  "visualTags": "素白长发,雪衣曳地,呵气成霜,足不沾雪",
+  "description": "风雪之夜现身的白衣女妖，一口寒气可将行人冻作冰雕",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":3.0,"white":3.0,"crimson":2.0,"silver":2.0,"midnight_blue":1.5,"frost_white":3.5,"platinum_blond":1.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.0,"snow_white":3.5,"fiery_red":1.5,"pale_ash":1.5,"translucent":1.5},
+    "eyeColor": {"blood_red":2.5,"golden":2.5,"slit_pupil_gold":2.0,"obsidian":1.5,"ice_blue":3.5,"moonlight":2.5,"pearl_gray":2.0,"white_opaque":1.5},
+    "defaultClothes": {"indigo_kimono":1.5,"white_haori_overcoat":2.0,"crimson_hakama_pants":2.0,"straw_mino_cape":1.5,"onmyoji_hunting_robe":1.5,"ice_silk_dress":3.0,"moonlight_gown":2.5},
+    "temperament": {"mysterious":3.0,"vicious":1.5,"cold":3.5,"melancholy":2.5,"unhinged":1.5,"serene":2.0},
+    "impression": {"demon_charm":2.5,"ghostly":2.5,"mysterious":2.0,"cold_beauty":3.5,"lonely":2.0,"ethereal":2.0},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":3.0,"distant_mountain":1.5},
+    "bodyType": {"ethereal_light":3.5,"floating_light":3.0,"willowy":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "faceShape": {"melon_seed_wide":2.5,"oval":2.0,"peach_face":1.5,"autumn_water":1.5},
+    "eyeShape": {"peach_blossom":2.5,"phoenix":2.0,"seductive_eye":2.0,"watery_eye":1.5},
+    "faceFeature": {"beauty_mark":2.0,"tear_mole":1.5,"pale_face":2.5,"none":1.5,"icy_face":3.0},
+    "lipShape": {"cherry":1.5,"red_lip":2.0,"petal_lip":1.5,"frost_lip":3.0,"pale_lip":2.5},
+    "noseShape": {"delicate":2.5,"jade_onion":2.0,"straight":1.5},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "defaultWeapon": {"none":3.0,"iron_fan":3.0,"poison_needle":3.0},
+    "defaultAccessories": {"hairpin":2.5,"veil":2.5,"silver_ear_cuff":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["axe","war_hammer","halberd","two_hand_sword"],
+    "bodyType": ["bulky_massive","muscular_broad","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; flowing white hair, trailing snow-white kimono, frost breath, feet never touching snow; japanese yokai ukiyo-e inspired art"
+}

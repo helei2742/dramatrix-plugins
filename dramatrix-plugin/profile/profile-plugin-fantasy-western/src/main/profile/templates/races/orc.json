@@ -1,0 +1,35 @@
+{
+  "race": "orc",
+  "displayName": "兽人",
+  "description": "兽性未脱的类人种族，皮肤粗糙，獠牙外露，体格壮硕，以部族尚武为荣",
+  "defaults": {
+    "skinColor": ["dark","swarthy","olive","ruddy","tan"],
+    "eyeColor": ["amber","crimson","dark_brown","black","gold"],
+    "hairColor": ["black","dark_brown","red","gray"],
+    "bodyType": ["muscular_broad","hulking","tall_athletic","stocky","sturdy"]
+  },
+  "weightBias": {
+    "skinColor": {"dark":2.5,"olive":2.5,"swarthy":2.0},
+    "eyeColor": {"amber":2.5,"crimson":2.5,"black":2.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5},
+    "bodyType": {"muscular_broad":2.5,"hulking":2.5},
+    "eyeShape": {"deep_set":2.5,"wolf":2.5,"round":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5},
+    "faceShape": {"square":2.5,"rectangular":2.5},
+    "faceFeature": {"scar":2.5,"tattoo":2.5,"beard_stubble":2.0},
+    "impression": {"wild":2.5,"overbearing":2.5,"resolute":2.0},
+    "temperament": {"wild":2.5,"overbearing":2.5,"stoic":2.0}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","fair","ivory","peach"],
+    "eyeColor": ["pearl","starry","moonlit","silver"],
+    "hairColor": ["platinum","golden","silver","honey","light_pink"],
+    "bodyType": ["slender_tall","petite","willowy","ethereal_light","slim"],
+    "temperament": ["refined","noble","innocent","delicate"]
+  },
+  "faceDescOverride": {
+    "prepend": "tusks visible, ",
+    "append": ""
+  },
+  "templateFluxPrompt": "an orc {gender}, {ageDesc}, {bodyType}, {faceDesc} with tusks and bestial features, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

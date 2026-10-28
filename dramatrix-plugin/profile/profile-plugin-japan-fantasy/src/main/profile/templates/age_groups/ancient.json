@@ -1,0 +1,29 @@
+{
+  "ageGroup": "ancient",
+  "displayName": "古稀",
+  "ageRange": "66-80岁",
+  "defaults": {
+    "ageDesc": ["六十六七岁","七十古稀","七十三四岁","须发皆白","七十八九岁","杖朝之年"],
+    "heightDesc": ["身形略有佝偻","一米六五左右","瘦削身形","老态龙钟"],
+    "bodyType": ["ethereal_light","slim","medium","willowy"]
+  },
+  "weightBias": {
+    "faceShape": {"long":2.5,"oval":2.0,"rectangular":1.5,"square":1.5,"broad":1.0},
+    "eyeShape": {"deep_set":3.0,"crane":3.0,"narrow":2.0,"eagle":1.5,"gentle_ripple":1.0},
+    "lipShape": {"thin":3.5,"downturned":1.5,"defined":1.0},
+    "noseShape": {"aquiline":2.5,"hawk":2.0,"roman":2.0,"broad":1.5,"straight":1.5},
+    "faceFeature": {"wrinkles":4.0,"nasolabial_folds":3.5,"beard_full":3.0,"beard_goatee":1.5,"beard_mustache":1.5,"age_spots":1.5,"rosacea":1.0,"scar":0.5},
+    "impression": {"weathered":4.0,"majestic":2.0,"dignified":2.5,"serene":2.0,"wizened":2.5,"ethereal":1.5,"melancholic":1.0},
+    "temperament": {"calm":3.0,"stoic":3.0,"majestic":2.0,"benevolent":2.0,"aloof":1.5,"warm":1.0,"melancholic":1.0},
+    "hairColor": {"white":4.0,"silver":3.0,"gray":2.5,"frost_white":3.0,"ash_gray":2.0},
+    "bodyType": {"ethereal_light":3.0,"slim":2.5,"willowy":2.0,"medium":1.0}
+  },
+  "exclude": {
+    "temperament": ["innocent","free_spirited","cheerful","wild","reckless","passionate","timid","arrogant","fierce","sharp"],
+    "faceFeature": ["freckles","dimples","beauty_mark","beard_stubble","ruddy"],
+    "bodyType": ["muscular_broad","tall_athletic","petite","lithe","slender_tall","lean_fit","plump","stocky","hulking"],
+    "impression": ["innocent","delicate","free_spirit","radiant","handsome","heroic"],
+    "hairColor": ["black","dark_brown","golden","platinum","honey","copper","ink_black","red","blue_black","chestnut","auburn"]
+  },
+  "fluxAgeDesc": "ancient elderly person in their seventies"
+}

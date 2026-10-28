@@ -1,0 +1,33 @@
+{
+  "archetype": "designer",
+  "name": "设计师",
+  "visualTags": "modern designer, fashion or graphic, creative studio, stylish, trendy, artistic, meticulous",
+  "description": "现代设计师，审美与功能的缔造者，以前瞻视野塑造世界的模样",
+  "defaults": {
+    "defaultAccessories": ["ring","earring","none","hair_ribbon","goggles"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":2.5,"willowy":2.5,"svelte_elegant":3.0,"lean_fit":2.0,"medium":2.0,"athletic_toned":1.5,"lean_wiry":1.5,"ethereal_light":2.0},
+    "temperament": {"flamboyant":3.0,"meticulous":3.0,"crafty":2.5,"free_spirited":3.0,"eloquent":2.5,"eccentric":2.5,"passionate":2.5,"charismatic":2.5,"whimsical":2.5,"pragmatic":2.0,"cunning":1.5,"radiant":2.0,"calculating":1.5,"arrogant":1.0},
+    "hairStyle": {"choppy_short":2.5,"wavy_long":2.5,"side_bangs_long":2.5,"half_up":2.5,"loose_curls":2.5,"silver_flow":2.5,"topknot_loose":2.0,"bangs_short":2.0,"messy_bun":2.5,"updo_elegant":2.5,"center_part_long":2.0,"loose_half_up":2.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"silver":2.5,"platinum_blond":2.5,"ash_blond":2.5,"jet_black":2.0,"chestnut":2.0,"auburn":2.0,"frost_white":1.5,"pink":1.5,"lavender":2.0,"honey_blond":2.0},
+    "defaultClothes": {"silk_embroider":3.0,"brocade_hanfu":2.5,"cotton_hanfu":2.5,"navy_silk_hanfu":2.5,"ink_wash_robe":2.5,"slate_gray_cloak":2.0,"silver_thread_robe":2.5,"black_night":2.0,"linen_simple":2.0,"white_robe":2.0,"mint_green_robe":2.0,"burgundy_velvet_cloak":2.0},
+    "eyeColor": {"dark_brown":2.5,"black":2.5,"hazel":2.5,"gray":2.5,"deep_blue":2.0,"emerald":2.0,"sapphire":2.0,"amber":2.0,"violet":1.5,"turquoise":2.0,"silver":1.5,"honey":1.5},
+    "skinColor": {"fair":3.0,"pale_porcelain":2.5,"ivory":2.5,"moon_white":2.0,"rose_white":2.0,"light_tan":2.0,"pearl":2.0,"jade":1.5},
+    "eyeShape": {"phoenix":2.5,"almond":2.5,"peach_blossom":2.5,"fox":2.5,"deep_set":2.0,"sharp_phoenix":2.5,"upturned":2.5,"swallow":2.0,"round":2.0},
+    "eyebrowShape": {"arched":2.5,"willow":2.5,"distant_mountain":2.5,"feathered":2.5,"straight":2.0,"curved_fine":2.5,"moth_antenna":2.0,"crescent":2.0,"wispy_brow":2.0},
+    "faceShape": {"oval":3.0,"heart":3.0,"seed_face":3.0,"diamond":2.5,"almond":2.5,"fox_face":2.0,"crescent_face":2.0,"inverted_triangle":2.0},
+    "faceFeature": {"none":2.5,"delicate_features":3.0,"high_cheekbones":2.5,"beauty_mark":2.0,"spectacles":2.5,"sharp_features":2.0,"clean_shaven":2.0,"dimples":1.5},
+    "impression": {"refined":3.0,"handsome":3.0,"elegant":3.0,"intellectual":2.5,"delicate":2.5,"free_spirit":3.0,"ethereal":2.5,"charismatic":2.5,"cunning":2.0,"artistic":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun","child_tuft"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","golden_armor","plate_armor","chainmail","leather_armor","bamboo_hat_cape","wild_beast_skin","training_gear","ochre_hemp_tunic","scale_armor","alchemist_apron"],
+    "temperament": ["brutal","reckless","overbearing","unhinged","haughty","vicious","grim","gruff"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","stocky_strong","plump","gnarled_tough"]
+  },
+  "templateFluxPrompt": "a {gender} modern designer creative professional, {ageDesc}, {bodyType} build, {faceDesc}, wearing stylish modern fashion, designer glasses, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern design studio with mood boards, mac computer, color swatches, creative workspace aesthetic, photorealistic, masterpiece"
+}

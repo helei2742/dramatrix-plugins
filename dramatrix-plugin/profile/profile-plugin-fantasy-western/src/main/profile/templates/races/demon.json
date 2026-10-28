@@ -1,0 +1,27 @@
+{
+  "race": "demon",
+  "displayName": "魔族",
+  "description": "来自魔界的强大种族，外形与人族相近但更具侵略性",
+  "defaults": {
+    "skinColor": ["wheat","bronze","swarthy","pale_blue"],
+    "eyeColor": ["crimson","purple","black","golden","heterochromia"],
+    "hairColor": ["black","white","red","purple","silver"],
+    "bodyType": ["tall_athletic","slender_tall","lean_fit","muscular_broad"]
+  },
+  "weightBias": {
+    "skinColor": {"swarthy":1.5,"pale_blue":1.5},
+    "eyeColor": {"crimson":2.0,"purple":2.0,"heterochromia":1.5},
+    "hairColor": {"black":2.0,"red":2.0},
+    "bodyType": {"tall_athletic":2.5},
+    "eyeShape": {"deep_set":2.5,"upturned":2.5,"heterochromia":2.0},
+    "eyebrowShape": {"raised":2.0,"sword":2.0},
+    "impression": {"cold":2.0,"sinister":2.5,"majestic":1.5,"overbearing":2.0}
+  },
+  "exclude": {
+    "skinColor": ["fair","ivory"],
+    "hairColor": ["light_pink"],
+    "eyeColor": ["dark_brown"],
+    "temperament": ["innocent","warm"]
+  },
+  "templateFluxPrompt": "a demon {gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

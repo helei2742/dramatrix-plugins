@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_rad_ghoul",
+  "name": "辐射尸鬼",
+  "visualTags": "皮肤剥落,盖革狂鸣,浑浊双目,踉跄成群",
+  "description": "长期泡在辐射尘里的人形残余，皮肉剥落却仍能奔跑，成群涌来最是难缠",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":3.0,"charcoal":2.0,"salt_pepper":1.5,"ash_blond":2.0,"orange":1.5},
+    "skinColor": {"pale_ash":3.0,"scarred_bronze":3.0,"phosphor_white":2.0,"moss_green":1.5,"clay_brown":1.5},
+    "eyeColor": {"white_opaque":3.0,"sunflower":2.5,"deep_orange":2.0,"blood_red":1.5,"heterochromia":1.5},
+    "defaultClothes": {"tattered_jacket":3.0,"radiation_suit_worn":1.5,"scrap_metal_armor":2.0,"nomad_wraps":2.0,"gas_mask_hooded_poncho":1.5,"patched_coveralls":2.5},
+    "temperament": {"unhinged":3.5,"volatile":2.5,"brutal":2.0,"paranoid":2.0,"jaded":1.5,"desolate":2.5,"weary":1.5},
+    "impression": {"sickness":3.5,"wild":2.5,"weathered":2.0,"bloodthirsty":1.5,"bitter":2.0,"ghostly":2.0},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "faceShape": {"long":2.5,"seed_face":2.0,"sharp":1.5},
+    "eyeShape": {"empty_eye":2.5,"white_eye":2.5,"deep_set":2.0},
+    "faceFeature": {"gaunt_face":2.5,"veins":3.0,"burn_scar":3.5,"pale_face":2.0,"age_spots":1.5},
+    "lipShape": {"warped_lip":3.0,"dry_cracked":2.5,"toothed_lip":2.0},
+    "noseShape": {"flat":2.5,"bony":2.0,"ghost_nose":1.5},
+    "bodyType": {"hunched":3.5,"gnarled_tough":2.5,"compact_dense":1.5,"thin_bony":1.5},
+    "heightDesc": {"hunched_short":3.5,"short_small":2.0,"medium_short":1.5},
+    "hairStyle": {"bald":3.0,"choppy_short":2.0,"messy_bun":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0,"iron_hook":3.0},
+    "defaultAccessories": {"none":2.5,"goggles":2.5,"leather_belt":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified","radiant","noble","cheerful","dignified"],
+    "defaultWeapon": ["flying_sword","guqin","ink_brush"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; sloughing irradiated skin, milky blind eyes, staggering lurch; post-apocalyptic mutant creature art, radioactive wasteland"
+}

@@ -1,0 +1,24 @@
+{
+  "ageGroup": "child",
+  "displayName": "儿童",
+  "ageRange": "8-12岁",
+  "defaults": {
+    "ageDesc": ["十岁左右","十来岁","总角之年"],
+    "heightDesc": ["娇小玲珑","五短身材"],
+    "bodyType": ["medium","slim"]
+  },
+  "weightBias": {
+    "faceShape": {"round":3.0,"almond":2.0,"oval":1.5},
+    "eyeShape": {"round":3.0,"almond":2.5},
+    "lipShape": {"cherry":2.5,"pouty":2.5},
+    "noseShape": {"upturned":2.0,"water_drop":2.0},
+    "impression": {"delicate":2.0,"innocent":3.0},
+    "temperament": {"innocent":4.0,"warm":2.0},
+    "faceFeature": {"none":2.0,"ruddy":2.0,"dimples":2.0}
+  },
+  "exclude": {
+    "temperament": ["sinister","cold","overbearing"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","nasolabial_folds"]
+  },
+  "fluxAgeDesc": "child"
+}

@@ -1,0 +1,29 @@
+{
+  "archetype": "gambler",
+  "name": "赌徒",
+  "visualTags": "骰子,牌九,筹码,冒险豪赌",
+  "description": "以运气为武器的赌徒，手中的骰子与卡牌即是生死利器",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","ring"],
+    "defaultWeapon": ["dagger","fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.5,"slim":2.5,"lean_fit":2.0,"short_stout":1.5},
+    "temperament": {"cunning":3.0,"lazy":2.5,"shrewd":2.5,"reckless":2.0},
+    "hairStyle": {"half_up":2.5,"topknot_loose":2.5,"slicked_back":2.0,"simple_tie":1.5},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"chestnut":1.5,"gray":1.0},
+    "defaultClothes": {"merchant_robe":3.0,"black_night":2.5,"linen_simple":2.0,"blue_robe":1.5},
+    "eyeColor": {"dark_brown":2.5,"black":2.0,"amber":1.5,"topaz":1.5},
+    "eyeShape": {"triangle":3.0,"fox":2.5,"narrow":2.0,"swallow":1.5},
+    "eyebrowShape": {"hook_brow":3.0,"lazy_brow":2.5,"short_eyebrow":2.0,"raised":1.5},
+    "faceShape": {"diamond":2.5,"inverted_triangle":2.5,"goblin_face":2.0,"sharp":1.5},
+    "faceFeature": {"none":2.5,"beard_mustache":1.5,"high_cheekbones":1.5},
+    "impression": {"shrewd":3.0,"free_spirit":2.5,"sinister":1.5,"cunning":1.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["buddha_beads","spirit_beast_bag"],
+    "defaultWeapon": ["staff_monk","hoe","whisk"],
+    "hairStyle": ["bald","child_tuft","two_horns"]
+  },
+  "templateFluxPrompt": "a {gender} gambler, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, holding dice and cards with luck aura"
+}

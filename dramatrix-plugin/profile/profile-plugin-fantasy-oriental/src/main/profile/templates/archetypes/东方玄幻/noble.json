@@ -1,0 +1,29 @@
+{
+  "archetype": "noble",
+  "name": "贵族",
+  "visualTags": "贵族,皇族",
+  "description": "出身高贵，举手投足间尽显华贵气度",
+  "defaults": {
+    "defaultAccessories": ["jade_pendant","hairpin","belt_jade","earring"],
+    "defaultWeapon": ["jade_ruyi","fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":2.5,"slim":2.0,"willowy":2.0,"tall_athletic":0.3},
+    "temperament": {"noble":3.0,"gentle":2.5,"calm":2.0,"overbearing":1.5},
+    "hairStyle": {"cloud_bun":3.0,"phoenix_crown":3.0,"bound_up":2.0,"flowing_long":1.5},
+    "hairColor": {"black":2.5,"silver":1.5,"golden":1.0},
+    "defaultClothes": {"red_dress":2.5,"golden_armor":1.5,"spirit_silk":2.5,"merchant_robe":2.0},
+    "eyeColor": {"dark_brown":1.5,"golden":1.5,"sky_blue":1.0,"amber":1.0},
+    "eyeShape": {"phoenix":3.0,"dragon":1.5,"peach_blossom":1.5},
+    "eyebrowShape": {"phoenix_eyebrow":3.0,"distant_mountain":2.5,"moth_antenna":2.0},
+    "faceShape": {"oval":2.5,"heart":2.0,"almond":2.0,"round":0.3},
+    "faceFeature": {"none":2.0,"beauty_mark":1.5,"dimples":1.0},
+    "impression": {"majestic":3.0,"handsome":2.0,"noble":3.0,"refined":2.0,"heroic":1.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","hoe"],
+    "defaultWeapon": ["hoe","pole"],
+    "faceFeature": ["scar","beard_full","beard_stubble"]
+  },
+  "templateFluxPrompt": "a {gender} noble aristocrat, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

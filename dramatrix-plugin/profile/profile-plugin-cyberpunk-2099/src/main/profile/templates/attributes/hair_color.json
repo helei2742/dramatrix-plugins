@@ -1,0 +1,168 @@
+{
+  "attribute": "hairColor",
+  "displayName": "发色",
+  "options": [
+    {
+      "id": "natural_black",
+      "value": "墨黑",
+      "description": "未染的自然黑发",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "黑",
+        " 自然"
+      ]
+    },
+    {
+      "id": "silver_white",
+      "value": "银白",
+      "description": "早衰或刻意的冰银色",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "银",
+        " 冷感"
+      ]
+    },
+    {
+      "id": "neon_pink",
+      "value": "霓虹粉",
+      "description": "街头最常见的荧光粉",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "粉",
+        " 荧光",
+        " 街头"
+      ]
+    },
+    {
+      "id": "electric_blue",
+      "value": "电光蓝",
+      "description": "企业公子小姐的爱色",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "蓝",
+        " 电光"
+      ]
+    },
+    {
+      "id": "toxic_green",
+      "value": "毒绿",
+      "description": "帮派与黑客偏好的刺眼绿",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "绿",
+        " 毒",
+        " 黑客"
+      ]
+    },
+    {
+      "id": "chrome",
+      "value": "铬色",
+      "description": "金属镀层的反光发",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "铬",
+        " 金属"
+      ]
+    },
+    {
+      "id": "violet",
+      "value": "紫罗兰",
+      "description": "神秘主义的暗紫",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "紫",
+        " 神秘"
+      ]
+    },
+    {
+      "id": "blood_red",
+      "value": "血红",
+      "description": "独狼与杀手印记般的红",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "红",
+        " 杀意"
+      ]
+    },
+    {
+      "id": "bioluminescent",
+      "value": "生物荧光",
+      "description": "植入 bioluminescent 藻类的发光发",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "荧光",
+        " 生物"
+      ]
+    },
+    {
+      "id": "split_dye",
+      "value": "双色挑染",
+      "description": "左右截然不同的撞色挑染",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "挑染",
+        " 撞色"
+      ]
+    }
+  ]
+}

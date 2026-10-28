@@ -1,0 +1,30 @@
+{
+  "archetype": "knight",
+  "name": "骑士",
+  "visualTags": "骏马,骑士剑,甲胄,忠诚荣誉",
+  "description": "身披重甲的高贵骑士，骑乘战马，恪守骑士道义",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","ring"],
+    "defaultWeapon": ["iron_sword","spear","none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"slender_tall":2.5,"lean_fit":2.5,"muscular_broad":1.5},
+    "temperament": {"noble":3.0,"stoic":2.5,"brave":2.5,"humble":2.0,"calm":1.5},
+    "hairStyle": {"warrior_topknot":2.5,"high_ponytail":2.5,"bound_up":2.5,"side_part_long":2.0},
+    "hairColor": {"black":2.0,"jet_black":2.0,"platinum_blond":2.0,"golden":1.5,"dark_brown":1.5},
+    "defaultClothes": {"golden_armor":3.0,"leather_armor":2.0,"white_robe":1.5},
+    "eyeColor": {"sapphire":2.5,"dark_brown":2.5,"black":2.0,"golden":1.5},
+    "eyeShape": {"almond":2.5,"sharp_phoenix":2.0,"tiger":2.0,"dragon":1.5},
+    "eyebrowShape": {"chivalrous_brow":3.0,"sword":2.5,"hero_eyebrow":2.5,"straight":2.0},
+    "faceShape": {"rectangular":2.5,"horse_face":2.5,"square":2.0,"oval":1.5},
+    "faceFeature": {"none":3.0,"scar":1.0,"beard_full":1.0},
+    "impression": {"heroic":3.0,"refined":2.5,"resolute":2.5,"loyal":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","whisk","staff","fan"],
+    "defaultAccessories": ["abacus","tattoo"],
+    "hairStyle": ["bald","wild_mane"],
+    "temperament": ["sinister","lazy"]
+  },
+  "templateFluxPrompt": "a {gender} knight, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, mounted on a noble steed, chivalric order"
+}

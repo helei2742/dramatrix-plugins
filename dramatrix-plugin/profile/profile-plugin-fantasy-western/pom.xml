@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.dramatrix.plugins</groupId>
+        <artifactId>dramatrix-plugins</artifactId>
+        <version>${revision}</version>
+        <relativePath>../../../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>profile-plugin-fantasy-western</artifactId>
+    <packaging>pom</packaging>
+
+    <name>profile-plugin-fantasy-western</name>
+    <description>西方奇幻：西方玄幻、魔物、元素精怪、亡灵、深渊题材，剑与魔法、龙与地下城</description>
+
+    <properties>
+        <plugin.name>profile-plugin-fantasy-western</plugin.name>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>deploy-profile-plugin</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <mkdir dir="../../../plugins/profile/${plugin.name}"/>
+                                <copy file="src/main/profile/plugin.json"
+                                      todir="../../../plugins/profile/${plugin.name}" overwrite="true"/>
+                                <copy todir="../../../plugins/profile/${plugin.name}/templates" overwrite="true">
+                                    <fileset dir="src/main/profile/templates" erroronmissingdir="false"/>
+                                </copy>
+                                <echo message="Deployed profile plugin ${plugin.name} to plugins/profile/${plugin.name}/"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,60 @@
+{
+  "race": "human",
+  "displayName": "人族",
+  "description": "未经改造或轻度改造的自然人类，是夜城最庞大也最脆弱的群体，可塑性极强。",
+  "defaults": {
+    "skinColor": [
+      "fair",
+      "tan",
+      "dark",
+      "olive"
+    ],
+    "eyeColor": [
+      "dark_brown",
+      "ice_blue"
+    ],
+    "hairColor": [
+      "natural_black",
+      "silver_white"
+    ],
+    "bodyType": [
+      "slim",
+      "athletic"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "fair": 2.0,
+      "tan": 1.8,
+      "dark": 1.5
+    },
+    "faceShape": {
+      "clean_oval": 1.8,
+      "soft_diamond": 1.5
+    },
+    "impression": {
+      "street_smart": 1.8,
+      "burnt_out": 1.5
+    }
+  },
+  "exclude": {
+    "chromeSignature": [
+      "full_chrome_mask",
+      "half_skull_plate",
+      "synth_mold_face"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "unmodified human features",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "可承载任意义体改造，但无种族加成"
+    },
+    {
+      "description": "痛觉与情绪完整保留"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_death_knight",
+  "name": "亡灵骑士",
+  "visualTags": "黑色重铠,幽蓝剑焰,无面头盔,战马残魂",
+  "description": "堕落骑士以死灵之力续存的战争兵器，黑甲无面，剑焰幽蓝",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"several_centuries":2.5,"century_old":2.0,"thousand_years":1.5,"immortal_ancient":1.5},
+    "hairColor": {"none":3.0,"white":2.5,"ash_blond":2.0,"gray":2.0,"charcoal":1.5},
+    "skinColor": {"ghostly_pale":3.0,"chalk_white":2.5,"pale_ash":2.5,"stone_gray":1.5,"age_spotted":1.5},
+    "eyeColor": {"white_opaque":3.0,"blood_red":2.0,"shadow_black":2.0,"moonlight":2.5,"pearl_gray":1.5,"ice_blue":3.0},
+    "defaultClothes": {"corpse_robe":3.0,"patchwork_rags":2.5,"dark_cloak":2.0,"charcoal_hooded_cloak":1.5,"chainmail":2.0,"polished_plate_armor":3.0,"bronze_scale_armor":2.0,"chainmail_tunic":1.5},
+    "temperament": {"desolate":3.0,"cold":3.0,"grim":2.0,"sinister":2.0,"stoic":2.5,"ruthless":2.5},
+    "impression": {"ghostly":2.0,"cold":2.5,"lonely":2.0,"sinister":1.5,"ancient_soul":1.5,"domineering":2.5,"unyielding":2.0},
+    "eyebrowShape": {"faint":2.5,"ghost_brow":2.5,"wispy_brow":2.0,"broken_brow":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "hairStyle": {"bald":2.0,"slicked_back":2.0,"short_crop":2.0,"warrior_braid":1.5},
+    "eyeShape": {"cold_star_eye":3.0,"narrow":2.0,"empty_eye":2.0},
+    "faceShape": {"square":2.5,"rectangular":2.0,"sharp":1.5},
+    "faceFeature": {"pale_face":2.5,"scar":2.0,"shadow_face":2.0,"gaunt_face":1.5},
+    "defaultWeapon": {"two_hand_sword":3.0,"rune_sword":3.0,"halberd":3.0},
+    "defaultAccessories": {"armor_pauldron":2.5,"bracer_iron":2.5,"military_seal":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["head_flower","phoenix_hairpin","hair_ribbon"],
+    "temperament": ["cheerful","jovial","warm","innocent"],
+    "faceFeature": ["dimples","ruddy","freckles"],
+    "defaultWeapon": ["guqin","ink_brush","fan","hoe"],
+    "bodyType": ["petite_curvy","delicate_frail","pin_thin","child_plump"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; blackened plate armor, faceless helm, blue soul-flame blade; dark fantasy undead art, necrotic gloom"
+}

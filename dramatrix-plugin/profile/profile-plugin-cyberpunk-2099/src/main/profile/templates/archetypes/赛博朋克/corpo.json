@@ -1,0 +1,45 @@
+{
+  "archetype": "corpo",
+  "category": "赛博朋克",
+  "name": "企业人",
+  "visualTags": "企业, 权力, 精英",
+  "description": "高塔之上的权力玩家，微笑背后是冷血算计。",
+  "defaults": {
+    "defaultClothes": [
+      "holographic_suit",
+      "corp_armor"
+    ],
+    "eyeColor": [
+      "optic_red"
+    ],
+    "temperament": [
+      "cold"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "holographic_suit": 3.0,
+      "corp_armor": 2.0
+    },
+    "eyeColor": {
+      "optic_red": 2.5
+    },
+    "impression": {
+      "corporate_polish": 3.0,
+      "corp_predator": 2.5
+    },
+    "temperament": {
+      "cold": 2.5
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "ragged_poncho",
+      "foil_wrap"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

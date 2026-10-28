@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_flame_elemental",
+  "name": "火元素",
+  "visualTags": "烈焰成躯,余烬飞散,炙浪扭曲,所触成灰",
+  "description": "由纯粹火焰凝成的元素生命，无骨无肉，靠近三步便觉皮肤灼痛",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":2.0,"frost_white":2.0,"flame_red":3.5,"cyan":2.0,"none":1.5,"orange":3.0,"crimson":2.0,"golden":1.5},
+    "skinColor": {"translucent":3.0,"luminous_blue":2.5,"phosphor_white":2.0,"amber_glow":3.0,"rocky":1.5,"fiery_red":3.0},
+    "eyeColor": {"star_silver":2.5,"cosmic":2.5,"moonlight":2.0,"topaz":1.5,"aquamarine":1.5,"sunset_gold":3.0,"deep_orange":2.5,"blood_red":2.0},
+    "defaultClothes": {"spirit_silk":2.0,"spirit_leaf_dress":2.0,"cloud_pattern_robe":1.5,"moonlight_gown":1.5,"water_silk":1.5,"phoenix_robe":2.5},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":3.5,"serene":1.5,"passionate":2.5,"reckless":2.0,"fierce":2.0},
+    "impression": {"ethereal":3.0,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":1.5},
+    "eyebrowShape": {"faint":1.5,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":3.5,"fire_eyebrow":3.0},
+    "noseShape": {"elemental_nose":2.5,"delicate":1.5,"straight":1.5,"fire_nose":3.0},
+    "bodyType": {"ethereal_light":3.5,"floating_light":3.0,"willowy":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "hairStyle": {"ethereal_floating":3.5,"drifting_cloud":2.5,"flying_sky":2.0},
+    "faceFeature": {"flaming_face":3.5,"glowing_face":2.5,"none":1.5},
+    "lipShape": {"flame_lip":3.0,"open_lip":1.5},
+    "faceShape": {"wind_face":2.0,"sharp":2.0,"cloud_face":1.5},
+    "defaultWeapon": {"none":3.0,"staff":3.0,"spirit_seal":3.0},
+    "defaultAccessories": {"none":2.5,"spirit_stone":2.5,"ring":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent","tranquil","subdued","reserved"],
+    "defaultWeapon": ["hoe","pole","bow"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; body woven from living flame, drifting embers, air rippling with heat; elemental spirit art, glowing energy body"
+}

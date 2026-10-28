@@ -1,0 +1,32 @@
+{
+  "race": "spirit",
+  "displayName": "灵族",
+  "description": "天地灵气所化的存在，形态飘逸，介于虚实之间",
+  "defaults": {
+    "skinColor": ["jade","ivory","pale_gold","pale_blue"],
+    "eyeColor": ["silver","golden","sky_blue","purple","heterochromia"],
+    "hairColor": ["silver","white","golden","light_pink","sky_blue"],
+    "bodyType": ["ethereal_light","slender_tall","slim","willowy"]
+  },
+  "weightBias": {
+    "bodyType": {"ethereal_light":2.5,"slim":2.0},
+    "temperament": {"ethereal":2.5,"calm":2.0,"gentle":1.5},
+    "hairColor": {"silver":2.5,"white":2.0},
+    "eyeColor": {"silver":2.5,"golden":2.0},
+    "defaultClothes": {"spirit_silk":2.5,"white_robe":2.0},
+    "eyebrowShape": {"faint":2.5,"distant_mountain":2.5,"long_eyebrow":2.0},
+    "eyeShape": {"crane":2.5,"sharp_phoenix":2.0,"deep_set":1.5},
+    "impression": {"ethereal":2.5,"delicate":2.0,"gentle":1.5}
+  },
+  "exclude": {
+    "skinColor": ["dark","swarthy","bronze"],
+    "bodyType": ["plump","muscular_broad"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","scar"],
+    "temperament": ["wild","overbearing"]
+  },
+  "faceDescOverride": {
+    "prepend": "",
+    "append": "spiritual energy swirling around"
+  },
+  "templateFluxPrompt": "a spirit being {gender}, {ageDesc}, {bodyType}, {faceDesc}, floating aura, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

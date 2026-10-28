@@ -1,0 +1,30 @@
+{
+  "archetype": "shaman",
+  "name": "萨满",
+  "visualTags": "图腾,灵骨,部族,祖灵之舞",
+  "description": "连接祖灵与自然之力的部族巫师，以图腾和祭祀沟通万物之灵",
+  "defaults": {
+    "defaultAccessories": ["tattoo","spirit_beast_bag"],
+    "defaultWeapon": ["staff","dagger"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.5,"lean_fit":2.5,"short_stout":2.0,"muscular_broad":1.5},
+    "temperament": {"wild":3.0,"warm":2.5,"stoic":2.0,"cunning":1.5},
+    "hairStyle": {"savage_bun":3.0,"braided":3.0,"wild_mane":2.5,"braid_crown":2.0},
+    "hairColor": {"black":2.0,"dark_brown":2.0,"red":1.5,"orange":1.5,"emerald":1.0},
+    "defaultClothes": {"leather_armor":3.0,"hemp_cloth":2.5,"linen_simple":2.0,"dark_cloak":1.5},
+    "eyeColor": {"amber":3.0,"emerald":2.5,"one_green_one_amber":2.0,"dark_brown":2.0},
+    "eyeShape": {"round":2.5,"tiger":2.5,"swallow":2.0,"deep_set":1.5},
+    "eyebrowShape": {"spiral_brow":3.0,"curved_thick":2.5,"rugged":2.5,"twin_peak_brow":2.0},
+    "faceShape": {"broad":3.0,"round":2.0,"pear":2.0,"bear_face":1.5},
+    "faceFeature": {"tattoo":3.0,"beard_stubble":2.0,"scar":1.5},
+    "impression": {"heroic_open":3.0,"free_spirit":2.5,"weathered":2.5,"loyal":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["jade_ruyi","fan","whisk"],
+    "defaultAccessories": ["abacus","hairpin","belt_jade"],
+    "hairStyle": ["bald","phoenix_crown","immortal_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","monk_robe"]
+  },
+  "templateFluxPrompt": "a {gender} shaman spirit medium, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, surrounded by totems and spirit energy,"
+}

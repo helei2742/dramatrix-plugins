@@ -1,0 +1,33 @@
+{
+  "archetype": "field_medic",
+  "name": "战地医生",
+  "visualTags": "wasteland field medic, combat medic, emergency care, bloody bandages, trauma kit, quick, brave, post-apocalyptic battlefield",
+  "description": "末世战地医生，在炮火与废墟中抢救伤员，与死神赛跑的战场天使，临危不惧",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"athletic_toned":3.0,"lean_fit":3.0,"runner_lean":3.0,"lean_wiry":2.5,"medium":2.5,"slim":2.5,"chiseled_fit":2.0,"tall_athletic":2.0},
+    "temperament": {"heroic":3.0,"steadfast":3.0,"altruistic":3.0,"calm_under_pressure":3.0,"resolute":2.5,"quick_witted":2.5,"determined":2.5,"disciplined":2.5,"hardened":2.0,"bold":2.0,"sincere":2.5},
+    "hairStyle": {"short_crop":3.0,"bound_up":3.0,"choppy_short":2.5,"low_ponytail":2.5,"simple_tie":2.5,"buzz_cut":2.0,"half_up":2.0,"tied_back_loose":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"jet_black":2.5,"dusty_brown":2.0,"chestnut":2.0,"auburn":1.5,"charcoal":1.5,"light_brown":1.5},
+    "defaultClothes": {"wasteland_medic_vest":3.0,"tactical_vest_light":3.0,"wasteland_lab_coat":2.5,"military_fatigues":2.5,"tattered_jacket":2.0,"scavenger_harness":2.0,"gas_mask_hooded_poncho":2.0,"patched_coveralls":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.5,"deep_blue":2.0,"green":2.0,"gray":2.0,"keen_blue":2.0,"amber":1.5},
+    "skinColor": {"weathered_tan":3.0,"tan":2.5,"light_tan":2.5,"sun_kissed":2.5,"olive":2.5,"fair":2.0,"dusty_tan":2.5,"ivory":1.5},
+    "eyeShape": {"sharp_phoenix":2.5,"almond":3.0,"tiger":2.5,"keen":3.0,"deep_set":2.0,"round":2.0,"eagle":2.0,"scholar_eye":2.0},
+    "eyebrowShape": {"hero_eyebrow":3.0,"straight":3.0,"thick":2.5,"steel_brow":2.5,"sword":2.0,"chivalrous_brow":2.5,"willow":2.0,"angular":1.5},
+    "faceShape": {"oval":2.5,"chiseled":2.5,"angular":2.0,"seed_face":2.5,"rectangular":2.5,"strong_jawline":2.0,"round":2.0,"square":2.0},
+    "faceFeature": {"none":2.5,"scar":2.0,"dirt_smudge":2.5,"blood_stain":2.0,"sharp_features":2.0,"clean_shaven":2.0,"weathered":2.0,"high_cheekbones":2.0},
+    "impression": {"heroic":3.0,"resolute":3.0,"altruistic":2.5,"urgent":2.5,"focused":3.0,"hardened":2.0,"determined":2.5,"steadfast":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","earring"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","lazy","decadent","sinister","unhinged","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump","pin_thin"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland field medic, {ageDesc}, {bodyType} athletic agile build, {faceDesc}, wearing medic vest over tactical gear, trauma kit and bandages, blood stains on clothes, {hairStyle} {hairColor} hair, {eyeColor} urgent focused eyes, {skinColor} battle-smudged skin, {temperament} aura, battlefield triage zone, wounded survivors, smoke and dust, rushing to help, photorealistic, dramatic, masterpiece"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "nomad",
+  "name": "流浪者",
+  "visualTags": "wasteland nomad, wanderer, dusty cloak, walking staff, weathered, solitary, desert wasteland, traveler, rugged",
+  "description": "末世流浪者，背负行囊独行废土，无家可归却自由不羁，以天为被以地为席",
+  "defaults": {
+    "defaultAccessories": ["none","belt_jade","goggles"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"slender_tall":2.5,"runner_lean":2.5,"lean_fit":2.5,"gangly":2.5,"slim":2.0,"lanky":2.5,"medium":1.5},
+    "temperament": {"loner":3.0,"stoic":3.0,"philosophical":2.5,"wanderer":3.0,"wistful":2.5,"weary":2.5,"calm":2.0,"adaptable":2.0,"melancholic":2.5,"observant":2.5,"quiet":2.0,"resilient":2.5},
+    "hairStyle": {"unkempt_long":3.0,"tied_back_loose":3.0,"messy_medium":2.5,"half_up":2.5,"bandana_wrap":2.5,"choppy_short":2.0,"low_ponytail":2.5,"loose_half_up":2.0},
+    "hairColor": {"dusty_brown":3.0,"gray_streaked":3.0,"ash_brown":2.5,"faded_black":2.5,"dirty_blonde":2.5,"salt_pepper":2.5,"dark_brown":2.0,"charcoal":1.5},
+    "defaultClothes": {"nomad_wraps":3.0,"dust_cloak_worn":3.0,"wasteland_duster":3.0,"tattered_jacket":2.5,"survivor_hoodie_worn":2.0,"patched_denim_suit":2.0,"wasteland_ranger_coat":2.5,"scavenger_harness":1.5},
+    "eyeColor": {"weary_blue":3.0,"gray":3.0,"hazel":2.5,"dark_brown":2.0,"dull_blue":2.5,"green":2.0,"amber":1.5,"pale_blue":2.0},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":3.0,"dusty_tan":3.0,"tan":2.5,"olive":2.0,"light_tan":2.0,"leathery_tan":2.5,"fair":1.0},
+    "eyeShape": {"tired":3.0,"deep_set":3.0,"downturned":2.5,"narrow":2.0,"almond":2.0,"round":1.5,"farseeing":2.5,"sharp_phoenix":1.5},
+    "eyebrowShape": {"rugged":2.5,"furrowed":2.5,"long_eyebrow":2.0,"thin":2.0,"straight":2.0,"knitted":2.0,"chivalrous_brow":1.5,"thick":1.5},
+    "faceShape": {"weathered":3.0,"gaunt":3.0,"long":2.5,"angular":2.5,"rectangular":2.0,"oval":2.0,"seed_face":1.5,"bamboo_leaf_face":1.5},
+    "faceFeature": {"weathered":3.0,"hollow_cheeks":2.5,"beard_stubble":2.5,"scar":2.0,"chapped_lips":2.5,"dirt_smudge":2.0,"none":1.5,"strong_jaw":1.5},
+    "impression": {"weathered":3.0,"wistful":3.0,"shadowed":2.5,"philosophical":2.5,"solitary":3.0,"weary":2.5,"mysterious":2.0,"tragic":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","buzz_cut","slicked_back"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail","polished_plate_armor"],
+    "temperament": ["innocent","naive","flamboyant","jovial","carefree","seductive","haughty","zealous"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","chiseled_fit","heroic_figure","bulky_massive","muscular_broad"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland nomad wanderer, {ageDesc}, {bodyType} lean weathered build, {faceDesc}, wearing dusty flowing cloak and wrapped layered clothing, walking staff, worn travel bag, {hairStyle} {hairColor} windswept hair, {eyeColor} farseeing eyes, {skinColor} sun-beaten skin, {temperament} aura, endless desert wasteland, dusty wind, lonely road stretching to horizon, walking alone, photorealistic, cinematic, masterpiece"
+}

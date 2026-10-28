@@ -1,0 +1,29 @@
+{
+  "archetype": "bailiff",
+  "name": "衙役",
+  "visualTags": "bailiff, yamen runner, constable",
+  "description": "县衙差役，巡街捕盗，狐假虎威，见多识广",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","none","hat"],
+    "defaultWeapon": ["staff","pole","none","dagger"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"athletic_toned":2.5,"medium":2.0,"lean_wiry":1.5},
+    "temperament": {"crafty":3.0,"imposing":2.5,"calculating":2.0,"subdued":1.5,"cunning":1.5},
+    "hairStyle": {"bound_up":2.5,"short_crop":2.0,"half_up":2.0,"simple_tie":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"charcoal":1.0},
+    "defaultClothes": {"black_night":3.0,"officer_uniform":2.5,"blue_robe":2.0,"leather_armor":1.5,"training_gear":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":1.0},
+    "eyeShape": {"eagle":2.0,"tiger":1.5,"narrow":1.5,"sharp_phoenix":1.0},
+    "eyebrowShape": {"raised":2.0,"straight":1.5,"hook_brow":1.5,"thick":1.0},
+    "faceShape": {"sharp":2.0,"square":2.0,"oval":1.5,"water_chestnut":1.0},
+    "faceFeature": {"none":2.0,"scar":2.0,"ruddy":1.5,"high_cheekbones":1.0},
+    "impression": {"shrewd":2.5,"devious":2.0,"weathered":2.0,"resolute":1.5,"fierce":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","jade_ruyi","guqin","claws"],
+    "defaultAccessories": ["jade_pendant","phoenix_hairpin","hairpin","earring","tattoo"],
+    "hairStyle": ["bald","wild_mane","double_bun"]
+  },
+  "templateFluxPrompt": "a {gender} yamen bailiff, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, ancient chinese government yamen, official banners, ming dynasty, masterpiece"
+}

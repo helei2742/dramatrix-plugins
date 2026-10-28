@@ -1,0 +1,45 @@
+{
+  "archetype": "street_racer",
+  "category": "赛博朋克",
+  "name": "街头赛车手",
+  "visualTags": "赛车, 速度, 疯子",
+  "description": "把油门焊进脊椎、与死神竞速的疯子。",
+  "defaults": {
+    "defaultClothes": [
+      "biker_leathers"
+    ],
+    "cyberImplant": [
+      "kerenzikov",
+      "reflex_booster"
+    ],
+    "temperament": [
+      "reckless"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "biker_leathers": 3.0
+    },
+    "cyberImplant": {
+      "kerenzikov": 3.0,
+      "reflex_booster": 2.5
+    },
+    "impression": {
+      "speed_wired": 3.0,
+      "reckless_spark": 2.0
+    },
+    "temperament": {
+      "reckless": 3.0
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "neon_kimono"
+    ],
+    "temperament": [
+      "zen",
+      "calm"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_nine_tails",
+  "name": "九尾",
+  "visualTags": "九尾扬空,金瞳狐面,狐火环绕,妖力滔天",
+  "description": "妖力滔天的九尾狐妖，金瞳一睁狐火漫野，翻覆一国不过一念",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":3.0,"white":3.0,"crimson":2.0,"silver":1.5,"midnight_blue":1.5,"golden":2.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.5,"snow_white":2.0,"fiery_red":1.5,"pale_ash":1.5,"fox_fur":2.5,"pale_gold":2.0},
+    "eyeColor": {"blood_red":2.5,"golden":3.5,"slit_pupil_gold":3.0,"obsidian":1.5,"ice_blue":1.5,"sunset_gold":2.0},
+    "defaultClothes": {"indigo_kimono":2.0,"white_haori_overcoat":1.5,"crimson_hakama_pants":2.0,"straw_mino_cape":1.5,"onmyoji_hunting_robe":1.5,"phoenix_robe":2.5,"miko_shrine_robe":2.0},
+    "temperament": {"mysterious":3.0,"vicious":2.0,"cold":2.0,"melancholy":2.0,"unhinged":1.5,"overbearing":3.0,"seductive":2.5,"majestic":2.5,"enigmatic":2.0},
+    "impression": {"demon_charm":3.0,"ghostly":2.5,"mysterious":2.0,"cold_beauty":1.5,"demonic_majesty":2.5,"noble_elegance":2.0},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":1.5},
+    "bodyType": {"willow_waist":3.0,"svelte_elegant":2.5,"willowy":2.5,"hourglass":1.5},
+    "heightDesc": {"graceful_stature":3.0,"willowy_tall":2.0,"moderate_165":1.5},
+    "faceShape": {"melon_seed_wide":2.0,"oval":2.0,"peach_face":1.5,"autumn_water":1.5,"fox_face":3.5,"phoenix_face":1.5},
+    "eyeShape": {"peach_blossom":2.5,"phoenix":2.0,"seductive_eye":2.0,"watery_eye":1.5,"fox":3.5,"sharp_phoenix":2.5,"vertical_pupil_eye":2.0},
+    "faceFeature": {"beauty_mark":1.5,"tear_mole":2.0,"pale_face":2.0,"none":1.5,"gold_mark":2.5,"demon_mark":2.0},
+    "lipShape": {"cherry":2.5,"red_lip":2.0,"petal_lip":1.5},
+    "noseShape": {"delicate":2.5,"jade_onion":2.0,"straight":1.5},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "defaultWeapon": {"none":3.0,"chain_whip":3.0,"iron_fan":3.0},
+    "defaultAccessories": {"phoenix_hairpin":2.5,"spirit_stone":2.5,"hair_crown":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["hoe","pole","war_hammer"],
+    "bodyType": ["bulky_massive","barrel_chested","short_stout"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; nine massive white tails fanned out, golden slit eyes, swirling foxfire; japanese yokai ukiyo-e inspired art"
+}

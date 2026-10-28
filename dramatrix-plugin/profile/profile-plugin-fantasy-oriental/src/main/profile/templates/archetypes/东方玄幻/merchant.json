@@ -1,0 +1,26 @@
+{
+  "archetype": "merchant",
+  "name": "商人",
+  "visualTags": "商人",
+  "description": "走南闯北的生意人，精于算计",
+  "defaults": {
+    "defaultAccessories": ["abacus","jade_pendant","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"plump":2.5,"short_stout":1.5,"slender_tall":0.5},
+    "temperament": {"cunning":2.5,"shrewd":3.0,"warm":2.0,"calm":1.0},
+    "hairStyle": {"simple_tie":2.5,"bound_up":2.0,"half_up":1.5},
+    "hairColor": {"black":2.0,"dark_brown":2.0,"gray":1.0},
+    "defaultClothes": {"merchant_robe":3.0,"blue_robe":2.0,"linen_simple":1.0},
+    "eyeShape": {"triangle":2.0,"narrow":1.5,"sharp_phoenix":1.0},
+    "eyebrowShape": {"short_eyebrow":2.0,"splayed":1.5},
+    "faceShape": {"round":2.5,"pear":2.0,"oval":1.5},
+    "faceFeature": {"beard_goatee":1.5,"beard_mustache":1.5},
+    "impression": {"shrewd":3.0,"loyal":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword"]
+  },
+  "templateFluxPrompt": "a {gender} merchant, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

@@ -1,0 +1,29 @@
+{
+  "archetype": "samurai",
+  "name": "武士",
+  "visualTags": "samurai, katana, bushido, yoroi armor",
+  "description": "Japanese samurai warrior bound by bushido code",
+  "defaults": {
+    "defaultAccessories": ["katana_sage","menpo_mask"],
+    "defaultWeapon": ["katana","wakizashi","yumi_bow","naginata"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"athletic":2.5,"broad_shoulders":2.5,"lean_fit":1.5,"medium":1.0},
+    "temperament": {"stoic":3.0,"honorable":3.0,"steadfast":2.5,"disciplined":2.5,"calm":2.0,"fierce":2.0,"loyal":2.0,"resolute":2.0},
+    "hairStyle": {"topknot":3.0,"bound_up":2.5,"half_up":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.0},
+    "eyeColor": {"brown":2.5,"dark_brown":3.0,"black":2.0},
+    "skinColor": {"fair":2.0,"light_tan":2.5,"tan":2.5,"olive":2.0},
+    "defaultClothes": {"kimono":2.5,"hakama":2.5,"yoroi_armor":3.0,"jinbaori":2.0,"kataginu":2.0},
+    "faceFeature": {"none":2.5,"scar":2.0,"beard":1.5,"clean_shaven":2.0},
+    "faceShape": {"angular":3.0,"square":2.5,"rectangular":2.5,"oval":1.0},
+    "eyeShape": {"almond":2.5,"narrow":2.5,"sharp":3.0},
+    "eyebrowShape": {"thick":2.5,"straight":2.5,"sword":3.0},
+    "impression": {"stoic":3.0,"battle_hardened":3.0,"resolute":2.5,"weathered":2.0,"fierce":2.0}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus"],
+    "defaultWeapon": ["hoe","pole","farming_sickle"]
+  },
+  "templateFluxPrompt": "a {gender} samurai, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, japanese samurai warrior, cherry blossom, feudal japan, ukiyo-e art style, masterpiece"
+}

@@ -1,0 +1,30 @@
+{
+  "archetype": "exorcist",
+  "name": "驱魔师",
+  "visualTags": "符箓,桃木剑,法铃,驱邪镇鬼",
+  "description": "驱邪除魔的术士，以符箓法器降妖伏魔，守护人间正道",
+  "defaults": {
+    "defaultAccessories": ["storage_bag","buddha_beads","ring"],
+    "defaultWeapon": ["green_bamboo_sword","whisk","staff"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"slender_tall":2.5,"medium":2.0,"ethereal_light":1.5},
+    "temperament": {"stoic":3.0,"calm":3.0,"sharp":2.0,"resolute":2.0},
+    "hairStyle": {"dao_bun":3.0,"bound_up":3.0,"immortal_bun":2.0,"topknot_loose":1.5},
+    "hairColor": {"black":3.0,"jet_black":2.5,"silver":1.0,"gray":0.5},
+    "defaultClothes": {"blue_robe":3.0,"green_robe":2.5,"white_robe":2.5,"dark_cloak":1.5},
+    "eyeColor": {"black":3.0,"dark_brown":2.5,"silver":1.5,"moonlight":1.5},
+    "eyeShape": {"phoenix":3.0,"sharp_phoenix":2.5,"dragon":2.0,"narrow":1.5},
+    "eyebrowShape": {"sword":3.0,"long_eyebrow":2.5,"charcoal_brow":2.0,"straight":1.5},
+    "faceShape": {"rectangular":2.5,"bamboo_leaf_face":2.5,"long":2.0,"bronze_mirror":1.5},
+    "faceFeature": {"none":3.0,"beard_full":1.5},
+    "impression": {"resolute":3.0,"majestic":2.5,"ethereal":2.0,"refined":2.0}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","wine_gourd","tattoo"],
+    "defaultWeapon": ["hoe","axe"],
+    "hairStyle": ["bald","wild_mane","buzz_cut"],
+    "temperament": ["sinister","lazy"]
+  },
+  "templateFluxPrompt": "a {gender} exorcist, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, holding talismans and demon-banishing tools"
+}

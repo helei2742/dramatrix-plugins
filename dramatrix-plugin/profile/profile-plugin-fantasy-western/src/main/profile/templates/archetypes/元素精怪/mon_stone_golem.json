@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_stone_golem",
+  "name": "岩石巨像",
+  "visualTags": "巨岩构体,符文发光,踏步地裂,沉默守护",
+  "description": "由整块山岩雕琢并以符文驱动的守卫巨像，沉默、迟缓、不可撼动",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":2.0,"frost_white":2.0,"flame_red":2.0,"cyan":2.0,"none":3.5},
+    "skinColor": {"translucent":3.0,"luminous_blue":2.5,"phosphor_white":2.0,"amber_glow":2.0,"rocky":3.5,"stone_gray":3.0,"sandstone":2.5,"clay_brown":1.5},
+    "eyeColor": {"star_silver":2.5,"cosmic":2.5,"moonlight":2.0,"topaz":2.5,"aquamarine":1.5,"amber_gold":2.5,"white_opaque":2.0},
+    "defaultClothes": {"spirit_silk":2.5,"spirit_leaf_dress":2.0,"cloud_pattern_robe":2.0,"moonlight_gown":1.5,"water_silk":1.5,"patchwork_rags":2.0,"hemp_cloth":1.5},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":1.5,"serene":1.5,"stoic":3.5,"steadfast":3.0,"disciplined":2.0,"calm":1.5},
+    "impression": {"ethereal":3.0,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":2.0,"unyielding":3.5,"cold":2.0},
+    "eyebrowShape": {"faint":2.5,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":1.5},
+    "noseShape": {"elemental_nose":3.0,"delicate":1.5,"straight":1.5,"stone_nose":3.5,"square_nose":2.0,"broad_flat":1.5},
+    "bodyType": {"gnarled_tough":3.0,"bulky_massive":2.5,"solid_robust":2.5,"compact_dense":1.5},
+    "heightDesc": {"barrel_frame":2.5,"towering_2m":2.0,"solid_build":2.0},
+    "hairStyle": {"bald":3.5,"buzz_cut":1.5},
+    "faceFeature": {"bark_skin":2.5,"gold_mark":2.5,"glowing_face":2.0,"none":1.5},
+    "faceShape": {"stone_face":3.5,"square":2.5,"broad":2.0},
+    "eyeShape": {"empty_eye":3.0,"golden_eye":2.0,"deep_set":1.5},
+    "lipShape": {"shut_lip":3.0,"silent_lip":2.5,"wide_lip":1.5},
+    "defaultWeapon": {"war_hammer":3.0,"pole":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"spirit_stone":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent"],
+    "defaultWeapon": ["throwing_knives","poison_needle","wind_shuriken","bow"],
+    "bodyType": ["pin_thin","delicate_frail","lithe_agile","willowy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; colossal carved rock body, glowing runic seams, moss in the crevices; elemental spirit art, glowing energy body"
+}

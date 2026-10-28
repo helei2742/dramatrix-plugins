@@ -1,0 +1,28 @@
+{
+  "archetype": "tailor",
+  "name": "裁缝",
+  "visualTags": "tailor, seamstress, fabric shop",
+  "description": "街坊裁缝，以针线制衣为生，心灵手巧",
+  "defaults": {
+    "defaultAccessories": ["hairpin","none","hair_ribbon"],
+    "defaultWeapon": ["poison_needle","dagger","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"lean_fit":2.0,"medium":2.0,"svelte_elegant":1.5},
+    "temperament": {"meticulous":3.0,"gentle":2.5,"eloquent":2.0,"calm":1.5,"reserved":1.0},
+    "hairStyle": {"half_up":2.5,"simple_tie":2.0,"low_ponytail":1.5,"braided":1.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"chestnut":2.0,"auburn":1.0},
+    "defaultClothes": {"blue_robe":2.5,"linen_simple":2.5,"cotton_hanfu":2.0,"silk_embroider":1.5,"navy_silk_hanfu":1.0},
+    "eyeColor": {"dark_brown":2.5,"black":2.5,"hazel":1.5,"honey":1.0},
+    "eyeShape": {"sharp_phoenix":2.0,"almond":2.0,"round":1.5,"laughter_eye":1.0},
+    "eyebrowShape": {"willow":2.0,"straight":1.5,"curved_fine":1.5,"thin":1.0},
+    "faceShape": {"oval":2.5,"seed_face":2.5,"almond":1.5,"round":1.0},
+    "faceFeature": {"none":3.0,"dimples":1.5,"beauty_mark":1.0},
+    "impression": {"delicate":3.0,"gentle":2.5,"refined":2.0,"humble":1.5,"intellectual":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","war_hammer","claws","two_hand_sword","meteor_hammer"],
+    "defaultAccessories": ["tattoo","eye_patch","bone_necklace","bracer_iron","armor_pauldron"]
+  },
+  "templateFluxPrompt": "a {gender} tailor, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, fabric shop with colorful silk rolls, measuring tape, ancient china, masterpiece"
+}

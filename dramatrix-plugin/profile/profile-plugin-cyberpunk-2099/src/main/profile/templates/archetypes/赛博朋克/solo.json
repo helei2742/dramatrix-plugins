@@ -1,0 +1,50 @@
+{
+  "archetype": "solo",
+  "category": "赛博朋克",
+  "name": "雇佣兵",
+  "visualTags": "雇佣兵, 战斗, 义体",
+  "description": "为信用点而战的独狼，义体即武器，忠诚只给雇主。",
+  "defaults": {
+    "defaultWeapon": [
+      "monokatana",
+      "smart_pistol"
+    ],
+    "cyberImplant": [
+      "mantis_blade",
+      "reflex_booster"
+    ],
+    "bodyType": [
+      "athletic",
+      "bulky"
+    ],
+    "temperament": [
+      "ruthless"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "mantis_blade": 3.0,
+      "reflex_booster": 2.5,
+      "gorilla_arms": 2.0
+    },
+    "bodyType": {
+      "athletic": 2.5,
+      "bulky": 2.0
+    },
+    "impression": {
+      "war_hardened": 2.5,
+      "steel_cold": 2.0
+    },
+    "defaultWeapon": {
+      "monokatana": 2.5,
+      "smart_pistol": 2.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "playful",
+      "zen"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "arms_dealer",
+  "name": "军火贩",
+  "visualTags": "wasteland arms dealer, weapons trader, ammunition crates, military surplus, shady, dangerous, gun merchant, post-apocalyptic black market",
+  "description": "末世军火贩，在废土黑市中贩卖武器弹药，游走于各方势力之间的危险商人",
+  "defaults": {
+    "defaultAccessories": ["none","ring","eye_patch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"stocky_strong":3.0,"chiseled_fit":2.5,"broad_shouldered":2.5,"athletic_toned":2.5,"muscular_broad":2.5,"medium":2.5,"barrel_chested":2.0,"tall_athletic":2.0},
+    "temperament": {"shrewd":3.0,"ruthless":3.0,"calculating":3.0,"pragmatic":2.5,"cynical":2.5,"wary":2.5,"cold":2.5,"intimidating":2.5,"silver_tongued":2.5,"cautious":2.5,"greedy":2.0},
+    "hairStyle": {"slicked_back":3.0,"short_crop":3.0,"buzz_cut":2.5,"choppy_short":2.5,"low_ponytail":2.0,"shaved_sides":2.5,"half_up":1.5,"tied_back_loose":1.5},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"salt_pepper":2.5,"gray":2.5,"charcoal":2.0,"faded_black":2.0,"dusty_brown":1.5},
+    "defaultClothes": {"tactical_vest_light":3.0,"ammo_belt_bandolier":3.0,"reinforced_trench_coat":3.0,"biker_leather_armor":2.5,"military_fatigues":2.5,"road_warrior_gear":2.5,"leather_armor_improvised":2.0,"wasteland_duster":2.5},
+    "eyeColor": {"steel_gray":3.0,"dark_brown":3.0,"cold_blue":2.5,"black":2.5,"hazel":2.0,"smoky_quartz":2.5,"amber":2.0,"charcoal":2.0},
+    "skinColor": {"tan":3.0,"weathered_tan":3.0,"olive":2.5,"light_tan":2.0,"sun_kissed":2.5,"dusty_tan":2.5,"fair":1.5,"leathery_tan":2.0},
+    "eyeShape": {"narrow":3.0,"eagle":3.0,"tiger":2.5,"deep_set":2.5,"sharp_phoenix":2.5,"shrewd":3.0,"hunter":2.5,"dragon":2.0},
+    "eyebrowShape": {"knitted":2.5,"angular":3.0,"steel_brow":3.0,"thick":2.5,"straight":2.5,"furrowed":2.5,"hero_eyebrow":2.0,"sword":2.0},
+    "faceShape": {"square":3.0,"stone_face":3.0,"angular":2.5,"chiseled":2.5,"strong_jawline":3.0,"rectangular":2.5,"pentagon":2.5,"oval":1.5},
+    "faceFeature": {"scar":2.5,"beard_stubble":3.0,"broken_nose":2.0,"strong_jaw":2.5,"sharp_features":2.5,"none":1.5,"weathered":2.5,"dirt_smudge":1.5},
+    "impression": {"dangerous":3.0,"shrewd":3.0,"cold":2.5,"intimidating":2.5,"ruthless":2.5,"calculating":2.5,"hardened":2.5,"cynical":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","silk_embroider"],
+    "temperament": ["innocent","naive","seductive","flamboyant","carefree","jovial","cheerful","wistful","altruistic"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","pin_thin","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland arms dealer, {ageDesc}, {bodyType} intimidating build, {faceDesc}, wearing tactical vest with ammunition belts, reinforced trench coat, showing weapons from a crate, {hairStyle} {hairColor} hair, {eyeColor} cold calculating eyes, {skinColor} weathered skin, {temperament} aura, hidden black market cache, ammunition crates, various weapons displayed, dim underground bunker, photorealistic, tense, masterpiece"
+}

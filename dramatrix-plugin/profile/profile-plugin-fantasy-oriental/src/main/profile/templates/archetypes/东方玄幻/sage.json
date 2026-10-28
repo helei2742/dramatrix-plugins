@@ -1,0 +1,30 @@
+{
+  "archetype": "sage",
+  "name": "贤者",
+  "visualTags": "古卷,竹简,智慧深邃,隐居山林",
+  "description": "隐居深山的智者，通晓古今，以无上智慧指点苍生",
+  "defaults": {
+    "defaultAccessories": ["jade_pendant","ring"],
+    "defaultWeapon": ["whisk","staff","none"]
+  },
+  "weightBias": {
+    "bodyType": {"ethereal_light":3.0,"slender_tall":3.0,"slim":2.0},
+    "temperament": {"calm":3.0,"stoic":3.0,"benevolent":2.5,"ethereal":2.0},
+    "hairStyle": {"immortal_bun":3.0,"loose_half_up":2.5,"bound_up":2.5,"side_bangs_long":1.5},
+    "hairColor": {"white":3.0,"silver":2.5,"frost_white":2.5,"gray":2.0,"salt_pepper":2.0},
+    "defaultClothes": {"white_robe":3.0,"green_robe":2.5,"blue_robe":2.0,"spirit_silk":1.5},
+    "eyeColor": {"gray":2.5,"moonlight":2.5,"silver":2.0,"dark_brown":1.5},
+    "eyeShape": {"crane":3.0,"phoenix":2.5,"deep_set":2.5,"sharp_phoenix":2.0},
+    "eyebrowShape": {"immortal_eyebrow":3.0,"crane_eyebrow":3.0,"frost_brow":3.0,"twin_peak_brow":2.0},
+    "faceShape": {"immortal_face":3.0,"bamboo_leaf_face":3.0,"long":2.0,"jade_mirror":1.5},
+    "faceFeature": {"beard_full":2.5,"nasolabial_folds":1.5,"none":2.0},
+    "impression": {"ethereal":3.0,"refined":3.0,"majestic":2.5,"weathered":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","dagger"],
+    "defaultAccessories": ["abacus","tattoo","mask","earring"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","double_bun"],
+    "temperament": ["wild","sinister","lazy","innocent"]
+  },
+  "templateFluxPrompt": "a {gender} sage wise hermit, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, profound wisdom emanating"
+}

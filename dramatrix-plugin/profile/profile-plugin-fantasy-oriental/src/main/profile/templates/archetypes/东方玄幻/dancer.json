@@ -1,0 +1,30 @@
+{
+  "archetype": "dancer",
+  "name": "舞者",
+  "visualTags": "霓裳羽衣,翩若惊鸿,舞姿倾国",
+  "description": "以舞入道的舞者，身姿曼妙，舞袖之间暗藏玄机",
+  "defaults": {
+    "defaultAccessories": ["hairpin","earring","jade_pendant"],
+    "defaultWeapon": ["fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"willowy":3.0,"slim":3.0,"ethereal_light":2.5},
+    "temperament": {"noble":3.0,"ethereal":3.0,"passionate":2.0,"gentle":1.5},
+    "hairStyle": {"startled_swan":3.0,"flying_sky":3.0,"flowing_long":2.5,"tilted_bun":2.5,"falling_horse":1.5},
+    "hairColor": {"black":2.5,"jet_black":2.5,"silver":1.5,"frost_white":1.5,"platinum_blond":1.0},
+    "defaultClothes": {"spirit_silk":3.0,"red_dress":3.0,"silk_dress":3.0,"white_robe":1.5},
+    "eyeColor": {"black":2.5,"dark_brown":2.0,"silver":1.5,"ruby":1.5},
+    "eyeShape": {"phoenix":3.0,"peach_blossom":3.0,"fox":2.0,"swallow":1.5},
+    "eyebrowShape": {"peach_blossom_brow":3.0,"willow":3.0,"distant_mountain":2.5,"ripple_brow":2.0},
+    "faceShape": {"seed_face":3.0,"peach_face":2.5,"crescent_face":2.5,"phoenix_face":1.5},
+    "faceFeature": {"beauty_mark":2.0,"none":2.5,"dimples":1.5},
+    "impression": {"ethereal":3.0,"refined":2.5,"delicate":2.5,"handsome":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","hoe","staff_monk","spear"],
+    "defaultAccessories": ["abacus","buddha_beads","tattoo"],
+    "hairStyle": ["bald","buzz_cut","wild_mane"],
+    "defaultClothes": ["leather_armor","golden_armor","hemp_cloth"]
+  },
+  "templateFluxPrompt": "a {gender} dancer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, graceful dancing pose"
+}

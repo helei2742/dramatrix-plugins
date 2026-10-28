@@ -1,0 +1,88 @@
+name: Build changed Profile plugins
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pom.xml"
+      - "dramatrix-plugin/**"
+      - "release/**"
+      - ".github/workflows/plugin-profile-build.yml"
+  pull_request:
+    paths:
+      - "pom.xml"
+      - "dramatrix-plugin/**"
+      - "release/**"
+      - ".github/workflows/plugin-profile-build.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    outputs:
+      plugins: ${{ steps.matrix.outputs.plugins }}
+    steps:
+      - name: Checkout history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find changed plugin IDs
+        id: matrix
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          base="$BASE_SHA"
+          if [[ -z "$base" || "$base" =~ ^0+$ ]]; then
+            base="$(git rev-parse "$HEAD_SHA^" 2>/dev/null || echo "$HEAD_SHA")"
+          fi
+          plugins="$(python3 release/plugin_build_matrix.py --base "$base" --head "$HEAD_SHA")"
+          echo "plugins=$plugins" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: detect
+    if: needs.detect.outputs.plugins != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        plugin: ${{ fromJson(needs.detect.outputs.plugins) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Build plugin package
+        env:
+          PLUGIN_ID: ${{ matrix.plugin }}
+        run: |
+          set -euo pipefail
+          module="dramatrix-plugin/profile/profile-plugin-$PLUGIN_ID"
+          mvn --batch-mode --no-transfer-progress --file pom.xml \
+            --projects ":profile-plugin-$PLUGIN_ID" clean package \
+            -Dplugin.deploy.skip=true \
+            -Dproject.build.outputTimestamp=1980-01-01T00:00:02Z
+          python3 release/plugin_package.py package \
+            --project-root . \
+            --module "$module" \
+            --type profile \
+            --output-dir "$RUNNER_TEMP/plugin-packages" \
+            --unsigned
+
+      - name: Upload unsigned validation package
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-${{ matrix.plugin }}
+          path: ${{ runner.temp }}/plugin-packages/*.zip
+          if-no-files-found: error
+          retention-days: 7

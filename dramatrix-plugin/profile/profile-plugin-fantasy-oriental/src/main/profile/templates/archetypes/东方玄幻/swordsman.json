@@ -1,0 +1,26 @@
+{
+  "archetype": "swordsman",
+  "name": "剑客",
+  "visualTags": "剑客,武者",
+  "description": "仗剑天涯的武者，以剑为生，快意恩仇",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","hat"],
+    "defaultWeapon": ["iron_sword","green_bamboo_sword","spear"]
+  },
+  "weightBias": {
+    "bodyType": {"slender_tall":3.0,"lean_fit":3.0,"tall_athletic":2.0,"slim":1.5,"plump":0.1},
+    "temperament": {"sharp":3.0,"calm":2.5,"wild":2.0,"cold":2.0,"stoic":1.5},
+    "hairStyle": {"bound_up":3.0,"warrior_topknot":3.0,"topknot_loose":2.0},
+    "hairColor": {"black":3.0,"dark_brown":1.5,"white":0.5},
+    "defaultClothes": {"black_night":3.0,"green_robe":2.0,"golden_armor":1.0,"hemp_cloth":1.0},
+    "eyeShape": {"eagle":3.0,"narrow":2.5,"phoenix":2.0,"tiger":2.0},
+    "eyebrowShape": {"sword":3.0,"thick":2.0,"knitted":1.5},
+    "faceShape": {"oval":1.5,"square":2.5,"rectangular":2.5,"sharp":2.5,"pentagon":2.0},
+    "impression": {"heroic":3.0,"handsome":3.0,"resolute":3.0,"cold":2.0,"free_spirit":2.0}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus"],
+    "defaultWeapon": ["hoe","pole"]
+  },
+  "templateFluxPrompt": "a {gender} swordsman, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

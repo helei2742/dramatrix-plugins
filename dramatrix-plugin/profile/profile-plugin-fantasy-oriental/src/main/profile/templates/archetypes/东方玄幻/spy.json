@@ -1,0 +1,30 @@
+{
+  "archetype": "spy",
+  "name": "谍者",
+  "visualTags": "暗探,易容,情报,无形之刃",
+  "description": "行走于暗处的情报者，善于伪装与潜伏，出没于无形之间",
+  "defaults": {
+    "defaultAccessories": ["mask","ring","earring"],
+    "defaultWeapon": ["dagger","fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"slim":2.5,"lean_fit":2.0,"slender_tall":1.5},
+    "temperament": {"cunning":3.0,"sly":3.0,"calm":2.5,"sharp":1.5},
+    "hairStyle": {"simple_tie":3.0,"choppy_short":2.5,"half_up":2.5,"short_crop":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"obsidian":2.0,"salt_pepper":1.5},
+    "defaultClothes": {"black_night":3.0,"linen_simple":2.5,"dark_cloak":2.5,"hemp_cloth":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.0,"smoky_quartz":1.5},
+    "eyeShape": {"fox":3.0,"triangle":2.5,"swallow":2.0,"narrow":1.5},
+    "eyebrowShape": {"hook_brow":3.0,"needle_brow":2.5,"sharp_straight_brow":2.0,"short_eyebrow":1.5},
+    "faceShape": {"inverted_triangle":3.0,"monkey_face":2.5,"diamond":2.0,"cat_face":1.5},
+    "faceFeature": {"none":3.0,"high_cheekbones":1.5},
+    "impression": {"shrewd":3.0,"cold":2.0,"refined":1.5,"delicate":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","staff_monk","spear","hoe"],
+    "defaultAccessories": ["abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["bald","wild_mane","phoenix_crown"],
+    "temperament": ["innocent","wild"]
+  },
+  "templateFluxPrompt": "a {gender} spy intelligence agent, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, disguised and stealthy"
+}

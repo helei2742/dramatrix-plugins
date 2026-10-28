@@ -1,0 +1,76 @@
+{
+  "race": "netghost",
+  "displayName": "网络幽灵",
+  "description": "肉身濒临消亡、意识长期寄居网络的存在，实体半透明且不稳定，介于人与数据之间。",
+  "defaults": {
+    "skinColor": [
+      "pale_cyan",
+      "iridescent"
+    ],
+    "faceShape": [
+      "data_ghost_face",
+      "glass_mask_face"
+    ],
+    "eyeColor": [
+      "glowing_white",
+      "void_black"
+    ],
+    "chromeSignature": [
+      "ghost_flicker",
+      "pixel_static_veil",
+      "holo_veil"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "pale_cyan": 2.5,
+      "iridescent": 2.0
+    },
+    "faceShape": {
+      "data_ghost_face": 3.0,
+      "glass_mask_face": 2.0
+    },
+    "chromeSignature": {
+      "ghost_flicker": 2.5,
+      "pixel_static_veil": 2.0,
+      "holo_veil": 2.0
+    },
+    "impression": {
+      "data_trance": 2.5,
+      "rogue_ai_eerie": 2.5,
+      "ghost_faint": 2.0
+    },
+    "bodyType": {
+      "slender": 2.0,
+      "lithe": 2.0
+    }
+  },
+  "exclude": {
+    "bodyType": [
+      "bulky",
+      "heavy_frame",
+      "augmented_bulk"
+    ],
+    "chromeSignature": [
+      "full_chrome_mask",
+      "jawline_chrome"
+    ],
+    "impression": [
+      "war_hardened",
+      "corp_predator"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "semi-transparent digital form flickering",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "实体不稳定，禁用重型肉体"
+    },
+    {
+      "description": "偏好数据/幽灵类 chrome 与印象"
+    }
+  ]
+}

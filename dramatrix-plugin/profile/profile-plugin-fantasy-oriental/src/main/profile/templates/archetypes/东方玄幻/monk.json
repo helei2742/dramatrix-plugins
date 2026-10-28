@@ -1,0 +1,26 @@
+{
+  "archetype": "monk",
+  "name": "僧侣",
+  "visualTags": "僧侣,武者",
+  "description": "佛门修行者，或为武僧，戒律清规",
+  "defaults": {
+    "defaultAccessories": ["buddha_beads"],
+    "defaultWeapon": ["staff_monk","none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"lean_fit":3.0,"short_stout":1.5,"medium":1.0},
+    "temperament": {"stoic":3.0,"calm":3.0,"resolute":2.5},
+    "hairStyle": {"bald":10.0},
+    "hairColor": {"none":10.0},
+    "defaultClothes": {"monk_robe":3.0,"hemp_cloth":2.0},
+    "eyeShape": {"tiger":2.0,"round":1.5,"phoenix":1.0},
+    "eyebrowShape": {"silkworm":2.0,"thick":2.0,"straight":1.5},
+    "faceShape": {"square":2.5,"round":2.0,"rectangular":2.0},
+    "impression": {"loyal":3.0,"resolute":3.0,"weathered":2.0}
+  },
+  "exclude": {
+    "hairStyle": [],
+    "defaultWeapon": ["flying_sword","fan","hoe"]
+  },
+  "templateFluxPrompt": "a {gender} monk warrior, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, bald head, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

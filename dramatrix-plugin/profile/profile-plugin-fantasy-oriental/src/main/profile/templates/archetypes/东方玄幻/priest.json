@@ -1,0 +1,30 @@
+{
+  "archetype": "priest",
+  "name": "祭司",
+  "visualTags": "神庙,祭祀,圣器,祈福祷祝",
+  "description": "侍奉神明的祭祀者，降福消灾，以圣礼沟通天地",
+  "defaults": {
+    "defaultAccessories": ["buddha_beads","ring","jade_pendant"],
+    "defaultWeapon": ["staff","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":2.5,"slender_tall":2.5,"medium":2.0,"ethereal_light":2.0},
+    "temperament": {"noble":3.0,"calm":3.0,"benevolent":2.5,"warm":2.0},
+    "hairStyle": {"bound_up":2.5,"immortal_bun":2.5,"flowing_long":2.0,"side_part_long":2.0},
+    "hairColor": {"white":2.5,"silver":2.5,"golden":2.0,"black":1.5,"platinum_blond":1.5},
+    "defaultClothes": {"white_robe":3.0,"spirit_silk":2.5,"green_robe":2.0},
+    "eyeColor": {"golden":3.0,"moonlight":2.5,"silver":2.0,"dark_brown":1.5},
+    "eyeShape": {"phoenix":2.5,"sharp_phoenix":2.5,"crane":2.0,"almond":1.5},
+    "eyebrowShape": {"auspicious_brow":3.0,"buddha_brow":2.5,"long_eyebrow":2.5,"crane_eyebrow":2.0},
+    "faceShape": {"immortal_face":3.0,"oval":2.5,"jade_mirror":2.5,"bamboo_leaf_face":1.5},
+    "faceFeature": {"none":3.0,"beard_full":1.0},
+    "impression": {"majestic":3.0,"ethereal":3.0,"refined":2.5,"gentle":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","dagger"],
+    "defaultAccessories": ["abacus","tattoo","mask","wine_gourd"],
+    "hairStyle": ["bald","wild_mane","buzz_cut"],
+    "temperament": ["sinister","wild","lazy"]
+  },
+  "templateFluxPrompt": "a {gender} priest clergy, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, in a sacred temple, divine blessing"
+}

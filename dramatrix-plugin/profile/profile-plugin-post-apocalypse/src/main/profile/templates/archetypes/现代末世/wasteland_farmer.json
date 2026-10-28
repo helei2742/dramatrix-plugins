@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_farmer",
+  "name": "废土农夫",
+  "visualTags": "wasteland farmer, struggling crops, barren soil, greenhouse, irrigation, hardworking, sun-beaten, post-apocalyptic agriculture",
+  "description": "末世农夫，在被污染的土地上艰难耕作，用汗水浇灌废土中的绿色希望",
+  "defaults": {
+    "defaultAccessories": ["none","belt_jade","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"stocky_strong":3.0,"athletic_toned":2.5,"medium":2.5,"weathered_strong":3.0,"barrel_chested":2.5,"lean_fit":2.5,"broad_shouldered":2.0},
+    "temperament": {"steadfast":3.0,"humble":3.0,"patient":3.0,"resilient":3.0,"stoic":2.5,"simple":2.5,"hardworking":3.0,"pragmatic":2.5,"determined":2.5,"weary":2.0,"kind_heart":2.5},
+    "hairStyle": {"short_crop":3.0,"bandana_wrap":3.0,"tied_back_loose":2.5,"messy_medium":2.5,"choppy_short":2.0,"low_ponytail":2.5,"half_up":2.5,"buzz_cut":2.0},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":3.0,"gray_streaked":2.5,"dirty_blonde":2.5,"black":2.5,"ash_brown":2.5,"faded_black":2.0,"salt_pepper":2.5},
+    "defaultClothes": {"patched_coveralls":3.0,"patched_denim_suit":3.0,"dust_cloak_worn":3.0,"tattered_jacket":2.5,"survivor_hoodie_worn":2.5,"heavy_work_apron":2.0,"nomad_wraps":2.0,"scavenger_harness":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"green":2.0,"gray":2.5,"black":2.0,"amber":2.0,"warm_brown":2.5,"deep_blue":1.5},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":3.0,"leathery_tan":3.0,"tan":3.0,"dusty_tan":2.5,"olive":2.5,"light_tan":2.0,"honey_tan":2.0},
+    "eyeShape": {"deep_set":3.0,"almond":2.5,"tired":2.5,"narrow":2.5,"round":2.0,"sharp_phoenix":2.0,"downturned":2.0,"hunter":2.0},
+    "eyebrowShape": {"thick":3.0,"rugged":3.0,"straight":2.5,"furrowed":2.5,"knitted":2.0,"chivalrous_brow":2.0,"hero_eyebrow":2.0,"steel_brow":1.5},
+    "faceShape": {"weathered":3.0,"square":2.5,"round":2.5,"rectangular":2.5,"oval":2.0,"stone_face":2.5,"angular":2.0,"seed_face":2.0},
+    "faceFeature": {"weathered":3.0,"beard_stubble":2.5,"dirt_smudge":3.0,"ruddy":2.5,"chapped_lips":2.5,"none":1.5,"scar":1.5,"clean_shaven":2.0},
+    "impression": {"humble":3.0,"hardworking":3.0,"weathered":3.0,"simple":2.5,"resilient":2.5,"steadfast":2.5,"kind_heart":2.0,"weary":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns","slicked_back","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","unhinged","lazy","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland farmer, {ageDesc}, {bodyType} sturdy hardworking build, {faceDesc}, wearing patched overalls and dust cloak, holding farming tools, calloused hands, {hairStyle} {hairColor} sun-bleached hair, {eyeColor} tired hopeful eyes, {skinColor} deeply sun-baked skin, {temperament} aura, barren field with struggling crops, makeshift greenhouse, irrigation pipes, harsh sunlight, dust in air, photorealistic, rustic, masterpiece"
+}

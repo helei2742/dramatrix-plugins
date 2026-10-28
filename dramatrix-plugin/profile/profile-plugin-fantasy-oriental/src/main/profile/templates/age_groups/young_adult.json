@@ -1,0 +1,20 @@
+{
+  "ageGroup": "young_adult",
+  "displayName": "青年",
+  "ageRange": "18-30岁",
+  "defaults": {
+    "ageDesc": ["二十岁出头","二十来岁","二十四五岁","二十七八岁","二十岁许"],
+    "heightDesc": ["一米八左右","一米七五左右","身形颀长","中等身材"]
+  },
+  "weightBias": {
+    "faceFeature": {"none":3.0,"beauty_mark":1.0,"tear_mole":1.0,"beard_stubble":0.3},
+    "bodyType": {"slender_tall":2.0,"slim":1.5,"lean_fit":1.5,"plump":0.2},
+    "temperament": {"sharp":2.0,"wild":1.5,"calm":1.0},
+    "impression": {"handsome":2.0,"delicate":2.0,"heroic":1.5}
+  },
+  "exclude": {
+    "temperament": ["innocent"],
+    "faceFeature": ["beard_full"]
+  },
+  "fluxAgeDesc": "young adult"
+}

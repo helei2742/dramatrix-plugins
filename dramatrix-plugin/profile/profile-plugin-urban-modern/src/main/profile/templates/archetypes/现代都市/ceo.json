@@ -1,0 +1,33 @@
+{
+  "archetype": "ceo",
+  "name": "总裁",
+  "visualTags": "modern CEO, business executive, luxury suit, high-rise office, confident, power",
+  "description": "现代企业总裁，掌控商业帝国，杀伐决断，气场强大",
+  "defaults": {
+    "defaultAccessories": ["ring","none"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"lean_fit":2.5,"slender_tall":2.5,"athletic_toned":2.0,"medium":1.5,"svelte_elegant":1.5,"chiseled_fit":2.0},
+    "temperament": {"imposing":3.0,"dignified":3.0,"calculating":2.5,"charismatic":2.5,"calm":2.5,"arrogant":2.0,"majestic":2.0,"bold":1.5,"haughty":1.5,"pragmatic":2.0,"disciplined":2.0,"ambitious":2.5,"cold":1.0,"noble":1.5},
+    "hairStyle": {"slicked_back":3.0,"side_part_long":2.5,"short_wavy":2.0,"short_crop":2.0,"bound_up":1.5,"low_ponytail":1.5,"buzz_cut":1.0,"choppy_short":1.5,"center_part_long":1.5,"half_up":1.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"salt_pepper":2.0,"gray":2.0,"charcoal":1.5,"silver":1.5,"chestnut":1.0,"light_brown":1.0},
+    "defaultClothes": {"brocade_hanfu":2.5,"silk_embroider":2.5,"navy_silk_hanfu":2.0,"merchant_robe":2.0,"jade_belt_robe":1.5,"black_night":1.5,"linen_simple":1.0,"cotton_hanfu":1.0,"blue_robe":1.5,"slate_gray_cloak":1.0},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"deep_blue":2.0,"gray":2.0,"sapphire":1.5,"hazel":1.5,"smoky_quartz":1.5,"golden":1.0,"charcoal":1.0},
+    "skinColor": {"fair":2.5,"ivory":2.0,"light_tan":1.5,"pale_porcelain":1.5,"tan":1.0,"olive":1.0,"rose_white":1.5},
+    "eyeShape": {"sharp_phoenix":3.0,"deep_set":2.5,"almond":2.5,"narrow":2.0,"eagle":2.0,"dragon":1.5,"piercing":2.5,"hooded":1.5},
+    "eyebrowShape": {"sword":2.5,"straight":2.5,"thick":2.0,"hero_eyebrow":2.0,"angular":2.0,"steel_brow":2.0,"raised":1.5,"chivalrous_brow":1.5},
+    "faceShape": {"angular":3.0,"rectangular":2.5,"square":2.0,"chiseled":2.5,"oval":2.0,"sharp":1.5,"strong_jawline":2.5,"long":1.5},
+    "faceFeature": {"none":2.5,"clean_shaven":2.5,"high_cheekbones":2.0,"sharp_features":2.0,"beard_stubble":1.5,"beard_full":1.0,"nasolabial_folds":1.5,"delicate_features":1.0},
+    "impression": {"dignified":3.0,"majestic":3.0,"refined":2.5,"heroic":2.0,"handsome":2.5,"intellectual":2.0,"resolute":2.5,"cold":1.5,"noble":2.0,"arrogant":1.5,"calculating":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","warrior_topknot","child_tuft","two_horns","savage_bun","immortal_bun"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","leather_armor","golden_armor","plate_armor","chainmail","bamboo_hat_cape","wild_beast_skin","training_gear","alchemist_apron","scale_armor","ochre_hemp_tunic","russet_leather_armor"],
+    "temperament": ["innocent","naive","cheerful","wild","brutal","lazy","unhinged"],
+    "bodyType": ["plump_soft","delicate_frail","petite_curvy","short_stout"]
+  },
+  "templateFluxPrompt": "a {gender} modern CEO business executive, {ageDesc}, {bodyType} build, {faceDesc}, wearing a tailored designer suit and tie, luxury wristwatch, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern glass high-rise office, city skyline through window, polished leather shoes, corporate power, photorealistic, masterpiece"
+}

@@ -1,0 +1,33 @@
+{
+  "race": "naga",
+  "displayName": "娜迦",
+  "description": "半人半蛇的古老种族，蛇瞳竖瞳，下半身为蛇躯，居于密林沼泽之中",
+  "defaults": {
+    "skinColor": ["emerald","jade","obsidian","sapphire","bronze"],
+    "eyeColor": ["amber","gold","emerald","crimson","obsidian"],
+    "hairColor": ["black","dark_brown","emerald","ruby","purple"],
+    "bodyType": ["tall_athletic","lithe","muscular_broad","lean_fit"]
+  },
+  "weightBias": {
+    "skinColor": {"emerald":2.5,"jade":2.5,"obsidian":2.0},
+    "eyeColor": {"amber":2.5,"gold":2.5,"emerald":2.5},
+    "hairColor": {"black":2.5,"emerald":2.5,"dark_brown":2.0},
+    "bodyType": {"lithe":2.5,"tall_athletic":2.5},
+    "eyeShape": {"deep_set":2.5,"upturned":2.5,"wolf":2.0},
+    "eyebrowShape": {"raised":2.5,"sword":2.5},
+    "impression": {"majestic":2.5,"cold":2.5,"sinister":2.5},
+    "temperament": {"cold":2.5,"overbearing":2.0}
+  },
+  "exclude": {
+    "skinColor": ["fair","porcelain","alabaster","peach"],
+    "eyeColor": ["dark_brown","pearl"],
+    "hairColor": ["platinum","honey","light_pink"],
+    "bodyType": ["plump","petite","ethereal_light"],
+    "temperament": ["innocent","warm","gentle"]
+  },
+  "faceDescOverride": {
+    "prepend": "slit snake pupils, ",
+    "append": ", serpent lower body"
+  },
+  "templateFluxPrompt": "a naga {gender}, {ageDesc}, {bodyType}, {faceDesc} with slit snake pupils and serpent lower body, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} snake eyes, {skinColor} skin, {temperament} aura"
+}

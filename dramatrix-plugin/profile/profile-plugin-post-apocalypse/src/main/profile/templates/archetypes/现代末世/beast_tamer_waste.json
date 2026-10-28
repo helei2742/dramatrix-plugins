@@ -1,0 +1,33 @@
+{
+  "archetype": "beast_tamer_waste",
+  "name": "废土驯兽师",
+  "visualTags": "wasteland beast tamer, mutated animal companion, dog, leather harness, loyal companion, rugged, post-apocalyptic handler",
+  "description": "末世驯兽师，驯养变异动物为伙伴，在废土中与兽同行，人兽间的独特羁绊",
+  "defaults": {
+    "defaultAccessories": ["none","bone_necklace","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"athletic_toned":3.0,"lean_fit":2.5,"slender_tall":2.5,"medium":2.5,"stocky_strong":2.0,"chiseled_fit":2.0,"runner_lean":2.5},
+    "temperament": {"feral":3.0,"loyal":3.0,"patient":3.0,"silent":2.5,"kind_heart":2.5,"hardened":2.5,"adaptable":2.5,"loner":2.0,"calm":2.5,"wary":2.0,"bold":2.0},
+    "hairStyle": {"messy_medium":2.5,"unkempt_long":3.0,"warrior_braid":2.5,"tied_back_loose":3.0,"wild_mane":2.5,"half_up":2.0,"low_ponytail":2.5,"bandana_wrap":2.5},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":3.0,"ash_brown":2.5,"dirty_blonde":2.5,"black":2.0,"faded_black":2.0,"gray_streaked":2.0,"auburn":1.5},
+    "defaultClothes": {"leather_armor_improvised":3.0,"nomad_wraps":3.0,"makeshift_ghillie_suit":2.5,"wasteland_ranger_coat":2.5,"dust_cloak_worn":2.5,"tattered_jacket":2.0,"scavenger_harness":2.0,"patched_denim_suit":2.0},
+    "eyeColor": {"amber":3.0,"dark_brown":2.5,"hawk_yellow":3.0,"hazel":2.5,"green":2.5,"gray":2.0,"pale_blue":2.0,"wolf_blue":3.0},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":3.0,"tan":2.5,"dusty_tan":3.0,"olive":2.5,"leathery_tan":2.5,"light_tan":2.0,"honey_tan":2.0},
+    "eyeShape": {"hunter":3.0,"wolf":3.0,"deep_set":2.5,"eagle":2.5,"tiger":2.5,"keen":2.5,"narrow":2.0,"almond":2.0},
+    "eyebrowShape": {"thick":3.0,"rugged":3.0,"straight":2.5,"furrowed":2.5,"knitted":2.0,"wild_brow":2.5,"hero_eyebrow":2.0,"steel_brow":2.0},
+    "faceShape": {"weathered":3.0,"angular":2.5,"chiseled":2.5,"stone_face":2.5,"oval":2.0,"rectangular":2.5,"square":2.0,"gaunt":2.5},
+    "faceFeature": {"scar":3.0,"dirt_smudge":3.0,"beard_stubble":2.5,"weathered":3.0,"animal_bite_scar":2.5,"none":1.5,"chapped_lips":2.0,"strong_jaw":2.0},
+    "impression": {"feral":3.0,"hardened":3.0,"loyal":2.5,"wild":2.5,"patient":2.5,"dangerous":2.0,"kind_heart":2.0,"shadowed":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","slicked_back"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","lazy","carefree","wistful"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland beast tamer, {ageDesc}, {bodyType} lean feral build, {faceDesc}, wearing improvised leather armor and wrapped clothing, accompanied by loyal mutated canine companion, animal leash and harness, {hairStyle} {hairColor} wild hair, {eyeColor} animal-like eyes, {skinColor} wind-burned skin, {temperament} aura, barren wasteland with mutated beast tracks, loyal animal companion at side, bond between human and beast, photorealistic, wild, masterpiece"
+}

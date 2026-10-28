@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_giant_rat",
+  "name": "巨鼠",
+  "visualTags": "獠牙外露,秃尾拖地,污水穴居,啃噬钢缆",
+  "description": "地下管道里长成人形大小的变异鼠，牙口能啃断钢缆，成群则连人也敢围攻",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":2.5,"charcoal":3.0,"salt_pepper":1.5,"ash_blond":1.5,"orange":1.5,"dark_brown":2.5},
+    "skinColor": {"pale_ash":2.5,"scarred_bronze":2.5,"phosphor_white":2.0,"moss_green":2.0,"clay_brown":2.5,"swarthy":2.0},
+    "eyeColor": {"white_opaque":2.5,"sunflower":2.0,"deep_orange":2.0,"blood_red":3.0,"heterochromia":1.5,"obsidian":2.0},
+    "defaultClothes": {"tattered_jacket":2.5,"radiation_suit_worn":2.0,"scrap_metal_armor":2.0,"nomad_wraps":1.5,"gas_mask_hooded_poncho":1.5},
+    "temperament": {"unhinged":3.0,"volatile":2.5,"brutal":2.0,"paranoid":3.0,"jaded":1.5,"crafty":3.0,"vicious":2.0,"wild":2.0},
+    "impression": {"sickness":2.5,"wild":2.5,"weathered":2.0,"bloodthirsty":1.5,"devious":2.5,"greedy":2.0},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "bodyType": {"hunched":3.0,"gnarled_tough":2.0,"compact_dense":2.5,"thin_bony":1.5,"lean_wiry":2.0},
+    "heightDesc": {"hunched_short":3.0,"short_small":2.5,"medium_short":1.5,"half_height":1.5},
+    "hairStyle": {"messy_bun":2.5,"choppy_short":2.5,"wolf_tail":1.5,"bald":1.5},
+    "faceShape": {"long":2.5,"sharp":2.5,"seed_face":1.5},
+    "eyeShape": {"rat_eye":3.5,"beast_eye":2.5,"narrow":2.0},
+    "faceFeature": {"fur_face":3.0,"veins":2.0,"sharp_chin":2.0,"burn_scar":1.5},
+    "lipShape": {"toothed_lip":3.5,"beast_lip":2.5,"warped_lip":1.5},
+    "noseShape": {"pointed":3.0,"flat":2.0,"fox_nose":1.5},
+    "defaultWeapon": {"claws":3.0,"dagger":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"leather_belt":2.5,"bandolier":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified"],
+    "defaultWeapon": ["two_hand_sword","halberd","war_hammer"],
+    "bodyType": ["towering_giant","bulky_massive","heroic_figure"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; human-sized rat with yellowed incisors, bald scaly tail, matted filthy fur; post-apocalyptic mutant creature art, radioactive wasteland"
+}

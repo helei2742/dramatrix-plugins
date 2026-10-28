@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_trader",
+  "name": "废土商人",
+  "visualTags": "wasteland trader, merchant, makeshift market stall, barter goods, savvy, resourceful, post-apocalyptic commerce, weighing scales",
+  "description": "末世商人，在废土聚落间互通有无，以物易物的精明买卖人，手握稀缺资源的中间商",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"soft_round":2.5,"stocky_strong":2.0,"athletic_toned":2.0,"lean_fit":2.0,"plump_soft":2.0,"slim":2.0,"chiseled_fit":1.5},
+    "temperament": {"shrewd":3.0,"pragmatic":3.0,"calculating":3.0,"silver_tongued":3.0,"adaptable":2.5,"cautious":2.5,"greedy":2.0,"jovial":2.0,"meticulous":2.5,"charismatic":2.5,"wary":2.0},
+    "hairStyle": {"short_crop":2.5,"slicked_back":2.5,"half_up":2.5,"low_ponytail":2.5,"choppy_short":2.5,"side_part_long":2.5,"simple_tie":2.0,"bound_up":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"gray":2.5,"salt_pepper":2.5,"jet_black":2.5,"chestnut":2.0,"dusty_brown":2.0,"light_brown":1.5},
+    "defaultClothes": {"merchant_patchwork_robe":3.0,"wasteland_duster":3.0,"dust_cloak_worn":2.5,"tattered_jacket":2.5,"scavenger_harness":2.5,"patched_denim_suit":2.0,"reinforced_trench_coat":2.0,"wasteland_ranger_coat":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.0,"gray":2.5,"amber":2.0,"green":1.5,"shrewd_blue":2.5,"honey":2.0},
+    "skinColor": {"light_tan":2.5,"tan":2.5,"olive":2.5,"fair":2.5,"weathered_tan":2.5,"sun_kissed":2.0,"dusty_tan":2.0,"honey_tan":2.0},
+    "eyeShape": {"almond":3.0,"sharp_phoenix":2.5,"shrewd":3.0,"narrow":2.5,"round":2.0,"tiger":2.0,"deep_set":2.0,"peach_blossom":2.0},
+    "eyebrowShape": {"willow":2.5,"straight":2.5,"crescent":2.5,"long_eyebrow":2.5,"silkworm":2.0,"angular":2.0,"auspicious_brow":2.0,"curved_fine":2.0},
+    "faceShape": {"round":3.0,"oval":2.5,"seed_face":2.5,"heart":2.0,"bamboo_leaf_face":2.0,"square":2.0,"jade_mirror":2.5,"long":1.5},
+    "faceFeature": {"none":2.5,"dimples":2.5,"beard_stubble":2.0,"beauty_mark":2.0,"clean_shaven":2.0,"nasolabial_folds":2.0,"ruddy":2.0,"sharp_features":1.5},
+    "impression": {"shrewd":3.0,"silver_tongued":3.0,"jovial":2.5,"calculating":2.5,"pragmatic":2.5,"humble":2.0,"approachable":2.5,"worldly":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["bone_necklace","spirit_beast_bag","military_seal","eye_patch","buddha_beads","mask"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","dao_bun","immortal_bun"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier"],
+    "temperament": ["innocent","naive","brutal","savage","unhinged","reckless","feral","loner"],
+    "bodyType": ["bulky_massive","towering_giant","pin_thin","gangly","delicate_frail"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland trader merchant, {ageDesc}, {bodyType} build, {faceDesc}, wearing patchwork merchant robe and dust cloak, carrying trade goods and weighing scales, makeshift market stall with barter items, {hairStyle} {hairColor} hair, {eyeColor} shrewd bargaining eyes, {skinColor} skin, {temperament} aura, bustling wasteland marketplace, shelves of scavenged goods, haggling, photorealistic, characterful, masterpiece"
+}

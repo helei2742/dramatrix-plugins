@@ -1,0 +1,33 @@
+{
+  "archetype": "mercenary_waste",
+  "name": "废土佣兵",
+  "visualTags": "wasteland mercenary, soldier of fortune, combat gear, pragmatic, hired gun, battle-worn, professional, post-apocalyptic",
+  "description": "末世佣兵，为出价最高者卖命的职业战士，不问是非只看报酬，专业而冷酷",
+  "defaults": {
+    "defaultAccessories": ["none","ring","eye_patch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":3.0,"chiseled_fit":2.5,"athletic_toned":3.0,"broad_shouldered":2.5,"stocky_strong":2.5,"lean_fit":2.5,"heroic_figure":2.0},
+    "temperament": {"pragmatic":3.0,"hardened":3.0,"cynical":3.0,"disciplined":2.5,"cold":2.5,"ruthless":2.5,"calculating":2.5,"fierce":2.5,"silent":2.0,"intimidating":2.0,"wary":2.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":3.0,"shaved_sides":2.5,"slicked_back":2.5,"choppy_short":2.5,"low_ponytail":2.0,"messy_medium":1.5,"tied_back_loose":1.5},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"charcoal":2.0,"salt_pepper":2.0,"faded_black":2.0,"dusty_brown":1.5,"gray":2.0},
+    "defaultClothes": {"military_fatigues":3.0,"tactical_vest_light":3.0,"ammo_belt_bandolier":3.0,"biker_leather_armor":2.5,"road_warrior_gear":2.5,"reinforced_trench_coat":2.5,"scrap_metal_armor":2.0,"leather_armor_improvised":2.5},
+    "eyeColor": {"steel_gray":3.0,"dark_brown":3.0,"cold_blue":2.5,"black":2.0,"hazel":2.0,"smoky_quartz":2.5,"gray":2.0,"amber":1.5},
+    "skinColor": {"weathered_tan":3.0,"tan":3.0,"olive":2.5,"sun_kissed":2.5,"dusty_tan":2.5,"light_tan":2.0,"leathery_tan":2.0,"fair":1.0},
+    "eyeShape": {"eagle":3.0,"deep_set":2.5,"tiger":2.5,"narrow":2.5,"sharp_phoenix":2.5,"hunter":2.0,"almond":1.5,"dragon":1.5},
+    "eyebrowShape": {"steel_brow":3.0,"thick":2.5,"knitted":2.5,"straight":2.5,"angular":2.5,"hero_eyebrow":2.0,"furrowed":2.0,"rugged":2.0},
+    "faceShape": {"square":3.0,"chiseled":2.5,"stone_face":3.0,"strong_jawline":2.5,"angular":2.5,"rectangular":2.5,"pentagon":2.0,"round":1.0},
+    "faceFeature": {"scar":3.0,"beard_stubble":2.5,"broken_nose":2.0,"strong_jaw":2.5,"weathered":2.5,"none":1.5,"sharp_features":2.0,"cauliflower_ear":2.0},
+    "impression": {"hardened":3.0,"cynical":3.0,"dangerous":2.5,"cold":2.5,"professional":2.5,"weathered":2.5,"intimidating":2.0,"pragmatic":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","carefree","jovial","cheerful","wistful","altruistic"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","pin_thin","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland mercenary, {ageDesc}, {bodyType} combat-fit build, {faceDesc}, wearing military fatigues with tactical vest and ammunition belts, battle-worn gear, {hairStyle} {hairColor} hair, {eyeColor} cold professional eyes, {skinColor} battle-tested skin, {temperament} aura, ruined warzone, smoke rising, abandoned military outpost, photorealistic, gritty, masterpiece"
+}

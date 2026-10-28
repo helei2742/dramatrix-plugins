@@ -1,0 +1,48 @@
+{
+  "archetype": "arms_dealer",
+  "category": "赛博朋克",
+  "name": "军火商",
+  "visualTags": "军火, 交易, 笑脸",
+  "description": "把死亡明码标价的笑脸商人。",
+  "defaults": {
+    "defaultWeapon": [
+      "smart_pistol",
+      "plasma_rifle",
+      "heavy_smg"
+    ],
+    "defaultClothes": [
+      "chrome_jacket"
+    ],
+    "temperament": [
+      "charismatic",
+      "cold"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "smart_pistol": 2.5,
+      "plasma_rifle": 2.0,
+      "heavy_smg": 2.0
+    },
+    "defaultClothes": {
+      "chrome_jacket": 2.5
+    },
+    "impression": {
+      "broker_slick": 2.5,
+      "corp_predator": 2.0
+    },
+    "temperament": {
+      "charismatic": 2.0,
+      "cold": 2.0
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "ragged_poncho"
+    ],
+    "temperament": [
+      "zen"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

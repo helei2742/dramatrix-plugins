@@ -1,0 +1,33 @@
+{
+  "archetype": "smuggler",
+  "name": "走私者",
+  "visualTags": "wasteland smuggler, contraband runner, stealthy, hidden compartments, night operations, cunning, fast, post-apocalyptic underground",
+  "description": "末世走私者，在废土势力之间偷运禁品与机密，暗夜中的阴影行者，狡黠而迅捷",
+  "defaults": {
+    "defaultAccessories": ["none","ring","goggles"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"slim":3.0,"runner_lean":3.0,"lean_fit":2.5,"gangly":2.5,"slender_tall":2.5,"medium":2.0,"lanky":2.5},
+    "temperament": {"stealthy":3.0,"cunning":3.0,"wary":3.0,"shrewd":2.5,"nervous":2.5,"pragmatic":2.5,"silent":2.5,"quick_witted":2.5,"loner":2.0,"adaptable":2.5,"calculating":2.0},
+    "hairStyle": {"choppy_short":3.0,"messy_medium":2.5,"tied_back_loose":2.5,"short_crop":2.5,"low_ponytail":2.5,"bandana_wrap":2.5,"half_up":2.0,"slicked_back":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"faded_black":2.5,"dusty_brown":2.5,"jet_black":2.0,"ash_brown":2.0,"charcoal":2.0,"dirty_blonde":1.5},
+    "defaultClothes": {"biker_leather_armor":3.0,"wasteland_duster":3.0,"scavenger_harness":3.0,"dust_cloak_worn":2.5,"tactical_vest_light":2.5,"tattered_jacket":2.5,"reinforced_trench_coat":2.0,"patched_denim_suit":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.5,"gray":2.5,"green":2.0,"amber":2.5,"pale_blue":2.0,"shifty_blue":2.5},
+    "skinColor": {"weathered_tan":2.5,"tan":2.5,"olive":2.5,"light_tan":2.5,"dusty_tan":2.5,"fair":2.0,"sun_kissed":2.0,"honey_tan":2.0},
+    "eyeShape": {"narrow":3.0,"hunter":3.0,"sharp_phoenix":2.5,"deep_set":2.5,"shifty":3.0,"almond":2.0,"keen":2.5,"tiger":2.0},
+    "eyebrowShape": {"thin":2.5,"angular":3.0,"furrowed":2.5,"straight":2.5,"knitted":2.5,"rugged":2.0,"long_eyebrow":2.0,"crescent":1.5},
+    "faceShape": {"angular":3.0,"gaunt":2.5,"seed_face":2.5,"oval":2.0,"long":2.5,"bamboo_leaf_face":2.5,"heart":2.0,"rectangular":2.0},
+    "faceFeature": {"none":2.5,"beard_stubble":2.5,"scar":2.0,"sharp_features":3.0,"hollow_cheeks":2.0,"dirt_smudge":2.0,"chapped_lips":2.0,"high_cheekbones":2.0},
+    "impression": {"stealthy":3.0,"shifty":3.0,"shadowed":3.0,"cunning":2.5,"nervous":2.5,"wary":2.5,"mysterious":2.5,"quick":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail","polished_plate_armor"],
+    "temperament": ["innocent","naive","flamboyant","heroic","gallant","carefree","jovial","haughty","altruistic"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","bulky_massive","muscular_broad","heroic_figure","soft_round"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland smuggler, {ageDesc}, {bodyType} lean stealthy build, {faceDesc}, wearing dark leather jacket and dust coat, hidden satchel with contraband, moving through shadows, {hairStyle} {hairColor} hair, {eyeColor} shifty watchful eyes, {skinColor} skin, {temperament} aura, dark alley in settlement, dead of night, sneaking past guards, moonlight, photorealistic, noir, masterpiece"
+}

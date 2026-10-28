@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_hunter",
+  "name": "废土猎人",
+  "visualTags": "wasteland hunter, tracker, rugged, bow or rifle, camouflaged, patient, predator, survivalist, post-apocalyptic wilderness",
+  "description": "末世猎人，追踪废土中的变异野兽，以狩猎为生，冷静耐心、感知敏锐的荒野主宰",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","bone_necklace"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"athletic_toned":2.5,"lean_fit":3.0,"slender_tall":2.5,"medium":2.0,"runner_lean":2.5,"stocky_strong":2.0,"broad_shouldered":2.0},
+    "temperament": {"patient":3.0,"silent":3.0,"observant":3.0,"feral":2.5,"loner":2.5,"pragmatic":2.5,"hardened":2.5,"ruthless":2.0,"calm":2.0,"adaptable":2.0,"wary":2.0},
+    "hairStyle": {"messy_medium":2.5,"tied_back_loose":2.5,"choppy_short":2.5,"warrior_braid":2.5,"unkempt_long":2.5,"bandana_wrap":2.5,"half_up":2.0,"low_ponytail":2.0},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":3.0,"ash_brown":2.5,"dirty_blonde":2.5,"black":2.0,"gray_streaked":2.0,"moss_brown":2.0,"faded_black":1.5},
+    "defaultClothes": {"makeshift_ghillie_suit":3.0,"wasteland_ranger_coat":3.0,"leather_armor_improvised":3.0,"dust_cloak_worn":2.5,"tattered_jacket":2.0,"nomad_wraps":2.5,"scavenger_harness":2.0,"hunters_garb":2.0},
+    "eyeColor": {"keen_green":3.0,"dark_brown":2.5,"hazel":2.5,"amber":2.5,"pale_blue":2.0,"gray":2.0,"hawk_yellow":2.5,"black":1.5},
+    "skinColor": {"weathered_tan":3.0,"olive":2.5,"dusty_tan":2.5,"sun_kissed":2.5,"tan":2.5,"leathery_tan":2.0,"light_tan":1.5,"honey_tan":2.0},
+    "eyeShape": {"hunter":3.0,"eagle":3.0,"narrow":2.5,"deep_set":2.5,"sharp_phoenix":2.0,"tiger":2.0,"almond":2.0,"keen":2.5},
+    "eyebrowShape": {"thick":2.5,"furrowed":2.5,"rugged":2.5,"straight":2.5,"knitted":2.0,"steel_brow":2.5,"angular":1.5,"chivalrous_brow":1.5},
+    "faceShape": {"angular":2.5,"weathered":3.0,"gaunt":2.0,"stone_face":2.5,"rectangular":2.5,"chiseled":2.0,"square":2.0,"long":2.0},
+    "faceFeature": {"scar":2.5,"beard_stubble":2.5,"sharp_features":2.5,"weathered":3.0,"dirt_smudge":2.0,"none":1.5,"high_cheekbones":2.0,"strong_jaw":2.0},
+    "impression": {"feral":3.0,"hardened":3.0,"predatory":2.5,"silent":3.0,"shadowed":2.5,"weathered":2.5,"patient":2.5,"dangerous":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","slicked_back"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","dragon_robe","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","jovial","carefree","lazy","decadent"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump"]
+  },
+  "templateFluxPrompt": "a {gender} post-apocalyptic wasteland hunter, {ageDesc}, {bodyType} lean predatory build, {faceDesc}, wearing camouflaged ghillie suit and improvised leather armor, hunting knife on belt, {hairStyle} {hairColor} hair, {eyeColor} sharp hunter eyes, {skinColor} weathered skin with camouflage paint, {temperament} aura, barren wasteland wilderness, mutated beasts tracks, stalking prey, overcast sky, photorealistic, intense, masterpiece"
+}

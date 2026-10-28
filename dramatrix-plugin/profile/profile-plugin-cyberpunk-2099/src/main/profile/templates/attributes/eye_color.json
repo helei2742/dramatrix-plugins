@@ -1,0 +1,153 @@
+{
+  "attribute": "eyeColor",
+  "displayName": "瞳色",
+  "options": [
+    {
+      "id": "dark_brown",
+      "value": "深棕",
+      "description": "最常见的自然瞳",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "棕",
+        " 自然"
+      ]
+    },
+    {
+      "id": "ice_blue",
+      "value": "冰蓝",
+      "description": "冷冽如极地的蓝",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "蓝",
+        " 冷"
+      ]
+    },
+    {
+      "id": "optic_red",
+      "value": "义眼红",
+      "description": "军用光学义眼的猩红扫描光",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "红",
+        " 义眼",
+        " 军用"
+      ]
+    },
+    {
+      "id": "emerald",
+      "value": "翠绿",
+      "description": "仿生虹膜的自然绿",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "绿",
+        " 仿生"
+      ]
+    },
+    {
+      "id": "heterochromia",
+      "value": "异色瞳",
+      "description": "左右虹膜颜色迥异，常因一边义眼",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "异色",
+        " 义眼"
+      ]
+    },
+    {
+      "id": "cyber_yellow",
+      "value": "机械黄",
+      "description": "低端光学改造的黄色反光",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "黄",
+        " 机械"
+      ]
+    },
+    {
+      "id": "void_black",
+      "value": "虚无黑",
+      "description": "全黑的仿生瞳孔，看不出情绪",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "黑",
+        " 仿生",
+        " 冷"
+      ]
+    },
+    {
+      "id": "glowing_white",
+      "value": "辉白",
+      "description": "高亮状态下的纯白光学眼",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "白",
+        " 辉光"
+      ]
+    },
+    {
+      "id": "snake_gold",
+      "value": "蛇金",
+      "description": "竖瞳金 iris 的改造眼",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "金",
+        " 蛇瞳",
+        " 改造"
+      ]
+    }
+  ]
+}

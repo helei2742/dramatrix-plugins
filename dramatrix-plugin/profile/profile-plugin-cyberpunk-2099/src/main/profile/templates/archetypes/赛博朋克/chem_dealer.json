@@ -1,0 +1,43 @@
+{
+  "archetype": "chem_dealer",
+  "category": "赛博朋克",
+  "name": "化学贩子",
+  "visualTags": "化学, 毒贩, 沉沦",
+  "description": "兜售快感与遗忘、自己先沉沦的毒贩。",
+  "defaults": {
+    "cyberImplant": [
+      "cyber_lung"
+    ],
+    "skinColor": [
+      "pale_cyan"
+    ],
+    "temperament": [
+      "manic"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "cyber_lung": 2.5
+    },
+    "skinColor": {
+      "pale_cyan": 2.0
+    },
+    "impression": {
+      "chem_hazy": 3.0,
+      "overclock_manic": 2.0
+    },
+    "temperament": {
+      "manic": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "stoic",
+      "cold"
+    ],
+    "skinColor": [
+      "chrome_skin"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

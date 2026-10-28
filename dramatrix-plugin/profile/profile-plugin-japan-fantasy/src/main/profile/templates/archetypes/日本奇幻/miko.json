@@ -1,0 +1,30 @@
+{
+  "archetype": "miko",
+  "name": "巫女",
+  "visualTags": "miko, shrine maiden, sacred, pure",
+  "description": "Japanese shrine maiden — miko serving at a shinto shrine",
+  "defaults": {
+    "defaultAccessories": ["hair_ribbon","bell"],
+    "defaultWeapon": ["gohei_wand","bow","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"willowy":3.0,"slender_tall":2.5,"petite":2.5,"lean_fit":1.5},
+    "temperament": {"pure":3.0,"serene":3.0,"gentle":2.5,"kind":2.5,"innocent":2.0,"dignified":2.5,"devoted":2.5},
+    "hairStyle": {"flowing_long":3.0,"straight_long":2.5,"ponytail":2.5,"braided":2.0,"half_up":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.0},
+    "eyeColor": {"brown":2.5,"dark_brown":3.0,"amber":2.0},
+    "skinColor": {"fair":2.5,"pale":3.0,"porcelain":2.5,"light":2.0},
+    "defaultClothes": {"white_haori":3.0,"red_hakama":3.0,"miko_robe":2.5,"white_kosode":2.5,"red_ribbon":2.0},
+    "faceFeature": {"none":2.5,"beauty_mark":1.5},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"round":2.0},
+    "eyeShape": {"almond":3.0,"round":2.5,"peach_blossom":2.5},
+    "eyebrowShape": {"willow":3.0,"silkworm":2.5,"straight":2.0},
+    "impression": {"serene":3.0,"pure":3.0,"gentle":2.5,"elegant":2.5,"mystical":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus"],
+    "defaultWeapon": ["hoe","pole","farming_sickle"],
+    "defaultClothes": ["yoroi_armor","jinbaori"]
+  },
+  "templateFluxPrompt": "a {gender} miko, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, japanese shrine maiden, torii gate, sacred shrine, cherry blossom petals, peaceful atmosphere, ukiyo-e art style, masterpiece"
+}

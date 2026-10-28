@@ -1,0 +1,31 @@
+{
+  "archetype": "painter",
+  "name": "画师",
+  "visualTags": "笔墨丹青,画卷生辉,点墨成兵,水墨意境",
+  "description": "以画笔为武器的艺者，落笔惊风雨，画中自有乾坤",
+  "defaults": {
+    "defaultAccessories": ["jade_pendant","ring"],
+    "defaultWeapon": ["fan","whisk","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":2.5,"willowy":2.5,"ethereal_light":2.0},
+    "temperament": {"ethereal":3.0,"gentle":2.5,"calm":2.5,"refined":2.0},
+    "hairStyle": {"half_up":2.5,"flowing_long":2.5,"loose_half_up":2.5,"center_part_long":2.0},
+    "hairColor": {"black":3.0,"jet_black":3.0,"dark_brown":1.5},
+    "defaultClothes": {"white_robe":3.0,"blue_robe":2.5,"green_robe":2.5,"linen_simple":2.0},
+    "eyeColor": {"dark_brown":2.5,"black":2.5,"hazel":2.0,"jade_green":1.5},
+    "eyeShape": {"sharp_phoenix":3.0,"phoenix":2.5,"crane":2.5,"downturned":1.5},
+    "eyebrowShape": {"autumn_brow":3.0,"distant_mountain":2.5,"willow":2.5,"long_eyebrow":2.0},
+    "faceShape": {"willow_leaf_face":3.0,"oval":2.5,"snow_face":2.0,"jade_mirror":2.0},
+    "faceFeature": {"none":3.0,"tear_mole":1.0},
+    "impression": {"refined":3.0,"ethereal":3.0,"gentle":2.5,"delicate":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","dagger","staff_monk"],
+    "defaultAccessories": ["abacus","tattoo","mask"],
+    "hairStyle": ["bald","buzz_cut","wild_mane"],
+    "temperament": ["wild","overbearing","sinister"],
+    "defaultClothes": ["leather_armor","golden_armor"]
+  },
+  "templateFluxPrompt": "a {gender} painter artist, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, holding ink brush with paintings coming alive"
+}

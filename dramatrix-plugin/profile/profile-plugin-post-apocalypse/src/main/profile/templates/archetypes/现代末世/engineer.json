@@ -1,0 +1,33 @@
+{
+  "archetype": "engineer",
+  "name": "工程师",
+  "visualTags": "wasteland engineer, technician, blueprint, machinery, improvised tech, problem solver, practical, post-apocalyptic builder",
+  "description": "末世工程师，用有限的资源修复和建造废土的基础设施，用智慧重建文明",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"medium":3.0,"slim":2.5,"athletic_toned":2.5,"slender_tall":2.0,"lean_wiry":2.0,"stocky_strong":2.0,"chiseled_fit":1.5},
+    "temperament": {"meticulous":3.0,"analytical":3.0,"pragmatic":3.0,"patient":2.5,"calm":2.5,"scholarly":2.5,"disciplined":2.0,"adaptable":2.5,"curious":2.5,"steadfast":2.0,"calculating":2.0},
+    "hairStyle": {"short_crop":2.5,"choppy_short":2.5,"messy_medium":2.5,"low_ponytail":2.5,"tied_back_loose":2.5,"slicked_back":2.0,"half_up":2.0,"bandana_wrap":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"dusty_brown":2.5,"jet_black":2.0,"gray":2.0,"salt_pepper":2.0,"ash_brown":2.0,"charcoal":1.5},
+    "defaultClothes": {"patched_coveralls":3.0,"scavenger_harness":3.0,"heavy_work_apron":2.5,"tactical_vest_light":2.5,"survivor_hoodie_worn":2.0,"tattered_jacket":2.0,"wasteland_lab_coat":2.5,"dust_cloak_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"green":2.0,"black":2.0,"deep_blue":2.0,"amber":1.5,"smoky_quartz":2.0},
+    "skinColor": {"light_tan":2.5,"fair":2.5,"tan":2.5,"weathered_tan":2.5,"olive":2.0,"sun_kissed":2.0,"dusty_tan":2.0,"ivory":1.5},
+    "eyeShape": {"almond":3.0,"sharp_phoenix":2.5,"deep_set":2.0,"scholar_eye":2.5,"round":2.0,"tiger":1.5,"keen":2.5,"narrow":2.0},
+    "eyebrowShape": {"straight":3.0,"thick":2.5,"silkworm":2.0,"long_eyebrow":2.5,"chivalrous_brow":2.0,"angular":2.0,"hero_eyebrow":2.0,"knitted":2.0},
+    "faceShape": {"oval":3.0,"rectangular":2.5,"seed_face":2.5,"angular":2.0,"long":2.0,"bamboo_leaf_face":2.0,"square":1.5,"chiseled":1.5},
+    "faceFeature": {"none":2.5,"spectacles":2.0,"clean_shaven":2.5,"beard_stubble":2.0,"sharp_features":2.0,"high_cheekbones":2.0,"dirt_smudge":2.0,"weathered":1.5},
+    "impression": {"intellectual":3.0,"focused":3.0,"pragmatic":2.5,"analytical":2.5,"reliable":2.5,"calm":2.0,"meticulous":3.0,"resolute":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe","chainmail"],
+    "temperament": ["innocent","naive","seductive","flamboyant","unhinged","brutal","savage","reckless","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","bulky_massive","towering_giant"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland engineer, {ageDesc}, {bodyType} build, {faceDesc}, wearing patched coveralls with tool harness, blueprint in hand, technical instruments, {hairStyle} {hairColor} hair, {eyeColor} intelligent focused eyes, {skinColor} skin, {temperament} aura, makeshift workshop with blueprints and scrap machinery, power generator under repair, photorealistic, technical, masterpiece"
+}

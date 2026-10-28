@@ -1,0 +1,29 @@
+{
+  "ageGroup": "early_adult",
+  "displayName": "初成年",
+  "ageRange": "18-22岁",
+  "defaults": {
+    "ageDesc": ["十八九岁","二十出头","弱冠之年","桃李年华","青春正好","恰逢年少"],
+    "heightDesc": ["一米七八左右","一米八左右","身姿挺拔","朝气蓬勃"],
+    "bodyType": ["slender_tall","lean_fit","slim"]
+  },
+  "weightBias": {
+    "faceShape": {"oval":2.5,"almond":2.0,"heart":1.5,"seed_face":1.5,"diamond":1.0},
+    "eyeShape": {"almond":2.5,"phoenix":2.0,"swallow":1.5,"sharp_phoenix":1.5,"fox":1.0},
+    "lipShape": {"rose":2.0,"bow":1.5,"defined":1.5,"cherry":1.0},
+    "noseShape": {"straight":2.5,"delicate":1.5,"aquiline":1.0,"water_drop":1.0},
+    "faceFeature": {"none":3.0,"beauty_mark":1.5,"tear_mole":1.0,"freckles":1.0,"dimples":1.0,"beard_stubble":0.3},
+    "impression": {"handsome":2.5,"delicate":2.0,"heroic":1.5,"free_spirit":1.5,"radiant":1.0},
+    "temperament": {"sharp":2.5,"wild":1.5,"calm":1.0,"passionate":1.5,"brave":1.0,"free_spirited":1.0},
+    "hairColor": {"black":1.5,"dark_brown":1.5,"golden":0.5,"chestnut":1.0,"auburn":0.5,"blue_black":0.5},
+    "bodyType": {"slender_tall":2.5,"lean_fit":2.0,"slim":1.5,"tall_athletic":0.5}
+  },
+  "exclude": {
+    "temperament": ["innocent","sinister","cunning","majestic","stoic","shrewd"],
+    "faceFeature": ["beard_full","beard_goatee","beard_mustache","nasolabial_folds","wrinkles","rosacea"],
+    "bodyType": ["hulking","stocky","muscular_broad","plump","plump"],
+    "impression": ["weathered","majestic","shrewd"],
+    "hairColor": ["white","gray","silver","frost_white","ash_gray"]
+  },
+  "fluxAgeDesc": "young adult in early twenties"
+}

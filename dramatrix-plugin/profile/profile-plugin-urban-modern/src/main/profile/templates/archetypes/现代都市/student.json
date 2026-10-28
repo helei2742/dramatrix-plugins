@@ -1,0 +1,33 @@
+{
+  "archetype": "student",
+  "name": "学生",
+  "visualTags": "modern student, college, campus, backpack, casual, youthful, energetic, books",
+  "description": "现代学生，校园里的青春身影，朝气蓬勃，求知若渴，未来可期",
+  "defaults": {
+    "defaultAccessories": ["book_pouch","none","hair_ribbon","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"medium":2.5,"lean_fit":3.0,"slender_tall":2.5,"willowy":2.0,"athletic_toned":2.5,"petite_curvy":1.5,"lean_wiry":1.5,"soft_round":1.0},
+    "temperament": {"cheerful":3.0,"innocent":2.5,"passionate":2.5,"naive":2.0,"plucky":2.5,"bold":2.0,"free_spirited":2.5,"zealous":2.5,"scholarly":2.5,"hopeful":3.0,"whimsical":2.0,"eloquent":2.0,"radiant":2.5,"jovial":2.0},
+    "hairStyle": {"bangs_short":2.5,"half_up":2.5,"high_ponytail":2.5,"choppy_short":2.5,"twin_tails":2.5,"simple_tie":2.5,"messy_bun":2.5,"short_crop":2.5,"topknot_loose":2.0,"side_bangs_long":2.0,"loose_half_up":2.0,"wavy_long":2.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":3.0,"chestnut":2.0,"light_brown":2.0,"auburn":1.5,"charcoal":1.5,"honey_blond":1.0},
+    "defaultClothes": {"school_uniform":3.0,"white_t_shirt":3.0,"hoodie":3.0,"oversized_hoodie":2.5,"sweatshirt":2.5,"zip_up_hoodie":2.0,"denim_jacket":2.0,"varsity_jacket":2.0,"windbreaker":2.0,"bomber_jacket":1.5,"puffer_jacket":1.5,"cardigan":2.0,"knit_sweater":2.0,"plaid_shirt":1.5,"polo_shirt":1.5,"cargo_pants":2.0,"jeans":3.0,"straight_leg_jeans":2.5,"wide_leg_pants":2.0,"black_trousers":2.0,"jogger_pants":2.0,"khaki_pants":1.5,"pleated_skirt":2.5,"tennis_skirt":1.5,"casual_dress":1.5,"graphic_t_shirt":2.5,"flannel_shirt":2.0,"oversized_sweater":2.5,"long_coat":1.5,"linen_shirt":1.5,"casual_blazer":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"hazel":2.0,"honey":1.5,"amber":1.5,"deep_blue":1.0,"gray":1.5,"jade_green":1.0},
+    "skinColor": {"fair":3.0,"ivory":2.5,"light_tan":2.0,"tan":1.5,"rose_white":2.0,"jade":1.5,"pale_porcelain":2.0,"sun_kissed":1.5},
+    "eyeShape": {"round":3.0,"almond":3.0,"peach_blossom":2.5,"fish":2.0,"swallow":2.5,"sharp_phoenix":2.0,"laughter_eye":2.5,"rabbit_eye":2.0},
+    "eyebrowShape": {"silkworm":2.5,"straight":3.0,"crescent":2.5,"willow":2.0,"curved_fine":2.0,"shuttle_brow":2.0,"feathered":2.0,"distant_mountain":1.5},
+    "faceShape": {"oval":3.0,"round":2.5,"seed_face":3.0,"heart":2.5,"pear":2.0,"almond":2.5,"jade_plate":1.5,"square":1.0},
+    "faceFeature": {"none":3.0,"freckles":2.0,"dimples":2.5,"clean_shaven":2.5,"ruddy":1.5,"spectacles":2.0,"delicate_features":2.0,"beauty_mark":1.0},
+    "impression": {"handsome":2.5,"gentle":2.5,"sunny":3.0,"delicate":2.5,"innocent":2.5,"intellectual":2.5,"hopeful":3.0,"refined":2.0,"free_spirit":2.5,"loyal":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun","immortal_bun","phoenix_crown"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","leather_armor","scale_armor","training_gear","bamboo_hat_cape","wild_beast_skin","patchwork_rags","crusader_white_surcoat","war_general_armor"],
+    "temperament": ["sinister","brutal","reckless","overbearing","unhinged","haughty","arrogant","vicious","cynical","weary","calculating"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","broad_shouldered","gnarled_tough"]
+  },
+  "templateFluxPrompt": "a {gender} modern student college, {ageDesc}, {bodyType} build, {faceDesc}, wearing casual campus clothing, carrying a backpack, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern university campus, green lawn, brick buildings, cherry blossom trees, youthful atmosphere, photorealistic, masterpiece"
+}

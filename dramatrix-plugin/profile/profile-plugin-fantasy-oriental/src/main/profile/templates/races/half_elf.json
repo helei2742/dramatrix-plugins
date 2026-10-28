@@ -1,0 +1,34 @@
+{
+  "race": "half_elf",
+  "displayName": "半精灵",
+  "description": "人族与精灵结合的后代，兼具人族的可塑性与精灵的灵性之美，常游走于两族世界之间",
+  "defaults": {
+    "skinColor": ["fair","wheat","pale_yellow","ivory","tan"],
+    "eyeColor": ["emerald","deep_blue","amber","dark_brown","silver"],
+    "hairColor": ["dark_brown","auburn","golden","chestnut","honey"],
+    "bodyType": ["slender_tall","slim","lean_fit","medium","lithe"]
+  },
+  "weightBias": {
+    "skinColor": {"fair":2.5,"wheat":2.0,"ivory":1.5},
+    "eyeColor": {"emerald":2.5,"deep_blue":2.5,"amber":2.0},
+    "hairColor": {"dark_brown":2.5,"auburn":2.0,"golden":2.0},
+    "bodyType": {"slender_tall":2.5,"lean_fit":2.0},
+    "eyeShape": {"almond":2.5,"crane":2.0},
+    "eyebrowShape": {"willow":2.5,"distant_mountain":2.0,"long_eyebrow":2.0},
+    "noseShape": {"greek":2.0,"water_drop":2.0},
+    "impression": {"delicate":2.5,"gentle":2.0,"noble":2.0},
+    "temperament": {"calm":2.0,"gentle":2.0,"warm":1.5}
+  },
+  "exclude": {
+    "skinColor": ["pale_blue","rocky","obsidian"],
+    "eyeColor": ["heterochromia"],
+    "hairColor": ["ash_gray","frost_white"],
+    "bodyType": ["hulking","plump"],
+    "temperament": ["sinister","wild"]
+  },
+  "faceDescOverride": {
+    "prepend": "微pointed ears，",
+    "append": ""
+  },
+  "templateFluxPrompt": "a half-elf {gender}, {ageDesc}, {bodyType}, {faceDesc} with slightly pointed ears, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

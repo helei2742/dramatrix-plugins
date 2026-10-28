@@ -1,0 +1,33 @@
+{
+  "archetype": "militia_commander",
+  "name": "民兵指挥官",
+  "visualTags": "wasteland militia commander, leader, military surplus uniform, tactical gear, stern, authoritative, post-apocalyptic, settlement defender",
+  "description": "末世民兵指挥官，带领聚落民兵抵御外敌，身经百战的战术领袖，威严而果断",
+  "defaults": {
+    "defaultAccessories": ["none","belt_jade","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":3.0,"chiseled_fit":2.5,"broad_shouldered":3.0,"athletic_toned":2.5,"heroic_figure":2.0,"stocky_strong":2.5,"lean_fit":2.0},
+    "temperament": {"stern":3.0,"disciplined":3.0,"stoic":3.0,"authoritative":3.0,"honor_bound":2.5,"steadfast":2.5,"bold":2.5,"strategic":3.0,"hardened":2.5,"resolute":2.5,"imposing":2.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":3.0,"slicked_back":2.5,"choppy_short":2.5,"low_ponytail":1.5,"tied_back_loose":1.5,"side_part_long":2.0,"half_up":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"salt_pepper":2.5,"gray":2.5,"charcoal":2.0,"faded_black":1.5,"dusty_brown":1.5},
+    "defaultClothes": {"military_fatigues":3.0,"tactical_vest_light":3.0,"reinforced_trench_coat":3.0,"ammo_belt_bandolier":2.5,"leather_armor_improvised":2.0,"wasteland_duster":2.0,"scrap_metal_armor":1.5,"biker_leather_armor":1.5},
+    "eyeColor": {"dark_brown":3.0,"steel_gray":3.0,"black":2.5,"gray":2.5,"smoky_quartz":2.0,"hazel":2.0,"deep_blue":1.5,"charcoal":2.0},
+    "skinColor": {"weathered_tan":3.0,"tan":2.5,"olive":2.5,"sun_kissed":2.5,"light_tan":2.0,"dusty_tan":2.0,"fair":1.5,"bronze":1.5},
+    "eyeShape": {"eagle":3.0,"tiger":3.0,"deep_set":2.5,"sharp_phoenix":2.5,"narrow":2.0,"dragon":2.0,"almond":1.5,"commander":2.5},
+    "eyebrowShape": {"steel_brow":3.0,"hero_eyebrow":3.0,"sword":2.5,"thick":2.5,"straight":2.5,"angular":2.0,"knitted":2.0,"furrowed":1.5},
+    "faceShape": {"square":3.0,"stone_face":3.0,"chiseled":2.5,"strong_jawline":3.0,"rectangular":2.5,"pentagon":2.0,"angular":2.0,"round":1.0},
+    "faceFeature": {"scar":3.0,"strong_jaw":3.0,"weathered":3.0,"beard_stubble":2.5,"none":1.5,"sharp_features":2.0,"clean_shaven":2.0,"ruddy":1.5},
+    "impression": {"authoritative":3.0,"hardened":3.0,"heroic":2.5,"resolute":3.0,"loyal":2.5,"stern":2.5,"imposing":2.5,"weathered":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe"],
+    "temperament": ["innocent","naive","seductive","flamboyant","carefree","lazy","decadent","wistful"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","pin_thin","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} post-apocalyptic militia commander, {ageDesc}, {bodyType} strong authoritative build, {faceDesc}, wearing worn military fatigues with tactical vest and reinforced trench coat, battle scars visible, {hairStyle} {hairColor} hair, {eyeColor} stern commanding eyes, {skinColor} battle-worn skin, {temperament} aura, fortified settlement walls behind, rallying defenders, dusty wind, photorealistic, heroic, masterpiece"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_artist",
+  "name": "废土艺人",
+  "visualTags": "wasteland artist, performer, mural painter, musician, storyteller, bringing color to wasteland, creative spirit, post-apocalyptic culture",
+  "description": "末世艺人，在灰暗废土中用画笔与音乐为幸存者带来片刻的欢愉与希望，文明不灭的灵魂",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":2.5,"willowy":2.5,"lean_wiry":2.5,"svelte_elegant":2.5,"medium":2.0,"lean_fit":2.0,"ethereal_light":2.0},
+    "temperament": {"flamboyant":3.0,"creative":3.0,"expressive":3.0,"passionate":3.0,"eccentric":2.5,"free_spirited":3.0,"jovial":2.5,"charismatic":2.5,"cheerful":2.5,"defiant":2.0,"kind_heart":2.0},
+    "hairStyle": {"wild_mane":2.0,"unkempt_long":2.5,"loose_half_up":2.5,"side_part_long":2.5,"messy_medium":2.5,"half_up":2.5,"low_ponytail":2.5,"choppy_short":2.5},
+    "hairColor": {"dark_brown":2.5,"black":2.5,"dyed_colorful":3.0,"auburn":2.5,"chestnut":2.0,"light_brown":2.0,"bleached_blonde":2.0,"copper":2.5},
+    "defaultClothes": {"merchant_patchwork_robe":3.0,"patched_denim_suit":2.5,"dust_cloak_worn":2.5,"tattered_jacket":3.0,"survivor_hoodie_worn":2.5,"nomad_wraps":2.5,"wasteland_duster":2.0,"scavenger_harness":1.5},
+    "eyeColor": {"deep_blue":2.5,"green":2.5,"hazel":3.0,"dark_brown":2.5,"amber":2.5,"violet":2.0,"honey":2.0,"copper":2.5},
+    "skinColor": {"fair":2.5,"light_tan":2.5,"tan":2.0,"ivory":2.5,"rose_white":2.5,"paint_smudged":2.5,"sun_kissed":2.0,"weathered_tan":1.5},
+    "eyeShape": {"peach_blossom":3.0,"sharp_phoenix":2.5,"almond":3.0,"round":2.0,"deep_set":2.0,"dragon":2.0,"downturned":2.0,"keen":2.5},
+    "eyebrowShape": {"curved_fine":2.5,"crescent":2.5,"willow":2.5,"distant_mountain":2.5,"long_eyebrow":2.0,"silkworm":2.5,"auspicious_brow":2.0,"straight":2.0},
+    "faceShape": {"heart":3.0,"oval":3.0,"seed_face":2.5,"bamboo_leaf_face":2.5,"jade_mirror":2.0,"angular":2.0,"round":1.5,"long":2.0},
+    "faceFeature": {"none":2.0,"beauty_mark":2.5,"dimples":2.5,"paint_smudge":3.0,"freckles":2.0,"sharp_features":2.0,"high_cheekbones":2.5,"piercing":2.5},
+    "impression": {"flamboyant":3.0,"expressive":3.0,"creative":3.0,"free_spirited":3.0,"artistic":3.0,"cheerful":2.5,"eccentric":2.5,"charismatic":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk","claws","flail"],
+    "defaultAccessories": ["eye_patch","spirit_beast_bag","military_seal","mask"],
+    "hairStyle": ["bald","buzz_cut","warrior_topknot","savage_bun","warrior_braid"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier","military_fatigues","tactical_vest_light"],
+    "temperament": ["sinister","brutal","cold","ruthless","stoic","stern","pragmatic","calculating"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland artist, {ageDesc}, {bodyType} slender expressive build, {faceDesc}, wearing colorful patchwork clothes with paint stains, holding paintbrush or musical instrument, creating art on ruined wall, {hairStyle} {hairColor} wild hair, {eyeColor} creative expressive eyes, {skinColor} paint-smudged skin, {temperament} aura, vibrant mural on ruined concrete wall, bringing color to gray wasteland, scattered paint cans, photorealistic, artistic, masterpiece"
+}

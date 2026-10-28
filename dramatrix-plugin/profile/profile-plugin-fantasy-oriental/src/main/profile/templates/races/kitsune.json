@@ -1,0 +1,35 @@
+{
+  "race": "kitsune",
+  "displayName": "狐妖",
+  "description": "修行成精的灵狐，生有狐耳狐尾，精通幻化之术，以魅惑与智慧著称",
+  "defaults": {
+    "skinColor": ["porcelain","fair","wheat","pale_yellow","ivory"],
+    "eyeColor": ["amber","gold","crimson","violet","purple"],
+    "hairColor": ["white","silver","golden","red","honey"],
+    "bodyType": ["slender_tall","slim","willowy","lithe","curvy"]
+  },
+  "weightBias": {
+    "skinColor": {"porcelain":2.5,"fair":2.5},
+    "eyeColor": {"amber":2.5,"gold":2.5,"crimson":2.0},
+    "hairColor": {"white":2.5,"silver":2.5,"golden":2.5,"red":2.0},
+    "bodyType": {"willowy":2.5,"slender_tall":2.5,"curvy":2.0},
+    "eyeShape": {"fox":2.5,"upturned":2.5,"almond":2.0},
+    "eyebrowShape": {"willow":2.5,"long_eyebrow":2.5,"phoenix_eyebrow":2.0},
+    "noseShape": {"water_drop":2.5},
+    "impression": {"delicate":2.5,"noble":2.5,"ethereal":2.5,"gentle":2.0},
+    "temperament": {"ethereal":2.5,"noble":2.0,"refined":2.5,"calm":1.5}
+  },
+  "exclude": {
+    "skinColor": ["dark","swarthy","bronze","rocky","ruddy"],
+    "eyeColor": ["dark_brown"],
+    "hairColor": ["gray","ash_gray"],
+    "bodyType": ["muscular_broad","hulking","stocky","plump"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","scar"],
+    "temperament": ["wild","overbearing","stoic"]
+  },
+  "faceDescOverride": {
+    "prepend": "fox ears, ",
+    "append": ", fox tails swaying behind"
+  },
+  "templateFluxPrompt": "a kitsune {gender}, {ageDesc}, {bodyType}, {faceDesc} with fox ears and fluffy fox tails, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} fox eyes, {skinColor} skin, {temperament} aura"
+}

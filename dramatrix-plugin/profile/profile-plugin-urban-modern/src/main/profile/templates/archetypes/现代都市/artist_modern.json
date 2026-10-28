@@ -1,0 +1,33 @@
+{
+  "archetype": "artist_modern",
+  "name": "艺术家",
+  "visualTags": "modern artist, painter, creative, art studio, beret, bohemian, expressive, colorful",
+  "description": "现代艺术家，以画笔与灵感为伴，追求美的极致，不拘一格的创作者",
+  "defaults": {
+    "defaultAccessories": ["ring","none","hair_ribbon","scroll_tube"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"willowy":2.5,"slender_tall":2.5,"medium":2.0,"ethereal_light":2.0,"lean_fit":1.5,"svelte_elegant":2.0,"lean_wiry":1.0},
+    "temperament": {"free_spirited":3.0,"melancholy":2.5,"passionate":2.5,"eccentric":2.5,"whimsical":2.5,"flamboyant":2.0,"eloquent":2.0,"crafty":2.0,"brooding":1.5,"tranquil":1.5,"enigmatic":1.5,"volatile":1.5,"desolate":1.0,"radiant":1.5},
+    "hairStyle": {"flowing_long":3.0,"wavy_long":2.5,"loose_curls":2.5,"messy_bun":2.5,"half_up":2.5,"silver_flow":2.0,"braided":2.0,"topknot_loose":2.0,"loose_half_up":2.0,"side_bangs_long":2.0,"bangs_short":1.5},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"silver":2.0,"chestnut":2.0,"auburn":2.0,"jet_black":2.0,"copper":1.5,"honey_blond":1.5,"ash_blond":1.5,"platinum_blond":1.0,"emerald":1.0,"purple":1.0},
+    "defaultClothes": {"linen_simple":2.5,"cotton_hanfu":2.5,"ink_wash_robe":3.0,"blue_robe":2.0,"hemp_cloth":2.0,"white_robe":2.0,"green_robe":2.0,"indigo_dyed_cotton":2.0,"charcoal_hooded_cloak":1.5,"slate_gray_cloak":1.5,"ochre_hemp_tunic":1.5},
+    "eyeColor": {"dark_brown":2.5,"black":2.5,"hazel":2.5,"forest_green":2.0,"amber":2.0,"gray":2.0,"deep_blue":1.5,"honey":1.5,"emerald":1.0,"jade_green":1.0,"turquoise":1.0},
+    "skinColor": {"fair":2.5,"ivory":2.5,"pale_porcelain":2.0,"light_tan":2.0,"rose_white":2.0,"tan":1.5,"jade":1.0,"moon_white":1.5},
+    "eyeShape": {"phoenix":2.5,"peach_blossom":2.5,"almond":2.5,"deep_set":2.0,"sharp_phoenix":2.0,"fox":2.0,"round":2.0,"swallow":2.0,"downturned":1.5,"crane":1.5},
+    "eyebrowShape": {"willow":2.5,"distant_mountain":2.5,"feathered":2.0,"crescent":2.5,"curved_fine":2.0,"autumn_brow":2.5,"straight":1.5,"wispy_brow":1.5,"arched":1.5},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"willow_leaf_face":2.5,"heart":2.0,"almond":2.0,"wind_face":2.0,"diamond":1.5,"snow_face":1.5},
+    "faceFeature": {"none":2.5,"beauty_mark":1.5,"spectacles":1.5,"freckles":1.5,"dimples":1.0,"tear_mole":1.0,"delicate_features":2.0,"high_cheekbones":1.5},
+    "impression": {"refined":3.0,"ethereal":2.5,"free_spirit":3.0,"delicate":2.5,"handsome":2.0,"gentle":2.0,"intellectual":2.5,"elegant":2.5,"artistic":3.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","warrior_topknot","wolf_tail","warrior_braid","savage_bun","child_tuft"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","leather_armor","scale_armor","training_gear","polished_plate_armor","russet_leather_armor","battle_skirt","wild_beast_skin"],
+    "temperament": ["brutal","reckless","overbearing","unhinged","fierce","haughty","vicious","grim"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} modern artist painter, {ageDesc}, {bodyType} build, {faceDesc}, wearing casual bohemian clothing, paint-splattered apron, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, art studio with canvas and easel, paint brushes, colorful palette, natural light from large windows, creative atmosphere, photorealistic, masterpiece"
+}

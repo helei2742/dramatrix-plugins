@@ -1,0 +1,399 @@
+{
+  "globalConstraints": [
+    {
+      "id": "cyberpunk-2099-c001",
+      "description": "女性角色排除一切胡须类面部特征",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "gender": "女"
+      },
+      "exclude": {
+        "faceFeature": [
+          "trimmed_beard",
+          "goatee_thin",
+          "stubble_shadow"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c002",
+      "description": "儿童/少年排除老态与战斗痕迹",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "ageGroup": [
+          "child",
+          "teen"
+        ]
+      },
+      "exclude": {
+        "faceFeature": [
+          "eye_bags",
+          "chapped_skin",
+          "pale_sickly"
+        ],
+        "impression": [
+          "war_hardened",
+          "steel_cold",
+          "noir_jaded"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c003",
+      "description": "网络幽灵排除重型肉体与全机械chrome",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "race": "netghost"
+      },
+      "exclude": {
+        "bodyType": [
+          "bulky",
+          "heavy_frame",
+          "augmented_bulk"
+        ],
+        "chromeSignature": [
+          "full_chrome_mask",
+          "jawline_chrome"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c004",
+      "description": "复制人排除自然皮肤瑕疵",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "race": "replicant"
+      },
+      "exclude": {
+        "faceFeature": [
+          "light_freckle",
+          "chapped_skin",
+          "pale_sickly",
+          "eye_bags"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c005",
+      "description": "全身义体人排除自然肤色",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "race": "full_borg"
+      },
+      "exclude": {
+        "skinColor": [
+          "fair",
+          "tan",
+          "dark",
+          "olive",
+          "albino"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c006",
+      "description": "赛博僧排除重型武器",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "archetype": "cyber_monk"
+      },
+      "exclude": {
+        "defaultWeapon": [
+          "railgun",
+          "heavy_smg",
+          "tech_shotgun",
+          "plasma_rifle"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c007",
+      "description": "网络黑客排除重型武器",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "archetype": "netrunner"
+      },
+      "exclude": {
+        "defaultWeapon": [
+          "railgun",
+          "heavy_smg",
+          "tech_shotgun"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c008",
+      "description": "女性战斗职业排除过于柔美发型",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "gender": "女",
+        "archetype": [
+          "solo",
+          "gang_enforcer",
+          "corp_security",
+          "bounty_hunter",
+          "cyber_assassin"
+        ]
+      },
+      "exclude": {
+        "hairStyle": [
+          "pixie"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c009",
+      "description": "企业体系职业排除街头破衣",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "archetype": [
+          "corpo",
+          "netwatch",
+          "corp_security"
+        ]
+      },
+      "exclude": {
+        "defaultClothes": [
+          "ragged_poncho",
+          "foil_wrap",
+          "cargo_punk"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c010",
+      "description": "游牧民排除企业装甲与西装",
+      "type": "EXCLUDE_IF",
+      "condition": {
+        "archetype": "nomad"
+      },
+      "exclude": {
+        "defaultClothes": [
+          "corp_armor",
+          "holographic_suit"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c011",
+      "description": "全身义体人强制机械脸与镀铬肤",
+      "type": "FORCE_IF",
+      "condition": {
+        "race": "full_borg"
+      },
+      "force": {
+        "faceShape": [
+          "synth_mold_face",
+          "hex_plate_face"
+        ],
+        "chromeSignature": [
+          "full_chrome_mask",
+          "half_skull_plate"
+        ],
+        "skinColor": [
+          "chrome_skin"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c012",
+      "description": "合成偶像强制完美脸与偶像光环",
+      "type": "FORCE_IF",
+      "condition": {
+        "race": "synth_idol"
+      },
+      "force": {
+        "faceShape": [
+          "idol_perfect_face",
+          "porcelain_shell"
+        ],
+        "impression": [
+          "idol_radiance",
+          "neon_glam"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c013",
+      "description": "兽化嵌合体强制兽化脸与皮毛特征",
+      "type": "FORCE_IF",
+      "condition": {
+        "race": "chimera"
+      },
+      "force": {
+        "faceShape": [
+          "feral_muzzle_face"
+        ],
+        "faceFeature": [
+          "beast_fur_patch",
+          "scale_graft",
+          "horn_implant"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c014",
+      "description": "仿生人强制无瑕合成面容",
+      "type": "FORCE_IF",
+      "condition": {
+        "race": "android"
+      },
+      "force": {
+        "faceFeature": [
+          "synth_flawless"
+        ],
+        "impression": [
+          "synthetic_perfect",
+          "deadpan_synth"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c015",
+      "description": "高塔狙击手强制远程步枪",
+      "type": "FORCE_IF",
+      "condition": {
+        "archetype": "tower_sniper"
+      },
+      "force": {
+        "defaultWeapon": [
+          "railgun"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c016",
+      "description": "赛博精神病强制狂乱气质",
+      "type": "FORCE_IF",
+      "condition": {
+        "archetype": "cyberpsycho"
+      },
+      "force": {
+        "temperament": [
+          "manic",
+          "reckless"
+        ],
+        "impression": [
+          "overclock_manic",
+          "feral_edge"
+        ]
+      }
+    },
+    {
+      "id": "cyberpunk-2099-c017",
+      "description": "娇小/纤细体型配粗犷脸型的审美惩罚",
+      "type": "PENALTY",
+      "condition": {},
+      "rules": [
+        {
+          "penalty": 0.4,
+          "conditions": {
+            "bodyType": "petite",
+            "faceShape": "brutal_slab"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "bodyType": "slender",
+            "faceShape": "brutal_slab"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "bodyType": "petite",
+            "faceShape": "boxy_jaw"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cyberpunk-2099-c018",
+      "description": "大体型配精致小脸的审美惩罚",
+      "type": "PENALTY",
+      "condition": {},
+      "rules": [
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "bodyType": "augmented_bulk",
+            "faceShape": "clean_oval"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "bodyType": "heavy_frame",
+            "faceShape": "porcelain_shell"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "bodyType": "bulky",
+            "faceShape": "doll_face_synth"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cyberpunk-2099-c019",
+      "description": "霓虹魅惑配战损/冷峻气质的惩罚",
+      "type": "PENALTY",
+      "condition": {},
+      "rules": [
+        {
+          "penalty": 0.4,
+          "conditions": {
+            "impression": "neon_glam",
+            "temperament": "war_hardened"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "impression": "idol_radiance",
+            "temperament": "stoic"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "impression": "gutter_grit",
+            "hairColor": "neon_pink"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cyberpunk-2099-c020",
+      "description": "冷峻/禅定气质配狂欢发型的惩罚",
+      "type": "PENALTY",
+      "condition": {},
+      "rules": [
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "temperament": "cold",
+            "hairStyle": "holographic_cut"
+          }
+        },
+        {
+          "penalty": 0.25,
+          "conditions": {
+            "temperament": "zen",
+            "hairStyle": "mohawk_neon"
+          }
+        },
+        {
+          "penalty": 0.3,
+          "conditions": {
+            "temperament": "calm",
+            "hairStyle": "afro_wire"
+          }
+        }
+      ]
+    }
+  ]
+}

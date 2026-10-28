@@ -1,0 +1,28 @@
+{
+  "archetype": "farmer",
+  "name": "农夫",
+  "visualTags": "farmer, agriculture, peasant",
+  "description": "田间农夫，日出而作，勤劳朴实，与土地为伴",
+  "defaults": {
+    "defaultAccessories": ["hat","none"],
+    "defaultWeapon": ["hoe","sickle","pole"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.5,"stocky_strong":2.0,"lean_fit":2.0,"gnarled_tough":1.5,"barrel_chested":1.0},
+    "temperament": {"warm":2.5,"sincere":2.5,"stoic":2.0,"subdued":2.0,"humble":1.5,"kind_heart":1.0},
+    "hairStyle": {"simple_tie":3.0,"short_crop":2.5,"half_up":1.5,"buzz_cut":1.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"salt_pepper":1.5,"charcoal":1.0},
+    "defaultClothes": {"hemp_cloth":3.0,"linen_simple":3.0,"ochre_hemp_tunic":2.5,"cotton_hanfu":2.0,"indigo_dyed_cotton":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":1.5},
+    "eyeShape": {"round":2.5,"fish":2.0,"almond":1.5,"puffy":1.0},
+    "eyebrowShape": {"silkworm":2.5,"straight":2.0,"thick":1.5,"shuttle_brow":1.0},
+    "faceShape": {"round":2.5,"pear":2.0,"square":1.5,"oval":1.5},
+    "faceFeature": {"ruddy":2.5,"freckles":1.5,"none":1.5,"wrinkled":1.0},
+    "impression": {"weathered":3.0,"simple":3.0,"loyal":2.5,"humble":2.0,"warm":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","jade_ruyi","fan","guqin","two_hand_sword"],
+    "defaultAccessories": ["jade_pendant","belt_jade","gold_chain","phoenix_hairpin","hair_crown"]
+  },
+  "templateFluxPrompt": "a {gender} farmer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, rice paddies and terraced fields, water buffalo, traditional chinese countryside, masterpiece"
+}

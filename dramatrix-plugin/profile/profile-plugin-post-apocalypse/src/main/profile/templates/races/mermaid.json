@@ -1,0 +1,33 @@
+{
+  "race": "mermaid",
+  "displayName": "鲛人",
+  "description": "居于深海的水生种族，泣泪成珠，人身鱼尾，歌声有摄人心魄之力",
+  "defaults": {
+    "skinColor": ["pearl","coral","pale_gold","jade","moon_pale"],
+    "eyeColor": ["aqua","pearl","sapphire","deep_blue","moonlit"],
+    "hairColor": ["silver","golden","aqua","honey","white"],
+    "bodyType": ["lithe","willowy","slender_tall","slim","curvy"]
+  },
+  "weightBias": {
+    "skinColor": {"pearl":2.5,"coral":2.5,"moon_pale":2.0},
+    "eyeColor": {"aqua":2.5,"sapphire":2.5,"pearl":2.5},
+    "hairColor": {"silver":2.5,"golden":2.5,"aqua":2.5},
+    "bodyType": {"lithe":2.5,"willowy":2.5,"curvy":2.0},
+    "eyeShape": {"almond":2.5,"crane":2.0,"round":2.0},
+    "eyebrowShape": {"willow":2.5,"distant_mountain":2.0},
+    "impression": {"ethereal":2.5,"delicate":2.5,"gentle":2.5},
+    "temperament": {"ethereal":2.5,"gentle":2.5,"calm":2.0}
+  },
+  "exclude": {
+    "skinColor": ["dark","swarthy","ruddy","rocky","bronze"],
+    "eyeColor": ["dark_brown","fiery_orange"],
+    "hairColor": ["dark_brown","black","gray"],
+    "bodyType": ["muscular_broad","hulking","stocky","plump"],
+    "temperament": ["wild","overbearing","sinister"]
+  },
+  "faceDescOverride": {
+    "prepend": "pearly skin, ",
+    "append": ", gill marks behind ears"
+  },
+  "templateFluxPrompt": "a mermaid {gender}, {ageDesc}, {bodyType}, {faceDesc} with pearlescent skin and fish tail, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

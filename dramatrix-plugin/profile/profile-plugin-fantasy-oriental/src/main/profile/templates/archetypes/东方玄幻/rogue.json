@@ -1,0 +1,27 @@
+{
+  "archetype": "rogue",
+  "name": "刺客",
+  "visualTags": "刺客,游侠",
+  "description": "行走于阴影中的独行侠，身手敏捷，来去无踪",
+  "defaults": {
+    "defaultAccessories": ["mask","wine_gourd"],
+    "defaultWeapon": ["dagger","bow","iron_sword"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"slim":3.0,"slender_tall":2.0,"short_stout":1.5,"plump":0.0},
+    "temperament": {"cold":3.0,"cunning":3.0,"sharp":2.0,"sinister":1.5,"lazy":1.5},
+    "hairStyle": {"topknot_loose":2.5,"half_up":2.5,"short_crop":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.0,"red":1.0,"gray":0.5},
+    "defaultClothes": {"black_night":3.0,"dark_cloak":3.0,"hemp_cloth":1.0},
+    "eyeShape": {"narrow":3.0,"eagle":2.5,"wolf":2.5,"fox":2.0},
+    "eyebrowShape": {"raised":2.5,"sword":2.0,"thin":1.5},
+    "faceShape": {"sharp":3.0,"diamond":2.5,"pentagon":2.0},
+    "faceFeature": {"scar":2.0},
+    "impression": {"cold":3.0,"sinister":2.0,"shrewd":2.5,"free_spirit":1.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus"],
+    "defaultWeapon": ["hoe"]
+  },
+  "templateFluxPrompt": "a {gender} rogue assassin, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

@@ -1,0 +1,30 @@
+{
+  "archetype": "chef",
+  "name": "灵厨",
+  "visualTags": "灵食,烹饪,香气四溢,舌尖仙途",
+  "description": "以灵材烹饪仙食的厨者，一道佳肴可增益修为、治愈百病",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","ring"],
+    "defaultWeapon": ["none","dagger"]
+  },
+  "weightBias": {
+    "bodyType": {"plump":3.0,"medium":3.0,"stocky":2.0,"lean_fit":1.5},
+    "temperament": {"warm":3.0,"cheerful":3.0,"calm":2.0,"humble":1.5},
+    "hairStyle": {"simple_tie":3.0,"short_crop":2.5,"half_up":2.0,"messy_bun":1.5},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"chestnut":2.0,"salt_pepper":1.5},
+    "defaultClothes": {"linen_simple":3.0,"hemp_cloth":2.5,"white_robe":2.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"honey":2.0,"topaz":1.5},
+    "eyeShape": {"round":3.0,"almond":2.5,"fish":2.0,"swallow":1.5},
+    "eyebrowShape": {"silkworm_brow":3.0,"straight":2.5,"shuttle_brow":2.0,"auspicious_brow":2.0},
+    "faceShape": {"persimmon_face":3.0,"round":3.0,"pig_face":2.0,"jade_plate":2.0},
+    "faceFeature": {"ruddy":3.0,"none":2.0,"dimples":1.5},
+    "impression": {"loyal":3.0,"warm":3.0,"delicate":2.0,"gentle":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","staff_monk"],
+    "defaultAccessories": ["abacus","tattoo","mask"],
+    "hairStyle": ["bald","wild_mane","phoenix_crown"],
+    "temperament": ["sinister","cold"]
+  },
+  "templateFluxPrompt": "a {gender} chef spirit cook, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cooking magical spirit food with aromatic steam"
+}

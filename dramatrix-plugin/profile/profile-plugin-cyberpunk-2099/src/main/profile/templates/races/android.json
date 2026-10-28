@@ -1,0 +1,73 @@
+{
+  "race": "android",
+  "displayName": "仿生人",
+  "description": "外观与人类无从分辨的合成人，皮下为真皮层包裹的伺服与电路，常用于陪护、演艺与渗透。",
+  "defaults": {
+    "skinColor": [
+      "synthetic_pale",
+      "fair"
+    ],
+    "faceShape": [
+      "doll_face_synth",
+      "porcelain_shell"
+    ],
+    "eyeColor": [
+      "void_black",
+      "glowing_white"
+    ],
+    "chromeSignature": [
+      "faint_seam_glow",
+      "data_tattoo_glow"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "synthetic_pale": 2.5,
+      "fair": 1.5
+    },
+    "faceShape": {
+      "doll_face_synth": 2.5,
+      "porcelain_shell": 2.0
+    },
+    "eyeColor": {
+      "void_black": 2.0,
+      "glowing_white": 2.0
+    },
+    "chromeSignature": {
+      "faint_seam_glow": 2.0,
+      "data_tattoo_glow": 2.0
+    },
+    "impression": {
+      "synthetic_perfect": 2.5,
+      "deadpan_synth": 2.0
+    }
+  },
+  "exclude": {
+    "chromeSignature": [
+      "full_chrome_mask",
+      "half_skull_plate",
+      "beast_chrome_muzzle"
+    ],
+    "faceShape": [
+      "feral_muzzle_face",
+      "brutal_slab"
+    ],
+    "impression": [
+      "gutter_grit",
+      "feral_edge"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "flawless synthetic face, almost human",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "外观完美，偏好 synthetic_perfect"
+    },
+    {
+      "description": "排斥野性与粗粝印象"
+    }
+  ]
+}

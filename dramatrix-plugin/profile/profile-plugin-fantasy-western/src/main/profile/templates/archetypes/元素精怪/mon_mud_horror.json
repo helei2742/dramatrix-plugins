@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_mud_horror",
+  "name": "泥沼怪",
+  "visualTags": "泥浆聚形,腐叶枯枝,黏臭拖行,吞人无声",
+  "description": "沼泽底部污泥与腐殖聚成的无定形怪物，缓慢、黏腻、吞人无声",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":2.0,"frost_white":2.0,"flame_red":2.0,"cyan":2.0,"none":2.5,"dark_green":2.5,"charcoal":2.0},
+    "skinColor": {"translucent":3.0,"luminous_blue":2.5,"phosphor_white":2.0,"amber_glow":2.0,"rocky":1.5,"moss_green":3.0,"clay_brown":3.0,"bark_brown":2.0,"pale_green":1.5},
+    "eyeColor": {"star_silver":2.5,"cosmic":2.5,"moonlight":2.0,"topaz":1.5,"aquamarine":1.5,"forest_green":2.5,"white_opaque":2.5,"smoky_quartz":2.0},
+    "defaultClothes": {"spirit_silk":2.5,"spirit_leaf_dress":2.0,"cloud_pattern_robe":2.0,"moonlight_gown":1.5,"water_silk":1.5},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":1.5,"serene":1.5,"lazy":2.5,"grim":2.5,"stoic":2.0,"vicious":2.0},
+    "impression": {"ethereal":3.0,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":1.5,"sickness":2.5,"wild":2.0,"ghostly":1.5},
+    "eyebrowShape": {"faint":2.5,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":1.5},
+    "noseShape": {"elemental_nose":3.0,"delicate":1.5,"straight":1.5},
+    "bodyType": {"gnarled_tough":3.0,"bulky_massive":3.0,"solid_robust":2.5,"compact_dense":1.5,"soft_round":2.5,"hunched":2.0,"plump_soft":2.0},
+    "heightDesc": {"barrel_frame":2.5,"towering_2m":2.0,"solid_build":2.0,"medium_short":1.5},
+    "hairStyle": {"bald":3.0,"messy_bun":1.5},
+    "faceFeature": {"bark_skin":2.5,"gills":2.0,"green_face":2.5,"veins":1.5},
+    "faceShape": {"round":2.5,"stone_face":2.0,"broad":1.5},
+    "eyeShape": {"toad_eye":3.0,"empty_eye":2.5,"deep_set":1.5},
+    "lipShape": {"wide_lip":2.5,"warped_lip":2.5,"fish_lip":2.0},
+    "defaultWeapon": {"none":3.0,"pole":3.0},
+    "defaultAccessories": {"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent"],
+    "defaultWeapon": ["flying_sword","bow","throwing_knives","wind_shuriken"],
+    "bodyType": ["svelte_elegant","pin_thin","lithe_agile","willowy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; shapeless mass of mud and rotting leaves, dripping ooze, sucking swamp stench; elemental spirit art, glowing energy body"
+}

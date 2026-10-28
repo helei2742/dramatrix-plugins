@@ -1,0 +1,33 @@
+{
+  "archetype": "bartender_waste",
+  "name": "废土酒保",
+  "visualTags": "wasteland bartender, makeshift bar, moonshine, tavern keeper, listener, worn rag, mysterious, post-apocalyptic saloon",
+  "description": "末世酒保，在废土酒吧中为旅人斟上自酿烈酒，倾听每个疲惫灵魂的故事",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"athletic_toned":2.5,"lean_fit":2.5,"slim":2.5,"soft_round":2.0,"stocky_strong":2.5,"svelte_elegant":2.0,"chiseled_fit":2.0},
+    "temperament": {"jovial":3.0,"shrewd":3.0,"warm":3.0,"worldly_wise":3.0,"calm":2.5,"silver_tongued":2.5,"cynical":2.0,"charismatic":2.5,"observant":3.0,"adaptable":2.5,"hardened":2.0},
+    "hairStyle": {"short_crop":2.5,"slicked_back":2.5,"messy_medium":2.5,"half_up":2.5,"low_ponytail":2.5,"choppy_short":2.5,"side_part_long":2.0,"bandana_wrap":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"gray":2.5,"salt_pepper":2.5,"auburn":2.0,"chestnut":2.5,"dusty_brown":2.0,"jet_black":2.0},
+    "defaultClothes": {"tattered_jacket":3.0,"dust_cloak_worn":2.5,"survivor_hoodie_worn":2.5,"patched_denim_suit":3.0,"merchant_patchwork_robe":2.5,"wasteland_duster":2.0,"scavenger_harness":1.5,"leather_armor_improvised":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":3.0,"gray":2.5,"amber":2.5,"green":2.0,"black":2.0,"shrewd_blue":2.5,"honey":2.0},
+    "skinColor": {"light_tan":2.5,"tan":2.5,"fair":2.5,"olive":2.5,"weathered_tan":2.5,"rose_white":2.0,"honey_tan":2.5,"sun_kissed":2.0},
+    "eyeShape": {"almond":3.0,"sharp_phoenix":2.5,"deep_set":2.5,"tiger":2.0,"round":2.0,"peach_blossom":2.5,"downturned":2.0,"shrewd":2.5},
+    "eyebrowShape": {"willow":2.5,"crescent":2.5,"straight":2.5,"long_eyebrow":2.5,"silkworm":2.0,"curved_fine":2.0,"auspicious_brow":2.0,"angular":2.0},
+    "faceShape": {"oval":3.0,"round":2.5,"seed_face":2.5,"heart":2.5,"square":2.0,"rectangular":2.0,"bamboo_leaf_face":2.0,"jade_mirror":2.5},
+    "faceFeature": {"none":2.5,"clean_shaven":2.5,"beard_stubble":2.5,"dimples":2.5,"scar":2.0,"ruddy":2.0,"sharp_features":2.0,"high_cheekbones":2.0},
+    "impression": {"worldly":3.0,"warm":2.5,"shrewd":2.5,"approachable":3.0,"silver_tongued":2.5,"jovial":2.5,"weathered":2.0,"kind_heart":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","axe"],
+    "defaultAccessories": ["spirit_beast_bag","military_seal","buddha_beads","phoenix_hairpin","hair_crown"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","dao_bun","child_tuft"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier","spirit_silk","dragon_robe"],
+    "temperament": ["innocent","naive","brutal","savage","unhinged","reckless","feral","lazy","haughty"],
+    "bodyType": ["bulky_massive","towering_giant","pin_thin","delicate_frail","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland bartender, {ageDesc}, {bodyType} build, {faceDesc}, wearing worn jacket and patched denim, wiping glass with rag behind makeshift bar counter, bottles of moonshine, {hairStyle} {hairColor} hair, {eyeColor} knowing eyes, {skinColor} skin, {temperament} aura, dimly lit post-apocalyptic tavern, salvaged furniture, weary patrons, warm lantern glow, photorealistic, atmospheric, masterpiece"
+}

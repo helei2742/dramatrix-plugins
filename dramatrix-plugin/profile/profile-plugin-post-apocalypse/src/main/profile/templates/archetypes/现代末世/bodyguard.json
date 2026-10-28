@@ -1,0 +1,33 @@
+{
+  "archetype": "bodyguard",
+  "name": "保镖",
+  "visualTags": "wasteland bodyguard, protector, muscular, tactical gear, alert, intimidating, loyal, post-apocalyptic mercenary guard",
+  "description": "末世保镖，以武力在废土中保护雇主安全，沉默寡言却绝对可靠，警觉而强悍",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"tall_athletic":3.0,"stocky_strong":3.0,"chiseled_fit":2.5,"broad_shouldered":3.0,"barrel_chested":2.5,"heroic_figure":2.0,"athletic_toned":2.0},
+    "temperament": {"silent":3.0,"vigilant":3.0,"intimidating":3.0,"loyal":3.0,"stoic":2.5,"stern":2.5,"hardened":3.0,"disciplined":2.5,"fierce":2.5,"cold":2.0,"ruthless":2.0},
+    "hairStyle": {"buzz_cut":3.0,"short_crop":3.0,"slicked_back":2.5,"shaved_sides":2.5,"choppy_short":2.0,"topknot_loose":2.0,"low_ponytail":1.5,"warrior_braid":1.5},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"charcoal":2.0,"gray":1.5,"faded_black":2.0,"salt_pepper":1.5,"dusty_brown":1.5},
+    "defaultClothes": {"tactical_vest_light":3.0,"biker_leather_armor":3.0,"scrap_metal_armor":2.5,"reinforced_trench_coat":3.0,"ammo_belt_bandolier":2.5,"military_fatigues":2.5,"leather_armor_improvised":2.5,"road_warrior_gear":2.0},
+    "eyeColor": {"dark_brown":3.0,"steel_gray":3.0,"black":2.5,"gray":2.5,"smoky_quartz":2.0,"cold_blue":2.5,"hazel":1.5,"amber":1.5},
+    "skinColor": {"tan":3.0,"weathered_tan":3.0,"olive":2.5,"sun_kissed":2.5,"light_tan":2.0,"dusty_tan":2.0,"fair":1.0,"bronze":2.0},
+    "eyeShape": {"tiger":3.0,"eagle":3.0,"deep_set":3.0,"narrow":2.5,"sharp_phoenix":2.0,"dragon":2.0,"almond":1.5,"hunter":2.5},
+    "eyebrowShape": {"steel_brow":3.0,"thick":3.0,"knitted":2.5,"straight":2.5,"sword":2.5,"angular":2.0,"hero_eyebrow":2.0,"rugged":2.0},
+    "faceShape": {"square":3.0,"stone_face":3.0,"strong_jawline":3.0,"chiseled":2.5,"rectangular":2.5,"pentagon":2.5,"angular":2.0,"round":1.0},
+    "faceFeature": {"scar":3.0,"strong_jaw":3.0,"broken_nose":2.5,"beard_stubble":2.5,"none":1.0,"cauliflower_ear":2.5,"sharp_features":2.0,"weathered":2.0},
+    "impression": {"intimidating":3.0,"silent":3.0,"dangerous":2.5,"imposing":3.0,"loyal":2.5,"cold":2.5,"hardened":3.0,"fierce":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","hairpin"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","silk_embroider"],
+    "temperament": ["innocent","naive","seductive","flamboyant","carefree","lazy","jovial","wistful","cheerful"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","pin_thin","gangly","slim"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland bodyguard, {ageDesc}, {bodyType} intimidating muscular build, {faceDesc}, wearing reinforced tactical gear and leather armor, scarred face, imposing stance, {hairStyle} {hairColor} hair, {eyeColor} cold vigilant eyes, {skinColor} battle-worn skin, {temperament} aura, dimly lit wasteland bar or settlement street, scanning for threats, photorealistic, intense, masterpiece"
+}

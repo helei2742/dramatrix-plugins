@@ -1,0 +1,33 @@
+{
+  "archetype": "explorer",
+  "name": "探索者",
+  "visualTags": "wasteland explorer, adventurer, expedition gear, map, binoculars, rugged terrain, curious, brave, post-apocalyptic",
+  "description": "末世探索者，深入未知废土探寻新天地，绘制荒芜世界的版图，勇敢而充满好奇心",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"athletic_toned":3.0,"lean_fit":3.0,"tall_athletic":2.5,"lean_wiry":2.5,"runner_lean":3.0,"medium":2.0,"broad_shouldered":2.0,"slender_tall":2.5},
+    "temperament": {"curious":3.0,"bold":3.0,"adventurous":3.0,"plucky":2.5,"resilient":2.5,"steadfast":2.5,"zealous":2.0,"observant":2.5,"hardened":2.0,"adaptable":2.0,"cheerful":1.5},
+    "hairStyle": {"short_crop":2.5,"choppy_short":2.5,"tied_back_loose":2.5,"half_up":2.0,"low_ponytail":2.5,"messy_medium":2.5,"bandana_wrap":2.5,"high_ponytail":2.0},
+    "hairColor": {"dark_brown":3.0,"dusty_brown":2.5,"black":2.5,"dirty_blonde":2.5,"ash_brown":2.0,"chestnut":1.5,"auburn":1.5,"faded_black":2.0},
+    "defaultClothes": {"wasteland_ranger_coat":3.0,"scavenger_harness":3.0,"tactical_vest_light":3.0,"wasteland_duster":2.5,"dust_cloak_worn":2.0,"tattered_jacket":2.0,"reinforced_trench_coat":2.0,"survivor_hoodie_worn":1.5},
+    "eyeColor": {"dark_brown":2.5,"hazel":2.5,"green":2.5,"keen_blue":2.5,"amber":2.0,"gray":2.0,"black":1.5,"deep_blue":2.0},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":2.5,"tan":2.5,"olive":2.0,"light_tan":2.0,"dusty_tan":2.5,"honey_tan":2.0,"fair":1.5},
+    "eyeShape": {"eagle":3.0,"almond":2.5,"keen":3.0,"sharp_phoenix":2.5,"deep_set":2.0,"tiger":2.0,"farseeing":2.5,"round":1.5},
+    "eyebrowShape": {"thick":2.5,"hero_eyebrow":3.0,"straight":2.5,"chivalrous_brow":2.5,"steel_brow":2.5,"rugged":2.0,"angular":1.5,"sword":2.0},
+    "faceShape": {"chiseled":2.5,"angular":2.5,"strong_jawline":2.5,"oval":2.0,"rectangular":2.0,"square":2.0,"stone_face":1.5,"pentagon":1.5},
+    "faceFeature": {"none":2.0,"clean_shaven":2.0,"scar":2.5,"strong_jaw":2.5,"beard_stubble":2.5,"weathered":2.5,"high_cheekbones":2.0,"sharp_features":2.0},
+    "impression": {"bold":3.0,"adventurous":3.0,"resolute":2.5,"weathered":2.5,"heroic":2.0,"determined":2.0,"keen":2.5,"hardened":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","bald"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress"],
+    "temperament": ["innocent","naive","lazy","seductive","decadent","unhinged","sinister","wistful"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump","pin_thin"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland explorer adventurer, {ageDesc}, {bodyType} athletic build, {faceDesc}, wearing expedition gear with tactical vest and rugged coat, carrying map and binoculars, {hairStyle} {hairColor} hair, {eyeColor} keen observant eyes, {skinColor} weathered skin, {temperament} aura, vast uncharted wasteland, rocky terrain, abandoned ruins in distance, looking toward horizon, photorealistic, adventurous, masterpiece"
+}

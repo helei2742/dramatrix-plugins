@@ -1,0 +1,47 @@
+{
+  "archetype": "cyber_assassin",
+  "category": "赛博朋克",
+  "name": "赛博刺客",
+  "visualTags": "刺客, 潜行, 致命",
+  "description": "不存在于监控里的影子，刀过无痕。",
+  "defaults": {
+    "defaultWeapon": [
+      "mantis_blade_w"
+    ],
+    "cyberImplant": [
+      "mantis_blade",
+      "optic_camouflage",
+      "kerenzikov"
+    ],
+    "temperament": [
+      "cold"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "mantis_blade_w": 3.0
+    },
+    "cyberImplant": {
+      "mantis_blade": 3.0,
+      "optic_camouflage": 2.5,
+      "kerenzikov": 2.5
+    },
+    "impression": {
+      "chrome_aloof": 2.5,
+      "steel_cold": 2.5
+    },
+    "temperament": {
+      "cold": 2.5
+    }
+  },
+  "exclude": {
+    "defaultWeapon": [
+      "heavy_smg",
+      "railgun"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

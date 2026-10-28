@@ -1,0 +1,26 @@
+{
+  "archetype": "commoner",
+  "name": "平民",
+  "visualTags": "平民,农夫",
+  "description": "普通人，日出而作日落而息",
+  "defaults": {
+    "defaultAccessories": ["none","hat"],
+    "defaultWeapon": ["none","hoe","pole"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":2.0,"plump":1.5,"lean_fit":1.5,"stocky_strong":1.5,"plump_soft":1.2,"barrel_chested":1.0,"petite_curvy":1.0,"soft_round":1.2,"delicate_frail":0.8},
+    "temperament": {"warm":1.5,"innocent":1.2,"gentle":1.5,"stoic":1.2,"cheerful":1.2,"sincere":1.5,"jovial":1.5,"humble":1.5,"amiable":1.5,"plucky":1.2,"pragmatic":1.2,"naive":1.0,"weary":1.2,"hopeful":1.2,"gruff":1.2,"serene":1.0,"bold":1.2,"fierce":0.8,"solemn":0.8,"wistful":1.0,"altruistic":1.2,"dignified":1.0},
+    "hairStyle": {"simple_tie":1.5,"short_crop":1.5,"half_up":1.5,"double_bun":1.2,"braided":1.2,"flowing_long":1.0,"messy_bun":1.2,"choppy_short":1.2,"buzz_cut":1.0,"bangs_short":1.0,"short_wavy":1.0,"twin_tails":0.8},
+    "defaultClothes": {"hemp_cloth":2.0,"linen_simple":2.0,"cotton_hanfu":2.0,"blue_robe":1.0,"ochre_hemp_tunic":1.5,"indigo_dyed_cotton":1.5,"bamboo_hat_cape":1.0,"travelers_cloak":1.0,"slate_gray_cloak":1.0,"patchwork_rags":0.5,"willow_cotton":0.5,"straw_mino_cape":0.5,"cotton_jinbei":0.5,"woolen_travel_cloak":1.0,"charcoal_hooded_cloak":0.5,"russet_leather_armor":0.3,"training_gear":0.5,"black_night":0.3},
+    "eyeShape": {"round":1.5,"almond":1.5,"peach_blossom":1.0,"fish":1.0,"laughter_eye":1.0,"downturned":1.0,"puffy":0.8,"rabbit_eye":0.8},
+    "eyebrowShape": {"silkworm":1.5,"straight":1.5,"thick":1.2,"willow":1.0,"short_eyebrow":1.0,"shuttle_brow":1.0,"splayed":0.8,"hanging_brow":0.5},
+    "faceShape": {"round":1.5,"pear":1.2,"oval":1.5,"square":1.2,"seed_face":1.0},
+    "faceFeature": {"none":1.5,"freckles":1.2,"ruddy":1.5,"dimples":1.0},
+    "impression": {"loyal":1.5,"weathered":1.5,"delicate":1.0,"resolute":1.0,"simple":1.5,"affable":1.5,"sunny":1.5,"humble":1.2,"gentle":1.2,"benevolent":1.2,"dignified":1.0,"carefree":1.0,"intellectual":0.8}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","ring","belt_jade"],
+    "defaultWeapon": ["flying_sword","jade_ruyi"]
+  },
+  "templateFluxPrompt": "a {gender} commoner, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

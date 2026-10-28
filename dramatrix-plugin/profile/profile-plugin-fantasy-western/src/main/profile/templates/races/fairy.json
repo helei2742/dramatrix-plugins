@@ -1,0 +1,29 @@
+{
+  "race": "fairy",
+  "displayName": "仙灵",
+  "description": "体型娇小的有翼仙灵，天生拥有薄如蝉翼的翅膀，居于花丛仙境之中",
+  "defaults": {
+    "skinColor": ["porcelain","fair","ivory","peach","alabaster"],
+    "eyeColor": ["violet","emerald","sapphire","pearl","amber"],
+    "hairColor": ["golden","silver","platinum","honey","light_pink"],
+    "bodyType": ["petite","ethereal_light","slim","willowy"]
+  },
+  "weightBias": {
+    "skinColor": {"porcelain":2.5,"peach":2.0,"alabaster":2.0},
+    "eyeColor": {"violet":2.5,"emerald":2.5,"pearl":2.5},
+    "hairColor": {"golden":2.5,"silver":2.5,"honey":2.0},
+    "bodyType": {"petite":2.5,"ethereal_light":2.5},
+    "eyeShape": {"round":2.5,"almond":2.5,"fox":2.0},
+    "eyebrowShape": {"willow":2.5,"long_eyebrow":2.0},
+    "impression": {"ethereal":2.5,"delicate":2.5,"innocent":2.5},
+    "temperament": {"ethereal":2.5,"innocent":2.5,"gentle":2.0}
+  },
+  "exclude": {
+    "skinColor": ["dark","swarthy","bronze","rocky"],
+    "eyeColor": ["dark_brown","obsidian","black"],
+    "hairColor": ["gray","ash_gray"],
+    "bodyType": ["muscular_broad","hulking","tall_athletic","plump","stocky"],
+    "temperament": ["overbearing","cold","sinister","wild"]
+  },
+  "templateFluxPrompt": "a tiny fairy {gender}, {ageDesc}, {bodyType}, {faceDesc} with delicate translucent wings, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

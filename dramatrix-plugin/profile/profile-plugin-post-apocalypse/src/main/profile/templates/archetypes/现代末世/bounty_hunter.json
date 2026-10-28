@@ -1,0 +1,33 @@
+{
+  "archetype": "bounty_hunter",
+  "name": "赏金猎人",
+  "visualTags": "wasteland bounty hunter, mercenary, dangerous, rugged, wanted posters, tracker, lone wolf, post-apocalyptic gunman",
+  "description": "末世赏金猎人，追捕逃犯换取赏金，独来独往的荒野执法者，冷酷而高效",
+  "defaults": {
+    "defaultAccessories": ["none","ring","eye_patch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_wiry":3.0,"chiseled_fit":3.0,"tall_athletic":2.5,"athletic_toned":2.5,"lean_fit":3.0,"broad_shouldered":2.5,"slender_tall":2.5,"medium":1.5},
+    "temperament": {"ruthless":3.0,"loner":3.0,"hardened":3.0,"patient":2.5,"wary":2.5,"cold":2.5,"calculating":3.0,"fierce":2.0,"pragmatic":2.0,"cynical":2.5,"intimidating":2.5},
+    "hairStyle": {"choppy_short":2.5,"slicked_back":2.5,"messy_medium":2.5,"low_ponytail":2.5,"tied_back_loose":2.5,"short_crop":2.0,"unkempt_long":2.0,"warrior_braid":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"jet_black":2.5,"dusty_brown":2.5,"faded_black":2.0,"charcoal":2.0,"gray_streaked":2.0,"ash_brown":1.5},
+    "defaultClothes": {"wasteland_duster":3.0,"biker_leather_armor":3.0,"ammo_belt_bandolier":3.0,"road_warrior_gear":2.5,"leather_armor_improvised":2.5,"tactical_vest_light":2.5,"reinforced_trench_coat":2.0,"tattered_jacket":1.5},
+    "eyeColor": {"steel_gray":3.0,"cold_blue":3.0,"dark_brown":2.5,"hazel":2.0,"smoky_quartz":2.5,"amber":2.5,"black":2.0,"pale_blue":2.0},
+    "skinColor": {"weathered_tan":3.0,"tan":3.0,"sun_kissed":2.5,"olive":2.5,"leathery_tan":2.5,"light_tan":2.0,"dusty_tan":2.5,"fair":1.0},
+    "eyeShape": {"eagle":3.0,"narrow":3.0,"hunter":3.0,"deep_set":2.5,"sharp_phoenix":2.5,"tiger":2.0,"dragon":1.5,"almond":1.5},
+    "eyebrowShape": {"furrowed":3.0,"knitted":3.0,"steel_brow":2.5,"angular":2.5,"thick":2.0,"straight":2.0,"rugged":2.0,"hero_eyebrow":1.5},
+    "faceShape": {"angular":3.0,"chiseled":3.0,"gaunt":2.5,"strong_jawline":3.0,"weathered":2.5,"rectangular":2.5,"square":2.0,"pentagon":2.0},
+    "faceFeature": {"scar":3.0,"beard_stubble":3.0,"sharp_features":2.5,"weathered":2.5,"broken_nose":2.0,"hollow_cheeks":2.0,"none":1.0,"strong_jaw":2.5},
+    "impression": {"cold":3.0,"dangerous":3.0,"ruthless":3.0,"shadowed":2.5,"hardened":2.5,"weathered":2.5,"mysterious":2.0,"predatory":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","coral_pink_dress"],
+    "temperament": ["innocent","naive","seductive","flamboyant","carefree","jovial","cheerful","wistful","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","soft_round","plump","pin_thin"]
+  },
+  "templateFluxPrompt": "a {gender} post-apocalyptic bounty hunter, {ageDesc}, {bodyType} lean dangerous build, {faceDesc}, wearing worn leather duster and tactical vest, bandolier across chest, wanted poster in hand, {hairStyle} {hairColor} windblown hair, {eyeColor} cold piercing eyes, {skinColor} weathered skin, {temperament} aura, abandoned frontier town, dusty main street, lone figure, harsh sunlight, photorealistic, western-noir, masterpiece"
+}

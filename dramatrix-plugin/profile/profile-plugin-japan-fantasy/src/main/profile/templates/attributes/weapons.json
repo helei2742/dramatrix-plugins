@@ -1,0 +1,8 @@
+{
+  "attribute": "defaultWeapon",
+  "displayName": "默认武器",
+  "options": [
+    {"id":"staff","value":"法杖","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","精灵","灵族","魔族"],"archetypeTags":["mage"],"ageTags":[],"tags":["法杖","魔法","施法"]},
+    {"id":"bow","value":"长弓","genderBias":{"男":1.5,"女":1.0},"raceTags":["精灵","人族","妖族"],"archetypeTags":["beast_tamer","rogue"],"ageTags":[],"tags":["弓箭","远程","猎手"]}
+  ]
+}

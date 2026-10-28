@@ -1,0 +1,34 @@
+{
+  "archetype": "mon_dire_bear",
+  "name": "巨熊",
+  "visualTags": "厚重熊掌,棕褐硬毛,立身咆哮,断木如柴",
+  "description": "站起来足有两人高的荒野巨熊，一掌拍下碗口粗的树应声折断",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"prime_age":2.0,"thirty_mid":1.5,"century_old":1.5},
+    "hairColor": {"dark_brown":3.0,"charcoal":2.0,"sand_blond":2.0,"silver":1.5,"auburn":1.5,"jet_black":1.5,"chestnut":2.5},
+    "skinColor": {"bark_brown":3.0,"weathered_tan":2.0,"swarthy":2.0,"scaly_green":1.5,"clay_brown":2.5},
+    "eyeColor": {"slit_pupil_gold":3.0,"amber":2.5,"sunflower":2.0,"forest_green":1.5,"copper":1.5},
+    "defaultClothes": {"wild_beast_skin":3.0,"hunters_garb":2.0,"patchwork_rags":1.5,"feather_cloak":1.5,"leather_armor":1.5},
+    "temperament": {"wild":3.0,"fierce":2.5,"brutal":3.0,"volatile":2.5,"paranoid":1.5,"gruff":2.5,"stoic":1.5},
+    "impression": {"wild":2.5,"fierce":3.0,"bloodthirsty":2.0,"lynx_eye":1.5,"domineering":2.5},
+    "eyebrowShape": {"tiger_eyebrow":2.5,"rugged":2.0,"thick":2.0,"wire_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5},
+    "heightDesc": {"giant_towering":3.5,"towering_2m":2.5,"cloud_reaching":1.5},
+    "faceShape": {"wolf_face":2.5,"tiger_face":2.0,"bear_face":3.5,"broad":2.5,"round":1.5},
+    "eyeShape": {"beast_eye":3.0,"vertical_pupil_eye":2.0,"wolf":2.0,"triangle":1.5},
+    "faceFeature": {"fur_face":3.5,"broad_jaw":2.5,"thick_neck":3.0},
+    "lipShape": {"beast_lip":3.0,"toothed_lip":2.5,"fanged_lip":2.0},
+    "noseShape": {"wolf_nose":2.5,"wide_nostrils":2.5,"broad_flat":3.0,"lion":1.5},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":2.0,"warrior_braid":1.5},
+    "defaultWeapon": {"claws":3.0,"none":3.0,"war_hammer":3.0},
+    "defaultAccessories": {"none":2.5,"bone_necklace":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","folding_fan","scroll_tube"],
+    "temperament": ["scholarly","eloquent","dignified","demure"],
+    "hairStyle": ["updo_elegant","phoenix_crown","braid_crown"],
+    "defaultWeapon": ["throwing_knives","poison_needle","wind_shuriken","guqin"],
+    "bodyType": ["pin_thin","delicate_frail","lithe_agile","petite_curvy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; towering brown-furred bear form, massive paws, thunderous roar; wild beast monster concept art, savage wilderness"
+}

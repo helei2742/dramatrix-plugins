@@ -1,0 +1,33 @@
+{
+  "archetype": "barista",
+  "name": "咖啡师",
+  "visualTags": "modern barista, coffee shop, apron, espresso machine, hipster, warm, artisan",
+  "description": "现代咖啡师，萃取醇香的手艺人，在咖啡香气中为都市人调制温暖",
+  "defaults": {
+    "defaultAccessories": ["ring","none","hair_ribbon","headband"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"medium":2.5,"lean_fit":2.5,"willowy":2.0,"lean_wiry":1.5,"athletic_toned":1.5,"svelte_elegant":2.0,"soft_round":1.0},
+    "temperament": {"warm":3.0,"cheerful":3.0,"gentle":2.5,"crafty":2.0,"tranquil":2.5,"amiable":3.0,"free_spirited":2.0,"eloquent":2.0,"subdued":1.5,"flamboyant":1.5,"jovial":2.0,"whimsical":2.0,"serene":2.0,"radiant":2.0},
+    "hairStyle": {"half_up":2.5,"choppy_short":2.5,"simple_tie":2.5,"messy_bun":2.5,"topknot_loose":2.5,"short_crop":2.0,"bangs_short":2.0,"loose_half_up":2.5,"braided":2.0,"wavy_long":2.0,"loose_curls":1.5},
+    "hairColor": {"black":2.5,"dark_brown":3.0,"chestnut":2.5,"light_brown":2.0,"auburn":2.0,"honey_blond":1.5,"ash_blond":1.5,"copper":1.5,"jet_black":2.0},
+    "defaultClothes": {"linen_simple":3.0,"cotton_hanfu":2.5,"indigo_dyed_cotton":2.0,"ochre_hemp_tunic":2.5,"slate_gray_cloak":1.5,"blue_robe":2.0,"ink_wash_robe":1.5,"charcoal_hooded_cloak":1.5,"hemp_cloth":2.0,"green_robe":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.5,"honey":2.5,"amber":2.0,"forest_green":1.5,"topaz":1.5,"turquoise":1.5},
+    "skinColor": {"fair":2.5,"light_tan":2.5,"ivory":2.5,"tan":2.0,"sun_kissed":2.0,"olive":1.5,"rose_white":1.5,"wheat":1.5},
+    "eyeShape": {"round":2.5,"almond":3.0,"peach_blossom":2.5,"swallow":2.5,"fish":1.5,"laughter_eye":2.5,"fox":2.0,"sharp_phoenix":1.5},
+    "eyebrowShape": {"silkworm":2.5,"straight":2.5,"crescent":2.5,"curved_fine":2.5,"willow":2.0,"feathered":2.0,"distant_mountain":1.5,"shuttle_brow":2.0},
+    "faceShape": {"oval":3.0,"round":2.5,"seed_face":2.5,"heart":2.0,"wind_face":2.0,"jade_plate":1.5,"cat_face":1.5,"almond":2.0},
+    "faceFeature": {"none":2.5,"freckles":2.0,"dimples":2.5,"beauty_mark":1.5,"spectacles":1.0,"clean_shaven":2.0,"ruddy":1.5,"delicate_features":2.0},
+    "impression": {"warm":3.0,"gentle":3.0,"delicate":2.5,"free_spirit":2.5,"sunny":3.0,"affable":2.5,"refined":2.0,"simple":1.5,"loyal":1.5,"handsome":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal"],
+    "hairStyle": ["bald","buzz_cut","wild_mane","dao_bun","warrior_topknot","wolf_tail","warrior_braid","savage_bun","child_tuft","immortal_bun","phoenix_crown"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","leather_armor","scale_armor","training_gear","bamboo_hat_cape","wild_beast_skin","patchwork_rags","battle_skirt","crusader_white_surcoat"],
+    "temperament": ["sinister","brutal","reckless","overbearing","unhinged","haughty","arrogant","vicious","grim","cold"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","bulky_massive","chiseled_fit","broad_shouldered"]
+  },
+  "templateFluxPrompt": "a {gender} modern barista coffee artisan, {ageDesc}, {bodyType} build, {faceDesc}, wearing a casual apron over comfortable clothes, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern cozy coffee shop, espresso machine, latte art, warm ambient lighting, indie cafe vibe, photorealistic, masterpiece"
+}

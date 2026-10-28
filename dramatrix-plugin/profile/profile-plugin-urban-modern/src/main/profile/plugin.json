@@ -1,0 +1,14 @@
+{
+  "name": "urban-modern",
+  "displayName": "现代都市",
+  "version": "1.0.0",
+  "author": "dramatrix",
+  "description": "现代都市题材：都市传奇、吸血鬼日记、超自然悬疑",
+  "enabled": true,
+  "order": 400,
+  "templateDir": "templates",
+  "merge": {
+    "defaultMode": "REPLACE",
+    "perFile": {"dimensions/impression.json":"MERGE","dimensions/lip_shape.json":"MERGE","dimensions/eye_shape.json":"MERGE","dimensions/eyebrow_shape.json":"MERGE","dimensions/nose_shape.json":"MERGE","dimensions/face_feature.json":"MERGE","dimensions/face_shape.json":"MERGE","attributes/skin_color.json":"MERGE","attributes/body_type.json":"MERGE","attributes/age_desc.json":"MERGE","attributes/accessories.json":"MERGE","attributes/weapons.json":"MERGE","attributes/hair_style.json":"MERGE","attributes/hair_color.json":"MERGE","attributes/eye_color.json":"MERGE","attributes/clothes.json":"MERGE","attributes/temperament.json":"MERGE","attributes/height_desc.json":"MERGE","constraints.json":"MERGE","generator_config.json":"MERGE"}
+  }
+}

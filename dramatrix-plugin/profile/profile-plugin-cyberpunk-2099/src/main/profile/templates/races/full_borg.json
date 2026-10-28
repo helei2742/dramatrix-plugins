@@ -1,0 +1,78 @@
+{
+  "race": "full_borg",
+  "displayName": "全身义体人",
+  "description": "除大脑外几乎全数替换为军用义体的人类，肉体已成 chassis，力量与耐久远超常人。",
+  "defaults": {
+    "skinColor": [
+      "chrome_skin",
+      "synthetic_pale"
+    ],
+    "faceShape": [
+      "synth_mold_face",
+      "hex_plate_face"
+    ],
+    "eyeColor": [
+      "optic_red",
+      "cyber_yellow"
+    ],
+    "chromeSignature": [
+      "full_chrome_mask",
+      "half_skull_plate",
+      "jawline_chrome"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "chrome_skin": 3.0,
+      "synthetic_pale": 1.5
+    },
+    "faceShape": {
+      "synth_mold_face": 2.5,
+      "hex_plate_face": 2.5
+    },
+    "chromeSignature": {
+      "full_chrome_mask": 3.0,
+      "half_skull_plate": 2.5,
+      "jawline_chrome": 2.0
+    },
+    "bodyType": {
+      "heavy_frame": 2.5,
+      "augmented_bulk": 2.5,
+      "bulky": 2.0
+    },
+    "impression": {
+      "machine_calm": 2.5,
+      "war_hardened": 2.0
+    }
+  },
+  "exclude": {
+    "chromeSignature": [
+      "natural_face",
+      "cheek_led_strip",
+      "faint_seam_glow"
+    ],
+    "faceShape": [
+      "clean_oval",
+      "soft_diamond",
+      "porcelain_shell"
+    ],
+    "impression": [
+      "neon_glam",
+      "idol_radiance",
+      "magnetic_charm"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "fully mechanized chassis with exposed plating",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "几乎全机械，禁用自然脸型与柔美印象"
+    },
+    {
+      "description": "体型强制重型化"
+    }
+  ]
+}

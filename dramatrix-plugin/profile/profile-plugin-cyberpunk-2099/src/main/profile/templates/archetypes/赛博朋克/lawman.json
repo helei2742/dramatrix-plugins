@@ -1,0 +1,43 @@
+{
+  "archetype": "lawman",
+  "category": "赛博朋克",
+  "name": "警察",
+  "visualTags": "警察, 秩序, 执法",
+  "description": "在腐败街区维持秩序的蓝衣执法者。",
+  "defaults": {
+    "defaultWeapon": [
+      "smart_pistol"
+    ],
+    "defaultClothes": [
+      "kevlar_vest"
+    ],
+    "temperament": [
+      "stoic"
+    ]
+  },
+  "weightBias": {
+    "defaultWeapon": {
+      "smart_pistol": 3.0
+    },
+    "defaultClothes": {
+      "kevlar_vest": 2.5
+    },
+    "impression": {
+      "war_hardened": 2.5,
+      "steel_cold": 2.0
+    },
+    "temperament": {
+      "stoic": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "manic",
+      "playful"
+    ],
+    "defaultClothes": [
+      "latex_catsuit"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

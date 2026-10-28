@@ -1,0 +1,29 @@
+{
+  "ageGroup": "immortal",
+  "displayName": "长生者",
+  "ageRange": "80岁以上不限",
+  "defaults": {
+    "ageDesc": ["不知年岁","寿元无尽","与天同寿","活过无数纪元","岁月不侵","长生久视"],
+    "heightDesc": ["身形颀长","仙风道骨","飘然出尘","中等身材"],
+    "bodyType": ["ethereal_light","slender_tall","slim","lithe"]
+  },
+  "weightBias": {
+    "faceShape": {"oval":2.5,"almond":2.0,"diamond":1.5,"heart":1.0,"seed_face":1.5},
+    "eyeShape": {"phoenix":2.5,"crane":2.0,"sharp_phoenix":2.0,"dragon":1.5,"deep_set":1.5,"fox":1.0,"starry":1.0},
+    "lipShape": {"rose":2.0,"bow":1.5,"defined":1.5,"cherry":1.0},
+    "noseShape": {"straight":2.5,"delicate":2.0,"aquiline":1.5,"water_drop":1.0},
+    "faceFeature": {"none":3.0,"beauty_mark":1.5,"tear_mole":1.5},
+    "impression": {"ethereal":4.0,"majestic":2.5,"serene":2.5,"refined":2.0,"delicate":1.5,"scholarly":1.5},
+    "temperament": {"ethereal":4.0,"calm":3.0,"majestic":2.5,"aloof":1.5,"stoic":2.0,"benevolent":1.5,"serene":2.0,"warm":1.0},
+    "hairColor": {"white":3.0,"silver":3.5,"frost_white":3.0,"platinum":1.5,"ink_black":1.0,"ash_gray":0.5},
+    "bodyType": {"ethereal_light":3.5,"slender_tall":2.5,"slim":2.0,"lithe":2.0,"willowy":1.5}
+  },
+  "exclude": {
+    "temperament": ["innocent","timid","cheerful","reckless","arrogant","sly","obsessive","ruthless","sinister","cunning"],
+    "faceFeature": ["beard_full","beard_goatee","beard_mustache","beard_stubble","nasolabial_folds","wrinkles","freckles","ruddy","rosacea","scar","birthmark","age_spots"],
+    "bodyType": ["muscular_broad","stocky","hulking","hefty","compact","plump","curvy","petite"],
+    "impression": ["weathered","innocent","wild","shrewd"],
+    "hairColor": ["red","honey","copper"]
+  },
+  "fluxAgeDesc": "ageless immortal with ancient eyes"
+}

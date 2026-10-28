@@ -1,0 +1,42 @@
+{
+  "archetype": "data_courier",
+  "category": "赛博朋克",
+  "name": "数据信使",
+  "visualTags": "信使, 速度, 神经",
+  "description": "把机密塞进神经、比子弹更快的活体U盘。",
+  "defaults": {
+    "defaultClothes": [
+      "netrunner_suit"
+    ],
+    "cyberImplant": [
+      "kerenzikov",
+      "reflex_booster"
+    ],
+    "temperament": [
+      "reckless"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "netrunner_suit": 2.5
+    },
+    "cyberImplant": {
+      "kerenzikov": 3.0,
+      "reflex_booster": 2.5
+    },
+    "impression": {
+      "speed_wired": 3.0,
+      "underground_defiant": 2.0
+    },
+    "temperament": {
+      "reckless": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "calm",
+      "zen"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

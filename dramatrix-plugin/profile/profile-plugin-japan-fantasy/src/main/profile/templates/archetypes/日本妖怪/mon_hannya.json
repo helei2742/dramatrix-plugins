@@ -1,0 +1,31 @@
+{
+  "archetype": "mon_hannya",
+  "name": "般若",
+  "visualTags": "般若鬼面,金角外张,长发披散,妒火焚心",
+  "description": "妒恨化鬼的女性怨灵，面如般若、双角外张，泣声中带着笑",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":3.5,"white":2.0,"crimson":2.0,"silver":1.5,"midnight_blue":1.5,"charcoal":1.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.5,"snow_white":2.0,"fiery_red":1.5,"pale_ash":2.0},
+    "eyeColor": {"blood_red":2.5,"golden":3.0,"slit_pupil_gold":2.0,"obsidian":1.5,"ice_blue":1.5,"white_opaque":1.5},
+    "defaultClothes": {"indigo_kimono":2.5,"white_haori_overcoat":1.5,"crimson_hakama_pants":2.0,"straw_mino_cape":1.5,"onmyoji_hunting_robe":1.5,"blood_dress":2.5},
+    "temperament": {"mysterious":3.0,"vicious":3.0,"cold":2.0,"melancholy":2.0,"unhinged":3.0,"fanatical":2.0},
+    "impression": {"demon_charm":2.5,"ghostly":2.5,"mysterious":2.0,"cold_beauty":1.5,"bitter":2.5,"sinister":2.0},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":1.5},
+    "bodyType": {"willow_waist":3.0,"svelte_elegant":2.5,"willowy":2.5,"hourglass":1.5},
+    "heightDesc": {"graceful_stature":3.0,"willowy_tall":2.0,"moderate_165":1.5},
+    "hairStyle": {"flowing_long":3.5,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5,"ethereal_floating":2.0,"messy_bun":1.5},
+    "faceFeature": {"horn":3.0,"double_horn":2.5,"demon_mark":2.0,"pale_face":2.0},
+    "faceShape": {"demon_face":3.0,"sharp":2.0,"long":1.5},
+    "eyeShape": {"crimson_eye":2.5,"golden_eye":2.5,"sharp_phoenix":2.0},
+    "lipShape": {"fanged_lip":3.0,"sneer_lip":2.5,"red_lip":2.0},
+    "defaultWeapon": {"dagger":3.0,"none":3.0,"poison_needle":3.0},
+    "defaultAccessories": {"mask":2.5,"hairpin":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["hoe","pole"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; hannya demon visage with golden horns, wild loose black hair, tear-streaked grin; japanese yokai ukiyo-e inspired art"
+}

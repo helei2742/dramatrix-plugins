@@ -1,0 +1,33 @@
+{
+  "race": "dryad",
+  "displayName": "树精",
+  "description": "古树化灵而成的种族，皮肤如树皮般带有木纹，与森林共生，守护自然",
+  "defaults": {
+    "skinColor": ["olive","jade","bronze","ruddy","moss_green"],
+    "eyeColor": ["emerald","amber","deep_blue","jade","gold"],
+    "hairColor": ["emerald","auburn","chestnut","honey","dark_brown"],
+    "bodyType": ["slender_tall","willowy","slim","lithe","lanky"]
+  },
+  "weightBias": {
+    "skinColor": {"olive":2.5,"jade":2.5,"bronze":2.0},
+    "eyeColor": {"emerald":2.5,"amber":2.5,"jade":2.5},
+    "hairColor": {"emerald":2.5,"auburn":2.5,"chestnut":2.5},
+    "bodyType": {"willowy":2.5,"slender_tall":2.5},
+    "eyeShape": {"almond":2.5,"crane":2.0,"round":1.5},
+    "eyebrowShape": {"willow":2.5,"distant_mountain":2.0},
+    "impression": {"ethereal":2.5,"gentle":2.5,"delicate":2.0},
+    "temperament": {"calm":2.5,"ethereal":2.0,"gentle":2.0}
+  },
+  "exclude": {
+    "skinColor": ["porcelain","alabaster","pale_yellow","fair"],
+    "eyeColor": ["dark_brown","crimson","purple"],
+    "hairColor": ["platinum","silver"],
+    "bodyType": ["muscular_broad","hulking","plump"],
+    "impression": ["cold","sinister"]
+  },
+  "faceDescOverride": {
+    "prepend": "bark-like skin texture, ",
+    "append": "foliage in hair"
+  },
+  "templateFluxPrompt": "a dryad {gender}, {ageDesc}, {bodyType}, {faceDesc} with bark-like skin texture, wearing {defaultClothes} made of leaves and vines, {hairStyle} {hairColor} hair intertwined with foliage, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

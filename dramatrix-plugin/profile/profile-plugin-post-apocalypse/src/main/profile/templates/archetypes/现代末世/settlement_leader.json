@@ -1,0 +1,33 @@
+{
+  "archetype": "settlement_leader",
+  "name": "聚落领袖",
+  "visualTags": "wasteland settlement leader, mayor, community head, authoritative, decisive, council chamber, respected, post-apocalyptic governance",
+  "description": "末世聚落领袖，带领幸存者在废土中建立秩序与家园，肩负众人希望的决策者",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":2.5,"chiseled_fit":2.5,"medium":2.5,"athletic_toned":2.5,"broad_shouldered":2.5,"lean_fit":2.5,"heroic_figure":2.0,"stocky_strong":2.0},
+    "temperament": {"authoritative":3.0,"resolute":3.0,"honor_bound":3.0,"strategic":3.0,"steadfast":2.5,"charismatic":2.5,"dignified":2.5,"pragmatic":2.5,"altruistic":2.5,"disciplined":2.5,"bold":2.0},
+    "hairStyle": {"short_crop":2.5,"slicked_back":2.5,"low_ponytail":2.5,"side_part_long":2.5,"choppy_short":2.5,"half_up":2.5,"simple_tie":2.0,"bound_up":2.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"salt_pepper":2.5,"gray":2.5,"jet_black":2.5,"white":2.0,"charcoal":2.0,"silver_gray":2.0},
+    "defaultClothes": {"settlement_leader_coat":3.0,"reinforced_trench_coat":3.0,"wasteland_duster":2.5,"merchant_patchwork_robe":2.0,"tactical_vest_light":2.0,"military_fatigues":1.5,"leather_armor_improvised":1.5,"tattered_jacket":1.5},
+    "eyeColor": {"dark_brown":3.0,"steel_gray":3.0,"black":2.5,"gray":2.5,"hazel":2.0,"deep_blue":2.0,"amber":1.5,"smoky_quartz":2.0},
+    "skinColor": {"weathered_tan":2.5,"tan":2.5,"light_tan":2.5,"olive":2.5,"fair":2.0,"sun_kissed":2.5,"ivory":2.0,"dusty_tan":2.0},
+    "eyeShape": {"eagle":3.0,"tiger":3.0,"sharp_phoenix":2.5,"dragon":2.5,"deep_set":2.5,"almond":2.0,"scholar_eye":2.0,"commander":2.5},
+    "eyebrowShape": {"hero_eyebrow":3.0,"steel_brow":3.0,"sword":2.5,"straight":2.5,"thick":2.5,"chivalrous_brow":2.5,"angular":2.0,"silkworm":2.0},
+    "faceShape": {"square":3.0,"chiseled":2.5,"strong_jawline":3.0,"stone_face":2.5,"oval":2.0,"rectangular":2.5,"angular":2.0,"seed_face":2.0},
+    "faceFeature": {"none":2.0,"scar":2.0,"beard_stubble":2.5,"strong_jaw":2.5,"clean_shaven":2.5,"weathered":2.0,"sharp_features":2.0,"high_cheekbones":2.0},
+    "impression": {"authoritative":3.0,"resolute":3.0,"dignified":3.0,"heroic":2.5,"loyal":2.5,"weathered":2.5,"majestic":2.0,"righteous":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","phoenix_hairpin","hair_crown","mask","abacus"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","dao_bun","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","golden_armor","chainmail","scrap_metal_armor","road_warrior_gear"],
+    "temperament": ["innocent","naive","seductive","flamboyant","unhinged","sinister","brutal","savage","lazy","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland settlement leader, {ageDesc}, {bodyType} dignified authoritative build, {faceDesc}, wearing reinforced leader coat, bearing the weight of command, {hairStyle} {hairColor} hair, {eyeColor} commanding eyes, {skinColor} weathered skin, {temperament} aura, settlement council chamber, maps on walls, making difficult decisions, loyal followers behind, photorealistic, dignified, masterpiece"
+}

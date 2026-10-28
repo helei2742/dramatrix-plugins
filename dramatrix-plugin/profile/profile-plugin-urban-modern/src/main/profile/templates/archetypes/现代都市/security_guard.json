@@ -1,0 +1,33 @@
+{
+  "archetype": "security_guard",
+  "name": "保安",
+  "visualTags": "modern security guard, uniform, vigilant, building entrance, reliable, steady, observant",
+  "description": "现代保安，默默守护的守夜人，以平凡之躯筑起安全之墙",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"stocky_strong":3.0,"barrel_chested":2.5,"athletic_toned":2.5,"lean_fit":2.0,"broad_shouldered":2.0,"hefty_burly":2.5,"solid_robust":2.5,"tall_athletic":1.5,"muscular_broad":2.0},
+    "temperament": {"steadfast":3.0,"disciplined":3.0,"sincere":3.0,"stoic":2.5,"stern":2.5,"calm":2.5,"humble":2.5,"pragmatic":2.5,"observant":2.5,"loyal":2.5,"gruff":1.5,"cold":1.5,"subdued":2.0,"weary":2.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":3.0,"simple_tie":2.0,"slicked_back":2.0,"choppy_short":1.5,"side_part_long":1.5,"bound_up":2.0,"half_up":1.0,"topknot_loose":1.0},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"charcoal":2.5,"jet_black":2.5,"salt_pepper":2.0,"gray":2.0,"light_brown":1.0},
+    "defaultClothes": {"black_night":3.0,"training_gear":2.5,"officer_uniform":3.0,"indigo_dyed_cotton":2.0,"slate_gray_cloak":2.5,"cotton_hanfu":2.0,"leather_armor":2.0,"linen_simple":2.0,"charcoal_hooded_cloak":2.0,"quilted_gambeson":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"smoky_quartz":2.0,"charcoal":2.0,"hazel":1.5,"gray":1.5,"deep_blue":1.0,"copper":1.0},
+    "skinColor": {"tan":2.5,"light_tan":2.5,"olive":2.5,"fair":2.0,"weathered_tan":2.5,"sun_kissed":2.0,"ivory":1.5,"wheat":1.5},
+    "eyeShape": {"almond":2.5,"round":2.5,"tiger":2.5,"narrow":2.0,"deep_set":2.5,"sharp_phoenix":2.0,"fish":1.5,"eagle":2.0},
+    "eyebrowShape": {"thick":2.5,"straight":3.0,"steel_brow":2.5,"silkworm":2.5,"shuttle_brow":2.0,"knitted":2.0,"rugged":1.5,"raised":1.5},
+    "faceShape": {"square":3.0,"round":2.5,"pagoda_face":2.5,"stone_face":2.5,"rectangular":2.5,"oval":1.5,"pear":1.5,"broad":2.0},
+    "faceFeature": {"none":2.5,"ruddy":2.0,"scar":1.5,"weathered":2.5,"beard_stubble":2.0,"clean_shaven":2.5,"nasolabial_folds":2.0,"strong_jaw":1.5},
+    "impression": {"loyal":3.0,"resolute":3.0,"weathered":2.5,"dignified":2.0,"humble":2.5,"cold":1.5,"fierce":1.5,"simple":2.0,"stern":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","hoe","pole","sickle","whisk","fan","jade_ruyi","staff_monk"],
+    "defaultAccessories": ["abacus","buddha_beads","spirit_beast_bag","bone_necklace","hairpin","phoenix_hairpin","hair_crown","jade_pendant","gold_chain","earring","anklet_silver"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","child_tuft","two_horns","double_bun","immortal_bun","savage_bun","startled_swan","flying_sky","wolf_tail"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","golden_armor","plate_armor","bamboo_hat_cape","wild_beast_skin","brocade_hanfu","ice_silk_dress","coral_pink_dress"],
+    "temperament": ["innocent","naive","seductive","decadent","unhinged","noble","haughty","melancholy","wistful"],
+    "bodyType": ["ethereal_light","willowy","pin_thin","svelte_elegant","petite_curvy","delicate_frail"]
+  },
+  "templateFluxPrompt": "a {gender} modern security guard, {ageDesc}, {bodyType} solid build, {faceDesc}, wearing a neat security guard uniform with badge, duty cap, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern building entrance, security desk, urban background, photorealistic, masterpiece"
+}

@@ -1,0 +1,30 @@
+{
+  "archetype": "paladin",
+  "name": "圣骑士",
+  "visualTags": "圣光,十字军,光明铠甲,惩恶扬善",
+  "description": "以圣光为信仰的圣骑士，驱散黑暗，惩恶扬善",
+  "defaults": {
+    "defaultAccessories": ["ring","belt_jade"],
+    "defaultWeapon": ["iron_sword","spear","none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":2.5,"slender_tall":2.0,"lean_fit":1.5},
+    "temperament": {"noble":3.0,"stoic":3.0,"benevolent":2.5,"calm":2.0},
+    "hairStyle": {"high_ponytail":2.5,"warrior_topknot":2.5,"bound_up":2.0,"side_part_long":2.0},
+    "hairColor": {"golden":3.0,"platinum_blond":2.5,"black":2.0,"silver":1.5},
+    "defaultClothes": {"golden_armor":3.0,"white_robe":2.5,"scale_armor":2.0},
+    "eyeColor": {"golden":3.0,"sapphire":2.5,"moonlight":2.0,"dark_brown":1.5},
+    "eyeShape": {"dragon":2.5,"sharp_phoenix":2.5,"almond":2.0,"tiger":1.5},
+    "eyebrowShape": {"steel_brow":3.0,"hero_eyebrow":3.0,"straight":2.0,"sword":1.5},
+    "faceShape": {"stone_face":3.0,"rectangular":2.5,"lion_face":2.5,"dragon_face":2.0},
+    "faceFeature": {"none":3.0,"beard_full":1.0},
+    "impression": {"majestic":3.0,"heroic":3.0,"loyal":3.0,"resolute":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","fan","whisk","staff"],
+    "defaultAccessories": ["abacus","tattoo","mask"],
+    "hairStyle": ["bald","wild_mane"],
+    "temperament": ["sinister","lazy","cunning"]
+  },
+  "templateFluxPrompt": "a {gender} paladin holy knight, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, radiating holy light"
+}

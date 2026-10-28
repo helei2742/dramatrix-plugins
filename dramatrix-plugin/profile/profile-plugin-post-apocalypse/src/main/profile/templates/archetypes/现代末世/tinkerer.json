@@ -1,0 +1,33 @@
+{
+  "archetype": "tinkerer",
+  "name": "修补匠",
+  "visualTags": "wasteland tinkerer, gadget maker, improvised electronics, small repairs, meticulous, tiny workshop, post-apocalyptic inventor",
+  "description": "末世修补匠，修复废土中的小物件和电子设备，用灵巧双手让破碎的文明碎片重新运转",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"lean_wiry":2.5,"gangly":2.5,"medium":2.5,"lean_fit":2.0,"slender_tall":2.0,"pin_thin":1.5,"lanky":2.0},
+    "temperament": {"meticulous":3.0,"obsessive":3.0,"curious":3.0,"eccentric":2.5,"patient":2.5,"nervous":2.5,"pragmatic":2.5,"adaptable":2.0,"silent":2.0,"loner":2.0,"shrewd":2.0},
+    "hairStyle": {"messy_medium":3.0,"unkempt_long":2.5,"choppy_short":2.5,"tied_back_loose":2.5,"half_up":2.0,"low_ponytail":2.0,"short_crop":2.0,"bandana_wrap":2.5},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":2.5,"gray_streaked":2.5,"ash_brown":2.5,"dirty_blonde":2.0,"mousy_brown":2.5,"black":2.0,"faded_black":1.5},
+    "defaultClothes": {"scavenger_harness":3.0,"patched_denim_suit":3.0,"survivor_hoodie_worn":3.0,"tattered_jacket":2.5,"patched_coveralls":2.5,"heavy_work_apron":2.0,"dust_cloak_worn":2.0,"wasteland_lab_coat":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"green":2.0,"amber":2.0,"black":1.5,"magnifying_blue":2.5,"deep_blue":1.5},
+    "skinColor": {"fair":2.5,"light_tan":2.5,"pale_porcelain":2.0,"tan":2.0,"weathered_tan":2.0,"dusty_tan":2.0,"olive":1.5,"ivory":2.0},
+    "eyeShape": {"round":3.0,"almond":2.5,"magnified":2.5,"deep_set":2.0,"keen":3.0,"sharp_phoenix":2.0,"tired":2.5,"narrow":2.0},
+    "eyebrowShape": {"thin":2.5,"straight":2.5,"silkworm":2.5,"furrowed":2.5,"long_eyebrow":2.0,"rugged":1.5,"angular":1.5,"crescent":2.0},
+    "faceShape": {"oval":2.5,"gaunt":2.5,"seed_face":2.5,"angular":2.0,"long":2.0,"bamboo_leaf_face":2.0,"round":2.0,"heart":2.0},
+    "faceFeature": {"spectacles":3.0,"squinting":2.5,"none":2.0,"dirt_smudge":2.5,"sharp_features":2.0,"hollow_cheeks":1.5,"beard_stubble":2.0,"clean_shaven":2.0},
+    "impression": {"eccentric":3.0,"meticulous":3.0,"intellectual":2.5,"curious":2.5,"nervous":2.5,"shadowed":2.0,"focused":2.5,"quirky":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","wild_mane","savage_bun","warrior_topknot"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","phoenix_robe","chainmail","polished_plate_armor"],
+    "temperament": ["innocent","flamboyant","seductive","brutal","savage","heroic","gallant","reckless","carefree"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","muscular_broad","heroic_figure","bulky_massive","towering_giant"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland tinkerer, {ageDesc}, {bodyType} lean slight build, {faceDesc}, wearing patched hoodie and multi-pocket scavenger harness, magnifying goggles, tiny tools in hand, soldering improvised device, {hairStyle} {hairColor} messy hair, {eyeColor} focused magnified eyes, {skinColor} skin, {temperament} aura, cluttered tiny workshop, electronic scrap, wires and circuit boards, dim lamp light, photorealistic, detailed, masterpiece"
+}

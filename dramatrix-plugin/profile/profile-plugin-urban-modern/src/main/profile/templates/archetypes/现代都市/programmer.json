@@ -1,0 +1,33 @@
+{
+  "archetype": "programmer",
+  "name": "程序员",
+  "visualTags": "modern programmer, software engineer, casual hoodie, laptop, tech office, glasses, focused",
+  "description": "现代程序员，代码世界的构建者，逻辑缜密，熬夜加班，指尖改变世界",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"medium":2.5,"lean_fit":2.0,"slender_tall":1.5,"gangly":1.5,"lean_wiry":1.5,"soft_round":1.5,"delicate_frail":1.0,"plump":1.5},
+    "temperament": {"subdued":3.0,"pragmatic":3.0,"calm":2.5,"scholarly":2.5,"meticulous":2.5,"eccentric":2.0,"calculating":2.5,"tranquil":2.0,"reserved":2.5,"cynical":1.5,"brooding":1.5,"crafty":2.0,"lazy":1.5},
+    "hairStyle": {"short_crop":2.5,"choppy_short":2.5,"simple_tie":2.0,"buzz_cut":1.5,"half_up":2.0,"messy_bun":2.0,"topknot_loose":2.0,"bangs_short":2.0,"loose_half_up":1.5,"side_part_long":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"charcoal":2.0,"chestnut":1.5,"light_brown":1.5,"salt_pepper":1.0,"gray":1.0},
+    "defaultClothes": {"cotton_hanfu":2.5,"linen_simple":2.5,"indigo_dyed_cotton":2.0,"slate_gray_cloak":2.0,"blue_robe":2.0,"charcoal_hooded_cloak":1.5,"ink_wash_robe":1.5,"black_night":1.5,"hemp_cloth":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"hazel":1.5,"gray":1.5,"smoky_quartz":1.5,"deep_blue":1.0,"charcoal":1.5,"honey":1.0},
+    "skinColor": {"fair":3.0,"pale_porcelain":2.5,"ivory":2.0,"light_tan":1.5,"moon_white":1.5,"chalk_white":1.0,"tan":1.0},
+    "eyeShape": {"almond":2.5,"narrow":2.0,"round":2.0,"deep_set":2.0,"fish":1.5,"downturned":1.5,"puffy":2.0,"sharp_phoenix":1.5},
+    "eyebrowShape": {"straight":3.0,"silkworm":2.0,"short_eyebrow":1.5,"thick":1.5,"shuttle_brow":2.0,"raised":1.5,"faint":1.5},
+    "faceShape": {"oval":3.0,"round":2.5,"seed_face":2.0,"square":1.5,"pear":2.0,"long":1.5,"jade_plate":1.5,"broad":1.0},
+    "faceFeature": {"none":2.5,"spectacles":3.0,"beard_stubble":2.0,"freckles":1.5,"pale_face":1.5,"nasolabial_folds":1.0,"puffy_eyes":1.5},
+    "impression": {"intellectual":3.0,"delicate":2.5,"shrewd":2.5,"humble":2.5,"simple":2.0,"weathered":1.5,"refined":2.0,"cunning":1.5,"loyal":1.5,"subdued":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword","dagger","bow"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal","wine_gourd","mask"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","warrior_topknot","child_tuft","two_horns","wolf_tail","warrior_braid","immortal_bun"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","leather_armor","bamboo_hat_cape","wild_beast_skin","scale_armor","training_gear","russet_leather_armor","battle_skirt"],
+    "temperament": ["overbearing","majestic","noble","wild","brutal","seductive","haughty","reckless"],
+    "bodyType": ["muscular_broad","towering_giant","barrel_chested","broad_shouldered","tall_athletic","chiseled_fit"]
+  },
+  "templateFluxPrompt": "a {gender} modern programmer software engineer, {ageDesc}, {bodyType} build, {faceDesc}, wearing a comfortable hoodie or casual tshirt, glasses, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern open plan tech office, multiple monitors with code, keyboard, coffee mug, indoor plants, startup vibe, photorealistic, masterpiece"
+}

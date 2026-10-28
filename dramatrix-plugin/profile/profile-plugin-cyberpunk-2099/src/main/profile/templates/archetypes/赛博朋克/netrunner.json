@@ -1,0 +1,54 @@
+{
+  "archetype": "netrunner",
+  "category": "赛博朋克",
+  "name": "网络黑客",
+  "visualTags": "黑客, 潜行, 数字",
+  "description": "潜入网络的幽灵，靠指尖与代码掀翻企业防火墙。",
+  "defaults": {
+    "defaultClothes": [
+      "netrunner_suit"
+    ],
+    "defaultAccessories": [
+      "neural_port",
+      "data_glove"
+    ],
+    "cyberImplant": [
+      "data_jack",
+      "neural_coprocessor"
+    ],
+    "eyeColor": [
+      "optic_red",
+      "ice_blue"
+    ],
+    "temperament": [
+      "calm",
+      "wired"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "data_jack": 3.0,
+      "neural_coprocessor": 2.5
+    },
+    "defaultAccessories": {
+      "neural_port": 2.5,
+      "data_glove": 2.0
+    },
+    "eyeColor": {
+      "optic_red": 2.5,
+      "ice_blue": 2.0
+    },
+    "impression": {
+      "data_trance": 2.5,
+      "steel_cold": 2.0
+    }
+  },
+  "exclude": {
+    "defaultWeapon": [
+      "railgun",
+      "heavy_smg",
+      "tech_shotgun"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

@@ -1,0 +1,9 @@
+{
+  "attribute": "defaultAccessories",
+  "displayName": "默认配饰",
+  "options": [
+    {"id":"hairpin","value":"发簪","genderBias":{"男":0.1,"女":3.0},"raceTags":["人族","精灵","灵族"],"archetypeTags":["noble"],"ageTags":["young_adult","adult"],"tags":["发簪","装饰","精致"]},
+    {"id":"talisman_pouch","value":"符箓袋","genderBias":{"男":1.5,"女":1.5},"raceTags":["人族","灵族"],"archetypeTags":["cultivator","exorcist"],"ageTags":[],"tags":["符箓","道法","降妖"]},
+    {"id":"folding_fan","value":"折扇","genderBias":{"男":2.0,"女":1.0},"raceTags":["人族","精灵","灵族"],"archetypeTags":["scholar","noble","bard"],"ageTags":["young_adult","adult"],"tags":["折扇","风雅","潇洒"]}
+  ]
+}

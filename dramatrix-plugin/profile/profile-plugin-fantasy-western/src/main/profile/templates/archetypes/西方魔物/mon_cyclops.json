@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_cyclops",
+  "name": "独眼巨人",
+  "visualTags": "独目巨瞳,粗砺皮肤,巨木为杖,踏地震颤",
+  "description": "额生独目的山岭巨人，视野狭窄却力大无穷，一步踏出地面震颤",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5,"auburn":1.5,"jet_black":1.5},
+    "skinColor": {"moss_green":3.0,"pale_green":2.5,"stone_gray":1.5,"clay_brown":3.0,"swarthy":2.5,"weathered_tan":2.0},
+    "eyeColor": {"amber":2.5,"blood_red":2.0,"sunflower":2.0,"dark_brown":1.5,"smoky_quartz":1.5},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":2.5,"wild":2.5,"gruff":3.0,"reckless":1.5,"cunning":1.5,"volatile":2.0},
+    "impression": {"fierce":3.0,"wild":2.5,"weathered":2.0,"domineering":1.5},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":3.0,"barrel_chested":2.0,"solid_robust":1.5},
+    "heightDesc": {"giant_towering":3.5,"towering_2m":2.5,"cloud_reaching":1.5},
+    "hairStyle": {"wild_mane":3.5,"savage_bun":2.0,"warrior_braid":1.5},
+    "faceFeature": {"third_eye":2.0,"broad_jaw":3.0,"thick_neck":2.5,"scar":2.0},
+    "faceShape": {"giant_face":3.5,"broad":2.5,"square":1.5},
+    "eyeShape": {"bull_eye":3.0,"toad_eye":2.0,"deep_set":1.5},
+    "lipShape": {"wide_lip":3.0,"thick":2.5,"toothed_lip":1.5},
+    "noseShape": {"giant_nose":3.0,"broad_flat":2.5,"wide_nostrils":2.0},
+    "defaultWeapon": {"pole":3.0,"war_hammer":3.0,"meteor_hammer":3.0},
+    "defaultAccessories": {"leather_belt":2.5,"bracer_iron":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure"],
+    "defaultWeapon": ["throwing_knives","poison_needle","wind_shuriken","flying_sword"],
+    "bodyType": ["petite_curvy","delicate_frail","pin_thin","lithe_agile"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; single enormous eye in the forehead, coarse thick hide, uprooted tree as club; western dark fantasy monster art"
+}

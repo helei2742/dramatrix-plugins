@@ -1,0 +1,30 @@
+{
+  "archetype": "mon_thunder_spirit",
+  "name": "雷精",
+  "visualTags": "electric弧光,焦味弥漫,行走炸响,须发倒竖",
+  "description": "雷云落地凝成的暴烈精怪，周身电弧噼啪，靠近者须发倒竖",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"immortal_ancient":2.5,"several_centuries":2.0,"thousand_years":2.0,"ageless_beauty":1.5},
+    "hairColor": {"cosmic":1.5,"frost_white":2.0,"flame_red":2.0,"cyan":3.0,"none":1.5,"silver_blue":3.0,"platinum_blond":2.0},
+    "skinColor": {"translucent":3.0,"luminous_blue":3.0,"phosphor_white":3.0,"amber_glow":2.0,"rocky":1.5,"silver_luster":2.0},
+    "eyeColor": {"star_silver":3.0,"cosmic":2.0,"moonlight":2.0,"topaz":2.5,"aquamarine":1.5,"ice_blue":1.5},
+    "defaultClothes": {"spirit_silk":2.5,"spirit_leaf_dress":2.0,"cloud_pattern_robe":2.0,"moonlight_gown":1.5,"water_silk":1.5},
+    "temperament": {"ethereal":3.0,"tranquil":2.0,"enigmatic":2.0,"volatile":3.5,"serene":1.5,"reckless":2.5,"bold":2.0,"passionate":2.0},
+    "impression": {"ethereal":3.0,"mysterious":2.0,"immortal_grace":2.0,"ancient_soul":1.5},
+    "eyebrowShape": {"faint":1.5,"cloud_eyebrow":2.0,"immortal_eyebrow":2.0,"flame_brow":1.5,"lightning_brow":3.5,"raised":2.0},
+    "noseShape": {"elemental_nose":3.0,"delicate":1.5,"straight":1.5},
+    "bodyType": {"ethereal_light":2.0,"floating_light":3.0,"willowy":1.5,"lean_fit":2.5,"athletic_toned":2.5,"lithe_agile":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "hairStyle": {"wild_mane":3.0,"ethereal_floating":2.5,"high_ponytail":1.5},
+    "faceFeature": {"glowing_face":3.5,"veins":2.0,"none":1.5},
+    "faceShape": {"wind_face":2.5,"sharp":2.5,"diamond":1.5},
+    "defaultWeapon": {"none":3.0,"spirit_seal":3.0,"rune_sword":3.0},
+    "defaultAccessories": {"none":2.5,"spirit_stone":2.5,"ring":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","bandolier","military_seal","pipe"],
+    "temperament": ["brutal","gruff","decadent","tranquil","subdued","lazy","serene"],
+    "defaultWeapon": ["hoe","pole","guqin"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; crackling arcs of lightning across a luminous body, ozone haze, hair standing on end; elemental spirit art, glowing energy body"
+}

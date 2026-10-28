@@ -1,0 +1,30 @@
+{
+  "archetype": "puppeteer",
+  "name": "傀儡师",
+  "visualTags": "傀儡,偶线,木人,机关操控",
+  "description": "操纵傀儡与机关的奇术师，以指尖之线驱动木偶化为利器",
+  "defaults": {
+    "defaultAccessories": ["ring","storage_bag","mask"],
+    "defaultWeapon": ["fan","dagger","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"short_stout":2.0,"medium":2.0,"ethereal_light":1.5},
+    "temperament": {"cunning":3.0,"sinister":2.5,"obsessive":2.5,"cold":1.5},
+    "hairStyle": {"simple_tie":2.5,"choppy_short":2.5,"half_up":2.0,"topknot_loose":1.5},
+    "hairColor": {"black":2.5,"obsidian":2.0,"dark_brown":2.0,"salt_pepper":1.5},
+    "defaultClothes": {"dark_cloak":3.0,"black_night":2.5,"purple_robe":2.0,"linen_simple":1.5},
+    "eyeColor": {"dark_brown":2.5,"black":2.0,"shadow_black":2.0,"mercury":1.5},
+    "eyeShape": {"triangle":2.5,"deep_set":2.5,"fox":2.0,"narrow":2.0},
+    "eyebrowShape": {"needle_brow":2.5,"short_eyebrow":2.5,"spiral_brow":2.0,"triangular_brow":1.5},
+    "faceShape": {"goblin_face":3.0,"bamboo_shoot":2.5,"gourd_face":2.0,"sharp":1.5},
+    "faceFeature": {"none":2.5,"high_cheekbones":1.5,"nasolabial_folds":1.5},
+    "impression": {"sinister":3.0,"shrewd":3.0,"cold":2.0,"weathered":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","spear","staff_monk","hoe"],
+    "defaultAccessories": ["buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["bald","cloud_bun","double_bun","phoenix_crown"],
+    "temperament": ["innocent","warm"]
+  },
+  "templateFluxPrompt": "a {gender} puppeteer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, controlling puppets with invisible strings"
+}

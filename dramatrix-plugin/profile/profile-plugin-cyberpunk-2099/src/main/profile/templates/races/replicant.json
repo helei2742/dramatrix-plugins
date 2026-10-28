@@ -1,0 +1,77 @@
+{
+  "race": "replicant",
+  "displayName": "复制人",
+  "description": "生化合成的人形生命体，体能卓越、痛觉淡漠，常被用于高危工种或雇佣战事。",
+  "defaults": {
+    "skinColor": [
+      "synthetic_pale",
+      "pale_cyan"
+    ],
+    "eyeColor": [
+      "optic_red",
+      "ice_blue"
+    ],
+    "hairColor": [
+      "neon_pink",
+      "electric_blue"
+    ],
+    "bodyType": [
+      "athletic",
+      "towering"
+    ]
+  },
+  "weightBias": {
+    "skinColor": {
+      "synthetic_pale": 2.5,
+      "pale_cyan": 2.0
+    },
+    "eyeColor": {
+      "optic_red": 2.5,
+      "ice_blue": 2.0
+    },
+    "hairColor": {
+      "neon_pink": 2.5,
+      "electric_blue": 2.0
+    },
+    "bodyType": {
+      "athletic": 2.5,
+      "towering": 2.0
+    },
+    "impression": {
+      "cold": 2.5,
+      "stoic": 2.0,
+      "machine_calm": 2.0
+    },
+    "chromeSignature": {
+      "data_tattoo_glow": 2.0,
+      "serial_barcode_face": 1.5
+    }
+  },
+  "exclude": {
+    "skinColor": [
+      "dark",
+      "tan"
+    ],
+    "faceFeature": [
+      "light_freckle",
+      "chapped_skin"
+    ],
+    "impression": [
+      "neon_glam",
+      "magnetic_charm"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "synthetic skin with faint seam lines",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "合成皮肤无自然瑕疵，禁用freckle类选项"
+    },
+    {
+      "description": "痛觉淡漠，偏好 cold/stoic 气质"
+    }
+  ]
+}

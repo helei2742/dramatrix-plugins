@@ -1,0 +1,33 @@
+{
+  "archetype": "driver",
+  "name": "网约车司机",
+  "visualTags": "modern driver, rideshare, taxi, car, urban night, experienced, calm, streetwise",
+  "description": "现代网约车司机，城市的夜行者，阅人无数，方向盘后的城市故事收集者",
+  "defaults": {
+    "defaultAccessories": ["ring","none","hat"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"medium":3.0,"lean_fit":2.0,"plump":2.0,"short_stout":1.5,"stocky_strong":1.5,"lean_wiry":1.5,"athletic_toned":1.5,"soft_round":1.5},
+    "temperament": {"calm":3.0,"pragmatic":3.0,"subdued":2.5,"sincere":2.5,"warm":2.0,"crafty":2.0,"cynical":2.0,"jovial":2.0,"weary":2.0,"humble":2.0,"gruff":1.5,"cunning":1.5,"eloquent":2.0,"gloomy":1.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":2.0,"simple_tie":2.5,"choppy_short":2.0,"slicked_back":2.0,"side_part_long":2.0,"half_up":1.5,"topknot_loose":1.5,"low_ponytail":1.5},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"salt_pepper":2.5,"gray":2.0,"charcoal":2.0,"jet_black":2.0,"light_brown":1.5,"chestnut":1.0},
+    "defaultClothes": {"cotton_hanfu":2.5,"linen_simple":2.5,"indigo_dyed_cotton":2.0,"slate_gray_cloak":2.0,"blue_robe":2.0,"charcoal_hooded_cloak":2.0,"ochre_hemp_tunic":2.0,"hemp_cloth":2.0,"black_night":1.5,"travelers_cloak":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"hazel":2.0,"gray":1.5,"smoky_quartz":1.5,"honey":1.5,"charcoal":1.5,"amber":1.0},
+    "skinColor": {"tan":2.5,"weathered_tan":2.5,"light_tan":2.5,"fair":2.0,"olive":2.0,"sun_kissed":2.0,"ivory":1.5,"wheat":1.5},
+    "eyeShape": {"almond":2.5,"round":2.5,"narrow":2.0,"fish":2.0,"deep_set":2.5,"puffy":2.0,"sharp_phoenix":1.5,"laughter_eye":1.5},
+    "eyebrowShape": {"silkworm":2.5,"straight":2.5,"thick":2.0,"splayed":1.5,"raised":2.0,"short_eyebrow":1.5,"shuttle_brow":2.0,"hanging_brow":1.5},
+    "faceShape": {"round":3.0,"oval":2.5,"pear":2.5,"square":2.0,"persimmon_face":1.5,"long":1.5,"broad":1.5,"jade_plate":2.0},
+    "faceFeature": {"none":2.0,"weathered":2.0,"nasolabial_folds":2.5,"beard_stubble":2.0,"ruddy":2.0,"wrinkled":2.0,"scar":1.0,"beard_goatee":1.5},
+    "impression": {"weathered":3.0,"loyal":2.5,"simple":2.5,"humble":2.5,"shrewd":2.0,"warm":2.0,"resolute":1.5,"affable":2.0,"calm":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","spear","hoe","pole","sickle","staff_monk","war_hammer","claws","iron_sword"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","spirit_beast_bag","bone_necklace","eye_patch","bracer_iron","armor_pauldron","military_seal","hairpin","phoenix_hairpin"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","warrior_topknot","child_tuft","two_horns","double_bun","immortal_bun","savage_bun","flying_sky"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","golden_armor","plate_armor","chainmail","bamboo_hat_cape","wild_beast_skin","scale_armor","polished_plate_armor"],
+    "temperament": ["noble","haughty","seductive","unhinged","arrogant","majestic","brutal","heroic","overbearing"],
+    "bodyType": ["towering_giant","chiseled_fit","muscular_broad","ethereal_light","willowy","pin_thin"]
+  },
+  "templateFluxPrompt": "a {gender} modern rideshare driver, {ageDesc}, {bodyType} build, {faceDesc}, wearing casual comfortable clothing, sitting in car, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, modern car interior at night, city lights reflected on windshield, urban driving atmosphere, photorealistic, masterpiece"
+}

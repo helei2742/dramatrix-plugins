@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_kappa",
+  "name": "河童",
+  "visualTags": "头顶水皿,龟甲负背,蹼足利喙,溺人于渊",
+  "description": "头顶盛水盘、背负龟甲的河中妖怪，喜将失足者拖入深渊",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"unknown_age":2.0,"thousand_years":1.5,"ageless_beauty":1.5},
+    "hairColor": {"jet_black":3.0,"white":2.5,"crimson":2.0,"silver":1.5,"midnight_blue":1.5,"dark_green":2.5,"black":2.0,"teal":1.5},
+    "skinColor": {"moon_white":2.5,"pale_porcelain":2.5,"snow_white":2.0,"fiery_red":1.5,"pale_ash":1.5,"moss_green":3.0,"pale_green":2.5,"scaly_green":2.0,"blue_gray":1.5},
+    "eyeColor": {"blood_red":2.5,"golden":2.5,"slit_pupil_gold":2.0,"obsidian":1.5,"ice_blue":1.5,"forest_green":2.5,"amber":2.0,"aquamarine":1.5},
+    "defaultClothes": {"indigo_kimono":2.5,"white_haori_overcoat":2.0,"crimson_hakama_pants":2.0,"straw_mino_cape":1.5,"onmyoji_hunting_robe":1.5},
+    "temperament": {"mysterious":3.0,"vicious":2.0,"cold":2.0,"melancholy":2.0,"unhinged":1.5,"crafty":3.0,"whimsical":2.5,"paranoid":1.5},
+    "impression": {"demon_charm":2.5,"ghostly":2.5,"mysterious":2.0,"cold_beauty":1.5,"devious":2.5,"wild":2.0,"sickness":1.5},
+    "eyebrowShape": {"demon_eyebrow":2.5,"willow":2.0,"raised":1.5,"frost_brow":1.5},
+    "bodyType": {"short_stout":3.0,"compact_dense":2.5,"gangly":2.0,"lean_wiry":1.5},
+    "heightDesc": {"dwarf_short":3.0,"short_small":2.5,"half_height":2.0},
+    "hairStyle": {"bald":3.0,"child_tuft":2.0,"bangs_short":1.5},
+    "faceFeature": {"gills":3.0,"scale_face":2.5,"green_face":2.0},
+    "faceShape": {"round":2.5,"fish_face":2.5,"child_face":1.5},
+    "eyeShape": {"toad_eye":3.0,"round":2.5,"fish":2.0},
+    "lipShape": {"fish_lip":3.0,"beast_lip":2.0,"wide_lip":1.5},
+    "noseShape": {"flat":2.5,"mermaid_nose":2.5,"upturned":1.5},
+    "defaultWeapon": {"forked_spear":3.0,"trident":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"bell_collar":2.5,"ankle_bell":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","goggles","bandolier"],
+    "temperament": ["pragmatic","amiable"],
+    "defaultWeapon": ["two_hand_sword","halberd","war_hammer"],
+    "bodyType": ["towering_giant","bulky_massive","muscular_broad"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; water-filled dish on head, turtle shell on back, webbed hands and beak; japanese yokai ukiyo-e inspired art"
+}

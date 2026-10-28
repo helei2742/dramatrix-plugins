@@ -1,0 +1,72 @@
+{
+  "race": "chimera",
+  "displayName": "兽化嵌合体",
+  "description": "人类与兽类基因及义体融合的嵌合体，獠牙、皮毛与金属并存，多游走于帮派与荒野。",
+  "defaults": {
+    "faceShape": [
+      "feral_muzzle_face",
+      "brutal_slab"
+    ],
+    "faceFeature": [
+      "beast_fur_patch",
+      "scale_graft",
+      "horn_implant"
+    ],
+    "skinColor": [
+      "tan",
+      "dark"
+    ],
+    "chromeSignature": [
+      "beast_chrome_muzzle",
+      "war_paint_uv"
+    ]
+  },
+  "weightBias": {
+    "faceShape": {
+      "feral_muzzle_face": 3.0,
+      "brutal_slab": 2.0
+    },
+    "faceFeature": {
+      "beast_fur_patch": 2.5,
+      "scale_graft": 2.0,
+      "horn_implant": 2.0
+    },
+    "chromeSignature": {
+      "beast_chrome_muzzle": 2.5,
+      "war_paint_uv": 2.0
+    },
+    "bodyType": {
+      "bulky": 2.5,
+      "wiry": 2.0
+    },
+    "impression": {
+      "feral_edge": 2.5,
+      "gutter_grit": 2.0
+    }
+  },
+  "exclude": {
+    "faceShape": [
+      "porcelain_shell",
+      "doll_face_synth",
+      "clean_oval"
+    ],
+    "impression": [
+      "synthetic_perfect",
+      "idol_radiance",
+      "corporate_polish"
+    ]
+  },
+  "faceDescOverride": {
+    "prepend": "beast-like hybrid features, fur and chrome intertwined",
+    "append": ""
+  },
+  "templateFluxPrompt": "a {raceDisplayName} {gender}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, cybernetic augmentations: {cyberImplant}, cyberpunk, neon city, high detail",
+  "specialRules": [
+    {
+      "description": "强制兽化脸型与皮毛特征"
+    },
+    {
+      "description": "排斥精致偶像风"
+    }
+  ]
+}

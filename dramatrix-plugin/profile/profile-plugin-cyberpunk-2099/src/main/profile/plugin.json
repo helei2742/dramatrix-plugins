@@ -1,0 +1,22 @@
+{
+  "name": "cyberpunk-2099",
+  "displayName": "赛博朋克 2099 世界观包",
+  "version": "1.0.0",
+  "author": "helei",
+  "description": "新增义体改造属性、复制人种族、赛博朋克原型分类与配套约束",
+  "enabled": true,
+  "order": 100,
+  "templateDir": "templates",
+  "merge": {
+    "defaultMode": "REPLACE",
+    "perFile": {
+      "constraints.json": "MERGE",
+      "generator_config.json": "MERGE"
+    }
+  },
+  "validate": {
+    "idPrefix": null,
+    "strictConflict": false
+  },
+  "idPrefix": "cyberpunk-2099"
+}

@@ -1,0 +1,32 @@
+{
+  "archetype": "western_knight",
+  "name": "西方骑士",
+  "visualTags": "western knight, plate armor, chivalric",
+  "description": "中世纪欧洲骑士，身披闪光铠甲，恪守骑士精神",
+  "defaults": {
+    "defaultAccessories": ["belt_jade","ring"],
+    "defaultWeapon": ["longsword","lance","shield"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"broad_shouldered":3.0,"chiseled_fit":2.5,"lean_fit":2.0,"heroic_figure":2.5},
+    "temperament": {"noble":3.0,"stoic":2.5,"chivalrous":2.5,"steadfast":2.5,"heroic":2.5,"righteous":2.0,"majestic":1.5,"calm":1.5,"subdued":1.0},
+    "hairStyle": {"short_wavy":2.5,"short_crop":2.5,"side_part_long":2.0,"flowing_long":2.0,"slicked_back":1.5,"bound_up":1.5,"loose_half_up":2.0},
+    "hairColor": {"dark_brown":2.5,"light_brown":2.5,"auburn":2.0,"golden":2.0,"silver":1.5,"chestnut":1.5,"honey_blond":1.5,"ash_blond":1.5,"sand_blond":1.0,"salt_pepper":1.0,"charcoal":1.0},
+    "eyeColor": {"sapphire":2.5,"deep_blue":2.5,"forest_green":2.0,"hazel":2.0,"gray":2.0,"dark_brown":2.0,"emerald":1.5,"sky_blue":1.5,"ice_blue":1.5,"pearl_gray":1.0,"amber":1.0},
+    "skinColor": {"fair":2.5,"weathered_tan":2.5,"pale_porcelain":1.5,"ivory":1.5,"sun_kissed":1.5,"rose_white":1.0,"olive":1.0},
+    "defaultClothes": {"plate_armor":3.0,"chainmail":2.5,"tabard":2.5,"surcoat":2.0,"steel_cuirass":2.5,"travelers_cloak":1.5,"chainmail_tunic":1.5,"leather_armor":1.0,"officer_uniform":1.0},
+    "faceFeature": {"strong_jaw":2.5,"beard_full":2.0,"clean_shaven":2.0,"scar":2.0,"weathered":1.5,"none":1.5,"beard_stubble":1.0},
+    "faceShape": {"angular":2.5,"square":2.5,"rectangular":2.0,"oval":2.0,"chiseled":1.5,"strong_jawline":1.5},
+    "eyeShape": {"deep_set":2.5,"hooded":2.0,"almond":2.0,"sharp":1.5,"narrow":1.0},
+    "eyebrowShape": {"thick":2.5,"straight":2.5,"angular":2.0,"furrowed":1.5,"hero_eyebrow":1.0},
+    "impression": {"noble":3.0,"stoic":2.5,"battle_hardened":2.5,"heroic":2.5,"weathered":2.0,"chivalrous":2.0,"resolute":1.5,"honorable":1.5,"loyal":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","sickle","whisk","claws"],
+    "defaultAccessories": ["abacus","tattoo","buddha_beads","talisman_pouch","jade_pendant","hairpin"],
+    "hairStyle": ["bald","cloud_bun","phoenix_crown","dao_bun","double_bun","twin_tails","child_tuft"],
+    "temperament": ["sinister","lazy","seductive","decadent","whimsical"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","elf_robe","blood_dress","bamboo_hat_cape"]
+  },
+  "templateFluxPrompt": "a {gender} western knight in shining armor, {ageDesc}, {bodyType} build, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, medieval european knight, castle background, heraldic banner, high fantasy art, masterpiece"
+}

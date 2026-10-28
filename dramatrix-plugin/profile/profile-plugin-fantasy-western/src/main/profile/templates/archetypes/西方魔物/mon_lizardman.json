@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_lizardman",
+  "name": "蜥蜴人",
+  "visualTags": "鳞甲护体,长尾摆动,竖瞳冷视,沼泽埋伏",
+  "description": "栖身沼泽的鳞甲战士，长尾扫击可断人腿骨，水下潜伏一刻不喘",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":3.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5},
+    "skinColor": {"moss_green":2.5,"pale_green":2.5,"stone_gray":2.0,"clay_brown":2.0,"swarthy":1.5,"scaly_green":3.5,"leaf_green":2.0,"blue_gray":1.5},
+    "eyeColor": {"amber":2.5,"blood_red":2.0,"sunflower":2.0,"dark_brown":1.5,"smoky_quartz":1.5,"slit_pupil_gold":3.5,"forest_green":1.5},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":3.0,"wild":2.5,"gruff":2.0,"reckless":2.0,"cunning":2.0,"cold":2.5,"paranoid":2.5,"fierce":2.0},
+    "impression": {"fierce":3.0,"wild":2.5,"weathered":2.0,"domineering":1.5},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"lithe_agile":3.5,"lean_wiry":2.5,"runner_lean":2.0,"slim":1.5},
+    "heightDesc": {"tall_lithe":2.5,"moderate_tall":2.0,"lean_height":1.5},
+    "hairStyle": {"bald":3.5},
+    "faceFeature": {"scale_face":3.5,"gills":2.5,"sharp_chin":1.5},
+    "faceShape": {"snake_face":2.5,"long":2.5,"sharp":1.5},
+    "eyeShape": {"snake_eye":3.0,"vertical_pupil_eye":3.0,"narrow":1.5},
+    "lipShape": {"snake_lip":2.5,"toothed_lip":2.5,"thin":1.5},
+    "noseShape": {"snake_nose":3.0,"flat":2.0},
+    "defaultWeapon": {"spear":3.0,"trident":3.0,"forked_spear":3.0},
+    "defaultAccessories": {"bone_necklace":2.5,"leather_belt":2.5,"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure"],
+    "defaultWeapon": ["guqin","ink_brush","fan"],
+    "hairStyle": ["flowing_long","updo_elegant","wavy_long","phoenix_crown"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; overlapping green scales, long lashing tail, webbed clawed hands; western dark fantasy monster art"
+}

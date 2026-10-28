@@ -1,0 +1,30 @@
+{
+  "archetype": "pirate",
+  "name": "海盗",
+  "visualTags": "海盗,弯刀,火铳,碧海狂涛",
+  "description": "横行海域的盗匪，手持弯刀火铳，追逐自由与财宝",
+  "defaults": {
+    "defaultAccessories": ["hat","wine_gourd","earring"],
+    "defaultWeapon": ["dagger","iron_sword","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"medium":2.5,"tall_athletic":2.0,"short_stout":1.5},
+    "temperament": {"wild":3.0,"cunning":3.0,"lazy":2.0,"reckless":2.0},
+    "hairStyle": {"wild_mane":2.5,"choppy_short":2.5,"topknot_loose":2.5,"braided":2.0},
+    "hairColor": {"dark_brown":2.5,"black":2.0,"auburn":2.0,"copper":1.5,"chestnut":1.5},
+    "defaultClothes": {"black_night":3.0,"leather_armor":2.5,"hemp_cloth":2.0,"dark_cloak":1.5},
+    "eyeColor": {"dark_brown":2.5,"amber":2.0,"deep_orange":1.5,"aquamarine":1.5},
+    "eyeShape": {"wolf":2.5,"eagle":2.5,"narrow":2.0,"fox":1.5},
+    "eyebrowShape": {"rugged":3.0,"broken_brow":2.5,"raised":2.0,"hook_brow":1.5},
+    "faceShape": {"sharp":2.5,"pentagon":2.5,"water_chestnut":2.0,"monkey_face":1.5},
+    "faceFeature": {"scar":2.5,"beard_stubble":2.0,"tattoo":2.0},
+    "impression": {"heroic_open":3.0,"free_spirit":3.0,"shrewd":2.0,"weathered":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","whisk","jade_ruyi"],
+    "defaultAccessories": ["abacus","buddha_beads","hairpin"],
+    "hairStyle": ["bald","immortal_bun","phoenix_crown"],
+    "defaultClothes": ["spirit_silk","monk_robe"]
+  },
+  "templateFluxPrompt": "a {gender} pirate sea raider, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, aboard a ship with cutlass"
+}

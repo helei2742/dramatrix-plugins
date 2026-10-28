@@ -1,0 +1,14 @@
+{
+  "attribute": "defaultWeapon",
+  "displayName": "默认武器",
+  "options": [
+    {"id":"staff","value":"法杖","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","精灵","灵族","魔族"],"archetypeTags":["mage"],"ageTags":[],"tags":["法杖","魔法","施法"]},
+    {"id":"bow","value":"长弓","genderBias":{"男":1.5,"女":1.0},"raceTags":["精灵","人族","妖族"],"archetypeTags":["beast_tamer","rogue"],"ageTags":[],"tags":["弓箭","远程","猎手"]},
+    {"id":"spear","value":"长枪","genderBias":{"男":3.0,"女":0.0},"raceTags":["人族","魔族","妖族"],"archetypeTags":["swordsman"],"ageTags":[],"tags":["长枪","战阵","英武"]},
+    {"id":"meteor_hammer","value":"流星锤","genderBias":{"男":2.5,"女":0.0},"raceTags":["人族","魔族","妖族"],"archetypeTags":["swordsman","berserker"],"ageTags":[],"tags":["流星锤","重击","蛮力"]},
+    {"id":"double_swords","value":"双剑","genderBias":{"男":1.5,"女":1.5},"raceTags":["人族","魔族","精灵"],"archetypeTags":["swordsman","rogue"],"ageTags":["young_adult","adult"],"tags":["双剑","灵动","剑舞"]},
+    {"id":"chain_whip","value":"链鞭","genderBias":{"男":0.5,"女":2.0},"raceTags":["人族","魔族","妖族"],"archetypeTags":["rogue","swordsman"],"ageTags":["young_adult","adult"],"tags":["链鞭","灵活","缠绕"]},
+    {"id":"throwing_knives","value":"飞刀","genderBias":{"男":1.5,"女":1.0},"raceTags":["人族","魔族","精灵"],"archetypeTags":["rogue","ranger","assassin"],"ageTags":[],"tags":["飞刀","暗器","精准"]},
+    {"id":"crossbow","value":"弩","genderBias":{"男":1.5,"女":1.0},"raceTags":["人族","矮人","精灵","地精"],"archetypeTags":["hunter","rogue","ranger"],"ageTags":[],"tags":["弩","远程","精准"]}
+  ]
+}

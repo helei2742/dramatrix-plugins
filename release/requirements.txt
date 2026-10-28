@@ -1,0 +1,2 @@
+# Plugin package and release tools use the system OpenSSL and GitHub CLI.
+# No third-party Python packages are required.

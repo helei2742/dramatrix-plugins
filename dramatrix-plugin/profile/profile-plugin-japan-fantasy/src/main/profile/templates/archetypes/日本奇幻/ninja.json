@@ -1,0 +1,30 @@
+{
+  "archetype": "ninja",
+  "name": "忍者",
+  "visualTags": "ninja, shinobi, shadow warrior, stealth",
+  "description": "Japanese shadow warrior — ninja/shinobi",
+  "defaults": {
+    "defaultAccessories": ["mask","stealth_tools"],
+    "defaultWeapon": ["ninjato","shuriken","kusarigama","tanto"]
+  },
+  "weightBias": {
+    "bodyType": {"lean":3.0,"slim":3.0,"athletic":2.5,"slender_tall":2.0,"medium":1.0},
+    "temperament": {"cunning":3.0,"mysterious":3.0,"reserved":2.5,"calculating":2.5,"cold":2.0,"disciplined":2.0,"patient":2.0,"stealthy":3.0},
+    "hairStyle": {"bound_up":3.0,"short_crop":2.5,"ponytail":2.5,"hooded":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.0},
+    "eyeColor": {"brown":2.0,"dark_brown":3.0,"black":2.5,"grey":1.5},
+    "skinColor": {"fair":2.0,"light_tan":2.5,"tan":2.5},
+    "defaultClothes": {"shinobi_shozoku":3.0,"dark_kimono":2.5,"chainmail_under":2.0,"hooded_cloak":2.5,"dark_gi":2.0},
+    "faceFeature": {"none":2.5,"scar":1.5,"mask":2.5},
+    "faceShape": {"angular":3.0,"oval":2.5,"diamond":2.5,"sharp":2.0},
+    "eyeShape": {"narrow":3.0,"almond":2.5,"sharp":3.0},
+    "eyebrowShape": {"straight":2.5,"knitted":2.0,"sword":2.0},
+    "impression": {"shadowy":3.0,"cold":3.0,"sharp":2.5,"emotionless":2.5,"mysterious":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","jade_pendant"],
+    "defaultWeapon": ["hoe","pole","farming_sickle"],
+    "defaultClothes": ["yoroi_armor","jinbaori"]
+  },
+  "templateFluxPrompt": "a {gender} ninja, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, japanese ninja warrior, moonlit night, feudal japan, misty background, ukiyo-e style, masterpiece"
+}

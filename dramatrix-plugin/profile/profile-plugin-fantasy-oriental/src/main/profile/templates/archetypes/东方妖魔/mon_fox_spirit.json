@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_fox_spirit",
+  "name": "狐妖",
+  "visualTags": "九尾狐影,妖异狐火,红衣媚骨,月下化形",
+  "description": "修行千年化作人形的狐族妖物，媚态天成而杀心暗藏，最擅摄魂惑心",
+  "weightBias": {
+    "ageDesc": {"several_centuries":3.0,"century_old":2.5,"thousand_years":2.0,"unknown_age":2.0,"immortal_ancient":1.5},
+    "hairColor": {"jet_black":3.0,"inky_blue":2.0,"crimson":2.0,"white":1.5,"silver":1.5},
+    "skinColor": {"pale_porcelain":2.5,"moon_white":2.0,"pale_ash":2.0,"jade":1.5,"fox_fur":2.5},
+    "eyeColor": {"slit_pupil_gold":3.0,"blood_red":2.5,"amber":2.0,"crimson":2.0,"obsidian":1.5},
+    "defaultClothes": {"smoke_gauze":2.5,"black_night":2.0,"blood_dress":2.0,"dark_cloak":1.5,"wild_beast_skin":1.5},
+    "temperament": {"sinister":3.0,"seductive":2.0,"vicious":2.0,"mysterious":2.0,"brutal":1.5},
+    "impression": {"demon_charm":3.0,"sinister":2.5,"demonic_majesty":2.0,"mysterious":1.5,"coquettish":2.5,"cold_beauty":2.0,"devious":1.5},
+    "eyebrowShape": {"demon_eyebrow":3.0,"sword":2.0,"raised":1.5,"hook_brow":1.5},
+    "bodyType": {"willow_waist":3.0,"svelte_elegant":2.5,"willowy":2.5,"hourglass":1.5},
+    "heightDesc": {"graceful_stature":3.0,"willowy_tall":2.0,"moderate_165":1.5},
+    "faceShape": {"melon_seed_wide":2.0,"oval":2.0,"peach_face":1.5,"autumn_water":1.5,"fox_face":3.0},
+    "eyeShape": {"peach_blossom":2.5,"phoenix":2.0,"seductive_eye":2.0,"watery_eye":1.5,"fox":3.0,"vertical_pupil_eye":1.5},
+    "faceFeature": {"beauty_mark":2.0,"tear_mole":2.0,"pale_face":2.0,"none":1.5},
+    "lipShape": {"cherry":2.5,"red_lip":2.0,"petal_lip":1.5},
+    "noseShape": {"delicate":2.5,"jade_onion":2.0,"straight":1.5},
+    "hairStyle": {"flowing_long":3.0,"falling_horse":2.0,"spirit_snake":1.5,"wavy_long":1.5},
+    "defaultWeapon": {"none":3.0,"chain_whip":3.0,"dagger":3.0},
+    "defaultAccessories": {"hairpin":2.5,"veil":2.5,"spirit_stone":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","goggles"],
+    "temperament": ["innocent","kind_heart","pure_heart"],
+    "defaultWeapon": ["war_hammer","halberd","axe"],
+    "bodyType": ["bulky_massive","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; nine glowing fox tails, fox ears, eerie foxfire; oriental yaoguai demon art, ink and mist atmosphere"
+}

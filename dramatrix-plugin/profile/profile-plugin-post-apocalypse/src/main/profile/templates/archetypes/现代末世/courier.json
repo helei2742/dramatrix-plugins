@@ -1,0 +1,33 @@
+{
+  "archetype": "courier",
+  "name": "信使",
+  "visualTags": "wasteland courier, messenger, leather satchel, fast, reliable, dusty roads, determined, post-apocalyptic delivery, worn cap",
+  "description": "末世信使，在废土聚落间传递消息与物资，风尘仆仆的连结者，可靠而迅捷",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"runner_lean":3.0,"lean_fit":3.0,"lean_wiry":3.0,"athletic_toned":2.5,"slim":2.5,"slender_tall":2.0,"medium":2.0,"lanky":2.0},
+    "temperament": {"steadfast":3.0,"pragmatic":3.0,"quick_witted":3.0,"loyal":2.5,"determined":2.5,"cautious":2.5,"silent":2.0,"plucky":2.5,"wary":2.0,"adaptable":2.5,"hardened":2.0},
+    "hairStyle": {"short_crop":3.0,"choppy_short":2.5,"messy_medium":2.5,"tied_back_loose":2.0,"low_ponytail":2.5,"bandana_wrap":2.0,"half_up":2.0,"buzz_cut":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"dusty_brown":2.5,"dirty_blonde":2.0,"ash_brown":2.5,"chestnut":1.5,"faded_black":2.0,"jet_black":2.0},
+    "defaultClothes": {"tattered_jacket":3.0,"survivor_hoodie_worn":3.0,"wasteland_duster":2.5,"tactical_vest_light":2.5,"biker_leather_armor":2.5,"patched_denim_suit":2.5,"reinforced_trench_coat":2.0,"dust_cloak_worn":1.5},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"black":2.0,"gray":2.0,"green":2.0,"keen_blue":2.0,"amber":1.5,"deep_blue":1.5},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":2.5,"tan":2.5,"light_tan":2.5,"olive":2.0,"dusty_tan":2.5,"honey_tan":2.0,"fair":1.5},
+    "eyeShape": {"almond":2.5,"sharp_phoenix":2.5,"keen":2.5,"narrow":2.0,"deep_set":2.0,"tiger":2.0,"round":1.5,"eagle":2.0},
+    "eyebrowShape": {"straight":3.0,"thick":2.5,"steel_brow":2.5,"chivalrous_brow":2.0,"hero_eyebrow":2.0,"angular":2.0,"rugged":1.5,"furrowed":1.5},
+    "faceShape": {"rectangular":2.5,"oval":2.5,"angular":2.5,"long":2.0,"square":2.0,"seed_face":2.0,"chiseled":1.5,"bamboo_leaf_face":1.5},
+    "faceFeature": {"none":2.0,"beard_stubble":2.5,"chapped_lips":2.0,"scar":2.0,"weathered":2.5,"dirt_smudge":2.0,"clean_shaven":2.0,"sharp_features":2.0},
+    "impression": {"swift":3.0,"hardened":2.5,"loyal":2.5,"determined":2.5,"stalwart":2.5,"weathered":2.5,"reliable":3.0,"focused":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail","polished_plate_armor"],
+    "temperament": ["innocent","naive","lazy","seductive","flamboyant","haughty","sinister","unhinged"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","bulky_massive","towering_giant","soft_round"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland courier messenger, {ageDesc}, {bodyType} lean swift build, {faceDesc}, wearing worn leather jacket and cargo pants, messenger satchel across chest, dusty boots, {hairStyle} {hairColor} windblown hair, {eyeColor} vigilant eyes, {skinColor} sun-beaten skin, {temperament} aura, long dusty road through wasteland, abandoned highway, hurry with purpose, photorealistic, atmospheric, masterpiece"
+}

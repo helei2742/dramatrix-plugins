@@ -1,0 +1,31 @@
+{
+  "archetype": "thief",
+  "name": "盗贼",
+  "visualTags": "飞檐走壁,扒窃贼手,灵巧敏捷,夜行街巷",
+  "description": "市井之间的盗贼，手上功夫了得，飞檐走壁如履平地",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","hat","earring"],
+    "defaultWeapon": ["dagger","fan","none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"short_stout":3.0,"lean_fit":2.5},
+    "temperament": {"lazy":3.0,"cunning":3.0,"sly":2.5,"cheerful":1.5},
+    "hairStyle": {"choppy_short":3.0,"topknot_loose":2.5,"short_crop":2.0,"messy_bun":2.0},
+    "hairColor": {"black":2.5,"dark_brown":2.5,"chestnut":2.0,"light_brown":1.5},
+    "defaultClothes": {"hemp_cloth":3.0,"linen_simple":2.5,"black_night":2.0},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":2.0,"amber":1.5},
+    "eyeShape": {"fox":3.0,"swallow":3.0,"round":2.0,"fish":1.5},
+    "eyebrowShape": {"lazy_brow":3.0,"raised":2.5,"short_eyebrow":2.0,"hook_brow":2.0},
+    "faceShape": {"cat_face":3.0,"monkey_face":3.0,"goblin_face":2.5,"round":1.5},
+    "faceFeature": {"none":3.0,"freckles":1.5,"dimples":1.0},
+    "impression": {"shrewd":3.0,"free_spirit":2.5,"loyal":1.5,"delicate":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["axe","staff_monk","spear","hoe"],
+    "defaultAccessories": ["abacus","buddha_beads","belt_jade"],
+    "hairStyle": ["bald","immortal_bun","phoenix_crown"],
+    "defaultClothes": ["golden_armor","spirit_silk"],
+    "temperament": ["noble"]
+  },
+  "templateFluxPrompt": "a {gender} thief pickpocket, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, agile and sneaky in the streets"
+}

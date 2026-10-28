@@ -1,0 +1,19 @@
+{
+  "attribute": "eyeColor",
+  "displayName": "瞳色",
+  "options": [
+    {"id":"dark_brown","value":"深棕色","genderBias":{"男":1.5,"女":1.5},"raceTags":["人族"],"archetypeTags":[],"ageTags":[],"tags":["棕色","常见","东方"]},
+    {"id":"black","value":"黑色","genderBias":{"男":1.5,"女":1.5},"raceTags":["人族","魔族","妖族"],"archetypeTags":[],"ageTags":[],"tags":["黑色","深邃","常见"]},
+    {"id":"amber","value":"琥珀色","genderBias":{"男":1.0,"女":1.5},"raceTags":["精灵","妖族","人族"],"archetypeTags":[],"ageTags":[],"tags":["琥珀","温暖","野性"]},
+    {"id":"gray","value":"灰色","genderBias":{"男":1.0,"女":0.5},"raceTags":["人族","矮人","灵族"],"archetypeTags":[],"ageTags":["elder"],"tags":["灰色","暗淡","沧桑"]},
+    {"id":"hazel","value":"浅褐色","genderBias":{"男":1.0,"女":1.5},"raceTags":["人族","精灵","半精灵"],"archetypeTags":[],"ageTags":[],"tags":["浅褐","温和","亲切"]},
+    {"id":"honey","value":"蜜色","genderBias":{"男":0.5,"女":2.0},"raceTags":["人族","精灵","半精灵"],"archetypeTags":[],"ageTags":["teen","young_adult"],"tags":["蜜色","温暖","甜美"]},
+    {"id":"copper","value":"铜色","genderBias":{"男":1.5,"女":0.5},"raceTags":["人族","矮人","地精"],"archetypeTags":[],"ageTags":[],"tags":["铜色","粗犷","坚毅"]},
+    {"id":"ruby","value":"宝石红","genderBias":{"男":0.5,"女":2.0},"raceTags":["魔族","灵族","血族"],"archetypeTags":[],"ageTags":["young_adult","adult"],"tags":["宝石红","妖艳","华贵"]},
+    {"id":"topaz","value":"黄玉色","genderBias":{"男":0.5,"女":1.5},"raceTags":["精灵","灵族","人族"],"archetypeTags":[],"ageTags":["young_adult","adult"],"tags":["黄玉","明澈","温暖"]},
+    {"id":"blood_red","value":"血红色","genderBias":{"男":1.0,"女":0.5},"raceTags":["魔族","血族","鬼族"],"archetypeTags":[],"ageTags":[],"tags":["血红","狰狞","黑暗"]},
+    {"id":"obsidian","value":"黑曜色","genderBias":{"男":1.5,"女":0.5},"raceTags":["魔族","鬼族","妖族"],"archetypeTags":[],"ageTags":["young_adult","adult"],"tags":["黑曜","幽暗","冷峻"]},
+    {"id":"smoky_quartz","value":"烟晶色","genderBias":{"男":1.0,"女":1.0},"raceTags":["矮人","地精","人族"],"archetypeTags":[],"ageTags":[],"tags":["烟晶","沉稳","朴实"]},
+    {"id":"shadow_black","value":"暗影黑","genderBias":{"男":1.5,"女":0.5},"raceTags":["鬼族","魔族","鬼族-东瀛"],"archetypeTags":[],"ageTags":[],"tags":["暗影","幽暗","无光"]}
+  ]
+}

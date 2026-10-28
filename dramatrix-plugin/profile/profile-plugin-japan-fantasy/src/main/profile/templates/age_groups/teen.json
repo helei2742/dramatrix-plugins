@@ -1,0 +1,23 @@
+{
+  "ageGroup": "teen",
+  "displayName": "少年",
+  "ageRange": "13-17岁",
+  "defaults": {
+    "ageDesc": ["十五六岁","十七八岁","少年","十三四岁"],
+    "heightDesc": ["娇小玲珑","一米七五左右","中等身材"],
+    "bodyType": ["slim","medium"]
+  },
+  "weightBias": {
+    "faceShape": {"oval":2.0,"almond":2.0,"round":1.5},
+    "eyeShape": {"almond":2.5,"swallow":2.0,"round":1.5},
+    "lipShape": {"cherry":1.5,"pouty":1.5},
+    "impression": {"delicate":2.5,"innocent":2.0,"free_spirit":1.5},
+    "temperament": {"innocent":2.5,"sharp":1.5,"warm":1.0},
+    "faceFeature": {"none":2.5,"freckles":1.5,"dimples":1.5}
+  },
+  "exclude": {
+    "temperament": ["sinister"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","nasolabial_folds"]
+  },
+  "fluxAgeDesc": "teenager"
+}

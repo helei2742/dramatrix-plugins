@@ -1,0 +1,30 @@
+{
+  "archetype": "oracle",
+  "name": "占卜师",
+  "visualTags": "星盘,龟甲,天命,洞悉未来",
+  "description": "洞悉天机命运的卜者，观星象卦象以窥未来",
+  "defaults": {
+    "defaultAccessories": ["ring","jade_pendant"],
+    "defaultWeapon": ["staff","none"]
+  },
+  "weightBias": {
+    "bodyType": {"ethereal_light":3.0,"slim":2.5,"willowy":2.5,"slender_tall":2.0},
+    "temperament": {"ethereal":3.0,"calm":3.0,"gentle":2.0,"stoic":1.5},
+    "hairStyle": {"silver_flow":3.0,"flowing_long":2.5,"immortal_bun":2.5,"ethereal_floating":2.0},
+    "hairColor": {"white":3.0,"silver":2.5,"cosmic":2.0,"frost_white":2.0,"platinum_blond":1.5},
+    "defaultClothes": {"spirit_silk":3.0,"white_robe":3.0,"purple_robe":2.0,"dark_cloak":1.5},
+    "eyeColor": {"moonlight":3.0,"white_opaque":2.5,"star_silver":2.5,"cosmic":2.5},
+    "eyeShape": {"deep_set":3.0,"crane":2.5,"phoenix":2.0,"downturned":1.5},
+    "eyebrowShape": {"wispy_brow":3.0,"cloud_eyebrow":2.5,"twin_peak_brow":2.0,"frost_brow":2.0},
+    "faceShape": {"cloud_face":3.0,"immortal_face":2.5,"wind_face":2.5,"snow_face":2.0},
+    "faceFeature": {"none":2.5,"pale_face":2.0,"tear_mole":1.0},
+    "impression": {"ethereal":3.0,"refined":2.5,"delicate":2.0,"cold":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","axe","spear","dagger"],
+    "defaultAccessories": ["abacus","tattoo","wine_gourd"],
+    "hairStyle": ["bald","buzz_cut","wild_mane"],
+    "temperament": ["wild","overbearing","sinister"]
+  },
+  "templateFluxPrompt": "a {gender} oracle diviner, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, gazing into star chart, divination"
+}

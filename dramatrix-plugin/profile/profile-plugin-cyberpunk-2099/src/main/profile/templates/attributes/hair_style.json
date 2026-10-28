@@ -1,0 +1,218 @@
+{
+  "attribute": "hairStyle",
+  "displayName": "发型",
+  "options": [
+    {
+      "id": "shaved",
+      "value": "剃光",
+      "description": "寸草不生的头皮，便于接口",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "光头",
+        " 实用"
+      ]
+    },
+    {
+      "id": "buzz_cut",
+      "value": "寸头",
+      "description": "贴 scalp 的极短发",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "寸头",
+        " 干练"
+      ]
+    },
+    {
+      "id": "mohawk_neon",
+      "value": "霓虹莫西干",
+      "description": "中央竖起的发光发型",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "莫西干",
+        " 叛逆",
+        " 发光"
+      ]
+    },
+    {
+      "id": "cyber_dreads",
+      "value": "电子脏辫",
+      "description": "编入光纤与LED的脏辫",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "脏辫",
+        " 科技",
+        " 街头"
+      ]
+    },
+    {
+      "id": "slick_back",
+      "value": "油头",
+      "description": "抹得一丝不苟的背头",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "背头",
+        " 精英"
+      ]
+    },
+    {
+      "id": "long_flow",
+      "value": "长发披散",
+      "description": "随意垂落的长发",
+      "genderBias": {
+        "男": 0.5,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "长发",
+        " 飘逸"
+      ]
+    },
+    {
+      "id": "undercut",
+      "value": "底层剃",
+      "description": "两侧剃光顶上留长的反差发型",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "底层剃",
+        " 利落"
+      ]
+    },
+    {
+      "id": "asymmetrical",
+      "value": "不对称",
+      "description": "左右长短迥异的挑衅造型",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "不对称",
+        " 前卫"
+      ]
+    },
+    {
+      "id": "holographic_cut",
+      "value": "全息染发",
+      "description": "随光线变色的动态染发",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "全息",
+        " 染发",
+        " 炫彩"
+      ]
+    },
+    {
+      "id": "bald_chrome",
+      "value": "铬光光头",
+      "description": "抛光如镜的金属头皮",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "光头",
+        " 铬",
+        " 义体"
+      ]
+    },
+    {
+      "id": "ponytail",
+      "value": "高马尾",
+      "description": "利落束起的高马尾",
+      "genderBias": {
+        "男": 3.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "马尾",
+        " 英气"
+      ]
+    },
+    {
+      "id": "pixie",
+      "value": "精灵短发",
+      "description": "俏皮的极短碎发",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "精灵",
+        " 俏皮"
+      ]
+    },
+    {
+      "id": "afro_wire",
+      "value": "线控爆炸头",
+      "description": "膨起并嵌入电路的爆炸头",
+      "genderBias": {
+        "男": 3.0,
+        "女": 3.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "爆炸头",
+        " 电路"
+      ]
+    }
+  ]
+}

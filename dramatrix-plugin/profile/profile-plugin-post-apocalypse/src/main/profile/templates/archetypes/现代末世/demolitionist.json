@@ -1,0 +1,33 @@
+{
+  "archetype": "demolitionist",
+  "name": "爆破专家",
+  "visualTags": "wasteland demolitionist, explosives expert, dynamite, bomb disposal, reckless, scarred, post-apocalyptic, demolition charges",
+  "description": "末世爆破专家，用火药与炸药清除障碍或击退敌人，与危险共舞的狂人",
+  "defaults": {
+    "defaultAccessories": ["none","ring","eye_patch"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"stocky_strong":3.0,"barrel_chested":2.5,"muscular_broad":2.5,"athletic_toned":2.5,"chiseled_fit":2.0,"medium":2.5,"broad_shouldered":2.5,"tall_athletic":2.0},
+    "temperament": {"reckless":3.0,"bold":3.0,"unhinged":2.5,"chaotic":2.5,"fierce":2.5,"defiant":2.5,"jovial":2.5,"zealous":2.0,"hardened":2.5,"pragmatic":2.0,"plucky":2.0},
+    "hairStyle": {"buzz_cut":3.0,"short_crop":3.0,"mohawk":2.5,"shaved_sides":2.5,"choppy_short":2.5,"slicked_back":2.0,"wild_mane":2.0,"tied_back_loose":2.0},
+    "hairColor": {"black":3.0,"dark_brown":2.5,"jet_black":2.5,"faded_black":2.5,"charcoal":2.0,"dusty_brown":2.0,"dyed_red":2.0,"bleached_blonde":1.5},
+    "defaultClothes": {"military_fatigues":3.0,"ammo_belt_bandolier":3.0,"heavy_work_apron":3.0,"leather_armor_improvised":2.5,"tactical_vest_light":2.5,"patched_coveralls":2.5,"scrap_metal_armor":2.0,"biker_leather_armor":2.0},
+    "eyeColor": {"dark_brown":3.0,"wild_yellow":2.5,"amber":2.5,"black":2.5,"steel_gray":2.0,"hazel":2.0,"bloodshot":2.5,"green":1.5},
+    "skinColor": {"weathered_tan":3.0,"tan":3.0,"sun_kissed":2.5,"scarred_tan":3.0,"olive":2.5,"dusty_tan":2.5,"light_tan":2.0,"leathery_tan":2.0},
+    "eyeShape": {"tiger":3.0,"deep_set":2.5,"round":2.5,"eagle":2.5,"narrow":2.0,"dragon":2.0,"sharp_phoenix":2.0,"hunter":2.0},
+    "eyebrowShape": {"thick":3.0,"steel_brow":2.5,"hero_eyebrow":2.5,"knitted":2.5,"furrowed":2.5,"rugged":2.5,"angular":2.0,"sword":2.0},
+    "faceShape": {"square":3.0,"stone_face":3.0,"round":2.5,"angular":2.5,"weathered":3.0,"chiseled":2.5,"pentagon":2.5,"strong_jawline":2.0},
+    "faceFeature": {"scar":3.0,"burn_scar":3.0,"missing_eyebrow":2.5,"beard_stubble":2.5,"dirt_smudge":2.5,"broken_nose":2.0,"none":1.0,"strong_jaw":2.0},
+    "impression": {"reckless":3.0,"dangerous":3.0,"unhinged":2.5,"fierce":2.5,"chaotic":2.5,"hardened":2.5,"jovial":2.0,"bold":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","silk_ribbon","silver_ornaments"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","two_horns"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","ice_silk_dress","phoenix_robe","ivory_white_gown"],
+    "temperament": ["innocent","naive","seductive","gentle","kind_heart","tranquil","scholarly","wistful","calm","subdued"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","willowy","pin_thin","gangly","slim"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland demolition expert, {ageDesc}, {bodyType} stocky powerful build, {faceDesc}, wearing military gear with ammunition belts and explosives vest, holding detonator, burn scars, {hairStyle} {hairColor} singed hair, {eyeColor} wild intense eyes, {skinColor} scarred soot-stained skin, {temperament} aura, ruined building prepared for demolition, explosive charges, smoke and debris, photorealistic, explosive, masterpiece"
+}

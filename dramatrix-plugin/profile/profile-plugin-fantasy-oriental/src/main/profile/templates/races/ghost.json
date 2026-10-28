@@ -1,0 +1,34 @@
+{
+  "race": "ghost",
+  "displayName": "鬼族",
+  "description": "幽魂凝聚而成的亡灵种族，身形半透明，游离于阴阳两界之间",
+  "defaults": {
+    "skinColor": ["translucent","pale_blue","moon_pale","silver","ash_gray"],
+    "eyeColor": ["ice_blue","silver","pearl","purple","moonlit"],
+    "hairColor": ["white","silver","ash_gray","ink_black","frost_white"],
+    "bodyType": ["ethereal_light","slender_tall","willowy","slim"]
+  },
+  "weightBias": {
+    "skinColor": {"translucent":2.5,"pale_blue":2.5,"moon_pale":2.5},
+    "eyeColor": {"ice_blue":2.5,"pearl":2.5,"moonlit":2.5},
+    "hairColor": {"white":2.5,"silver":2.5,"frost_white":2.0},
+    "bodyType": {"ethereal_light":2.5,"slender_tall":2.5},
+    "eyeShape": {"deep_set":2.5,"crane":2.0},
+    "eyebrowShape": {"faint":2.5,"distant_mountain":2.0},
+    "impression": {"ethereal":2.5,"cold":2.5,"delicate":2.0},
+    "temperament": {"cold":2.5,"ethereal":2.5,"calm":1.5}
+  },
+  "exclude": {
+    "skinColor": ["wheat","ruddy","bronze","dark","tan"],
+    "eyeColor": ["dark_brown","amber","fiery_orange"],
+    "hairColor": ["auburn","chestnut","honey","red"],
+    "bodyType": ["muscular_broad","hulking","plump","stocky"],
+    "faceFeature": ["beard_full","beard_goatee","beard_stubble","beard_mustache","scar"],
+    "temperament": ["wild","warm"]
+  },
+  "faceDescOverride": {
+    "prepend": "",
+    "append": ", translucent form"
+  },
+  "templateFluxPrompt": "a ghost {gender}, {ageDesc}, {bodyType}, {faceDesc} ethereal translucent form, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

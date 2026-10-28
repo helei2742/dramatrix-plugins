@@ -1,0 +1,52 @@
+{
+  "archetype": "cyberpsycho",
+  "category": "赛博朋克",
+  "name": "赛博精神病",
+  "visualTags": "精神病, 狂乱, 悲剧",
+  "description": "义体吞噬人性、在狂乱中屠戮的悲剧怪物。",
+  "defaults": {
+    "cyberImplant": [
+      "gorilla_arms",
+      "mantis_blade",
+      "kerenzikov"
+    ],
+    "bodyType": [
+      "augmented_bulk",
+      "bulky"
+    ],
+    "temperament": [
+      "manic",
+      "reckless"
+    ],
+    "defaultClothes": [
+      "biker_leathers"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "gorilla_arms": 3.0,
+      "mantis_blade": 3.0,
+      "kerenzikov": 2.5
+    },
+    "bodyType": {
+      "augmented_bulk": 3.0,
+      "bulky": 2.5
+    },
+    "impression": {
+      "overclock_manic": 3.0,
+      "feral_edge": 2.5
+    },
+    "temperament": {
+      "manic": 3.0,
+      "reckless": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "calm",
+      "zen",
+      "charismatic"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

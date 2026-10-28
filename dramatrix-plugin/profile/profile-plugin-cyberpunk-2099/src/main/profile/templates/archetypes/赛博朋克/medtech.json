@@ -1,0 +1,42 @@
+{
+  "archetype": "medtech",
+  "category": "赛博朋克",
+  "name": "医疗兵",
+  "visualTags": "医疗, 救助, 镇静",
+  "description": "在枪林弹雨中缝合生命的战地天使。",
+  "defaults": {
+    "defaultClothes": [
+      "cargo_punk"
+    ],
+    "cyberImplant": [
+      "cyber_lung",
+      "cyber_heart"
+    ],
+    "temperament": [
+      "calm"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "cyber_lung": 2.5,
+      "cyber_heart": 2.5
+    },
+    "defaultClothes": {
+      "cargo_punk": 2.0
+    },
+    "impression": {
+      "surgeon_precise": 2.5,
+      "razor_calm": 2.0
+    },
+    "temperament": {
+      "calm": 2.5
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "manic",
+      "reckless"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

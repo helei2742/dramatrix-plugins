@@ -1,0 +1,33 @@
+{
+  "archetype": "firefighter",
+  "name": "消防员",
+  "visualTags": "modern firefighter, fire rescue, uniform, helmet, brave, heroic, fit, determined",
+  "description": "现代消防员，烈火中的逆行者，以生命守护生命，无畏无惧",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"tall_athletic":3.0,"muscular_broad":3.0,"chiseled_fit":3.0,"athletic_toned":3.0,"broad_shouldered":2.5,"lean_fit":2.5,"stocky_strong":2.0,"heroic_figure":2.5},
+    "temperament": {"heroic":3.0,"bold":3.0,"disciplined":3.0,"steadfast":3.0,"honor_bound":2.5,"sincere":2.5,"altruistic":3.0,"zealous":2.5,"plucky":2.5,"stoic":2.0,"calm":2.0,"stern":1.5,"jovial":1.5,"dignified":2.0},
+    "hairStyle": {"short_crop":3.0,"buzz_cut":3.0,"choppy_short":2.0,"slicked_back":2.0,"simple_tie":2.0,"warrior_braid":1.5,"topknot_loose":1.5,"high_ponytail":2.0,"side_part_long":1.5},
+    "hairColor": {"black":3.0,"dark_brown":3.0,"jet_black":2.5,"charcoal":2.0,"light_brown":1.5,"copper":1.0,"salt_pepper":1.0,"chestnut":1.0},
+    "defaultClothes": {"training_gear":3.0,"black_night":3.0,"russet_leather_armor":2.0,"indigo_dyed_cotton":2.0,"leather_armor":2.0,"ochre_hemp_tunic":1.5,"cotton_hanfu":1.5,"slate_gray_cloak":1.5,"linen_simple":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":3.0,"hazel":1.5,"smoky_quartz":1.5,"deep_blue":1.0,"copper":1.5,"amber":1.5,"gray":1.0},
+    "skinColor": {"tan":3.0,"light_tan":2.5,"sun_kissed":2.5,"olive":2.5,"weathered_tan":2.5,"fair":2.0,"honey_tan":2.0,"bronze":1.5},
+    "eyeShape": {"tiger":3.0,"almond":2.5,"eagle":2.5,"sharp_phoenix":2.5,"round":2.0,"deep_set":2.0,"dragon":1.5,"narrow":1.0},
+    "eyebrowShape": {"hero_eyebrow":3.0,"steel_brow":3.0,"thick":2.5,"straight":2.5,"sword":2.5,"rugged":2.0,"curved_thick":2.0,"chivalrous_brow":2.0},
+    "faceShape": {"square":3.0,"chiseled":3.0,"stone_face":2.5,"rectangular":2.5,"angular":2.5,"strong_jawline":3.0,"round":1.0,"oval":1.0},
+    "faceFeature": {"none":2.0,"clean_shaven":2.5,"scar":2.0,"strong_jaw":3.0,"ruddy":2.5,"beard_stubble":2.0,"sharp_features":2.0,"weathered":1.5},
+    "impression": {"heroic":3.0,"resolute":3.0,"loyal":3.0,"dignified":2.5,"fierce":2.0,"weathered":2.5,"majestic":2.0,"bold":2.5,"honorable":2.0,"righteous":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","hoe","pole","sickle","whisk","fan","jade_ruyi","staff_monk"],
+    "defaultAccessories": ["abacus","buddha_beads","spirit_beast_bag","bone_necklace","hairpin","phoenix_hairpin","hair_crown","jade_pendant","gold_chain","earring"],
+    "hairStyle": ["bald","wild_mane","dao_bun","cloud_bun","phoenix_crown","child_tuft","two_horns","double_bun","immortal_bun","savage_bun","startled_swan","flying_sky"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","bamboo_hat_cape","wild_beast_skin","brocade_hanfu","ice_silk_dress"],
+    "temperament": ["innocent","naive","lazy","seductive","decadent","unhinged","sinister","wistful","cynical","haughty"],
+    "bodyType": ["plump_soft","delicate_frail","willowy","ethereal_light","pin_thin","slim","gangly"]
+  },
+  "templateFluxPrompt": "a {gender} modern firefighter, {ageDesc}, {bodyType} brave build, {faceDesc}, wearing firefighter uniform and protective gear, helmet, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, fire truck background, urban fire station, heroic stance, photorealistic, masterpiece"
+}

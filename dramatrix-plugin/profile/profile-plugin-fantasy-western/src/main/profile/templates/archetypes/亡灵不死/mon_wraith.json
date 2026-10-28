@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_wraith",
+  "name": "怨魂",
+  "visualTags": "半透明躯,飘忽无足,黑袍垂影,哀嚎回荡",
+  "description": "执念不散凝成的半透明幽魂，无足飘行，哀嚎所至生者神魂俱裂",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"several_centuries":2.5,"century_old":2.0,"thousand_years":1.5,"immortal_ancient":1.5},
+    "hairColor": {"none":3.0,"white":2.5,"ash_blond":2.0,"gray":2.0,"charcoal":1.5},
+    "skinColor": {"ghostly_pale":2.5,"chalk_white":2.5,"pale_ash":2.5,"stone_gray":1.5,"age_spotted":1.5,"translucent":3.5,"phosphor_white":1.5},
+    "eyeColor": {"white_opaque":3.0,"blood_red":2.5,"shadow_black":2.0,"moonlight":1.5,"pearl_gray":1.5},
+    "defaultClothes": {"corpse_robe":3.0,"patchwork_rags":2.5,"dark_cloak":2.0,"charcoal_hooded_cloak":1.5,"chainmail":1.5},
+    "temperament": {"desolate":3.0,"cold":1.5,"grim":2.0,"sinister":2.0,"stoic":1.5,"melancholy":2.5,"unhinged":2.0},
+    "impression": {"ghostly":3.5,"cold":2.0,"lonely":2.5,"sinister":1.5,"ancient_soul":1.5,"melancholy":2.0,"ethereal":2.0},
+    "eyebrowShape": {"faint":2.5,"ghost_brow":2.5,"wispy_brow":2.0,"broken_brow":1.5},
+    "bodyType": {"ethereal_light":3.5,"floating_light":3.0,"willowy":1.5},
+    "heightDesc": {"graceful_stature":2.5,"willowy_tall":2.0,"tall_lithe":1.5},
+    "hairStyle": {"ethereal_floating":3.5,"drifting_cloud":2.5,"flying_sky":2.0},
+    "faceFeature": {"shadow_face":3.0,"pale_face":2.5,"none":1.5},
+    "faceShape": {"ghost_face":3.0,"long":2.0,"autumn_water":1.5},
+    "eyeShape": {"empty_eye":3.0,"abyss_eye":2.0,"watery_eye":1.5},
+    "lipShape": {"ghost_lip":3.0,"silent_lip":2.0,"pale_lip":1.5},
+    "defaultWeapon": {"none":3.0,"scythe":3.0,"soul_flute":3.0},
+    "defaultAccessories": {"none":2.5,"black_veil_hat":2.5,"veil":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["head_flower","phoenix_hairpin","hair_ribbon"],
+    "temperament": ["cheerful","jovial","warm","innocent"],
+    "faceFeature": ["dimples","ruddy","freckles"],
+    "defaultWeapon": ["war_hammer","axe","halberd","crossbow"],
+    "bodyType": ["bulky_massive","muscular_broad","solid_robust","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; translucent floating body with no legs, tattered shroud trailing into mist; dark fantasy undead art, necrotic gloom"
+}

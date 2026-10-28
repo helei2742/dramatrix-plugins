@@ -1,0 +1,27 @@
+{
+  "race": "beast",
+  "displayName": "妖族",
+  "description": "万物有灵化形为妖，带有兽类特征，崇尚力量",
+  "defaults": {
+    "skinColor": ["wheat","bronze","ruddy","dark"],
+    "eyeColor": ["amber","emerald","crimson","golden","black"],
+    "hairColor": ["black","red","emerald","dark_brown"],
+    "bodyType": ["tall_athletic","lean_fit","muscular_broad","short_stout"]
+  },
+  "weightBias": {
+    "eyeColor": {"amber":2.5,"golden":2.0},
+    "hairColor": {"red":2.0,"emerald":1.5},
+    "bodyType": {"tall_athletic":2.0,"muscular_broad":2.0},
+    "eyeShape": {"tiger":2.5,"wolf":2.5,"fox":2.0,"round":1.5},
+    "eyebrowShape": {"rugged":2.5,"curved_thick":2.0,"thick":2.0},
+    "faceFeature": {"tattoo":2.5,"scar":2.0,"beard_stubble":1.5},
+    "impression": {"wild":2.5,"heroic_open":2.5,"free_spirit":2.0},
+    "temperament": {"wild":2.5,"overbearing":1.5,"warm":1.0}
+  },
+  "exclude": {
+    "skinColor": ["fair","ivory"],
+    "eyeColor": ["dark_brown"],
+    "temperament": ["refined","noble","innocent"]
+  },
+  "templateFluxPrompt": "a beastfolk {gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc} with beast traits, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}

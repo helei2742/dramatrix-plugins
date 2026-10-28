@@ -1,0 +1,47 @@
+{
+  "archetype": "corp_security",
+  "category": "赛博朋克",
+  "name": "企业安保",
+  "visualTags": "安保, 企业, 门神",
+  "description": "高塔的钢铁门神，冷漠而高效的暴力。",
+  "defaults": {
+    "defaultClothes": [
+      "corp_armor"
+    ],
+    "defaultWeapon": [
+      "smart_pistol",
+      "heavy_smg"
+    ],
+    "temperament": [
+      "stoic",
+      "cold"
+    ]
+  },
+  "weightBias": {
+    "defaultClothes": {
+      "corp_armor": 3.0
+    },
+    "defaultWeapon": {
+      "smart_pistol": 2.5,
+      "heavy_smg": 2.0
+    },
+    "impression": {
+      "corp_predator": 2.5,
+      "war_hardened": 2.0
+    },
+    "temperament": {
+      "stoic": 2.5,
+      "cold": 2.0
+    }
+  },
+  "exclude": {
+    "defaultClothes": [
+      "latex_catsuit",
+      "neon_kimono"
+    ],
+    "temperament": [
+      "playful"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

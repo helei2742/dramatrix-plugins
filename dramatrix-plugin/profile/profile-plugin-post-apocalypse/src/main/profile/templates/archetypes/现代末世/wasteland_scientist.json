@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_scientist",
+  "name": "废土科学家",
+  "visualTags": "wasteland scientist, researcher, radiation measurement, geiger counter, lab equipment, intellectual, analytical, post-apocalyptic science",
+  "description": "末世科学家，在废墟实验室中研究废土生态与变异现象，用理性之光照亮黑暗时代",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":3.0,"lean_wiry":2.5,"gangly":2.5,"lean_fit":2.5,"medium":2.5,"lanky":2.0,"ethereal_light":1.5},
+    "temperament": {"analytical":3.0,"scholarly":3.0,"curious":3.0,"meticulous":3.0,"obsessive":2.5,"eccentric":2.5,"calm":2.5,"pragmatic":2.5,"calculating":2.5,"cold":2.0,"loner":2.0},
+    "hairStyle": {"messy_medium":3.0,"unkempt_long":3.0,"choppy_short":2.5,"low_ponytail":2.5,"tied_back_loose":2.5,"slicked_back":2.0,"half_up":2.5,"bangs_short":2.0},
+    "hairColor": {"dark_brown":3.0,"gray_streaked":3.0,"black":2.5,"white":2.5,"salt_pepper":2.5,"dusty_brown":2.0,"ash_brown":2.0,"silver_gray":2.5},
+    "defaultClothes": {"radiation_suit_worn":3.0,"wasteland_lab_coat":3.0,"gas_mask_hooded_poncho":3.0,"scavenger_harness":2.5,"wasteland_medic_vest":2.0,"survivor_hoodie_worn":2.0,"tattered_jacket":1.5,"patched_denim_suit":1.5},
+    "eyeColor": {"gray":3.0,"pale_blue":3.0,"green":2.5,"hazel":2.5,"dark_brown":2.0,"keen_blue":2.5,"amber":2.0,"magnifying_blue":2.5},
+    "skinColor": {"pale_porcelain":3.0,"fair":3.0,"ivory":2.5,"light_tan":2.0,"jade":2.0,"rose_white":2.0,"weathered_tan":1.0,"tan":1.0},
+    "eyeShape": {"scholar_eye":3.0,"keen":3.0,"deep_set":2.5,"narrow":2.5,"round":2.5,"almond":2.0,"sharp_phoenix":2.0,"magnified":2.5},
+    "eyebrowShape": {"thin":2.5,"straight":2.5,"long_eyebrow":3.0,"silkworm":2.0,"furrowed":2.5,"angular":2.0,"crescent":2.0,"distant_mountain":1.5},
+    "faceShape": {"gaunt":2.5,"long":2.5,"oval":2.5,"seed_face":2.0,"angular":2.5,"bamboo_leaf_face":2.0,"heart":2.0,"jade_mirror":2.0},
+    "faceFeature": {"spectacles":3.0,"hollow_cheeks":2.5,"none":2.0,"sharp_features":2.5,"squinting":2.5,"clean_shaven":2.5,"nasolabial_folds":2.0,"pale_complexion":2.5},
+    "impression": {"scholarly":3.0,"eccentric":3.0,"intellectual":3.0,"analytical":2.5,"mysterious":2.5,"cold":2.0,"obsessive":2.5,"tired":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","abacus","buddha_beads"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","biker_leather_armor"],
+    "temperament": ["brutal","wild","reckless","vicious","unhinged","savage","seductive","flamboyant","jovial","carefree"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","heroic_figure","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland scientist, {ageDesc}, {bodyType} lean intellectual build, {faceDesc}, wearing worn radiation suit and lab coat, holding geiger counter and research notes, measuring instruments, {hairStyle} {hairColor} disheveled hair, {eyeColor} analytical observant eyes behind spectacles, {skinColor} pale indoor skin, {temperament} aura, ruined laboratory, scientific equipment, charts on walls, radioactive samples, dim fluorescent light, photorealistic, cerebral, masterpiece"
+}

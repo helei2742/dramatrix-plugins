@@ -1,0 +1,33 @@
+{
+  "archetype": "western_mage",
+  "name": "西方法师",
+  "visualTags": "western mage, wizard, arcane",
+  "description": "欧洲巫师/法师，手持法杖，身披长袍，掌握奥术之力",
+  "defaults": {
+    "defaultAccessories": ["ring","crystal_ball"],
+    "defaultWeapon": ["staff","wand"]
+  },
+  "weightBias": {
+    "bodyType": {"ethereal_light":2.5,"slender_tall":2.5,"slim":2.0,"gangly":2.0,"lean_fit":1.5,"pin_thin":1.5,"floating_light":1.5},
+    "temperament": {"mysterious":3.0,"enigmatic":3.0,"ethereal":2.5,"calm":2.5,"melancholy":2.0,"tranquil":2.0,"arrogant":1.5,"free_spirited":1.5,"subdued":1.0,"desolate":1.0},
+    "hairStyle": {"flowing_long":3.0,"wavy_long":2.0,"loose_curls":2.0,"side_part_long":2.0,"center_part_long":1.5,"side_bangs_long":2.0,"half_up":1.5,"silver_flow":1.5,"loose_half_up":1.5,"braided":1.0,"simple_tie":1.0},
+    "hairColor": {"white":3.0,"silver":3.0,"gray":2.5,"ash_blond":1.5,"salt_pepper":1.5,"charcoal":1.5,"dark_brown":1.0,"ice_blue":1.0,"platinum_blond":1.0,"frost_white":1.0},
+    "eyeColor": {"deep_blue":2.5,"sapphire":2.5,"emerald":2.5,"forest_green":2.0,"purple":2.0,"gray":1.5,"ice_blue":1.5,"silver":1.5,"violet":1.5,"moonlight":1.5,"amber":1.0,"lavender":1.0},
+    "skinColor": {"fair":3.0,"pale_porcelain":2.5,"ivory":2.0,"moon_white":1.5,"rose_white":1.0,"chalk_white":1.0,"pale_yellow":1.0},
+    "defaultClothes": {"wizard_robe":3.0,"cloak_arcane":2.5,"purple_robe":2.0,"moonlight_gown":2.0,"dark_cloak":1.5,"travelers_cloak":1.5,"white_robe":1.0,"spirit_silk":1.0},
+    "faceFeature": {"beard_full":2.5,"none":2.0,"wise_wrinkles":2.0,"beard_stubble":1.5,"clean_shaven":1.5,"scar":1.0,"spectacles":1.5},
+    "faceShape": {"angular":2.0,"oval":2.0,"rectangular":1.5,"gaunt":2.0,"narrow":1.5,"heart":1.0},
+    "eyeShape": {"deep_set":2.5,"hooded":2.0,"almond":2.0,"narrow":1.5,"piercing":1.5},
+    "eyebrowShape": {"thick":2.5,"bushy":2.5,"straight":2.0,"furrowed":1.5,"arched":1.0},
+    "impression": {"mysterious":3.0,"wise":3.0,"enigmatic":2.5,"arcane":2.5,"ethereal":2.0,"scholarly":2.0,"ancient":1.5,"weathered":1.0,"resolute":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","pole","sickle","axe","claws","halberd","war_hammer","spear"],
+    "defaultAccessories": ["abacus","buddha_beads","tattoo","bracer_iron","armor_pauldron","military_seal","hairpin"],
+    "hairStyle": ["bald","buzz_cut","warrior_topknot","dao_bun","cloud_bun","phoenix_crown","child_tuft"],
+    "temperament": ["brutal","reckless","wild","lazy","seductive"],
+    "defaultClothes": ["hemp_cloth","patchwork_rags","golden_armor","plate_armor","leather_armor","bamboo_hat_cape","training_gear"],
+    "bodyType": ["muscular_broad","bulky_massive","towering_giant","barrel_chested"]
+  },
+  "templateFluxPrompt": "a {gender} western wizard, {ageDesc}, {bodyType} build, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, medieval european wizard, arcane magic aura, tower library background, ancient tomes, mystical glowing runes, high fantasy art, masterpiece"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "mon_troll",
+  "name": "巨魔",
+  "visualTags": "再生血肉,长臂垂地,苔藓覆体,巨石为槌",
+  "description": "伤口转瞬愈合的山地巨魔，长臂垂地，唯有火焰能真正杀死它",
+  "weightBias": {
+    "ageDesc": {"thirty_mid":2.0,"forty":2.0,"unknown_age":2.0,"century_old":1.5,"prime_age":1.5},
+    "hairColor": {"none":2.5,"charcoal":2.0,"dark_brown":2.0,"gray":1.5,"orange":1.5},
+    "skinColor": {"moss_green":3.0,"pale_green":2.5,"stone_gray":2.5,"clay_brown":2.0,"swarthy":1.5,"bark_brown":1.5},
+    "eyeColor": {"amber":2.5,"blood_red":2.0,"sunflower":2.0,"dark_brown":1.5,"smoky_quartz":1.5},
+    "defaultClothes": {"patchwork_rags":2.5,"leather_armor":2.5,"studded_leather_vest":2.0,"bronze_scale_armor":1.5,"russet_leather_armor":1.5},
+    "temperament": {"brutal":2.5,"wild":2.0,"gruff":3.0,"reckless":2.0,"cunning":1.5,"lazy":2.0},
+    "impression": {"fierce":3.0,"wild":2.5,"weathered":2.0,"domineering":1.5},
+    "eyebrowShape": {"thick":2.5,"rugged":2.5,"knitted":2.0,"steel_brow":1.5},
+    "bodyType": {"towering_giant":3.5,"bulky_massive":2.5,"barrel_chested":2.0,"solid_robust":1.5,"ape_like":3.0,"hunched":1.5},
+    "heightDesc": {"giant_towering":3.5,"towering_2m":2.5,"cloud_reaching":1.5},
+    "hairStyle": {"messy_bun":2.5,"choppy_short":2.5,"wolf_tail":1.5,"bald":1.5},
+    "faceFeature": {"broad_jaw":2.5,"thick_neck":2.5,"wrinkled":2.0,"scar":2.0},
+    "faceShape": {"giant_face":3.0,"broad":2.5,"long":1.5},
+    "eyeShape": {"toad_eye":2.5,"deep_set":2.5,"narrow":1.5},
+    "lipShape": {"wide_lip":3.0,"toothed_lip":2.5,"thick":2.0},
+    "noseShape": {"giant_nose":3.0,"broad_flat":2.5,"hump":1.5},
+    "defaultWeapon": {"pole":3.0,"war_hammer":3.0,"none":3.0},
+    "defaultAccessories": {"none":2.5,"leather_belt":2.5,"bone_necklace":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["folding_fan","abacus","phoenix_hairpin","jade_pendant"],
+    "temperament": ["dignified","scholarly","demure"],
+    "defaultWeapon": ["throwing_knives","wind_shuriken","poison_needle","bow"],
+    "bodyType": ["petite_curvy","delicate_frail","svelte_elegant","pin_thin"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; hulking long-armed troll body, regenerating flesh, moss growing on hide; western dark fantasy monster art"
+}

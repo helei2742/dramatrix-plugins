@@ -1,0 +1,8 @@
+{
+  "attribute": "defaultWeapon",
+  "displayName": "默认武器",
+  "options": [
+    {"id":"spear","value":"长枪","genderBias":{"男":3.0,"女":0.0},"raceTags":["人族","魔族","妖族"],"archetypeTags":["swordsman"],"ageTags":[],"tags":["长枪","战阵","英武"]},
+    {"id":"throwing_knives","value":"飞刀","genderBias":{"男":1.5,"女":1.0},"raceTags":["人族","魔族","精灵"],"archetypeTags":["rogue","ranger","assassin"],"ageTags":[],"tags":["飞刀","暗器","精准"]}
+  ]
+}

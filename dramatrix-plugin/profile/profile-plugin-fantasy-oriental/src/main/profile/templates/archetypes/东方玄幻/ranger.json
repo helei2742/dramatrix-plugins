@@ -1,0 +1,30 @@
+{
+  "archetype": "ranger",
+  "name": "游侠",
+  "visualTags": "双刃,荒野,行侠仗义,孤身天涯",
+  "description": "浪迹天涯的侠客，双刃在手，行走荒野，行侠仗义",
+  "defaults": {
+    "defaultAccessories": ["wine_gourd","hat","mask"],
+    "defaultWeapon": ["iron_sword","dagger","bow"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":3.0,"slender_tall":3.0,"slim":2.0,"tall_athletic":1.5},
+    "temperament": {"wild":3.0,"free_spirit":2.5,"sharp":2.5,"cold":1.5,"cunning":1.0},
+    "hairStyle": {"half_up":3.0,"topknot_loose":2.5,"choppy_short":2.0,"high_ponytail":2.0},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"chestnut":1.5,"auburn":1.5},
+    "defaultClothes": {"leather_armor":3.0,"dark_cloak":2.5,"hemp_cloth":2.0,"black_night":2.0},
+    "eyeColor": {"forest_green":2.5,"dark_brown":2.5,"amber":2.0,"hazel":1.5},
+    "eyeShape": {"wolf":3.0,"swallow":2.5,"eagle":2.5,"fox":1.5},
+    "eyebrowShape": {"chivalrous_brow":3.0,"broken_brow":2.5,"bow_eyebrow":2.0,"rugged":1.5},
+    "faceShape": {"sharp":2.5,"wolf_face":2.5,"deer_face":2.0,"hunter_face":2.0},
+    "faceFeature": {"scar":2.0,"none":2.5,"beard_stubble":1.5,"tattoo":1.5},
+    "impression": {"free_spirit":3.0,"heroic_open":3.0,"weathered":2.0,"shrewd":1.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["hoe","whisk","jade_ruyi","staff"],
+    "defaultAccessories": ["abacus","hairpin","buddha_beads"],
+    "hairStyle": ["bald","phoenix_crown","immortal_bun"],
+    "defaultClothes": ["spirit_silk","monk_robe"]
+  },
+  "templateFluxPrompt": "a {gender} ranger wanderer, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, dual-wielding blades in the wilderness, wandering swordsman"
+}

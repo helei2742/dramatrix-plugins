@@ -1,0 +1,28 @@
+{
+  "archetype": "fisherman",
+  "name": "渔夫",
+  "visualTags": "fisherman, fishing, riverside",
+  "description": "江边渔夫，以捕鱼为生，风吹日晒，性情朴实",
+  "defaults": {
+    "defaultAccessories": ["hat","none"],
+    "defaultWeapon": ["pole","none","sickle"]
+  },
+  "weightBias": {
+    "bodyType": {"lean_fit":2.5,"lean_wiry":2.0,"medium":2.0,"wiry_sinewy":1.5},
+    "temperament": {"warm":2.5,"stoic":2.0,"calm":2.0,"tranquil":1.5,"sincere":1.5},
+    "hairStyle": {"simple_tie":2.5,"short_crop":2.0,"half_up":1.5,"choppy_short":1.0},
+    "hairColor": {"black":2.5,"dark_brown":2.0,"salt_pepper":1.5,"charcoal":1.0},
+    "defaultClothes": {"hemp_cloth":3.0,"bamboo_hat_cape":2.5,"linen_simple":2.0,"straw_mino_cape":1.5,"indigo_dyed_cotton":1.5},
+    "eyeColor": {"dark_brown":3.0,"black":2.5,"hazel":1.5},
+    "eyeShape": {"fish":2.0,"round":2.0,"almond":1.5,"downturned":1.0},
+    "eyebrowShape": {"silkworm":2.0,"straight":1.5,"thick":1.5,"hanging_brow":1.0},
+    "faceShape": {"oval":2.5,"round":2.0,"pear":1.5,"fish_face":1.0},
+    "faceFeature": {"none":2.0,"ruddy":1.5,"wrinkled":1.5,"freckles":1.0},
+    "impression": {"weathered":3.0,"simple":2.5,"loyal":2.0,"serene":1.5,"affable":1.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","jade_ruyi","fan","guqin","war_hammer"],
+    "defaultAccessories": ["jade_pendant","belt_jade","phoenix_hairpin","gold_chain"]
+  },
+  "templateFluxPrompt": "a {gender} fisherman, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, riverside with bamboo grove, fishing boat, misty morning, traditional chinese landscape, masterpiece"
+}

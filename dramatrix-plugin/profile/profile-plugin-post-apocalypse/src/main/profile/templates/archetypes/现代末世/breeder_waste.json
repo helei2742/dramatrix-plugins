@@ -1,0 +1,33 @@
+{
+  "archetype": "breeder_waste",
+  "name": "饲养员",
+  "visualTags": "wasteland breeder, livestock keeper, animal pen, chickens, goats, mutated livestock, homestead, post-apocalyptic ranch",
+  "description": "末世饲养员，在聚落中圈养变异后的禽畜，用耐心和智慧驯养废土中的蛋白质来源",
+  "defaults": {
+    "defaultAccessories": ["none","ring","belt_jade"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"stocky_strong":3.0,"medium":3.0,"athletic_toned":2.5,"lean_wiry":2.5,"soft_round":2.0,"barrel_chested":2.5,"lean_fit":2.5,"broad_shouldered":2.0},
+    "temperament": {"patient":3.0,"nurturing":3.0,"simple":3.0,"calm":2.5,"steadfast":2.5,"kind_heart":3.0,"humble":2.5,"resilient":2.5,"pragmatic":2.5,"wary":2.0,"hardworking":3.0},
+    "hairStyle": {"bandana_wrap":3.0,"short_crop":3.0,"tied_back_loose":2.5,"choppy_short":2.5,"messy_medium":2.5,"half_up":2.5,"low_ponytail":2.5,"buzz_cut":2.0},
+    "hairColor": {"dusty_brown":3.0,"dark_brown":3.0,"dirty_blonde":2.5,"gray_streaked":2.5,"black":2.5,"ash_brown":2.5,"salt_pepper":2.0,"faded_black":2.0},
+    "defaultClothes": {"patched_coveralls":3.0,"patched_denim_suit":3.0,"dust_cloak_worn":3.0,"heavy_work_apron":2.5,"survivor_hoodie_worn":2.5,"tattered_jacket":2.5,"nomad_wraps":2.0,"scavenger_harness":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"warm_brown":3.0,"green":2.0,"gray":2.5,"amber":2.0,"black":2.0,"honey":2.5},
+    "skinColor": {"weathered_tan":3.0,"sun_kissed":3.0,"tan":3.0,"dusty_tan":2.5,"olive":2.5,"light_tan":2.0,"fair":2.0,"honey_tan":2.5},
+    "eyeShape": {"almond":3.0,"round":2.5,"downturned":2.5,"deep_set":2.5,"sharp_phoenix":2.0,"tiger":2.0,"peach_blossom":2.0,"narrow":2.0},
+    "eyebrowShape": {"thick":2.5,"straight":2.5,"rugged":2.5,"chivalrous_brow":2.5,"hero_eyebrow":2.0,"willow":2.0,"silkworm":2.5,"crescent":2.5},
+    "faceShape": {"round":3.0,"square":2.5,"oval":2.5,"seed_face":2.5,"weathered":2.5,"jade_mirror":2.0,"rectangular":2.5,"heart":2.0},
+    "faceFeature": {"none":2.5,"ruddy":3.0,"dirt_smudge":2.5,"freckles":2.5,"clean_shaven":2.5,"dimples":2.0,"weathered":2.5,"beard_stubble":2.0},
+    "impression": {"simple":3.0,"kind_heart":3.0,"hardworking":3.0,"nurturing":2.5,"patient":2.5,"humble":2.5,"warm":2.5,"reliable":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","royal_scepter"],
+    "defaultAccessories": ["phoenix_hairpin","hair_crown","jade_pendant","gold_chain","abacus","buddha_beads","spirit_beast_bag","eye_patch"],
+    "hairStyle": ["phoenix_crown","cloud_bun","immortal_bun","dao_bun","double_bun","flying_sky","startled_swan","child_tuft","wild_mane","mohawk","savage_bun"],
+    "defaultClothes": ["spirit_silk","red_dress","palace_dress","dragon_robe","lotus_skirt","moonlight_gown","brocade_hanfu","golden_armor","ice_silk_dress","chainmail","road_warrior_gear"],
+    "temperament": ["innocent","naive","seductive","flamboyant","haughty","decadent","unhinged","sinister","savage","reckless","lazy"],
+    "bodyType": ["plump_soft","delicate_frail","ethereal_light","pin_thin","gangly","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland livestock breeder, {ageDesc}, {bodyType} sturdy nurturing build, {faceDesc}, wearing patched coveralls and dust cloak, tending to animals in pen, feeding mutated chickens or goats, {hairStyle} {hairColor} sun-bleached hair, {eyeColor} kind patient eyes, {skinColor} sun-beaten skin, {temperament} aura, makeshift animal pen in settlement, mutated livestock, feed buckets, rustic homestead, dusty morning light, photorealistic, pastoral, masterpiece"
+}

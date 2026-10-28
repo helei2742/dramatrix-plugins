@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.dramatrix.plugins</groupId>
+        <artifactId>dramatrix-plugins</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>dramatrix-plugin</artifactId>
+    <packaging>pom</packaging>
+    <name>Dramatrix Profile plugins</name>
+
+    <modules>
+        <module>profile/profile-plugin-cyberpunk-2099</module>
+        <module>profile/profile-plugin-fantasy-oriental</module>
+        <module>profile/profile-plugin-fantasy-western</module>
+        <module>profile/profile-plugin-japan-fantasy</module>
+        <module>profile/profile-plugin-post-apocalypse</module>
+        <module>profile/profile-plugin-urban-modern</module>
+    </modules>
+</project>

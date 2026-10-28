@@ -1,0 +1,312 @@
+{
+  "attribute": "cyberImplant",
+  "displayName": "义体改造",
+  "options": [
+    {
+      "id": "arm_blade",
+      "value": "臂刃",
+      "description": "前臂内藏单分子刃，近战致残",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 武器"
+      ]
+    },
+    {
+      "id": "optic_visor",
+      "value": "战术目镜",
+      "description": "增强现实战术目镜，标记敌人弱点",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 视觉"
+      ]
+    },
+    {
+      "id": "spine_cooler",
+      "value": "脊椎散热片",
+      "description": "背部散热鳍片，长时间作战不掉链",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 散热"
+      ]
+    },
+    {
+      "id": "phantom_limb",
+      "value": "幻肢投影",
+      "description": "失去的肢体以全息投影复现，可短暂实体化",
+      "genderBias": {
+        "男": 1.0,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 全息"
+      ]
+    },
+    {
+      "id": "mantis_blade",
+      "value": "螳螂刀",
+      "description": "肘部弹出的高速单分子利刃",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 刃"
+      ]
+    },
+    {
+      "id": "neural_coprocessor",
+      "value": "神经协处理器",
+      "description": "脑内并行运算芯片，加速决策",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 神经"
+      ]
+    },
+    {
+      "id": "subdermal_armor",
+      "value": "皮下装甲",
+      "description": "真皮下铺设的凯夫拉-陶瓷层",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 装甲"
+      ]
+    },
+    {
+      "id": "reflex_booster",
+      "value": "反射增幅",
+      "description": "强化脊髓反射，子弹时间般闪避",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 反射"
+      ]
+    },
+    {
+      "id": "voice_modulator",
+      "value": "声纹调制",
+      "description": "可任意改变声线与语言的喉部植入",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 声纹"
+      ]
+    },
+    {
+      "id": "cyber_lung",
+      "value": "机械肺",
+      "description": "过滤毒气、水下供氧的替换肺",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 呼吸"
+      ]
+    },
+    {
+      "id": "adrenal_pump",
+      "value": "肾上腺素泵",
+      "description": "危机时自动注药的循环植入",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 药物"
+      ]
+    },
+    {
+      "id": "skin_weave",
+      "value": "皮肤编织",
+      "description": "皮下纳米丝编织，抗割抗冲击",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 皮肤"
+      ]
+    },
+    {
+      "id": "optic_camouflage",
+      "value": "光学迷彩",
+      "description": "实时折射光线的隐身涂层",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 隐身"
+      ]
+    },
+    {
+      "id": "data_jack",
+      "value": "数据插孔",
+      "description": "后颈标准接口，直连网络",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 数据"
+      ]
+    },
+    {
+      "id": "cyber_heart",
+      "value": "机械心",
+      "description": "不受情绪影响的恒定泵血心",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 循环"
+      ]
+    },
+    {
+      "id": "pain_editor",
+      "value": "痛觉编辑器",
+      "description": "可关闭痛觉的神经开关",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 神经"
+      ]
+    },
+    {
+      "id": "gorilla_arms",
+      "value": "大猩猩臂",
+      "description": "巨力液压义臂，徒手破门",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 力量"
+      ]
+    },
+    {
+      "id": "kerenzikov",
+      "value": "凯伦兹科夫",
+      "description": "神经加速，世界相对变慢",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "赛博",
+        " 义体",
+        " 速度"
+      ]
+    }
+  ]
+}

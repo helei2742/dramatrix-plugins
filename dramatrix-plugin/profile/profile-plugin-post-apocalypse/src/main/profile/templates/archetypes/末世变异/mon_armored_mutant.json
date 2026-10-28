@@ -1,0 +1,32 @@
+{
+  "archetype": "mon_armored_mutant",
+  "name": "装甲变异体",
+  "visualTags": "骨甲增生,钢板嵌肉,重拳砸地,子弹难穿",
+  "description": "骨骼异常增生并嵌入废钢的重型变异体，普通弹药打上去只留白点",
+  "weightBias": {
+    "ageDesc": {"unknown_age":2.5,"thirty_mid":2.0,"twenty_late":1.5,"forty":1.5,"middle_age_weary":1.5},
+    "hairColor": {"none":3.0,"charcoal":2.0,"salt_pepper":2.0,"ash_blond":1.5,"orange":1.5},
+    "skinColor": {"pale_ash":1.5,"scarred_bronze":3.0,"phosphor_white":2.0,"moss_green":2.0,"clay_brown":2.0,"stone_gray":2.5},
+    "eyeColor": {"white_opaque":2.5,"sunflower":2.0,"deep_orange":2.0,"blood_red":1.5,"heterochromia":1.5},
+    "defaultClothes": {"tattered_jacket":2.5,"radiation_suit_worn":2.0,"scrap_metal_armor":3.5,"nomad_wraps":1.5,"gas_mask_hooded_poncho":1.5,"reinforced_trench_coat":2.0,"leather_armor_improvised":2.0,"patched_coveralls":1.5},
+    "temperament": {"unhinged":3.0,"volatile":2.0,"brutal":3.0,"paranoid":2.0,"jaded":1.5,"stoic":2.5,"ruthless":2.5},
+    "impression": {"sickness":2.5,"wild":2.5,"weathered":2.0,"bloodthirsty":1.5,"domineering":3.0,"unyielding":2.5,"fierce":2.0},
+    "eyebrowShape": {"broken_brow":2.5,"wispy_brow":2.0,"faint":2.0,"knitted":1.5},
+    "bodyType": {"muscular_broad":3.5,"broad_shouldered":3.0,"hefty_burly":2.0,"stocky_strong":1.5},
+    "heightDesc": {"tall_190":3.0,"broad_tall":2.5,"towering":1.5},
+    "hairStyle": {"bald":3.0,"buzz_cut":2.0},
+    "faceFeature": {"scale_face":3.0,"cyber_implant":2.5,"thick_neck":2.5,"burn_scar":2.0},
+    "faceShape": {"square":3.0,"broad":2.5,"giant_face":2.0},
+    "eyeShape": {"deep_set":2.5,"narrow":2.5,"empty_eye":1.5},
+    "lipShape": {"toothed_lip":2.5,"warped_lip":2.0,"wide_lip":1.5},
+    "defaultWeapon": {"war_hammer":3.0,"pole":3.0,"claws":3.0},
+    "defaultAccessories": {"armor_pauldron":2.5,"bracer_iron":2.5,"bandolier":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["jade_pendant","buddha_beads","phoenix_hairpin","folding_fan","abacus"],
+    "temperament": ["noble","scholarly","dignified"],
+    "defaultWeapon": ["throwing_knives","poison_needle","guqin","ink_brush"],
+    "bodyType": ["pin_thin","delicate_frail","willowy","petite_curvy"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; overgrown bone plating fused with scrap steel, riveted armor slabs, sledgehammer fists; post-apocalyptic mutant creature art, radioactive wasteland"
+}

@@ -1,0 +1,170 @@
+{
+  "attribute": "skinColor",
+  "displayName": "肤色",
+  "options": [
+    {
+      "id": "fair",
+      "value": "白皙",
+      "description": "未改造的自然白肤",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "白",
+        " 自然"
+      ]
+    },
+    {
+      "id": "tan",
+      "value": "小麦",
+      "description": "长期户外的健康麦色",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "麦",
+        " 自然"
+      ]
+    },
+    {
+      "id": "dark",
+      "value": "深褐",
+      "description": "深色的自然肤",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "深",
+        " 自然"
+      ]
+    },
+    {
+      "id": "pale_cyan",
+      "value": "苍青",
+      "description": "因贫血或改造泛青的冷白",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "青",
+        " 冷"
+      ]
+    },
+    {
+      "id": "chrome_skin",
+      "value": "镀铬肤",
+      "description": "面部或肢体覆盖抛光金属皮",
+      "genderBias": {
+        "男": 3.0,
+        "女": 0.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "铬",
+        " 金属",
+        " 义体"
+      ]
+    },
+    {
+      "id": "tattooed_neon",
+      "value": "霓虹纹身肤",
+      "description": "皮下植入发光电路的纹身肤",
+      "genderBias": {
+        "男": 0.5,
+        "女": 2.5
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "纹身",
+        " 荧光",
+        " 电路"
+      ]
+    },
+    {
+      "id": "albino",
+      "value": "白化",
+      "description": "缺乏色素的苍白皮肤",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "白化",
+        " 苍白"
+      ]
+    },
+    {
+      "id": "olive",
+      "value": "橄榄",
+      "description": "暖调橄榄色自然肤",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "橄榄",
+        " 自然"
+      ]
+    },
+    {
+      "id": "synthetic_pale",
+      "value": "合成苍白",
+      "description": "仿生人特有的无血色苍白",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "合成",
+        " 苍白",
+        " 仿生"
+      ]
+    },
+    {
+      "id": "iridescent",
+      "value": "虹彩",
+      "description": "随角度变色的纳米涂层肤",
+      "genderBias": {
+        "男": 1.0,
+        "女": 1.0
+      },
+      "raceTags": [],
+      "archetypeTags": [],
+      "ageTags": [],
+      "tags": [
+        "虹彩",
+        " 纳米",
+        " 涂层"
+      ]
+    }
+  ]
+}

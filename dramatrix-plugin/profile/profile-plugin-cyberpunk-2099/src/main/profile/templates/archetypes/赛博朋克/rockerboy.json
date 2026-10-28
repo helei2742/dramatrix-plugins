@@ -1,0 +1,46 @@
+{
+  "archetype": "rockerboy",
+  "category": "赛博朋克",
+  "name": "摇滚客",
+  "visualTags": "摇滚, 反叛, 表演",
+  "description": "用失真吉他与反叛歌词点燃街头的煽动者。",
+  "defaults": {
+    "defaultClothes": [
+      "latex_catsuit"
+    ],
+    "hairColor": [
+      "neon_pink"
+    ],
+    "cyberImplant": [
+      "skin_weave"
+    ],
+    "temperament": [
+      "charismatic",
+      "manic"
+    ]
+  },
+  "weightBias": {
+    "hairColor": {
+      "neon_pink": 3.0,
+      "violet": 2.0
+    },
+    "defaultClothes": {
+      "latex_catsuit": 2.5
+    },
+    "impression": {
+      "neon_glam": 3.0,
+      "magnetic_charm": 2.5
+    },
+    "temperament": {
+      "charismatic": 2.5,
+      "manic": 2.0
+    }
+  },
+  "exclude": {
+    "temperament": [
+      "stoic",
+      "cold"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

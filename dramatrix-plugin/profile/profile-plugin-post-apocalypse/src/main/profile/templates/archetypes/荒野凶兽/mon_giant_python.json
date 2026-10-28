@@ -1,0 +1,34 @@
+{
+  "archetype": "mon_giant_python",
+  "name": "巨蟒",
+  "visualTags": "环身绞杀,鳞纹幽暗,冷血无声,吞象之口",
+  "description": "藏身密林的环身巨蟒，无声贴近后骤然收紧，骨骼碎裂声连绵不绝",
+  "weightBias": {
+    "ageDesc": {"unknown_age":3.0,"prime_age":2.0,"thirty_mid":1.5,"century_old":1.5},
+    "hairColor": {"dark_brown":2.5,"charcoal":1.5,"sand_blond":2.0,"silver":1.5,"auburn":1.5,"none":3.0,"dark_green":2.0},
+    "skinColor": {"bark_brown":2.5,"weathered_tan":2.5,"swarthy":2.0,"scaly_green":3.5,"clay_brown":2.0,"moss_green":2.5,"blue_gray":1.5},
+    "eyeColor": {"slit_pupil_gold":3.5,"amber":2.5,"sunflower":2.0,"forest_green":1.5,"copper":1.5},
+    "defaultClothes": {"wild_beast_skin":3.0,"hunters_garb":2.0,"patchwork_rags":1.5,"feather_cloak":1.5,"leather_armor":1.5},
+    "temperament": {"wild":3.0,"fierce":2.5,"brutal":2.5,"volatile":2.0,"paranoid":1.5,"cold":3.0,"stoic":2.5,"vicious":2.5},
+    "impression": {"wild":3.0,"fierce":2.5,"bloodthirsty":2.0,"lynx_eye":1.5},
+    "eyebrowShape": {"tiger_eyebrow":2.5,"rugged":2.0,"thick":2.0,"wire_brow":1.5},
+    "bodyType": {"serpentine":3.5,"willowy":2.0,"lithe_agile":1.5},
+    "heightDesc": {"willowy_tall":2.5,"tall_lithe":2.0},
+    "hairStyle": {"bald":2.5,"spirit_snake":2.5,"flowing_long":1.5},
+    "faceShape": {"snake_face":3.5,"long":2.0},
+    "eyeShape": {"snake_eye":3.5,"vertical_pupil_eye":3.0,"narrow":2.0},
+    "lipShape": {"snake_lip":3.0,"wide_lip":2.5,"toothed_lip":2.0},
+    "noseShape": {"snake_nose":3.5,"flat":2.0},
+    "faceFeature": {"scale_face":3.5,"none":1.5},
+    "defaultWeapon": {"none":3.0,"chain_whip":3.0},
+    "defaultAccessories": {"none":2.5}
+  },
+  "exclude": {
+    "defaultAccessories": ["abacus","book_pouch","folding_fan","scroll_tube"],
+    "temperament": ["scholarly","eloquent","dignified","demure"],
+    "hairStyle": ["updo_elegant","phoenix_crown","braid_crown"],
+    "defaultWeapon": ["bow","crossbow","war_hammer","guqin"],
+    "bodyType": ["muscular_broad","broad_shouldered","barrel_chested"]
+  },
+  "templateFluxPrompt": "{gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, {hairStyle}, {hairColor}, {eyeColor}, {skinColor}, {temperament}, wearing {defaultClothes}, wielding {defaultWeapon}, {heightDesc}; enormous coiling python body, dark scale patterns, unblinking cold stare; wild beast monster concept art, savage wilderness"
+}

@@ -1,0 +1,33 @@
+{
+  "archetype": "radio_operator",
+  "name": "通讯员",
+  "visualTags": "wasteland radio operator, communications, antenna, radio equipment, headset, signals, connecting settlements, tech-savvy, post-apocalyptic",
+  "description": "末世通讯员，用拼凑的无线电设备为废土聚落传递消息，电磁波中的孤胆联络官",
+  "defaults": {
+    "defaultAccessories": ["none","goggles","ring"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"lean_wiry":2.5,"slender_tall":2.5,"gangly":2.5,"medium":3.0,"lanky":2.0,"lean_fit":2.0,"pin_thin":1.5},
+    "temperament": {"meticulous":3.0,"patient":3.0,"silent":3.0,"obsessive":2.5,"calm":2.5,"loner":3.0,"pragmatic":2.5,"nervous":2.0,"adaptable":2.0,"curious":2.5,"disciplined":2.0},
+    "hairStyle": {"messy_medium":3.0,"choppy_short":2.5,"tied_back_loose":2.5,"short_crop":2.5,"unkempt_long":2.0,"bangs_short":2.5,"half_up":2.0,"bandana_wrap":2.0},
+    "hairColor": {"dark_brown":3.0,"black":3.0,"dusty_brown":2.5,"ash_brown":2.0,"charcoal":2.0,"faded_black":2.5,"jet_black":2.0,"gray_streaked":1.5},
+    "defaultClothes": {"survivor_hoodie_worn":3.0,"scavenger_harness":3.0,"tattered_jacket":2.5,"patched_denim_suit":2.5,"dust_cloak_worn":2.5,"wasteland_duster":2.0,"wasteland_lab_coat":2.0,"patched_coveralls":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"gray":2.5,"black":2.0,"green":2.0,"tired_blue":2.5,"amber":2.0,"magnifying_blue":2.0},
+    "skinColor": {"pale_porcelain":3.0,"fair":3.0,"ivory":2.5,"light_tan":2.0,"rose_white":2.0,"tan":1.5,"weathered_tan":1.0,"jade":2.0},
+    "eyeShape": {"tired":3.0,"round":2.5,"deep_set":2.5,"scholar_eye":2.5,"almond":2.0,"keen":3.0,"narrow":2.0,"sharp_phoenix":1.5},
+    "eyebrowShape": {"thin":2.5,"straight":2.5,"furrowed":2.5,"long_eyebrow":2.0,"silkworm":2.0,"knitted":2.5,"angular":2.0,"crescent":1.5},
+    "faceShape": {"oval":3.0,"gaunt":2.5,"seed_face":2.5,"long":2.5,"bamboo_leaf_face":2.0,"angular":2.0,"heart":2.0,"jade_mirror":2.0},
+    "faceFeature": {"spectacles":3.0,"hollow_cheeks":2.0,"headset_indent":2.5,"none":2.0,"sharp_features":2.0,"dirt_smudge":2.0,"squinting":2.5,"clean_shaven":2.0},
+    "impression": {"focused":3.0,"meticulous":3.0,"solitary":3.0,"diligent":3.0,"tired":2.5,"calm":2.0,"shadowed":2.0,"intellectual":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","staff_monk","whisk","fan","jade_ruyi","war_hammer","axe","flail"],
+    "defaultAccessories": ["eye_patch","spirit_beast_bag","military_seal","bone_necklace","mask","buddha_beads"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut","dao_bun"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","spirit_silk","dragon_robe","ammo_belt_bandolier","biker_leather_armor"],
+    "temperament": ["brutal","savage","unhinged","reckless","heroic","gallant","flamboyant","jovial","seductive"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","heroic_figure","stocky_strong"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland radio operator, {ageDesc}, {bodyType} lean indoor build, {faceDesc}, wearing worn hoodie and headset, sitting at makeshift radio station with scavenged equipment, antenna wires, tuning dials, {hairStyle} {hairColor} disheveled hair, {eyeColor} focused tired eyes behind glasses, {skinColor} pale indoor skin, {temperament} aura, dim radio shack, electronic scrap, flickering screens, headphones on, photorealistic, solitary, masterpiece"
+}

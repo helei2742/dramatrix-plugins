@@ -1,0 +1,33 @@
+{
+  "archetype": "wasteland_teacher",
+  "name": "废土教师",
+  "visualTags": "wasteland teacher, educator, makeshift classroom, books, chalkboard, teaching children, patient, hopeful, post-apocalyptic school",
+  "description": "末世教师，在废墟教室中为孩子们点亮知识之光，守护文明火种的传道者",
+  "defaults": {
+    "defaultAccessories": ["none","ring","goggles"],
+    "defaultWeapon": ["none"]
+  },
+  "weightBias": {
+    "bodyType": {"slim":3.0,"slender_tall":2.5,"lean_fit":2.5,"medium":2.5,"svelte_elegant":2.5,"lean_wiry":2.0,"willowy":2.0,"athletic_toned":2.0},
+    "temperament": {"patient":3.0,"scholarly":3.0,"kind_heart":3.0,"encouraging":3.0,"gentle":3.0,"altruistic":2.5,"disciplined":2.5,"sincere":2.5,"calm":2.5,"resilient":2.5,"warm":2.5},
+    "hairStyle": {"bound_up":2.5,"low_ponytail":2.5,"bangs_short":2.5,"half_up":2.5,"side_part_long":3.0,"simple_tie":2.5,"choppy_short":2.0,"loose_half_up":2.5},
+    "hairColor": {"dark_brown":3.0,"black":2.5,"gray":2.5,"salt_pepper":2.5,"chestnut":2.0,"light_brown":2.0,"silver_gray":2.5,"jet_black":2.0},
+    "defaultClothes": {"survivor_hoodie_worn":3.0,"merchant_patchwork_robe":2.5,"wasteland_lab_coat":2.5,"patched_denim_suit":3.0,"tattered_jacket":2.5,"dust_cloak_worn":2.0,"scavenger_harness":2.0,"wasteland_medic_vest":2.0},
+    "eyeColor": {"dark_brown":3.0,"hazel":2.5,"warm_brown":3.0,"gray":2.0,"green":2.0,"deep_blue":2.5,"black":2.0,"honey":2.0},
+    "skinColor": {"fair":2.5,"ivory":2.5,"light_tan":2.5,"rose_white":2.5,"tan":2.0,"weathered_tan":2.0,"pale_porcelain":2.0,"jade":1.5},
+    "eyeShape": {"almond":3.0,"scholar_eye":3.0,"peach_blossom":2.5,"round":2.5,"sharp_phoenix":2.0,"deep_set":2.0,"downturned":2.5,"fish":1.5},
+    "eyebrowShape": {"straight":2.5,"willow":2.5,"silkworm":3.0,"long_eyebrow":2.5,"crescent":2.5,"auspicious_brow":2.5,"curved_fine":2.0,"distant_mountain":2.0},
+    "faceShape": {"oval":3.0,"seed_face":2.5,"bamboo_leaf_face":2.5,"jade_mirror":2.5,"heart":2.5,"round":2.0,"long":2.0,"angular":1.0},
+    "faceFeature": {"spectacles":2.5,"none":2.5,"clean_shaven":2.5,"dimples":2.0,"sharp_features":2.0,"chalk_dust":2.0,"nasolabial_folds":2.0,"high_cheekbones":2.0},
+    "impression": {"scholarly":3.0,"warm":3.0,"patient":3.0,"encouraging":3.0,"kind_heart":2.5,"intellectual":2.5,"hopeful":3.0,"gentle":2.5}
+  },
+  "exclude": {
+    "defaultWeapon": ["flying_sword","axe","war_hammer","hoe","pole","sickle","staff_monk","claws","flail"],
+    "defaultAccessories": ["bone_necklace","eye_patch","spirit_beast_bag","military_seal","mask"],
+    "hairStyle": ["bald","wild_mane","mohawk","warrior_topknot","savage_bun","buzz_cut","warrior_braid"],
+    "defaultClothes": ["golden_armor","plate_armor","chainmail","scrap_metal_armor","road_warrior_gear","ammo_belt_bandolier","biker_leather_armor","wild_beast_skin"],
+    "temperament": ["sinister","brutal","wild","reckless","vicious","unhinged","savage","feral","cold","ruthless","intimidating"],
+    "bodyType": ["bulky_massive","towering_giant","barrel_chested","muscular_broad","stocky_strong","heroic_figure"]
+  },
+  "templateFluxPrompt": "a {gender} wasteland teacher, {ageDesc}, {bodyType} scholarly build, {faceDesc}, wearing worn coat and glasses, holding chalk or worn book, teaching in front of makeshift chalkboard, {hairStyle} {hairColor} hair, {eyeColor} warm patient eyes, {skinColor} skin, {temperament} aura, makeshift classroom in ruined building, children listening, books salvaged from rubble, hopeful light through broken windows, photorealistic, inspiring, masterpiece"
+}

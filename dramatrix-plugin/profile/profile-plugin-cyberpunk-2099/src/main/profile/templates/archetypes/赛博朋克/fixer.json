@@ -1,0 +1,43 @@
+{
+  "archetype": "fixer",
+  "category": "赛博朋克",
+  "name": "掮客",
+  "visualTags": "掮客, 人脉, 话术",
+  "description": "在暗网与人脉间游走的中间人，没有他办不到的脏活。",
+  "defaults": {
+    "defaultClothes": [
+      "holographic_suit"
+    ],
+    "cyberImplant": [
+      "voice_modulator"
+    ],
+    "temperament": [
+      "charismatic"
+    ]
+  },
+  "weightBias": {
+    "cyberImplant": {
+      "voice_modulator": 3.0
+    },
+    "defaultClothes": {
+      "holographic_suit": 2.5
+    },
+    "impression": {
+      "broker_slick": 3.0,
+      "magnetic_charm": 2.5
+    },
+    "temperament": {
+      "charismatic": 2.5
+    }
+  },
+  "exclude": {
+    "defaultWeapon": [
+      "railgun",
+      "heavy_smg"
+    ],
+    "temperament": [
+      "feral_edge"
+    ]
+  },
+  "templateFluxPrompt": "a {gender} {archetypeName}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, augmentations: {cyberImplant}, cyberpunk, neon city"
+}

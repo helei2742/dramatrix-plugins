@@ -1,0 +1,29 @@
+{
+  "archetype": "berserker",
+  "name": "狂战士",
+  "visualTags": "怒发冲冠,血战狂暴,巨力无双",
+  "description": "以怒火为力量的狂战士，越是愤怒越是强大，所向披靡",
+  "defaults": {
+    "defaultAccessories": ["tattoo","none"],
+    "defaultWeapon": ["axe","iron_sword","spear"]
+  },
+  "weightBias": {
+    "bodyType": {"muscular_broad":3.0,"tall_athletic":3.0,"lean_fit":1.5},
+    "temperament": {"wild":3.0,"overbearing":3.0,"sharp":2.5,"reckless":2.0,"ferocious":2.0},
+    "hairStyle": {"wild_mane":3.0,"wolf_tail":2.5,"warrior_braid":2.5,"choppy_short":1.0},
+    "hairColor": {"red":3.0,"flame_red":2.5,"dark_brown":1.5,"black":1.0},
+    "defaultClothes": {"leather_armor":3.0,"black_night":2.0,"hemp_cloth":1.5},
+    "eyeColor": {"crimson":3.0,"blood_red":2.5,"deep_orange":2.0,"amber":1.5},
+    "eyeShape": {"tiger":3.0,"wolf":3.0,"dragon":2.0,"round":1.0},
+    "eyebrowShape": {"fire_eyebrow":3.0,"tiger_eyebrow":3.0,"linked":2.5,"thick":2.0,"rugged":2.0},
+    "faceShape": {"tiger_face":3.0,"bear_face":3.0,"giant_face":2.0,"pentagon":1.5},
+    "faceFeature": {"scar":3.0,"beard_stubble":2.5,"tattoo":2.5,"ruddy":1.5},
+    "impression": {"heroic_open":3.0,"sinister":2.5,"resolute":2.0,"heroic":2.0}
+  },
+  "exclude": {
+    "defaultWeapon": ["whisk","fan","jade_ruyi","none"],
+    "defaultAccessories": ["abacus","jade_pendant","hairpin"],
+    "hairStyle": ["bald","double_bun","cloud_bun","immortal_bun"]
+  },
+  "templateFluxPrompt": "a {gender} berserker, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura, rage-fueled warrior"
+}

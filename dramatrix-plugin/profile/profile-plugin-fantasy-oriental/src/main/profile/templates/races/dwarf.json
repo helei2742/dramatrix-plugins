@@ -1,0 +1,27 @@
+{
+  "race": "dwarf",
+  "displayName": "矮人族",
+  "description": "身材矮小但结实强壮，擅长锻造与采矿",
+  "defaults": {
+    "skinColor": ["bronze","ruddy","rocky","wheat"],
+    "eyeColor": ["dark_brown","black","amber"],
+    "hairColor": ["dark_brown","black","red","gray"],
+    "bodyType": ["short_stout","lean_fit","tall_athletic"]
+  },
+  "weightBias": {
+    "bodyType": {"short_stout":2.5,"lean_fit":1.5},
+    "heightDesc": {"short":2.5,"dwarf_stocky":2.5,"average":0.5},
+    "faceShape": {"square":2.5,"round":2.5,"rectangular":2.0},
+    "eyebrowShape": {"thick":2.5,"rugged":2.0},
+    "faceFeature": {"beard_full":2.5,"beard_stubble":2.0,"beard_mustache":1.0},
+    "impression": {"loyal":2.5,"resolute":2.5,"heroic_open":1.5},
+    "temperament": {"stoic":2.5,"wild":1.5,"warm":1.5}
+  },
+  "exclude": {
+    "bodyType": ["slender_tall","willowy","ethereal_light"],
+    "heightDesc": ["tall_180","towering","slender_tall"],
+    "hairStyle": ["flowing_long"],
+    "temperament": ["ethereal","noble"]
+  },
+  "templateFluxPrompt": "a dwarf {gender} {archetype_name}, {ageDesc}, {bodyType}, {faceDesc}, wearing {defaultClothes}, {hairStyle} {hairColor} hair, {eyeColor} eyes, {skinColor} skin, {temperament} aura"
+}
