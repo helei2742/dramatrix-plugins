@@ -1,0 +1,78 @@
+{
+  "models": [
+    {
+      "name": "flux-2-klein-9b.safetensors",
+      "displayName": "Flux.2 Klein 9B（BF16 原版）",
+      "kind": "diffusion_model",
+      "group": "flux2-klein-9b-diffusion",
+      "workflowValue": "flux-2-klein-9b.safetensors",
+      "sort": 1,
+      "version": "bf16",
+      "baseModel": "Flux2Klein_9B",
+      "downloadUrls": [
+        "https://modelscope.cn/models/black-forest-labs/FLUX.2-klein-9B/resolve/master/flux-2-klein-9b.safetensors",
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
+      ],
+      "description": "主模型（9B 蒸馏 BF16 原版，质量最好、显存占用最高），放入 ComfyUI/models/diffusion_models/。需 HuggingFace 访问令牌（9B 系列为非商用许可）。"
+    },
+    {
+      "name": "flux-2-klein-9b-fp8.safetensors",
+      "displayName": "Flux.2 Klein 9B（FP8）",
+      "kind": "diffusion_model",
+      "group": "flux2-klein-9b-diffusion",
+      "workflowValue": "flux-2-klein-9b-fp8.safetensors",
+      "default": true,
+      "sort": 2,
+      "version": "fp8",
+      "baseModel": "Flux2Klein_9B",
+      "downloadUrls": [
+        "https://modelscope.cn/models/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/master/flux-2-klein-9b-fp8.safetensors",
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
+      ],
+      "description": "主模型（9B 蒸馏 FP8，约 9.4GB，显存友好），放入 ComfyUI/models/diffusion_models/。需要 HuggingFace 访问令牌（9B 系列为非商用许可）。"
+    },
+    {
+      "name": "flux-2-klein-9b-nvfp4.safetensors",
+      "displayName": "Flux.2 Klein 9B（NVFP4）",
+      "kind": "diffusion_model",
+      "group": "flux2-klein-9b-diffusion",
+      "workflowValue": "flux-2-klein-9b-nvfp4.safetensors",
+      "sort": 3,
+      "version": "nvfp4",
+      "baseModel": "Flux2Klein_9B",
+      "downloadUrls": [
+        "https://modelscope.cn/models/black-forest-labs/FLUX.2-klein-9b-nvfp4/resolve/master/flux-2-klein-9b-nvfp4.safetensors",
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-nvfp4/resolve/main/flux-2-klein-9b-nvfp4.safetensors"
+      ],
+      "description": "主模型（9B 蒸馏 NVFP4，NVIDIA 量化，RTX50 系最快、VRAM 最省、约 2.7 倍加速），放入 ComfyUI/models/diffusion_models/。需 HuggingFace 访问令牌（9B 系列为非商用许可）。"
+    },
+    {
+      "name": "qwen_3_8b_fp8mixed.safetensors",
+      "displayName": "Qwen3 8B 文本编码器 (FP8)",
+      "kind": "text_encoder",
+      "group": "flux2-klein-clip",
+      "workflowValue": "qwen_3_8b_fp8mixed.safetensors",
+      "version": "fp8",
+      "baseModel": "Flux2Klein_9B",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/flux2-klein-9B/resolve/master/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+        "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"
+      ],
+      "description": "文本编码器，放入 ComfyUI/models/text_encoders/"
+    },
+    {
+      "name": "flux2-vae.safetensors",
+      "displayName": "Flux.2 VAE",
+      "kind": "vae",
+      "group": "flux2-klein-vae",
+      "workflowValue": "flux2-vae.safetensors",
+      "baseModel": "Flux2Klein_9B",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/flux2-dev/resolve/master/split_files/vae/flux2-vae.safetensors",
+        "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
+      ],
+      "description": "VAE，放入 ComfyUI/models/vae/"
+    }
+  ],
+  "comfyuiPlugins": []
+}

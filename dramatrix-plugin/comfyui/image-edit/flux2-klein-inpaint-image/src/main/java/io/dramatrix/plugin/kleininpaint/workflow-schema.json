@@ -1,0 +1,30 @@
+{
+  "parameters": [
+    { "key": "image", "type": "string", "required": true, "desc": "输入原图 ComfyUI 文件名（input 目录下，由服务端上传后注入）" },
+    { "key": "maskImageAssetId", "type": "int", "desc": "遮罩图图片资产 id（前端传入），与 image 配合做局部重绘；服务端解析出本地路径上传后回填 maskImage" },
+    { "key": "maskImage", "type": "string", "desc": "遮罩图 ComfyUI 文件名（input 目录下，由服务端从 maskImageAssetId 上传后回填），插件只读该字段" },
+    { "key": "referenceImageAssetId", "type": "int", "desc": "额外参考图图片资产 id（前端传入，选填）：经 LoadImage → ImageScaleToTotalPixels(1MP) → VAEEncode → ReferenceLatent 链注入条件，作全局风格/主体参考。服务端解析出本地路径上传后回填 referenceImage" },
+    { "key": "referenceImage", "type": "string", "desc": "额外参考图 ComfyUI 文件名（input 目录下，由服务端从 referenceImageAssetId 上传后回填），插件只读该字段；为空 = 不注入（该 LoadImage 节点会被剪掉）" },
+    { "key": "maskChannel", "type": "string", "desc": "遮罩选取通道（ImageToMask）：red（默认，适配不透明 RGB 黑白遮罩，白=重绘）/ green / blue / alpha / luminance" },
+    { "key": "prompt", "type": "string", "desc": "局部重绘指令，描述遮罩区域要改成什么，如「把头上羽毛去掉，脚下的铃铛去掉」。**无需指代填充色**（涂色仅供模型定位重绘区，属内部细节）。⚠️ 传了额外参考图时，提示词里可用自然语言 + 带空格的序数词指代它（如 `image 1`；裁剪图是 `image 0`）—— Flux.2 本地只有「链式注入的整体条件」，按编号绑定是尽力引导、不保证 100%" },
+    { "key": "cropTargetSize", "type": "int", "desc": "送模型的裁剪采样边长（正方形，InpaintCropImproved.output_target_width/height），默认 1024（官方 F2K 工作流口径），区间 256~2048 并向上对齐到 32 的倍数。⚠️ 这是**精确最终尺寸**不是上限：节点会先把上下文区按 1:1 扩缩、再把裁剪结果重采样到该尺寸。旧版接 `GetImageSize`（= 输入图尺寸），大图会让模型在 ~2MP 画布上采样、且为凑原图宽高比把上下文撑到近整图。⚠️ 同时决定重绘画布（EmptyFlux2LatentImage）边长 —— 两者必须一致，否则缝合几何错位" },
+    { "key": "maskExpandPixels", "type": "int", "desc": "遮罩膨胀像素（InpaintCropImproved.mask_expand_pixels，把重绘区向外扩以包含上下文，缺省 120）" },
+    { "key": "maskBlendPixels", "type": "int", "desc": "遮罩边缘羽化像素（InpaintCropImproved.mask_blend_pixels，缺省 64），越大过渡越柔和" },
+    { "key": "maskColor", "type": "string", "desc": "遮罩区域填充色（DrawMaskOnImage，供模型理解重绘位置）：\"0, 255, 0\" 或 \"#00FF00\"，缺省绿。一般无需修改" },
+    { "key": "steps", "type": "int", "desc": "采样步数（KSampler），缺省 6" },
+    { "key": "cfg", "type": "float", "desc": "CFG 强度（Flux.2 Klein 蒸馏模型固定 1），缺省 1" },
+    { "key": "samplerName", "type": "string", "desc": "采样器名（KSampler），缺省 euler" },
+    { "key": "scheduler", "type": "string", "desc": "调度器名（KSampler），缺省 simple" },
+    { "key": "denoise", "type": "float", "desc": "去噪强度（局部重绘遮罩内应保持 1 以完全重画），缺省 1" },
+    { "key": "seed", "type": "int", "desc": "随机种子；null 或 0 表示随机" },
+    { "key": "unetName", "type": "string", "desc": "主模型文件名（models/diffusion_models/ 下，缺省走模型槽 / flux-2-klein-9b-fp8.safetensors）" },
+    { "key": "vaeName", "type": "string", "desc": "VAE 文件名（models/vae/ 下，缺省走模型槽 / flux2-vae.safetensors）" },
+    { "key": "loras", "type": "object[]", "desc": "LoRA 列表。已收拢进 ImageEditInput.loras，由服务端从 ComfyResultSubscribe.loraNames 解析；插件按 binding 的 lora.startNodes（UNETLoader）动态串联 LoraLoaderModelOnly，工作流不预置 LoRA 节点。置空 = 不加 LoRA" }
+  ],
+  "extra": [
+    { "key": "clipName", "type": "string", "desc": "（adapter.json extra，非请求参数）文本编码器文件名（models/text_encoders/ 下），缺省 qwen_3_8b_fp8mixed.safetensors（与 dependencies.json / 同族 flux2-klein 插件同一口径）。模型槽优先于本项" },
+    { "key": "defaultMaskChannel", "type": "string", "options": ["red", "green", "blue", "alpha", "luminance"], "desc": "（adapter.json extra，非请求参数）遮罩选取通道默认值，缺省 red（适配不透明 RGB 黑白遮罩）" },
+    { "key": "deviceMode", "type": "string", "options": ["cpu (compatible)", "gpu (much faster)"], "desc": "（adapter.json extra，非请求参数）InpaintCropImproved 计算设备，缺省 cpu (compatible)；显存够可改 gpu (much faster) 提速。仅插件作者/部署者配置，不在前端口令里" }
+  ],
+  "output": { "kind": "image" }
+}

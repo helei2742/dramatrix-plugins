@@ -1,0 +1,139 @@
+{
+  "name": "index-tts2-audio",
+  "displayName": "IndexTTS2 文生音频",
+  "baseModel": "IndexTTS-2",
+  "type": "text2audio",
+  "category": "文生音频",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 IndexTTS-2 的文生音频工作流，支持多分段音色/情感/语速与语义情绪文本（emoTexts）",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.indextts2.IndexTTS2AudioAdapter",
+  "extra": {
+    "unload_model": false,
+    "do_sample": true,
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "top_k": 50,
+    "num_beams": 3,
+    "repetition_penalty": 1.05,
+    "length_penalty": 0,
+    "max_mel_tokens": 1815,
+    "max_tokens_per_sentence": 600,
+    "emotion": {
+      "type": "VECTOR",
+      "label": "情绪",
+      "note": "8 维情绪向量：单维 0~1.4，合计超过 3.5 时按比例压缩（最终落到 0~0.6）",
+      "defaultValue": {
+        "Happy": 0,
+        "Angry": 0,
+        "Sad": 0,
+        "Fear": 0,
+        "Hate": 0,
+        "Low": 0,
+        "Surprise": 0,
+        "Neutral": 0
+      },
+      "maxSum": 3.5,
+      "dims": [
+        { "key": "Happy", "label": "开心", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Angry", "label": "愤怒", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Sad", "label": "悲伤", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Fear", "label": "恐惧", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Hate", "label": "厌恶", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Low", "label": "低落", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Surprise", "label": "惊讶", "min": 0, "max": 1.4, "step": 0.1 },
+        { "key": "Neutral", "label": "中性", "min": 0, "max": 1.4, "step": 0.1 }
+      ]
+    },
+    "paramSchema": [
+      {
+        "key": "unload_model",
+        "label": "生成后卸载模型",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      {
+        "key": "do_sample",
+        "label": "采样生成",
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      {
+        "key": "temperature",
+        "label": "温度",
+        "type": "NUMBER",
+        "defaultValue": 0.8,
+        "min": 0.1,
+        "max": 2.0,
+        "interval": 0.05
+      },
+      {
+        "key": "top_p",
+        "label": "Top-P",
+        "type": "NUMBER",
+        "defaultValue": 0.9,
+        "min": 0.0,
+        "max": 1.0,
+        "interval": 0.01
+      },
+      {
+        "key": "top_k",
+        "label": "Top-K",
+        "type": "NUMBER",
+        "defaultValue": 50,
+        "min": 1,
+        "max": 200,
+        "interval": 1
+      },
+      {
+        "key": "num_beams",
+        "label": "Beam 数",
+        "type": "NUMBER",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 10,
+        "interval": 1
+      },
+      {
+        "key": "repetition_penalty",
+        "label": "重复惩罚",
+        "type": "NUMBER",
+        "defaultValue": 1.05,
+        "min": 0.5,
+        "max": 5.0,
+        "interval": 0.01,
+        "placeholder": "过高会损伤音色还原，官方建议 ≤ 3"
+      },
+      {
+        "key": "length_penalty",
+        "label": "长度惩罚",
+        "type": "NUMBER",
+        "defaultValue": 0,
+        "min": -2.0,
+        "max": 2.0,
+        "interval": 0.1
+      },
+      {
+        "key": "max_mel_tokens",
+        "label": "最大 Mel Token",
+        "type": "NUMBER",
+        "defaultValue": 1815,
+        "min": 100,
+        "max": 4000,
+        "interval": 5
+      },
+      {
+        "key": "max_tokens_per_sentence",
+        "label": "单句最大 Token",
+        "type": "NUMBER",
+        "defaultValue": 600,
+        "min": 20,
+        "max": 2000,
+        "interval": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "modelSlots": [
+    {
+      "group": "qwen3-asr",
+      "title": "Qwen3-ASR 模型",
+      "default": "Qwen3-ASR-0.6B",
+      "targets": [
+        { "match": "title", "title": "Qwen3-ASR 转写", "field": "model_name" }
+      ]
+    }
+  ]
+}

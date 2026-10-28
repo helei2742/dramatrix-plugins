@@ -1,0 +1,156 @@
+{
+  "name": "ace15-music",
+  "displayName": "AceStep 1.5 音乐生成",
+  "baseModel": "AceStep 1.5",
+  "type": "music_gen",
+  "category": "音乐生成",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.jpeg"],
+  "description": "基于 AceStep 1.5 的音乐生成工作流，支持 BGM、SFX 和 Ambient 三种模式",
+  "workflowFile": "workflow.json",
+  "promptFiles": ["bgm-prompt.md", "sfx-prompt.md", "ambient-prompt.md"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.ace15.AceStep15MusicAdapter",
+  "order": 10,
+  "extra": {
+    "categoryOrder": {
+      "BGM": 80,
+      "AMBIENT": 30,
+      "SFX": 40
+    },
+    "maxDuration": 120,
+
+    "paramSchema": [
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 8,
+        "tooltip": "KSampler 步数；AceStep 1.5 Turbo 蒸馏模型 8 步即可"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.1,
+        "defaultValue": 2.0,
+        "tooltip": "KSampler CFG；AceStep 1.5 推荐 2.0"
+      },
+      {
+        "key": "bpm",
+        "label": "节拍速度",
+        "type": "NUMBER",
+        "min": 40,
+        "max": 240,
+        "step": 1,
+        "placeholder": "自动",
+        "tooltip": "BPM，写进 ACE 的 lyrics metadata；留空由模型自适应"
+      },
+      {
+        "key": "keyScale",
+        "label": "调式",
+        "type": "SELECT",
+        "placeholder": "自动",
+        "tooltip": "调式/音阶，写进 ACE 的 lyrics metadata；选项由服务端下发"
+      },
+      {
+        "key": "timeSignature",
+        "label": "拍号",
+        "type": "SELECT",
+        "placeholder": "自动",
+        "tooltip": "拍号，写进 ACE 的 lyrics metadata；选项由服务端下发"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 1,
+        "placeholder": "随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "temperature",
+        "label": "采样温度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2,
+        "step": 0.05,
+        "defaultValue": 0.85,
+        "tooltip": "TextEncodeAceStepAudio1.5 的温度；越高越发散"
+      },
+      {
+        "key": "topP",
+        "label": "Top-P",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0.9,
+        "tooltip": "Nucleus 采样；0 = 关闭"
+      },
+      {
+        "key": "topK",
+        "label": "Top-K",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 200,
+        "step": 1,
+        "defaultValue": 0,
+        "tooltip": "Top-K 采样；0 = 关闭"
+      },
+      {
+        "key": "minP",
+        "label": "Min-P",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0,
+        "tooltip": "Min-P 采样；0 = 关闭"
+      },
+      {
+        "key": "sampler",
+        "label": "采样器",
+        "type": "SELECT",
+        "options": ["euler", "euler_ancestral", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_sde", "heun", "ddim", "uni_pc"],
+        "defaultValue": "euler",
+        "tooltip": "KSampler 的 sampler_name"
+      },
+      {
+        "key": "scheduler",
+        "label": "调度器",
+        "type": "SELECT",
+        "options": ["simple", "normal", "karras", "exponential", "sgm_uniform", "ddim_uniform", "beta"],
+        "defaultValue": "simple",
+        "tooltip": "KSampler 的 scheduler"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1.0,
+        "tooltip": "KSampler denoise；音频生成一般保持 1.0"
+      },
+      {
+        "key": "timeout",
+        "label": "生成超时",
+        "type": "NUMBER",
+        "min": 60,
+        "max": 3600,
+        "step": 60,
+        "defaultValue": 300,
+        "tooltip": "单次生成的等待上限（秒）；超时判定为失败"
+      }
+    ]
+  }
+}

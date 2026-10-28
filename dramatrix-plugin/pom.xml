@@ -9,7 +9,28 @@
     </parent>
     <artifactId>dramatrix-plugin</artifactId>
     <packaging>pom</packaging>
-    <name>Dramatrix Profile plugins</name>
+    <name>Dramatrix Profile and Media plugins</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.12.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <modules>
         <module>profile/profile-plugin-cyberpunk-2099</module>
@@ -18,5 +39,62 @@
         <module>profile/profile-plugin-japan-fantasy</module>
         <module>profile/profile-plugin-post-apocalypse</module>
         <module>profile/profile-plugin-urban-modern</module>
+        <module>comfyui/audio/index-tts2-audio</module>
+        <module>comfyui/audio/cosyvoice-audio</module>
+        <module>comfyui/music/ace15-music</module>
+        <module>comfyui/music/stable-audio-3</module>
+        <module>comfyui/music/minimax-music3</module>
+        <module>comfyui/image/flux2-klein-image2image</module>
+        <module>comfyui/image/flux2-klein-text2image</module>
+        <module>comfyui/image/moss-image-text2image</module>
+        <module>comfyui/image/qwen-image2.1-image2image</module>
+        <module>comfyui/image/qwen-image2.1-text2image</module>
+        <module>comfyui/image/anima-2.9b-text2image</module>
+        <module>comfyui/image-edit/seedvr2-3b-int8-upscale-image</module>
+        <module>comfyui/image-edit/birefnet-cutout-image</module>
+        <module>comfyui/image-edit/flux2-klein-outpaint-image</module>
+        <module>comfyui/image-edit/flux2-klein-inpaint-image</module>
+        <module>comfyui/image-edit/qwen-image2.1-inpaint-image</module>
+        <module>comfyui/image-edit/qwen-image2.1-outpaint-image</module>
+        <module>comfyui/video/seedvr2-3b-int8-upscale-video</module>
+        <module>comfyui/video/wan21-scail2-character-replacement</module>
+        <module>comfyui/image/krea2-text2image</module>
+        <module>comfyui/multi/qwen25-omni-media2text</module>
+        <module>comfyui/multi/qwen3-vl-media2text</module>
+        <module>comfyui/multi/qwen3-asr-media2text</module>
+        <module>comfyui/video/minimax-h3-i2v</module>
+        <module>comfyui/video/minimax-h3-i2v-fl</module>
+        <module>comfyui/video/minimax-h3-t2v</module>
+        <module>comfyui/video/wan-bernini-i2v</module>
+        <module>api/multi/dashscope-qwen-media2text</module>
+        <module>api/image/dashscope-qwen-text2image</module>
+        <module>api/image/dashscope-qwen-image2image</module>
+        <module>api/audio/dashscope-voice-clone-tts</module>
+        <module>api/image/gpt-image-text2image</module>
     </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.4.2</version>
+                    <configuration>
+                        <finalName>${plugin.name}</finalName>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.5.3</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

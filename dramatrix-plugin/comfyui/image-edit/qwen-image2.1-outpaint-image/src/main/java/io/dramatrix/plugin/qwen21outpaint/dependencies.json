@@ -1,0 +1,117 @@
+{
+  "models": [
+    {
+      "name": "qwen_image_2.1_int8_convrot.safetensors",
+      "displayName": "Qwen Image 2.1（INT8 convrot）",
+      "kind": "diffusion_model",
+      "folder": "diffusion_models",
+      "group": "qwen-image-2.1-diffusion",
+      "workflowValue": "qwen_image_2.1_int8_convrot.safetensors",
+      "default": true,
+      "sort": 1,
+      "version": "int8",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2.1_int8_convrot.safetensors"
+      ],
+      "description": "扩图主模型（7B INT8 convrot 量化版，约 7.2GB，显存友好），放入 ComfyUI/models/diffusion_models/。Qwen-Image-2.1 为 Apache-2.0 开源，无需访问令牌。"
+    },
+    {
+      "name": "qwen_image_2.1_bf16.safetensors",
+      "displayName": "Qwen Image 2.1（BF16 原版）",
+      "kind": "diffusion_model",
+      "folder": "diffusion_models",
+      "group": "qwen-image-2.1-diffusion",
+      "workflowValue": "qwen_image_2.1_bf16.safetensors",
+      "sort": 2,
+      "version": "bf16",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/diffusion_models/qwen_image_2.1_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2.1_bf16.safetensors"
+      ],
+      "description": "同槽变体：BF16 原版（约 14.2GB），质量最好、显存占用最高，放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "qwen3vl_8b_int8_convrot.safetensors",
+      "displayName": "Qwen3-VL 8B 文本编码器（INT8 convrot）",
+      "kind": "text_encoder",
+      "folder": "text_encoders",
+      "group": "qwen-image-2.1-clip",
+      "workflowValue": "qwen3vl_8b_int8_convrot.safetensors",
+      "default": true,
+      "sort": 1,
+      "version": "int8",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/text_encoders/qwen3vl_8b_int8_convrot.safetensors"
+      ],
+      "description": "视觉语义编码器（INT8 convrot，约 9.3GB），放入 ComfyUI/models/text_encoders/"
+    },
+    {
+      "name": "qwen3vl_8b_w4a8.safetensors",
+      "displayName": "Qwen3-VL 8B 文本编码器（W4A8）",
+      "kind": "text_encoder",
+      "folder": "text_encoders",
+      "group": "qwen-image-2.1-clip",
+      "workflowValue": "qwen3vl_8b_w4a8.safetensors",
+      "sort": 2,
+      "version": "w4a8",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/text_encoders/qwen3vl_8b_w4a8.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/text_encoders/qwen3vl_8b_w4a8.safetensors"
+      ],
+      "description": "视觉语义编码器（W4A8 量化版，约 6.3GB，最省显存），放入 ComfyUI/models/text_encoders/"
+    },
+    {
+      "name": "qwen3vl_8b_bf16.safetensors",
+      "displayName": "Qwen3-VL 8B 文本编码器（BF16 原版）",
+      "kind": "text_encoder",
+      "folder": "text_encoders",
+      "group": "qwen-image-2.1-clip",
+      "workflowValue": "qwen3vl_8b_bf16.safetensors",
+      "sort": 3,
+      "version": "bf16",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/text_encoders/qwen3vl_8b_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/text_encoders/qwen3vl_8b_bf16.safetensors"
+      ],
+      "description": "视觉语义编码器（BF16 原版，约 17.5GB），放入 ComfyUI/models/text_encoders/"
+    },
+    {
+      "name": "qwen_image_2.1_vae_bf16.safetensors",
+      "displayName": "Qwen Image 2.1 VAE（BF16）",
+      "kind": "vae",
+      "folder": "vae",
+      "group": "qwen-image-2.1-vae",
+      "workflowValue": "qwen_image_2.1_vae_bf16.safetensors",
+      "version": "bf16",
+      "baseModel": "QwenImage",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/resolve/master/vae/qwen_image_2.1_vae_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen-Image-2.1_ComfyUI/resolve/main/split_files/vae/qwen_image_2.1_vae_bf16.safetensors"
+      ],
+      "description": "VAE（约 675MB），放入 ComfyUI/models/vae/"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "ComfyUI-KJNodes",
+      "version": "main",
+      "repository": "https://github.com/kijai/ComfyUI-KJNodes",
+      "nodeClasses": [
+        "DrawMaskOnImage",
+        "ColorMatch"
+      ],
+      "downloadUrls": [
+        "https://github.com/kijai/ComfyUI-KJNodes",
+        "https://github.com/kijai/ComfyUI-KJNodes/archive/refs/heads/main.zip"
+      ],
+      "description": "kijai 的通用工具节点集。本工作流用两个：① DrawMaskOnImage —— 把 ImagePadForOutpaint 的扩边区遮罩涂成纯填充色（默认 0,255,0）再送 TextEncodeQwenImage21.images.image_1，因为 Qwen-Image 在**模型层面没有 mask 通道**，只能靠这块颜色让模型「看见」扩边区（⚠️ 提示词里须指代该填充色）；② ColorMatch —— 把重绘结果的色彩对齐回原图（消除 VAE 色彩漂移）。ColorMatch 依赖 color-matcher 包（pip install color-matcher），已包含在插件包 requirements.txt 中。⚠️ DrawMaskOnImage 的 `color` 只认 `\"0, 255, 0\"` 这种字面量、**不认颜色名**（传 green 会被静默解析成错误颜色）。"
+    }
+  ]
+}

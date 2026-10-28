@@ -1,0 +1,14 @@
+{
+  "parameters": [
+    { "key": "image", "type": "string", "required": true, "desc": "输入图像 ComfyUI 文件名（input 目录下）" },
+    { "key": "scale_multiplier", "type": "float", "desc": "放大倍率（0.01-4.0），作用于 ResizeImageMaskNode.resize_type.multiplier" },
+    { "key": "seed", "type": "int", "desc": "随机种子（0 表示随机）" },
+    { "key": "sampler_name", "type": "string", "desc": "采样器名（默认 euler；SeedVR2 单步蒸馏，一般无需修改）" },
+    { "key": "scheduler", "type": "string", "desc": "调度器名（默认 simple）" },
+    { "key": "denoise", "type": "float", "desc": "去噪强度（0-1，单步工作流默认 1）" },
+    { "key": "unet_name", "type": "string", "desc": "主模型文件名（models/diffusion_models/，如 seedvr2_3b_int8_convrot.safetensors）" },
+    { "key": "vae_name", "type": "string", "desc": "VAE 文件名（models/vae/，如 seedvr2_ema_vae_fp16.safetensors）" },
+    { "key": "color_correction_method", "type": "string", "options": ["lab", "wavelet", "adain", "none"], "desc": "输出色彩校正方式（lab / wavelet / adain / none）" }
+  ],
+  "output": { "kind": "image" }
+}

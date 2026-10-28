@@ -1,0 +1,36 @@
+{
+  "modelSlots": [
+    {
+      "group": "ace15-diffusion",
+      "title": "AceStep 1.5 扩散模型",
+      "default": "acestep_v1.5_turbo.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "ace15-clip1",
+      "title": "文本编码器 CLIP 1",
+      "default": "qwen_0.6b_ace15.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "DualCLIPLoader", "field": "clip_name1" }
+      ]
+    },
+    {
+      "group": "ace15-clip2",
+      "title": "文本编码器 CLIP 2",
+      "default": "qwen_1.7b_ace15.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "DualCLIPLoader", "field": "clip_name2" }
+      ]
+    },
+    {
+      "group": "ace15-vae",
+      "title": "VAE",
+      "default": "ace_1.5_vae.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "seedvr2-3b-int8-upscale-image",
+  "displayName": "SeedVR2 3B 图像超清",
+  "baseModel": "Upscaler",
+  "type": "image_edit",
+  "category": "upscale",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display1.webp", "display2.webp"],
+  "description": "SeedVR2 3B INT8 单步扩散修复/超清工作流： lanczos 预放大 → VAE 分块编码 → 单步采样 → 分块解码 → 色彩校正。无提示词参与，仅参数化配置（倍率/采样器/去噪/模型/色彩校正）",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.seedvr2.SeedVR2UpscaleImageAdapter",
+  "extra": {}
+}

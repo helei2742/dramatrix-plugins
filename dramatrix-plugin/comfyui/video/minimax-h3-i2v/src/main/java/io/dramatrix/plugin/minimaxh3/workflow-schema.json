@@ -1,0 +1,14 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "画面提示词" },
+    { "key": "fps", "type": "int", "desc": "帧率" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "ref_images", "type": "list", "desc": "参考图（图生视频/角色图）" },
+    { "key": "ref_videos", "type": "list", "desc": "白模/素材参考视频" },
+    { "key": "ref_audios", "type": "list", "desc": "参考音频（音色）" },
+    { "key": "sage_node", "type": "node", "optional": true, "desc": "Sage Attention 加速节点（不配置则跳过）" },
+    { "key": "steps", "type": "int", "optional": true, "desc": "采样步数（不配置则沿用工作流默认值）" }
+  ],
+  "output": { "kind": "video" },
+  "anchor": { "id": "video_node" }
+}

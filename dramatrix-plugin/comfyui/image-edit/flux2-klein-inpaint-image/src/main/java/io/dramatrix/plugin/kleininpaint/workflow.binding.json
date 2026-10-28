@@ -1,0 +1,54 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "title", "title": "加载重绘原图（LoadImage 原图）", "field": "image" } },
+    { "parameter": "mask_image", "target": { "match": "title", "title": "加载遮罩源图（LoadImage 遮罩）", "field": "image" } },
+    { "parameter": "reference_image", "target": { "match": "title", "title": "加载参考图（LoadImage 参考图）", "field": "image" } },
+    { "parameter": "mask_channel", "target": { "match": "classType", "classType": "ImageToMask", "field": "channel" } },
+    { "parameter": "mask_color", "target": { "match": "classType", "classType": "DrawMaskOnImage", "field": "color" } },
+    { "parameter": "mask_expand_pixels", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "mask_expand_pixels" }, "transform": "int" },
+    { "parameter": "mask_blend_pixels", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "mask_blend_pixels" }, "transform": "int" },
+    { "parameter": "crop_target_width", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "output_target_width" }, "transform": "int" },
+    { "parameter": "crop_target_height", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "output_target_height" }, "transform": "int" },
+    { "parameter": "canvas_width", "target": { "match": "classType", "classType": "EmptyFlux2LatentImage", "field": "width" }, "transform": "int" },
+    { "parameter": "canvas_height", "target": { "match": "classType", "classType": "EmptyFlux2LatentImage", "field": "height" }, "transform": "int" },
+    { "parameter": "device_mode", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "device_mode" } },
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "CLIPTextEncode", "field": "text" } },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSampler", "field": "sampler_name" } },
+    { "parameter": "scheduler", "target": { "match": "classType", "classType": "KSampler", "field": "scheduler" } },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "unet_name", "target": { "match": "classType", "classType": "UNETLoader", "field": "unet_name" } },
+    { "parameter": "clip_name", "target": { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" } },
+    { "parameter": "vae_name", "target": { "match": "classType", "classType": "VAELoader", "field": "vae_name" } }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "classType", "classType": "UNETLoader" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "flux2-klein-9b-diffusion",
+      "default": "flux-2-klein-9b-fp8.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-clip",
+      "default": "qwen_3_8b_fp8mixed.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-vae",
+      "default": "flux2-vae.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

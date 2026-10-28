@@ -1,0 +1,52 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "classType", "classType": "LoadImage", "field": "image" } },
+    { "parameter": "megapixels", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "megapixels" }, "transform": "float" },
+    { "parameter": "upscale_method", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "upscale_method" } },
+    { "parameter": "resolution_steps", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "resolution_steps" }, "transform": "int" },
+    { "parameter": "pad_left", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "left" }, "transform": "int" },
+    { "parameter": "pad_top", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "top" }, "transform": "int" },
+    { "parameter": "pad_right", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "right" }, "transform": "int" },
+    { "parameter": "pad_bottom", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "bottom" }, "transform": "int" },
+    { "parameter": "pad_feathering", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "feathering" }, "transform": "int" },
+    { "parameter": "mask_color", "target": { "match": "classType", "classType": "DrawMaskOnImage", "field": "color" } },
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "CLIPTextEncode", "field": "text" } },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "Flux2Scheduler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "CFGGuider", "field": "cfg" }, "transform": "float" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSamplerSelect", "field": "sampler_name" } },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "RandomNoise", "field": "noise_seed" }, "transform": "int" },
+    { "parameter": "unet_name", "target": { "match": "classType", "classType": "UNETLoader", "field": "unet_name" } },
+    { "parameter": "clip_name", "target": { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" } },
+    { "parameter": "vae_name", "target": { "match": "classType", "classType": "VAELoader", "field": "vae_name" } },
+    { "parameter": "color_match_method", "target": { "match": "classType", "classType": "ColorMatch", "field": "method" } },
+    { "parameter": "color_match_strength", "target": { "match": "classType", "classType": "ColorMatch", "field": "strength" }, "transform": "float" }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "classType", "classType": "UNETLoader" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "flux2-klein-9b-diffusion",
+      "default": "flux-2-klein-9b-fp8.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-clip",
+      "default": "qwen_3_8b.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-vae",
+      "default": "flux2-vae.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "flux2-klein-text2image",
+  "displayName": "Flux2 Klein 文生图",
+  "baseModel": "Flux2Klein_9B",
+  "type": "text2image_with_lora",
+  "category": "文生图",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display1.webp", "display2.webp"],
+  "description": "基于 Klein 模型的文生图工作流，支持 LoRA 人物优化",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.klein.KleinText2ImageAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "否定内容，如 低质量、畸形手部"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "interval": 1,
+        "defaultValue": 6
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1.0
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机"
+      }
+    ]
+  }
+}

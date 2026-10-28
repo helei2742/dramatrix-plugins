@@ -1,0 +1,12 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "正向提示词（FLUX.2 结构化 JSON，由 buildPrompt 拼装）" },
+    { "key": "negative_prompt", "type": "string", "desc": "负向提示词（FLUX.2 不支持，恒空串）" },
+    { "key": "lora", "type": "string", "desc": "LoRA 模型" },
+    { "key": "width", "type": "int", "desc": "生成宽度" },
+    { "key": "height", "type": "int", "desc": "生成高度" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "denoise", "type": "float", "desc": "重绘强度（extra.denoise 覆盖，缺省 0.75）" }
+  ],
+  "output": { "kind": "image" }
+}

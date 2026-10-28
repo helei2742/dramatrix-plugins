@@ -18,9 +18,18 @@
         <revision>0.1.0</revision>
         <dramatrix.backend.version>1.0.2</dramatrix.backend.version>
         <plugin.api.version>1.0.0</plugin.api.version>
+        <lombok.version>1.18.36</lombok.version>
+        <hutool.version>5.8.36</hutool.version>
         <plugin.deploy.skip>true</plugin.deploy.skip>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/helei2742/dramatrix</url>
+        </repository>
+    </repositories>
 
     <modules>
         <module>dramatrix-plugin</module>

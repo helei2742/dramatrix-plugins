@@ -1,0 +1,93 @@
+{
+  "name": "minimax-h3-i2v",
+  "displayName": "MiniMax H3 图生视频(参考图)",
+  "baseModel": "MiniMaxH3",
+  "type": "image2video_ref",
+  "category": "图生视频",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 MiniMax H3 Reference to Video 的参考图生成视频工作流，支持最多 9 张参考图。参数配置sageAttention：true开启加速。",
+  "workflowFile": "workflow.json",
+  "promptFiles": [],
+  "promptVariables": ["STORY_DIRECTOR_STYLE", "STORY_VISUAL_STYLE"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.minimaxh3.MiniMaxH3Adapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 6,
+        "placeholder": "留空用全局默认",
+        "tooltip": "BasicScheduler 采样步数；留空则用「视频默认步数」配置（当前 6），工作流自带值为 25。填得越高越精细、耗时越长"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "固定后可复现同一段视频；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "width",
+        "label": "生成宽度",
+        "type": "NUMBER",
+        "min": 128,
+        "max": 2048,
+        "step": 32,
+        "defaultValue": 832,
+        "tooltip": "输出视频宽度；需为 32 的倍数。留空用插件默认值（832，480p）"
+      },
+      {
+        "key": "height",
+        "label": "生成高度",
+        "type": "NUMBER",
+        "min": 128,
+        "max": 2048,
+        "step": 32,
+        "defaultValue": 480,
+        "tooltip": "输出视频高度；需为 32 的倍数。留空用插件默认值（480，480p）"
+      },
+      {
+        "key": "sageAttention",
+        "label": "Sage Attention 加速",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "tooltip": "开启后 PathchSageAttentionKJ 用 auto kernel 加速注意力；关闭则回退标准 attention。需指定具体 kernel（如 sageattn_qk_int8_pv_fp16_cuda）时请直接改插件 extra"
+      },
+      {
+        "key": "referenceOnly",
+        "label": "场景图仅作参考",
+        "type": "BOOLEAN",
+        "defaultValue": false,
+        "tooltip": "开启：场景图只作视觉参考、不锁定首帧；关闭：把场景图声明为 [Shot 1] 的首帧锚点（画面更贴场景图，但运镜自由度更低）"
+      },
+      {
+        "key": "adoptRefCamera",
+        "label": "采用参考视频运镜",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "tooltip": "仅在使用白模/素材参考视频时生效：开启则运镜交给参考视频、抑制 prompt 里的机位描述；关闭则按 prompt 自行运镜"
+      },
+      {
+        "key": "audioTrimDuration",
+        "label": "参考音频裁剪时长(秒)",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 20,
+        "tooltip": "音色参考音频只截取前 N 秒送进 TrimAudioDuration；过长会明显拖慢节点加载"
+      }
+    ],
+
+    "sageAttention": true,
+    "audioTrimDuration": 20,
+    "referenceOnly": false
+  }
+}

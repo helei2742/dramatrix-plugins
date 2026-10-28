@@ -1,0 +1,174 @@
+{
+  "20": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载重绘原图（LoadImage 原图）" }
+  },
+  "21": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载遮罩源图（LoadImage 遮罩）" }
+  },
+  "40": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载参考图（LoadImage 参考图）" }
+  },
+  "22": {
+    "inputs": {
+      "image": ["21", 0],
+      "channel": "red"
+    },
+    "class_type": "ImageToMask",
+    "_meta": { "title": "取遮罩通道" }
+  },
+  "23": {
+    "inputs": {
+      "image": ["20", 0],
+      "mask": ["22", 0],
+      "downscale_algorithm": "bilinear",
+      "upscale_algorithm": "bicubic",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 50,
+      "mask_invert": false,
+      "mask_blend_pixels": 32,
+      "mask_hipass_filter": 0.1,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
+      "context_from_mask_extend_factor": 1.2,
+      "output_resize_to_target_size": true,
+      "output_target_width": 768,
+      "output_target_height": 768,
+      "output_padding": "32",
+      "device_mode": "cpu (compatible)"
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": { "title": "裁剪重绘区（出参0=stitcher、出参1=干净裁剪图、出参2=裁剪遮罩）" }
+  },
+  "33": {
+    "inputs": {
+      "image": ["23", 1]
+    },
+    "class_type": "SplitImageWithAlpha",
+    "_meta": { "title": "裁剪图取 RGB（LoadImage 正常输出 RGB ⇒ 无操作；保留作 RGBA 输入的归一化保险）" }
+  },
+  "24": {
+    "inputs": {
+      "pixels": ["33", 0],
+      "vae": ["4", 0]
+    },
+    "class_type": "VAEEncode",
+    "_meta": { "title": "编码干净裁剪图（采样画布）" }
+  },
+  "25": {
+    "inputs": {
+      "samples": ["24", 0],
+      "mask": ["23", 2]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": { "title": "遮罩内加噪（采样期区外逐像素锁死）" }
+  },
+  "2": {
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": { "title": "加载主模型" }
+  },
+  "3": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "加载文本编码器" }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": { "title": "加载VAE" }
+  },
+  "5": {
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": ["2", 0]
+    },
+    "class_type": "QwenImage21Cache",
+    "_meta": { "title": "Qwen Image 2.1 缓存" }
+  },
+  "1": {
+    "inputs": {
+      "prompt": "",
+      "negative_prompt": "",
+      "resolution": 0,
+      "clip": ["3", 0],
+      "vae": ["4", 0],
+      "images.image_1": ["33", 0]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": { "title": "文本编码（重绘指令 + image_1=干净裁剪图；参考图由适配器接到 image_2）" }
+  },
+  "6": {
+    "inputs": {
+      "seed": 0,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": ["5", 0],
+      "positive": ["1", 0],
+      "negative": ["1", 1],
+      "latent_image": ["25", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "K采样器（画布=裁剪图 latent + noise_mask，遮罩区重画、区外逐像素锁死）" }
+  },
+  "9": {
+    "inputs": {
+      "samples": ["6", 0],
+      "vae": ["4", 0]
+    },
+    "class_type": "VAEDecode",
+    "_meta": { "title": "VAE解码（裁剪空间的重绘结果）" }
+  },
+  "26": {
+    "inputs": {
+      "stitcher": ["23", 0],
+      "inpainted_image": ["9", 0]
+    },
+    "class_type": "InpaintStitchImproved",
+    "_meta": { "title": "缝合回原图（遮罩区换为重绘结果、区外逐像素保留原图）" }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "qwen-image2.1-inpaint",
+      "format": "png",
+      "format.bit_depth": "8-bit",
+      "format.input_color_space": "sRGB",
+      "images": ["26", 0]
+    },
+    "class_type": "SaveImageAdvanced",
+    "_meta": { "title": "保存图像" }
+  }
+}

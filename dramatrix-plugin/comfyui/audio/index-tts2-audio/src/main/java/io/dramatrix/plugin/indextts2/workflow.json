@@ -1,0 +1,24 @@
+{
+  "0": {
+    "inputs": {
+      "model": "IndexTTS-2",
+      "download_from": "modelscope"
+    },
+    "class_type": "easy downloadIndexTTSAndLoadModel",
+    "_meta": {
+      "title": "IndexTTS 模型加载器"
+    }
+  },
+  "1": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": ["", 0]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "保存音频 (MP3)"
+    }
+  }
+}

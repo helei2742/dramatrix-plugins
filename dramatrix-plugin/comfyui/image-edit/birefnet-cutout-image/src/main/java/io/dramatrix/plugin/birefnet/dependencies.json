@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "name": "birefnet.safetensors",
+      "displayName": "BiRefNet（抠图）",
+      "kind": "background_removal",
+      "folder": "background_removal",
+      "group": "birefnet-bg-removal",
+      "workflowValue": "birefnet.safetensors",
+      "sort": 1,
+      "default": true,
+      "version": "1.0",
+      "baseModel": "Other",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/BiRefNet/resolve/master/background_removal/birefnet.safetensors",
+        "https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors"
+      ],
+      "description": "BiRefNet 背景移除模型，放入 ComfyUI/models/background_removal/（不要放 checkpoints）。ComfyUI 首次添加 LoadBackgroundRemovalModel 节点时通常会自动提示下载；需较新版 ComfyUI（原生背景移除节点）。"
+    }
+  ],
+  "comfyuiPlugins": []
+}

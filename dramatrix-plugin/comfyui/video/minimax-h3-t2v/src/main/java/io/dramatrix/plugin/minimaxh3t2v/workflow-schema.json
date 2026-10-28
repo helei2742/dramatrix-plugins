@@ -1,0 +1,12 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "画面提示词（文生视频唯一的内容输入）" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "fps", "type": "int", "desc": "帧率" },
+    { "key": "duration", "type": "float", "optional": true, "desc": "时长（秒）；驱动 length 按 17 帧网格对齐（5 / 22 / 39 …）" },
+    { "key": "steps", "type": "int", "optional": true, "desc": "采样步数（不配置则沿用工作流默认值）" },
+    { "key": "sage_node", "type": "node", "optional": true, "desc": "Sage Attention 加速节点（不配置则跳过）" }
+  ],
+  "output": { "kind": "video" },
+  "anchor": { "id": "video_node" }
+}

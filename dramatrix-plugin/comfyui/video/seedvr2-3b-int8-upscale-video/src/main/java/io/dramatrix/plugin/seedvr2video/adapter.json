@@ -1,0 +1,79 @@
+{
+  "name": "seedvr2-3b-int8-upscale-video",
+  "displayName": "SeedVR2 3B 视频超清",
+  "baseModel": "Upscaler",
+  "type": "video_edit",
+  "category": "upscale",
+  "version": "1.0",
+  "description": "SeedVR2 3B INT8 单步扩散视频修复/超清：lanczos 预放大 → VAE 分块编码 → 单步采样 → 分块解码 → 色彩校正 → 合回原音轨与原帧率。无提示词参与，仅参数化配置（倍率/采样器/去噪/模型/色彩校正/时长裁剪/分块采样）",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.seedvr2video.SeedVR2UpscaleVideoAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "scaleMultiplier",
+        "label": "放大倍率",
+        "type": "NUMBER",
+        "min": 0.01,
+        "max": 4,
+        "step": 0.01,
+        "defaultValue": 2,
+        "tooltip": "ResizeImageMaskNode 预放大倍数（进 SeedVR2 之前）；默认 2"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "固定后可复现同一段视频；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.01,
+        "defaultValue": 1,
+        "tooltip": "SeedVR2 单步工作流固定为 1，不建议下调"
+      },
+      {
+        "key": "colorCorrectionMethod",
+        "label": "色彩校正",
+        "type": "SELECT",
+        "options": ["lab", "wavelet", "adain", "none"],
+        "defaultValue": "none",
+        "tooltip": "后处理色彩对齐方式；默认 none（不做校正）"
+      },
+      {
+        "key": "sliceStart",
+        "label": "起始时间(秒)",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 0.1,
+        "defaultValue": 0,
+        "tooltip": "只处理视频的某一段；0 = 从头开始"
+      },
+      {
+        "key": "sliceDuration",
+        "label": "截取时长(秒)",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 0.1,
+        "defaultValue": 0,
+        "tooltip": "0 = 到结尾。长视频建议分段处理以控显存"
+      },
+      {
+        "key": "temporalChunk",
+        "label": "分块采样",
+        "type": "BOOLEAN",
+        "defaultValue": false,
+        "tooltip": "显存不足时开启（走 SeedVR2TemporalChunk / Merge 分支）；默认关闭走直通"
+      }
+    ],
+
+    "denoise": 1,
+    "colorCorrectionMethod": "none"
+  }
+}

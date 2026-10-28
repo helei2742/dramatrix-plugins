@@ -1,0 +1,15 @@
+{
+  "name": "birefnet-cutout-image",
+  "displayName": "BiRefNet 智能抠图",
+  "baseModel": "Other",
+  "type": "image_edit",
+  "category": "cutout",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.gif"],
+  "description": "BiRefNet 抠图（ComfyUI 原生 LoadBackgroundRemovalModel + RemoveBackground）：先生成前景遮罩，再按 mode 动态拼装合成链路 —— solid 去除背景（人像落在纯色背景上，缺省纯白、backgroundColor 可配）；remove_person 去除人物（人物区域透明或填充指定颜色，保留原背景）；replace_background 把人合成到指定背景图（backgroundImage / backgroundImageAssetId）里。无提示词参与。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.birefnet.BiRefNetCutoutImageAdapter",
+  "extra": {}
+}

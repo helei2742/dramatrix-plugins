@@ -1,0 +1,79 @@
+{
+  "models": [
+    {
+      "name": "Anima-2.9B-preview-v1.safetensors",
+      "displayName": "Anima 2.9B (Preview v1)",
+      "kind": "diffusion_model",
+      "group": "anima-diffusion",
+      "workflowValue": "Anima-2.9B-preview-v1.safetensors",
+      "default": true,
+      "sort": 1,
+      "version": "preview-v1",
+      "baseModel": "Anima",
+      "downloadUrls": [
+        "https://modelscope.cn/models/circlestone-labs/Anima/resolve/master/split_files/diffusion_models/Anima-2.9B-preview-v1.safetensors",
+        "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/Anima-2.9B-preview-v1.safetensors"
+      ],
+      "description": "Anima 2.9B 社区 Preview（circlestone-labs/Anima 协作发布的预览 UNET，约 8.9GB），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "anima-base-v1.0.safetensors",
+      "displayName": "Anima Base v1.0（官方）",
+      "kind": "diffusion_model",
+      "group": "anima-diffusion",
+      "workflowValue": "anima-base-v1.0.safetensors",
+      "sort": 2,
+      "version": "v1.0",
+      "baseModel": "Anima",
+      "downloadUrls": [
+        "https://modelscope.cn/models/circlestone-labs/Anima/resolve/master/split_files/diffusion_models/anima-base-v1.0.safetensors",
+        "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors"
+      ],
+      "description": "Anima Base v1.0（官方未微调 base，约 4.2GB），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "anima-aesthetic-v1.1.safetensors",
+      "displayName": "Anima Aesthetic v1.1（官方，推荐）",
+      "kind": "diffusion_model",
+      "group": "anima-diffusion",
+      "workflowValue": "anima-aesthetic-v1.1.safetensors",
+      "sort": 3,
+      "version": "v1.1",
+      "baseModel": "Anima",
+      "downloadUrls": [
+        "https://modelscope.cn/models/circlestone-labs/Anima/resolve/master/split_files/diffusion_models/anima-aesthetic-v1.1.safetensors",
+        "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-aesthetic-v1.1.safetensors"
+      ],
+      "description": "Anima Aesthetic v1.1（官方美学微调，推荐作为日常出图模型，约 4.2GB），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "qwen_3_06b_base.safetensors",
+      "displayName": "Qwen3 0.6B 文本编码器",
+      "kind": "text_encoder",
+      "group": "anima-clip",
+      "workflowValue": "qwen_3_06b_base.safetensors",
+      "version": "base",
+      "baseModel": "Anima",
+      "downloadUrls": [
+        "https://modelscope.cn/models/circlestone-labs/Anima/resolve/master/split_files/text_encoders/qwen_3_06b_base.safetensors",
+        "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors"
+      ],
+      "description": "文本编码器，放入 ComfyUI/models/text_encoders/"
+    },
+    {
+      "name": "qwen_image_vae.safetensors",
+      "displayName": "Qwen Image VAE",
+      "kind": "vae",
+      "group": "anima-vae",
+      "workflowValue": "qwen_image_vae.safetensors",
+      "version": "base",
+      "baseModel": "Anima",
+      "downloadUrls": [
+        "https://modelscope.cn/models/circlestone-labs/Anima/resolve/master/split_files/vae/qwen_image_vae.safetensors",
+        "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+      ],
+      "description": "VAE，放入 ComfyUI/models/vae/"
+    }
+  ],
+  "comfyuiPlugins": []
+}

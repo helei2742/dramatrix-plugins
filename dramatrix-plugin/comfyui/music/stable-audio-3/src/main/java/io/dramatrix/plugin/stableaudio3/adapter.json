@@ -1,0 +1,176 @@
+{
+  "name": "stable-audio-3",
+  "displayName": "Stable Audio 3 Medium 音乐生成",
+  "baseModel": "Stable Audio 3 Medium",
+  "type": "music_gen",
+  "category": "音乐生成",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 Stable Audio 3 Medium 的音乐/音效生成工作流，支持 Music / Instrument / SFX / One-shot 四类，并可选 LLM 二次重写（reprompt）。适配器直接加载 workflow.json 并按参数改写指定节点输入。默认用 stable_audio_3_small_sfx，可换 stable_audio_3_medium",
+  "workflowFile": "workflow.json",
+  "promptFiles": ["bgm-prompt.md", "sfx-prompt.md", "ambient-prompt.md"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.stableaudio3.StableAudio3MusicAdapter",
+  "order": 10,
+  "extra": {
+    "categoryOrder": {
+      "SFX": 100,
+      "AMBIENT": 100,
+      "BGM": 10
+    },
+
+    "paramSchema": [
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 8,
+        "tooltip": "KSampler(52:3) 步数；Stable Audio 3 蒸馏模型 8 步即可"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.1,
+        "defaultValue": 1.0,
+        "tooltip": "KSampler(52:3) CFG；Stable Audio 3 推荐 1.0"
+      },
+      {
+        "key": "bpm",
+        "label": "节拍速度",
+        "type": "NUMBER",
+        "min": 40,
+        "max": 240,
+        "step": 1,
+        "placeholder": "自动",
+        "tooltip": "BPM，追加到 user_input 末尾（交给内部 Qwen reprompt 扩写）；留空由模型自适应"
+      },
+      {
+        "key": "keyScale",
+        "label": "调式",
+        "type": "SELECT",
+        "placeholder": "自动",
+        "tooltip": "调式/音阶，追加到 user_input 末尾；选项由服务端下发"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 1,
+        "placeholder": "随机",
+        "tooltip": "主随机种子（KSampler）；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "userReprompt",
+        "label": "二次重写",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "tooltip": "开启后由内部 Qwen 按类别把 user_input 扩写成完整提示词（TextGenerate 节点开关）"
+      },
+      {
+        "key": "textSamplingMode",
+        "label": "重写采样",
+        "type": "SELECT",
+        "options": ["on", "off"],
+        "defaultValue": "on",
+        "tooltip": "TextGenerate(52:28) 的 sampling_mode"
+      },
+      {
+        "key": "textMaxLength",
+        "label": "重写长度",
+        "type": "NUMBER",
+        "min": 32,
+        "max": 2048,
+        "step": 32,
+        "defaultValue": 256,
+        "tooltip": "重写文本的最大 token 数"
+      },
+      {
+        "key": "textTemperature",
+        "label": "重写温度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2,
+        "step": 0.05,
+        "defaultValue": 0.7,
+        "tooltip": "重写用的采样温度（与音乐模型的采样温度无关）"
+      },
+      {
+        "key": "textTopK",
+        "label": "重写 Top-K",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 200,
+        "step": 1,
+        "defaultValue": 64,
+        "tooltip": "重写用的 top_k；0 = 关闭"
+      },
+      {
+        "key": "textTopP",
+        "label": "重写 Top-P",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0.95,
+        "tooltip": "重写用的 top_p；0 = 关闭"
+      },
+      {
+        "key": "textMinP",
+        "label": "重写 Min-P",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0.05,
+        "tooltip": "重写用的 min_p；0 = 关闭"
+      },
+      {
+        "key": "textRepetitionPenalty",
+        "label": "重复惩罚",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 3,
+        "step": 0.01,
+        "defaultValue": 1.05,
+        "tooltip": "重写用的 repetition_penalty"
+      },
+      {
+        "key": "textPresencePenalty",
+        "label": "存在惩罚",
+        "type": "NUMBER",
+        "min": -2,
+        "max": 2,
+        "step": 0.1,
+        "defaultValue": 0.0,
+        "tooltip": "重写用的 presence_penalty"
+      },
+      {
+        "key": "textSeed",
+        "label": "重写种子",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 1,
+        "placeholder": "随机",
+        "tooltip": "重写用的随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "timeout",
+        "label": "生成超时",
+        "type": "NUMBER",
+        "min": 60,
+        "max": 3600,
+        "step": 60,
+        "defaultValue": 300,
+        "tooltip": "单次生成的等待上限（秒）；超时判定为失败"
+      }
+    ]
+  }
+}

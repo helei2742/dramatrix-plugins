@@ -1,0 +1,110 @@
+{
+  "name": "cosyvoice-audio",
+  "displayName": "CosyVoice3 声音克隆+情感",
+  "baseModel": "CosyVoice3",
+  "type": "text2audio",
+  "category": "文生音频",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.png"],
+  "description": "基于 CosyVoice3 的声音克隆+情感控制文生音频工作流，支持多分段对话拼接（一句提示词对应一个音色）、情感指令（instructTexts）",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.cosyvoice.CosyVoiceAudioAdapter",
+  "extra": {
+    "model_path": "Fun-CosyVoice3-0.5B-RL",
+    "device": "auto",
+    "speed": 1.0,
+    "use_fp16": true,
+    "load_trt": false,
+    "load_vllm": false,
+    "max_chars_per_chunk": 400,
+    "chunk_combination_method": "crossfade",
+    "silence_between_chunks_ms": 100,
+    "enable_audio_cache": false,
+    "emotion": {
+      "type": "TEXT",
+      "label": "情绪",
+      "note": "自然语言情感指令，原样作为 CosyVoice 的 instruct_text",
+      "defaultValue": "请用自然平静的语气说话。",
+      "placeholder": "例如：请用非常激动、高兴的语气说话。",
+      "maxLength": 120,
+      "presets": [
+        "请用自然平静的语气说话。",
+        "请用非常激动、高兴且难以置信的语气说话。",
+        "请用低沉、悲伤、缓慢的语气说话。",
+        "请用愤怒、严厉的语气说话。",
+        "请用温柔、轻声细语的语气说话。",
+        "请用紧张、害怕、颤抖的语气说话。"
+      ]
+    },
+    "paramSchema": [
+      {
+        "key": "device",
+        "label": "推理设备",
+        "type": "SELECT",
+        "defaultValue": "auto",
+        "options": ["auto", "cuda", "cpu"]
+      },
+      {
+        "key": "speed",
+        "label": "全局语速",
+        "type": "NUMBER",
+        "defaultValue": 1.0,
+        "min": 0.5,
+        "max": 2.0,
+        "interval": 0.05,
+        "placeholder": "1.0 = 正常语速；分段自带语速时以分段为准"
+      },
+      {
+        "key": "max_chars_per_chunk",
+        "label": "单块最大字数",
+        "type": "NUMBER",
+        "defaultValue": 400,
+        "min": 50,
+        "max": 2000,
+        "interval": 10
+      },
+      {
+        "key": "chunk_combination_method",
+        "label": "分块拼接方式",
+        "type": "SELECT",
+        "defaultValue": "crossfade",
+        "options": ["crossfade", "concat"]
+      },
+      {
+        "key": "silence_between_chunks_ms",
+        "label": "分块间静音(ms)",
+        "type": "NUMBER",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 2000,
+        "interval": 10
+      },
+      {
+        "key": "use_fp16",
+        "label": "FP16 推理",
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      {
+        "key": "load_trt",
+        "label": "TensorRT 加速",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      {
+        "key": "load_vllm",
+        "label": "vLLM 加速",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      {
+        "key": "enable_audio_cache",
+        "label": "音频缓存",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      }
+    ]
+  }
+}

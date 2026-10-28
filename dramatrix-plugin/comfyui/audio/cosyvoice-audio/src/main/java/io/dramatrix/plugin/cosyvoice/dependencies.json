@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "name": "Fun-CosyVoice3-0.5B-RL",
+      "displayName": "CosyVoice3 0.5B RL 模型",
+      "kind": "tts_model",
+      "folder": "TTS",
+      "directory": true,
+      "group": "cosyvoice3",
+      "workflowValue": "Fun-CosyVoice3-0.5B-RL",
+      "default": true,
+      "version": "latest",
+      "baseModel": "CosyVoice3",
+      "downloadUrls": [
+        "https://modelscope.ai/models/FunAudioLLM/Fun-CosyVoice3-0.5B-2512/files",
+        "https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512/tree/main"
+      ],
+      "description": "CosyVoice3 语音合成模型。需放入 ComfyUI/models/CosyVoice/ 目录。包含 CosyVoice3-0.5B 模型权重及配置文件。",
+      "path": "CosyVoice/Fun-CosyVoice3-0.5B"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "TTS-Audio-Suite",
+      "version": "main",
+      "repository": "https://github.com/diodiogod/TTS-Audio-Suite",
+      "downloadUrls": [
+        "https://github.com/diodiogod/TTS-Audio-Suite",
+        "https://github.com/diodiogod/TTS-Audio-Suite/archive/refs/heads/main.zip"
+      ],
+      "description": "diodiogod 的 TTS-Audio-Suite ComfyUI 自定义节点（CosyVoice3 / Qwen3-TTS 等 TTS 引擎）。"
+    }
+  ]
+}

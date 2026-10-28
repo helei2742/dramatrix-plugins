@@ -1,0 +1,305 @@
+{
+  "models": [
+    {
+      "name": "Qwen3-VL-2B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-2B-Instruct",
+        "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct"
+      ],
+      "description": "Qwen3-VL 2B 指令版，放入 ComfyUI/models/LLM/Qwen-VL（或按 ComfyUI-QwenVL 节点要求放置）。",
+      "path": "Qwen-VL/Qwen3-VL-2B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-2B-Instruct"
+    },
+    {
+      "name": "Qwen3-VL-2B-Thinking",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-2B-Thinking",
+        "https://huggingface.co/Qwen/Qwen3-VL-2B-Thinking"
+      ],
+      "description": "Qwen3-VL 2B 推理增强（Thinking）版。",
+      "path": "Qwen-VL/Qwen3-VL-2B-Thinking",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-2B-Thinking"
+    },
+    {
+      "name": "Qwen3-VL-2B-Instruct-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-2B-Instruct-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct-FP8"
+      ],
+      "description": "Qwen3-VL 2B 指令版 FP8 量化（近无损，需现代 NVIDIA GPU 以发挥 FP8 加速）。",
+      "path": "Qwen-VL/Qwen3-VL-2B-Instruct-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-2B-Instruct-FP8"
+    },
+    {
+      "name": "Qwen3-VL-2B-Thinking-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-2B-Thinking-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-2B-Thinking-FP8"
+      ],
+      "description": "Qwen3-VL 2B Thinking 版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-2B-Thinking-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-2B-Thinking-FP8"
+    },
+    {
+      "name": "Qwen3-VL-4B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-4B-Instruct",
+        "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct"
+      ],
+      "description": "Qwen3-VL 4B 指令版。",
+      "path": "Qwen-VL/Qwen3-VL-4B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-4B-Instruct"
+    },
+    {
+      "name": "Qwen3-VL-4B-Thinking",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-4B-Thinking",
+        "https://huggingface.co/Qwen/Qwen3-VL-4B-Thinking"
+      ],
+      "description": "Qwen3-VL 4B 推理增强（Thinking）版。",
+      "path": "Qwen-VL/Qwen3-VL-4B-Thinking",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-4B-Thinking"
+    },
+    {
+      "name": "Qwen3-VL-4B-Instruct-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-4B-Instruct-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct-FP8"
+      ],
+      "description": "Qwen3-VL 4B 指令版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-4B-Instruct-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-4B-Instruct-FP8"
+    },
+    {
+      "name": "Qwen3-VL-4B-Thinking-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-4B-Thinking-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-4B-Thinking-FP8"
+      ],
+      "description": "Qwen3-VL 4B Thinking 版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-4B-Thinking-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-4B-Thinking-FP8"
+    },
+    {
+      "name": "Qwen3-VL-8B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-8B-Instruct",
+        "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct"
+      ],
+      "description": "Qwen3-VL 8B 指令版。",
+      "path": "Qwen-VL/Qwen3-VL-8B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-8B-Instruct",
+      "default": true
+    },
+    {
+      "name": "Qwen3-VL-8B-Thinking",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-8B-Thinking",
+        "https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking"
+      ],
+      "description": "Qwen3-VL 8B 推理增强（Thinking）版。",
+      "path": "Qwen-VL/Qwen3-VL-8B-Thinking",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-8B-Thinking"
+    },
+    {
+      "name": "Qwen3-VL-8B-Instruct-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-8B-Instruct-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct-FP8"
+      ],
+      "description": "Qwen3-VL 8B 指令版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-8B-Instruct-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-8B-Instruct-FP8"
+    },
+    {
+      "name": "Qwen3-VL-8B-Thinking-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-8B-Thinking-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking-FP8"
+      ],
+      "description": "Qwen3-VL 8B Thinking 版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-8B-Thinking-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-8B-Thinking-FP8"
+    },
+    {
+      "name": "Qwen3-VL-32B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-32B-Instruct",
+        "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct"
+      ],
+      "description": "Qwen3-VL 32B 指令版（大参数，需较高显存）。",
+      "path": "Qwen-VL/Qwen3-VL-32B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-32B-Instruct"
+    },
+    {
+      "name": "Qwen3-VL-32B-Thinking",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-32B-Thinking",
+        "https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking"
+      ],
+      "description": "Qwen3-VL 32B 推理增强（Thinking）版。",
+      "path": "Qwen-VL/Qwen3-VL-32B-Thinking",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-32B-Thinking"
+    },
+    {
+      "name": "Qwen3-VL-32B-Instruct-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-32B-Instruct-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct-FP8"
+      ],
+      "description": "Qwen3-VL 32B 指令版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-32B-Instruct-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-32B-Instruct-FP8"
+    },
+    {
+      "name": "Qwen3-VL-32B-Thinking-FP8",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen3-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen3-VL-32B-Thinking-FP8",
+        "https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking-FP8"
+      ],
+      "description": "Qwen3-VL 32B Thinking 版 FP8 量化。",
+      "path": "Qwen-VL/Qwen3-VL-32B-Thinking-FP8",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen3-VL-32B-Thinking-FP8"
+    },
+    {
+      "name": "Qwen2.5-VL-3B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen2.5-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen2.5-VL-3B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct"
+      ],
+      "description": "【可选】Qwen2.5-VL 3B 指令版，旧一代 VLM，按需下载。",
+      "path": "Qwen-VL/Qwen2.5-VL-3B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen2.5-VL-3B-Instruct"
+    },
+    {
+      "name": "Qwen2.5-VL-7B-Instruct",
+      "kind": "vlm",
+      "folder": "LLM",
+      "directory": true,
+      "version": "main",
+      "baseModel": "Qwen2.5-VL",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen2.5-VL-7B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct"
+      ],
+      "description": "【可选】Qwen2.5-VL 7B 指令版，旧一代 VLM，按需下载。",
+      "path": "Qwen-VL/Qwen2.5-VL-7B-Instruct",
+      "group": "qwen-vl",
+      "workflowValue": "Qwen2.5-VL-7B-Instruct"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "ComfyUI-QwenVL",
+      "version": "main",
+      "repository": "https://github.com/1038lab/ComfyUI-QwenVL",
+      "downloadUrls": [
+        "https://github.com/1038lab/ComfyUI-QwenVL",
+        "https://github.com/1038lab/ComfyUI-QwenVL/archive/refs/heads/main.zip"
+      ],
+      "description": "1038lab 的 QwenVL ComfyUI 节点，支持 Qwen3-VL 系列多模态理解（图/视频生文）。"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "models": [
+    {
+      "name": "stable_audio_3_small.safetensors",
+      "displayName": "Stable Audio 3 Small",
+      "kind": "checkpoint",
+      "group": "stable-audio-3",
+      "workflowValue": "stable_audio_3_small.safetensors",
+      "sort": 1,
+      "version": "3",
+      "baseModel": "Stable Audio 3 Small",
+      "downloadUrls": [
+        "https://modelscope.cn/models/stabilityai/stable-audio-3-small",
+        "https://huggingface.co/stabilityai/stable-audio-3-small"
+      ],
+      "description": "Stable Audio 3 Small 主扩散模型（checkpoint）。放置于 ComfyUI/models/checkpoints/，由 CheckpointLoaderSimple 加载。"
+    },
+    {
+      "name": "stable_audio_3_small_sfx.safetensors",
+      "displayName": "Stable Audio 3 Small SFX",
+      "kind": "checkpoint",
+      "group": "stable-audio-3",
+      "workflowValue": "stable_audio_3_small_sfx.safetensors",
+      "default": true,
+      "sort": 2,
+      "version": "3",
+      "baseModel": "Stable Audio 3 Small SFX",
+      "downloadUrls": [
+        "https://modelscope.cn/models/stabilityai/stable-audio-3-small-sfx",
+        "https://huggingface.co/stabilityai/stable-audio-3-small-sfx"
+      ],
+      "description": "Stable Audio 3 Small SFX 主扩散模型（checkpoint，音效增强版）。放置于 ComfyUI/models/checkpoints/，由 CheckpointLoaderSimple 加载。"
+    },
+    {
+      "name": "stable_audio_3_medium.safetensors",
+      "displayName": "Stable Audio 3 Medium",
+      "kind": "checkpoint",
+      "group": "stable-audio-3",
+      "workflowValue": "stable_audio_3_medium.safetensors",
+      "sort": 3,
+      "version": "3",
+      "baseModel": "Stable Audio 3 Medium",
+      "downloadUrls": [
+        "https://modelscope.cn/models/stabilityai/stable-audio-3-medium",
+        "https://huggingface.co/stabilityai/stable-audio-3-medium"
+      ],
+      "description": "Stable Audio 3 Medium 主扩散模型（checkpoint，质量更高）。放置于 ComfyUI/models/checkpoints/，由 CheckpointLoaderSimple 通过模型槽选择加载。"
+    },
+    {
+      "name": "t5gemma_b_b_ul2.safetensors",
+      "displayName": "Stable Audio 3 T5-Gemma CLIP",
+      "kind": "clip",
+      "group": "stable-audio-sa-clip",
+      "workflowValue": "t5gemma_b_b_ul2.safetensors",
+      "version": "3",
+      "baseModel": "Stable Audio 3 Medium",
+      "downloadUrls": [
+        "https://modelscope.cn/models/stabilityai/stable-audio-3-small-sfx",
+        "https://huggingface.co/stabilityai/stable-audio-3-small-sfx"
+      ],
+      "description": "Stable Audio 3 音频文本编码器（type=stable_audio）。放置于 ComfyUI/models/text_encoders/，由 CLIPLoader 加载（文件名经 workflow.binding.json 的模型槽注入），供给正/负向 CLIPTextEncode。",
+      "folder": "text_encoders"
+    },
+    {
+      "name": "qwen3.5_2b_bf16.safetensors",
+      "displayName": "Qwen 3.5 2B CLIP（reprompt LLM）",
+      "kind": "clip",
+      "group": "stable-audio-qwen-clip",
+      "workflowValue": "qwen3.5_2b_bf16.safetensors",
+      "version": "3.5",
+      "baseModel": "Stable Audio 3 Medium",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen3.5/resolve/master/text_encoders/qwen3.5_2b_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/Qwen3.5/resolve/main/text_encoders/qwen3.5_2b_bf16.safetensors"
+      ],
+      "description": "用于 LLM 二次重写（reprompt）的 Qwen CLIP（type=stable_diffusion）。放置于 ComfyUI/models/text_encoders/，由 CLIPLoader 加载（文件名经 workflow.binding.json 的模型槽注入），供 TextGenerate 节点使用。",
+      "folder": "text_encoders"
+    }
+  ],
+  "comfyuiPlugins": []
+}

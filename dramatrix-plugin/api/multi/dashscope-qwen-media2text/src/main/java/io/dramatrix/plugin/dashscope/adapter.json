@@ -1,0 +1,86 @@
+{
+  "name": "dashscope-qwen-media2text",
+  "displayName": "DashScope Qwen 多模态理解",
+  "baseModel": "Qwen3.8",
+  "type": "media2text",
+  "category": "understanding",
+  "kind": "api",
+  "vendor": "dashscope",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.jpeg"],
+  "description": "阿里云百炼 DashScope 的 Qwen3.8 / Qwen3.7 多模态理解（HTTP API 直连，不依赖 ComfyUI）。kind=api 故无需 workflow.json；需配套一条 type=API_SERVICE 且 extra.vendor=dashscope 的 backend。",
+  "adapterClass": "io.dramatrix.plugin.dashscope.DashScopeMedia2TextAdapter",
+  "extra": {
+    "modalities": [
+      "TEXT",
+      "IMAGE",
+      "VIDEO"
+    ],
+    "defaults": {
+      "modelName": "qwen3.8-flash",
+      "enableThinking": "false",
+      "maxTokens": 2048,
+      "temperature": 0.6,
+      "videoFps": 2
+    },
+    "configSchema": [
+      {
+        "key": "modelName",
+        "label": "模型名称",
+        "type": "SELECT",
+        "options": [
+          "qwen3.8-max",
+          "qwen3.8-flash",
+          "qwen3.7-plus",
+          "qwen3.7-flash",
+          "qwen3.6-plus",
+          "qwen3.6-flash",
+          "qwen3.5-plus",
+          "qwen3.5-flash",
+          "qwen3-vl-plus",
+          "qwen3-vl-flash",
+          "qwen-vl-max",
+          "qwen-vl-plus",
+          "qwen-vl-ocr"
+        ]
+      },
+      {
+        "key": "enableThinking",
+        "label": "思考模式",
+        "type": "SELECT",
+        "options": [
+          "false",
+          "true"
+        ]
+      },
+      {
+        "key": "maxTokens",
+        "label": "Max Tokens",
+        "type": "NUMBER",
+        "defaultValue": 2048,
+        "min": 1,
+        "max": 32768,
+        "interval": 1
+      },
+      {
+        "key": "temperature",
+        "label": "Temperature",
+        "type": "NUMBER",
+        "defaultValue": 0.6,
+        "min": 0,
+        "max": 2,
+        "interval": 0.1
+      },
+      {
+        "key": "videoFps",
+        "label": "视频抽帧率",
+        "type": "NUMBER",
+        "defaultValue": 2,
+        "min": 0.1,
+        "max": 10,
+        "interval": 0.1
+      }
+    ]
+  }
+}

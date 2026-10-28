@@ -1,0 +1,27 @@
+{
+  "1": {
+    "inputs": { "audio": "", "audioUI": "" },
+    "class_type": "LoadAudio",
+    "_meta": { "title": "加载音频" }
+  },
+  "2": {
+    "inputs": {
+      "audio": ["1", 0],
+      "model_name": "Qwen3-ASR/Qwen3-ASR-0.6B",
+      "language": "auto",
+      "device": "cuda",
+      "precision": "bf16",
+      "max_new_tokens": 256,
+      "flash_attention_2": false,
+      "chunk_size": 30,
+      "overlap": 2
+    },
+    "class_type": "Qwen3ASRTranscriber",
+    "_meta": { "title": "Qwen3-ASR 转写" }
+  },
+  "3": {
+    "inputs": { "text": ["2", 0] },
+    "class_type": "ShowText|pysssss",
+    "_meta": { "title": "Show Text 🐍" }
+  }
+}

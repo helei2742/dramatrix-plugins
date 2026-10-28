@@ -1,0 +1,101 @@
+{
+  "name": "qwen3-vl-media2text",
+  "displayName": "Qwen3-VL 图像理解",
+  "baseModel": "Qwen3-VL",
+  "type": "media2text",
+  "category": "understanding",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 AILab_QwenVL_Advanced 节点的图像理解，输出文本描述",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwen3vl.Qwen3VLMedia2TextAdapter",
+  "extra": {
+    "modalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "defaults": {
+      "modelName": "Qwen3-VL-8B-Instruct",
+      "quantization": "4-bit (VRAM-friendly)",
+      "attentionMode": "auto",
+      "maxTokens": 2048,
+      "temperature": 0.6,
+      "topP": 0.9,
+      "repetitionPenalty": 1.2,
+      "seed": 1
+    },
+    "configSchema": [
+      {
+        "key": "modelName",
+        "label": "模型名称",
+        "type": "SELECT",
+        "options": [
+          "Qwen3-VL-2B-Instruct",
+          "Qwen3-VL-4B-Instruct",
+          "Qwen3-VL-8B-Instruct",
+          "Qwen3-VL-32B-Instruct",
+          "Qwen2.5-VL-7B-Instruct"
+        ]
+      },
+      {
+        "key": "quantization",
+        "label": "量化类型",
+        "type": "SELECT",
+        "options": [
+          "4-bit (VRAM-friendly)",
+          "8-bit (Balanced)",
+          "None (FP16)"
+        ]
+      },
+      {
+        "key": "attentionMode",
+        "label": "注意力模式",
+        "type": "SELECT",
+        "options": [
+          "auto",
+          "sage",
+          "flash_attention_2",
+          "sdpa"
+        ]
+      },
+      {
+        "key": "maxTokens",
+        "label": "Max Tokens",
+        "type": "NUMBER",
+        "defaultValue": 2048,
+        "min": 1,
+        "max": 8192,
+        "interval": 1
+      },
+      {
+        "key": "temperature",
+        "label": "温度",
+        "type": "NUMBER",
+        "defaultValue": 0.6,
+        "min": 0.1,
+        "max": 1.0,
+        "interval": 0.1
+      },
+      {
+        "key": "topP",
+        "label": "Top P",
+        "type": "NUMBER",
+        "defaultValue": 0.9,
+        "min": 0.1,
+        "max": 1.0,
+        "interval": 0.1
+      },
+      {
+        "key": "repetitionPenalty",
+        "label": "重复惩罚",
+        "type": "NUMBER",
+        "defaultValue": 1.2,
+        "min": 1.0,
+        "max": 2.0,
+        "interval": 0.1
+      }
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "10": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "加载文本编码器" }
+  },
+  "13": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": { "title": "加载主模型" }
+  },
+  "18": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": { "title": "加载VAE" }
+  },
+  "19": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载重绘原图（LoadImage 原图）" }
+  },
+  "20": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载遮罩源图（LoadImage 遮罩）" }
+  },
+  "40": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载参考图（LoadImage 参考图）" }
+  },
+  "21": {
+    "inputs": {
+      "image": ["20", 0],
+      "channel": "red"
+    },
+    "class_type": "ImageToMask",
+    "_meta": { "title": "取遮罩通道" }
+  },
+  "22": {
+    "inputs": {
+      "image": ["19", 0],
+      "mask": ["21", 0],
+      "color": "0, 255, 0",
+      "device": "cpu"
+    },
+    "class_type": "DrawMaskOnImage",
+    "_meta": { "title": "遮罩区域画填充色（Flux.2 从空 latent 重画整块裁剪区，必须让模型看见要改哪一块）" }
+  },
+  "23": {
+    "inputs": {
+      "image": ["22", 0],
+      "mask": ["21", 0],
+      "downscale_algorithm": "bilinear",
+      "upscale_algorithm": "bicubic",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 120,
+      "mask_invert": false,
+      "mask_blend_pixels": 64,
+      "mask_hipass_filter": 0.1,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
+      "context_from_mask_extend_factor": 2,
+      "output_resize_to_target_size": true,
+      "output_target_width": 1024,
+      "output_target_height": 1024,
+      "output_padding": "32",
+      "device_mode": "cpu (compatible)"
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": { "title": "裁剪遮罩区域（裁剪目标=采样边长，由 cropTargetSize 注入；出参0=stitcher、1=裁剪图、2=裁剪遮罩）" }
+  },
+  "24": {
+    "inputs": {
+      "pixels": ["23", 1],
+      "vae": ["18", 0]
+    },
+    "class_type": "VAEEncode",
+    "_meta": { "title": "编码裁剪图（作为第 1 张参考图 image 0 注入条件）" }
+  },
+  "25": {
+    "inputs": {
+      "text": "",
+      "clip": ["10", 0]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "局部重绘指令" }
+  },
+  "26": {
+    "inputs": {
+      "conditioning": ["25", 0]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": { "title": "负向条件（置零）" }
+  },
+  "27": {
+    "inputs": {
+      "conditioning": ["25", 0],
+      "latent": ["24", 0]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": { "title": "正向参考潜变量（image 0 = 裁剪图）" }
+  },
+  "28": {
+    "inputs": {
+      "conditioning": ["26", 0],
+      "latent": ["24", 0]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": { "title": "负向参考潜变量（image 0 = 裁剪图）" }
+  },
+  "29": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": { "title": "空潜变量（重绘画布，边长=采样边长，由 cropTargetSize 注入）" }
+  },
+  "30": {
+    "inputs": {
+      "seed": 0,
+      "steps": 6,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": ["13", 0],
+      "positive": ["27", 0],
+      "negative": ["28", 0],
+      "latent_image": ["29", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "K采样器" }
+  },
+  "31": {
+    "inputs": {
+      "samples": ["30", 0],
+      "vae": ["18", 0]
+    },
+    "class_type": "VAEDecode",
+    "_meta": { "title": "解码" }
+  },
+  "36": {
+    "inputs": {
+      "stitcher": ["23", 0],
+      "inpainted_image": ["31", 0]
+    },
+    "class_type": "InpaintStitchImproved",
+    "_meta": { "title": "缝合回原图（Inpaint Stitch）" }
+  },
+  "37": {
+    "inputs": {
+      "images": ["36", 0],
+      "filename_prefix": "flux2-klein-inpaint"
+    },
+    "class_type": "SaveImage",
+    "_meta": { "title": "保存图像" }
+  }
+}

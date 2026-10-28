@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "name": "krea2_turbo_bf16.safetensors",
+      "displayName": "Krea2 Turbo (BF16, 官方)",
+      "kind": "checkpoint",
+      "version": "V1",
+      "baseModel": "Krea2",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Krea-2/resolve/master/diffusion_models/krea2_turbo_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_bf16.safetensors"
+      ],
+      "description": "Krea2 Turbo 主模型（官方版 Comfy-Org/Krea-2，自包含 checkpoint，放入 ComfyUI/models/diffusion_models/）。downloadUrls 已列出全部精度变体，按体积/显存权衡选择其一：krea2_turbo_bf16（~26GB，最佳质量）、fp8_scaled / int8_convrot / mxfp8（~13GB）、nvfp4（~7.6GB，最省显存）。原 White_Marble AIO 社区变体无直接下载，已替换为官方权重。",
+      "group": "krea2"
+    },
+    {
+      "name": "Krea2-turbo-White_Marble-AIO_V1_BF16.safetensors",
+      "displayName": "Krea2 白玉 Turbo AIO (BF16)",
+      "kind": "checkpoint",
+      "version": "V1",
+      "baseModel": "Krea2",
+      "downloadUrls": [
+        "https://huggingface.co/Comfy-Org/Krea-2"
+      ],
+      "description": "Krea2 Turbo 主模型（BF16，AIO 变体）。放入 ComfyUI/models/diffusion_models/。",
+      "group": "krea2"
+    },
+    {
+      "name": "krea2_turbo_fp8_scaled.safetensors",
+      "displayName": "Krea2 Turbo（FP8 Scaled，推荐）",
+      "kind": "checkpoint",
+      "group": "krea2",
+      "default": true,
+      "version": "fp8_scaled",
+      "baseModel": "Krea2",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Krea-2/resolve/master/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
+        "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
+      ],
+      "description": "Krea2 Turbo FP8 Scaled（推荐，8 步 / cfg 0），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "krea2_turbo_nvfp4.safetensors",
+      "displayName": "Krea2 Turbo（NVFP4，最省显存）",
+      "kind": "checkpoint",
+      "group": "krea2",
+      "version": "nvfp4",
+      "baseModel": "Krea2",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Krea-2/resolve/master/diffusion_models/krea2_turbo_nvfp4.safetensors",
+        "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_nvfp4.safetensors"
+      ],
+      "description": "Krea2 Turbo NVFP4（NVIDIA 量化，最省显存），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "krea2_turbo_mxfp8.safetensors",
+      "displayName": "Krea2 Turbo（MXFP8）",
+      "kind": "checkpoint",
+      "group": "krea2",
+      "version": "mxfp8",
+      "baseModel": "Krea2",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/Krea-2/resolve/master/diffusion_models/krea2_turbo_mxfp8.safetensors",
+        "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_mxfp8.safetensors"
+      ],
+      "description": "Krea2 Turbo MXFP8，放入 ComfyUI/models/diffusion_models/。"
+    }
+  ],
+  "comfyuiPlugins": []
+}

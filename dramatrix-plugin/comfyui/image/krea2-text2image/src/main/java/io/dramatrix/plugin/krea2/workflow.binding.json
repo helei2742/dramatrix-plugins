@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "title", "title": "CLIP文本编码", "field": "text" } },
+    { "parameter": "negative_prompt", "target": { "match": "title", "title": "Negative Prompt", "field": "text" } },
+    { "parameter": "width", "target": { "match": "title", "title": "简单尺寸设置", "field": "宽度" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "title", "title": "简单尺寸设置", "field": "高度" }, "transform": "int" },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "nodeId", "nodeId": "2" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "krea2",
+      "title": "Krea2 Turbo 扩散模型",
+      "default": "krea2_turbo_fp8_scaled.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CheckpointLoaderSimple", "field": "ckpt_name" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "parameters": [
+    {
+      "key": "image",
+      "type": "string",
+      "required": true,
+      "desc": "输入原图 ComfyUI 文件名（input 目录下，由服务端上传后注入）"
+    },
+    {
+      "key": "maskImageAssetId",
+      "type": "int",
+      "desc": "遮罩图图片资产 id（前端传入），与 image 配合做局部重绘；服务端解析出本地路径上传后回填 maskImage"
+    },
+    {
+      "key": "maskImage",
+      "type": "string",
+      "desc": "遮罩图 ComfyUI 文件名（input 目录下，由服务端从 maskImageAssetId 上传后回填），插件只读该字段"
+    },
+    {
+      "key": "referenceImageAssetId",
+      "type": "int",
+      "desc": "额外参考图图片资产 id（前端传入，选填）：与待编辑原图并列送进模型的第二张图，接 TextEncodeQwenImage21.images.image_2（提示词里可用 <image2> 指代）。服务端解析出本地路径上传后回填 referenceImage"
+    },
+    {
+      "key": "referenceImage",
+      "type": "string",
+      "desc": "额外参考图 ComfyUI 文件名（input 目录下，由服务端从 referenceImageAssetId 上传后回填），插件只读该字段；为空 = 不接 image_2（该 LoadImage 节点会被剪掉）"
+    },
+    {
+      "key": "maskChannel",
+      "type": "string",
+      "desc": "遮罩选取通道（ImageToMask）：red（默认，适配不透明 RGB 黑白遮罩，白=重绘）/ green / blue / alpha / luminance。默认值只声明在 adapter.json 的 extra.paramSchema[maskChannel].defaultValue（当前 red），前端 ParamForm 用它播种、Java 侧不写死"
+    },
+    {
+      "key": "cropTargetSize",
+      "type": "int",
+      "desc": "送模型的裁剪采样边长（正方形，InpaintCropImproved.output_target_width/height），默认 768（官方工作流口径），区间 256~2048 并向上对齐到 32 的倍数。⚠️ 这是**精确最终尺寸**不是上限：节点会先把上下文区按 1:1 扩缩、再把裁剪结果重采样到该尺寸。旧版接「输入图尺寸」，会让模型在 ~2MP 画布上采样（远超 Qwen 2.1 约 1MP 的原生训练分辨率）并为了凑原图宽高比把上下文撑到近整图 ⇒ 糊 / 重复 / 显存爆"
+    },
+    {
+      "key": "prompt",
+      "type": "string",
+      "desc": "局部重绘指令，描述「裁剪区最终该长什么样」，如「把头上的羽毛去掉，脚下的铃铛去掉」。**按自然语义写即可，不要指代任何颜色** —— 模型看到的是干净裁剪图，图上没有填充色（遮罩只通过 SetLatentNoiseMask 约束采样范围）。⚠️ 别指代前端遮罩编辑器的红色（那只是叠加显示，图上没有红）。⚠️ 其余内容会由缝合节点从原图保留"
+    },
+    {
+      "key": "negativePrompt",
+      "type": "string",
+      "desc": "反向提示词（走 ImageEditInput.options 透传）；⚠️ cfg=1 时不生效，需先把 CFG 调高"
+    },
+    {
+      "key": "maskExpandPixels",
+      "type": "int",
+      "desc": "把重绘区向外扩张以纳入上下文（InpaintCropImproved.mask_expand_pixels，缺省 50，官方工作流口径），过大易吞掉周边内容。膨胀后的遮罩决定**两处**：SetLatentNoiseMask 加噪的范围、以及缝合时「哪块换成重绘结果」（区内取重绘、区外逐像素保留原图）"
+    },
+    {
+      "key": "maskBlendPixels",
+      "type": "int",
+      "desc": "遮罩边缘羽化像素（InpaintCropImproved.mask_blend_pixels，节点上限 256，缺省 32，官方工作流口径）。只改变遮罩边缘的软硬（不改变「该重绘哪里」这个范围本身），软边会被 SetLatentNoiseMask 与缝合两处一并消费：越大与周边过渡越柔和"
+    },
+    {
+      "key": "steps",
+      "type": "int",
+      "desc": "采样步数（KSampler），缺省 25（Qwen Image 2.1 官方 25~50）"
+    },
+    {
+      "key": "cfg",
+      "type": "float",
+      "desc": "CFG 强度（Qwen Image 2.1 官方路径固定 1），缺省 1"
+    },
+    {
+      "key": "samplerName",
+      "type": "string",
+      "desc": "采样器名（KSampler），缺省 euler"
+    },
+    {
+      "key": "scheduler",
+      "type": "string",
+      "desc": "调度器名（KSampler），缺省 simple"
+    },
+    {
+      "key": "denoise",
+      "type": "float",
+      "desc": "去噪强度（采样画布是「裁剪图 latent + SetLatentNoiseMask」，遮罩外由 noise_mask 逐像素锁死），缺省 1；遮罩内应保持 1 全权重重画"
+    },
+    {
+      "key": "seed",
+      "type": "int",
+      "desc": "随机种子；null 或 0 表示随机"
+    },
+    {
+      "key": "cacheDevice",
+      "type": "string",
+      "desc": "QwenImage21Cache 设备：auto（默认）/ gpu / cpu / off"
+    },
+    {
+      "key": "dtype",
+      "type": "string",
+      "desc": "QwenImage21Cache 精度：default（默认）/ int8 / int4"
+    },
+    {
+      "key": "saveFormat",
+      "type": "string",
+      "desc": "输出图像格式（SaveImageAdvanced.format）：png（默认）/ exr / avif"
+    },
+    {
+      "key": "unetName",
+      "type": "string",
+      "desc": "主模型文件名（models/diffusion_models/ 下，缺省走模型槽 / qwen_image_2.1_int8_convrot.safetensors）"
+    },
+    {
+      "key": "vaeName",
+      "type": "string",
+      "desc": "VAE 文件名（models/vae/ 下，缺省走模型槽 / qwen_image_2.1_vae_bf16.safetensors）"
+    },
+    {
+      "key": "loras",
+      "type": "object[]",
+      "desc": "LoRA 列表。已收拢进 ImageEditInput.loras，由服务端从 ComfyResultSubscribe.loraNames 解析；插件按 binding 的 lora.startNodes（UNETLoader）动态串联，工作流不预置 LoRA 节点。置空 = 不加 LoRA"
+    }
+  ],
+  "extra": [
+    {
+      "key": "clipName",
+      "type": "string",
+      "desc": "（adapter.json extra，非请求参数）文本编码器文件名（models/text_encoders/ 下），缺省 qwen3vl_8b_int8_convrot.safetensors。模型槽优先于本项"
+    },
+    {
+      "key": "outputPadding",
+      "type": "string",
+      "options": [
+        "0",
+        "8",
+        "16",
+        "32",
+        "64",
+        "128",
+        "256",
+        "512"
+      ],
+      "desc": "（adapter.json extra，非请求参数）把裁剪目标尺寸（= cropTargetSize）向上对齐到该值的倍数，缺省 32。⚠️ 必须是 32 的倍数（合法值 32/64/128/256/512），才能保证裁剪图（= image_1 参考图，同时也是采样画布 VAEEncode 的输入）宽高能被 VAE 整除；否则裁剪图无法被 VAE 下采样、latent 几何不规整（适配器对非法值回退 32 并 WARN）"
+    },
+    {
+      "key": "contextExtendFactor",
+      "type": "double",
+      "desc": "（adapter.json extra，非请求参数）InpaintCropImproved.context_from_mask_extend_factor，缺省 1.2（= 每边多取 10%，官方工作流口径）。把「基于遮罩算出的上下文框」向四周按倍数放大，为模型提供额外参考；1.0 = 不扩展。旧版用 2.0，会把上下文撑得过大、接近整图重绘"
+    },
+    {
+      "key": "deviceMode",
+      "type": "string",
+      "options": [
+        "cpu (compatible)",
+        "gpu (much faster)"
+      ],
+      "desc": "（adapter.json extra，非请求参数）InpaintCropImproved 计算设备，缺省 cpu (compatible)；显存够可改 gpu (much faster) 提速。仅插件作者/部署者配置，不在前端口令里"
+    },
+    {
+      "key": "referenceResolution",
+      "type": "int",
+      "desc": "（adapter.json extra，非请求参数）TextEncodeQwenImage21.resolution（参考图缩放预算），缺省 0 = 保持各参考图自身尺寸。采样画布来自 VAEEncode(裁剪图)，与 image_1（同一张裁剪图）天然同尺寸；改成非 0 会把 image_1 二次缩放，而画布与缝合节点仍按裁剪输出几何工作 → 重绘结果与缝合错位（适配器会打 WARN）。⚠️ image_2 参考图尺寸可以与 image_1 不同：resolution=0 下节点按各图自身尺寸编码，参考图不参与画布几何（官方 image-edit 模板即「人像 + 衣服」两张不同尺寸）"
+    }
+  ],
+  "output": {
+    "kind": "image"
+  }
+}

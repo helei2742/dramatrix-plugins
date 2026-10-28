@@ -1,0 +1,40 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "title", "title": "CLIP文本编码", "field": "text" } },
+    { "parameter": "negative_prompt", "target": { "match": "title", "title": "Negative Prompt", "field": "text" } },
+    { "parameter": "width", "target": { "match": "title", "title": "空Latent图像（Flux2）", "field": "width" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "title", "title": "空Latent图像（Flux2）", "field": "height" }, "transform": "int" },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" }
+  ],
+
+
+  "modelSlots": [
+    {
+      "group": "flux2-klein-9b-diffusion",
+      "title": "扩散主干模型（Flux.2 Klein 9B）",
+      "default": "flux-2-klein-9b-fp8.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-clip",
+      "title": "文本编码器",
+      "default": "qwen_3_8b_fp8mixed.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "flux2-klein-vae",
+      "title": "VAE",
+      "default": "flux2-vae.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

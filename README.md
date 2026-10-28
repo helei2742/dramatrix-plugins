@@ -4,9 +4,20 @@ This repository hosts the independent source and signed GitHub Releases for Dram
 
 ## Source migration
 
-Profile plugins are the first source family migrated here. They have no Java runtime dependency and can be built from this checkout without cloning Dramatrix. Media and management sources will migrate after their API and SDK dependencies are available.
+Profile and media plugin sources are migrated here. Profile packages build from this checkout without host source; media packages use the independently versioned `dramatrix-plugin-api:1.0.0` artifact from GitHub Packages. Management sources remain in the main repository until their host dependency strategy is settled.
 
-## Build a Profile plugin
+## Build plugin packages
+
+The independent Maven reactor contains six Profile modules and 32 media modules. GitHub Actions builds only changed modules; media builds read the versioned plugin API from GitHub Packages. Grant this repository's Actions workflow read access to the `dramatrix-plugin-api` package in `helei2742/dramatrix`.
+
+For a local unsigned build of all packages of one type:
+
+```bash
+./release/build-plugin-packages.sh --type profile --unsigned
+./release/build-plugin-packages.sh --type media --unsigned
+```
+
+The Profile example below builds one module directly:
 
 ```bash
 mvn --batch-mode --file pom.xml \
@@ -17,6 +28,19 @@ python3 release/plugin_package.py package \
   --project-root . \
   --module dramatrix-plugin/profile/profile-plugin-cyberpunk-2099 \
   --type profile \
+  --output-dir release/build/plugin-packages \
+  --unsigned
+```
+
+Build a media plugin by its source module path (replace the path as needed):
+
+```bash
+mvn --batch-mode --file dramatrix-plugin/comfyui/image/qwen-image2.1-text2image/pom.xml \
+  clean package -Dplugin.deploy.skip=true
+python3 release/plugin_package.py package \
+  --project-root . \
+  --module dramatrix-plugin/comfyui/image/qwen-image2.1-text2image \
+  --type media \
   --output-dir release/build/plugin-packages \
   --unsigned
 ```

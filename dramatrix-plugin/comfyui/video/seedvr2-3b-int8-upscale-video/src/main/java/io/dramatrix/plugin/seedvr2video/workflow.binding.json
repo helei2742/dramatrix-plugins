@@ -1,0 +1,31 @@
+{
+  "bindings": [
+    { "parameter": "video", "target": { "match": "classType", "classType": "LoadVideo", "field": "file" } },
+    { "parameter": "scale_multiplier", "target": { "match": "classType", "classType": "ResizeImageMaskNode", "field": "resize_type.multiplier" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSampler", "field": "sampler_name" } },
+    { "parameter": "scheduler", "target": { "match": "classType", "classType": "KSampler", "field": "scheduler" } },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" },
+    { "parameter": "color_correction_method", "target": { "match": "classType", "classType": "SeedVR2PostProcessing", "field": "color_correction_method" } },
+    { "parameter": "slice_start", "target": { "match": "nodeId", "nodeId": "66:79", "field": "start_time" }, "transform": "float" },
+    { "parameter": "slice_duration", "target": { "match": "nodeId", "nodeId": "66:79", "field": "duration" }, "transform": "float" }
+  ],
+  "modelSlots": [
+    {
+      "group": "seedvr2-diffusion",
+      "title": "SeedVR2 3B 扩散模型",
+      "default": "seedvr2_3b_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "seedvr2-vae",
+      "title": "SeedVR2 VAE",
+      "default": "seedvr2_ema_vae_fp16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

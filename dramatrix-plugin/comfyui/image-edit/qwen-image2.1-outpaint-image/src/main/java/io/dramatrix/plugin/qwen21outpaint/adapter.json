@@ -1,0 +1,209 @@
+{
+  "name": "qwen-image2.1-outpaint-image",
+  "displayName": "Qwen Image 2.1 扩图",
+  "baseModel": "QwenImage",
+  "type": "image_edit",
+  "category": "outpaint",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display1.png", "display2.png"],
+  "description": "使用 Qwen Image 2.1 模型扩展图片画布（Outpaint）。可向上下左右任意方向扩边、按总像素缩放，由模型补画扩展区域，并把新画面色彩对齐回原图。扩边区用填充色标出供提示词指代，成品是**一次生成出来的整幅图**（不拼原图像素，故无接缝色差）。全部生成参数（缩放率 / 四边扩边 / 羽化 / 输出宽高 / 填充色 / 扩图指令 / 步数 / CFG / 采样器 / 种子 / 缩放插值 / 色彩校正算法与强度）都在「额外参数」里可调。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwen21outpaint.Qwen21OutpaintImageAdapter",
+  "extra": {
+    "clipName": "qwen3vl_8b_int8_convrot.safetensors",
+    "resolutionSteps": 1,
+    "referenceResolution": 0,
+    "paramSchema": [
+      {
+        "key": "megapixels",
+        "label": "缩放率(MP)",
+        "type": "NUMBER",
+        "min": 0.1,
+        "max": 8,
+        "step": 0.1,
+        "defaultValue": 1.5,
+        "tooltip": "先按「目标总像素」把原图缩放到该值（ImageScaleToTotalPixels.megapixels），扩边发生在缩放之后 —— 最终画布 = 缩放后尺寸 + 四边扩边。默认 1.5"
+      },
+      {
+        "key": "padLeft",
+        "label": "向左扩边",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 8192,
+        "step": 1,
+        "defaultValue": 800,
+        "tooltip": "左边扩出的像素（ImagePadForOutpaint.left）。四边至少一边 > 0，全 0 等于没扩图会被拦截。默认 800"
+      },
+      {
+        "key": "padTop",
+        "label": "向上扩边",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 8192,
+        "step": 1,
+        "defaultValue": 0,
+        "tooltip": "上边扩出的像素（ImagePadForOutpaint.top）。默认 0"
+      },
+      {
+        "key": "padRight",
+        "label": "向右扩边",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 8192,
+        "step": 1,
+        "defaultValue": 800,
+        "tooltip": "右边扩出的像素（ImagePadForOutpaint.right）。默认 800"
+      },
+      {
+        "key": "padBottom",
+        "label": "向下扩边",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 8192,
+        "step": 1,
+        "defaultValue": 0,
+        "tooltip": "下边扩出的像素（ImagePadForOutpaint.bottom）。默认 0"
+      },
+      {
+        "key": "padFeathering",
+        "label": "扩边羽化",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 64,
+        "step": 1,
+        "defaultValue": 0,
+        "tooltip": "扩边遮罩的羽化半径（ImagePadForOutpaint.feathering，节点上限 64）：0 = 硬边，越大「原图 ↔ 扩边区」的接缝过渡越软（羽化同时作用于涂色范围与采样遮罩）。默认 0"
+      },
+      {
+        "key": "width",
+        "label": "输出宽",
+        "type": "NUMBER",
+        "min": 64,
+        "max": 8192,
+        "step": 16,
+        "placeholder": "留空跟随",
+        "tooltip": "采样画布宽度（EmptyLatentImage.width）。⚠️ 留空（推荐）= 画布跟随「缩放 + 扩边」后的尺寸；**宽高都填**才会切到独立画布，此时画布与参考图（扩边后的图）尺寸不再一致，扩边内容不会按扩边位置对齐 —— 只在确实需要强制出图尺寸时用。必须能被 16 整除"
+      },
+      {
+        "key": "height",
+        "label": "输出高",
+        "type": "NUMBER",
+        "min": 64,
+        "max": 8192,
+        "step": 16,
+        "placeholder": "留空跟随",
+        "tooltip": "采样画布高度。⚠️ 留空（推荐）= 跟随「缩放 + 扩边」后的尺寸；语义见「输出宽」。必须能被 16 整除"
+      },
+      {
+        "key": "maskColor",
+        "label": "扩边区填充色",
+        "type": "TEXT",
+        "defaultValue": "0, 255, 0",
+        "placeholder": "0, 255, 0",
+        "tooltip": "画在扩边区、供扩图指令指代的填充色（DrawMaskOnImage.color）。支持 \"0, 255, 0\"（RGB(A) 数值）或 \"#00FF00\"。改色后「扩图指令」必须同步改成指代该色，否则扩边区会以填充色残留"
+      },
+      {
+        "key": "prompt",
+        "label": "扩图指令",
+        "type": "TEXTAREA",
+        "defaultValue": "重新绘制图像：用场景的无缝延续替换绿色区域，保持现有图片不变。",
+        "placeholder": "用场景的无缝延续替换绿色区域，保持现有图片不变",
+        "tooltip": "⚠️ 必须指代扩边区填充色（默认指令即指代绿色），否则填充色会残留在结果里；可在其后追加内容描述。留空沿用工作流默认值"
+      },
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "TextEncodeQwenImage21.negative_prompt；⚠️ cfg=1 时不生效，需先把 CFG 调高"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 25,
+        "tooltip": "KSampler 步数；Qwen Image 2.1 官方建议 25~50"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1,
+        "tooltip": "KSampler CFG；Qwen Image 2.1 官方路径固定 1，调高后反向提示词才生效"
+      },
+      {
+        "key": "samplerName",
+        "label": "采样器",
+        "type": "SELECT",
+        "options": ["euler", "euler_ancestral", "heun", "heunpp2", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2s_ancestral", "dpmpp_sde", "ddim_uniform", "lcm"],
+        "defaultValue": "euler",
+        "tooltip": "KSampler 采样器；Qwen Image 2.1 官方推荐 euler"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "cacheDevice",
+        "label": "缓存设备",
+        "type": "SELECT",
+        "options": ["auto", "gpu", "cpu", "off"],
+        "defaultValue": "auto",
+        "tooltip": "QwenImage21Cache.device；auto 即可"
+      },
+      {
+        "key": "dtype",
+        "label": "量化精度",
+        "type": "SELECT",
+        "options": ["default", "int8", "int4"],
+        "defaultValue": "default",
+        "tooltip": "QwenImage21Cache.dtype；显存紧张可降到 int8 或 int4"
+      },
+      {
+        "key": "upscaleMethod",
+        "label": "缩放插值",
+        "type": "SELECT",
+        "options": ["nearest-exact", "bilinear", "area", "bicubic", "lanczos"],
+        "defaultValue": "lanczos",
+        "tooltip": "扩边前把原图缩放到目标总像素（缩放率）时用的插值算法（ImageScaleToTotalPixels.upscale_method）。lanczos 画质最好、最慢；nearest-exact 最快但会有锯齿，一般只在需要像素级保真时用"
+      },
+      {
+        "key": "colorMatchMethod",
+        "label": "色彩校正算法",
+        "type": "SELECT",
+        "options": ["mkl", "hm", "reinhard", "mvgd", "hm-mvgd-hm", "hm-mkl-hm"],
+        "defaultValue": "mkl",
+        "tooltip": "把重绘结果的色彩对齐回原图的算法（ColorMatch.method），消除 VAE 带来的色彩漂移。mkl 最稳；hm 系列（hm / hm-mvgd-hm / hm-mkl-hm）对直方图差异大的图更激进；reinhard 偏柔和；mvgd 保均值与方差"
+      },
+      {
+        "key": "colorMatchStrength",
+        "label": "色彩校正强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 10,
+        "step": 0.1,
+        "defaultValue": 0.4,
+        "tooltip": "色彩校正的混合强度（ColorMatch.strength）：0 = 完全不做校正，1 = 完全按算法结果；>1 会过校正。扩边区域与原图色调不一致时调大，出现色带/发灰时调小"
+      },
+      {
+        "key": "saveFormat",
+        "label": "保存格式",
+        "type": "SELECT",
+        "options": ["png", "exr", "avif"],
+        "defaultValue": "png",
+        "tooltip": "输出图片格式（SaveImageAdvanced.format）；png 最常用"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "modelSlots": [
+    {
+      "group": "stable-audio-3",
+      "title": "Stable Audio 3 扩散模型",
+      "default": "stable_audio_3_small_sfx.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CheckpointLoaderSimple", "field": "ckpt_name" }
+      ]
+    },
+    {
+      "group": "stable-audio-sa-clip",
+      "title": "音频文本编码器（T5-Gemma）",
+      "default": "t5gemma_b_b_ul2.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "nodeId": "52:26", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "stable-audio-qwen-clip",
+      "title": "reprompt 文本编码器（Qwen）",
+      "default": "qwen3.5_2b_bf16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "nodeId": "52:29", "field": "clip_name" }
+      ]
+    }
+  ]
+}

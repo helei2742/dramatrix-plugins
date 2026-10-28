@@ -1,0 +1,88 @@
+{
+  "name": "qwen-image2.1-image2image",
+  "displayName": "Qwen Image 2.1 图生图",
+  "baseModel": "QwenImage",
+  "type": "image2image_with_lora",
+  "category": "图生图",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display1.webp", "display2.webp"],
+  "description": "基于 Qwen Image 2.1（7B）的图生图/图像编辑工作流：单一 checkpoint 同时支持文生图与图像编辑，最多 12 张参考图经 TextEncodeQwenImage21 编码为时序保持条件，原生 2K 输出与 RGBA 透明通道。参考图（场景/角色/资产）在 buildApiJson 中按 场景→角色→资产 的顺序动态接线到 images.image_1..N，workflow 本身不含图片加载节点；资产只接正式资产（已有资产图的），其身份与角色一样走槽位指代而非外貌文字。cacheDevice / dtype 控制 QwenImage21Cache 的设备与量化精度。",
+  "workflowFile": "workflow.json",
+  "promptFiles": [],
+  "promptVariables": ["STORY_VISUAL_STYLE"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwenimage21.Qwen21Image2ImageAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "否定内容，如 低质量、畸形手部"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "interval": 1,
+        "defaultValue": 25,
+        "tooltip": "KSampler 步数；Qwen Image 2.1 通常 20~50 步，配合蒸馏 LoRA 可降至 8 步"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1,
+        "tooltip": "KSampler CFG；Qwen Image 2.1 推荐 1.0"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "0~1，越低越贴近参考图结构与内容"
+      },
+      {
+        "key": "cacheDevice",
+        "label": "缓存设备",
+        "type": "SELECT",
+        "options": ["auto", "gpu", "cpu", "off"],
+        "defaultValue": "auto",
+        "tooltip": "QwenImage21Cache 计算设备：auto 自动选择、gpu/cpu 显式指定、off 关闭缓存（每步重算）"
+      },
+      {
+        "key": "dtype",
+        "label": "量化精度",
+        "type": "SELECT",
+        "options": ["default", "int8", "int4"],
+        "defaultValue": "default",
+        "tooltip": "QwenImage21Cache 缓存权重精度：default 保持原精度、int8/int4 进一步量化以降低显存占用"
+      },
+      {
+        "key": "saveFormat",
+        "label": "保存格式",
+        "type": "SELECT",
+        "options": ["png", "exr", "avif"],
+        "defaultValue": "png",
+        "tooltip": "输出图像格式：png 无损常规、exr 浮点高动态、avif 高压缩"
+      }
+    ]
+  }
+}

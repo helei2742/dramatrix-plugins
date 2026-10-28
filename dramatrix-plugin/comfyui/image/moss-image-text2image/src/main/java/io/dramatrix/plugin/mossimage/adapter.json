@@ -1,0 +1,61 @@
+{
+  "name": "moss-image-text2image",
+  "displayName": "MOSS-Image 文生图",
+  "baseModel": "MossImage",
+  "type": "text2image_with_lora",
+  "category": "文生图",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 MOSS-Image SFT 的文生图工作流，默认使用同一 Qwen3.5 编码器扩写提示词并预览最终 caption",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.mossimage.MossImageText2ImageAdapter",
+  "extra": {
+    "defaults": {
+      "enable_prompt_upsampler": true
+    },
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "defaultValue": "nsfw, worst quality, bad anatomy, watermark, jpeg artifact",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "默认排除不适宜内容、低质量、错误人体结构、水印和压缩伪影"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "interval": 1,
+        "defaultValue": 25
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 2.5
+      },
+      {
+        "key": "enable_prompt_upsampler",
+        "label": "提示词扩写",
+        "type": "SELECT",
+        "defaultValue": true,
+        "options": [true, false],
+        "tooltip": "启用 MOSS-Image 文本编码器将短提示词扩写为完整场景 caption"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机"
+      }
+    ]
+  }
+}

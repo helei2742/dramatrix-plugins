@@ -1,0 +1,13 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "classType", "classType": "LoadImage", "field": "image" } },
+    { "parameter": "scale_multiplier", "target": { "match": "classType", "classType": "ResizeImageMaskNode", "field": "resize_type.multiplier" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSampler", "field": "sampler_name" } },
+    { "parameter": "scheduler", "target": { "match": "classType", "classType": "KSampler", "field": "scheduler" } },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" },
+    { "parameter": "unet_name", "target": { "match": "classType", "classType": "UNETLoader", "field": "unet_name" } },
+    { "parameter": "vae_name", "target": { "match": "classType", "classType": "VAELoader", "field": "vae_name" } },
+    { "parameter": "color_correction_method", "target": { "match": "classType", "classType": "SeedVR2PostProcessing", "field": "color_correction_method" } }
+  ]
+}

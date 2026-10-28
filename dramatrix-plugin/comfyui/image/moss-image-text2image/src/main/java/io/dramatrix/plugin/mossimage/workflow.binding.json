@@ -1,0 +1,44 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "TextGenerate", "nodeId": "4", "field": "prompt" } },
+    { "parameter": "raw_prompt", "target": { "match": "classType", "classType": "ComfySwitchNode", "nodeId": "5", "field": "on_false" } },
+    { "parameter": "negative_prompt", "target": { "match": "classType", "classType": "CLIPTextEncode", "nodeId": "8", "field": "text" } },
+    { "parameter": "width", "target": { "match": "classType", "classType": "EmptyFlux2LatentImage", "field": "width" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "classType", "classType": "EmptyFlux2LatentImage", "field": "height" }, "transform": "int" },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "prompt_extend", "target": { "match": "classType", "classType": "ComfySwitchNode", "nodeId": "5", "field": "switch" } }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "nodeId", "nodeId": "1" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "moss-image-diffusion",
+      "title": "MOSS-Image 扩散模型",
+      "default": "moss_image_sft_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "moss-image-text-encoder",
+      "title": "MOSS-Image 文本编码器",
+      "default": "qwen3.5_9b_w4a8_gptq.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "moss-image-vae",
+      "title": "VAE",
+      "default": "flux2-vae_small.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

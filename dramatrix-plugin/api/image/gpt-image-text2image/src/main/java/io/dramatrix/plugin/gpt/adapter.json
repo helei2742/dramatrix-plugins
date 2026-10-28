@@ -1,0 +1,98 @@
+{
+  "name": "gpt-image-text2image",
+  "displayName": "OpenAI GPT 文生图",
+  "baseModel": "GPT-Image",
+  "type": "text2image_with_lora",
+  "category": "文生图",
+  "kind": "api",
+  "vendor": "gpt",
+  "version": "2.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "使用 OpenAI 官方 GPT-Image 模型，根据文字描述直接生成图片。支持 gpt-image-2 与 gpt-image-2.5 两代模型，可选多种分辨率和生成质量。出图清晰自然，适合快速产出视觉内容。",
+  "adapterClass": "io.dramatrix.plugin.gpt.GptImageText2ImageAdapter",
+  "extra": {
+    "defaults": {
+      "modelName": "gpt-image-2",
+      "n": 1,
+      "outputFormat": "png",
+      "background": "auto",
+      "maxSize": "2560x1440"
+    },
+    "paramSchema": [
+      {
+        "key": "modelName",
+        "label": "模型名称",
+        "type": "SELECT",
+        "defaultValue": "gpt-image-2",
+        "tooltip": "只支持 2.0 / 2.5 两代；2.5 的官方 id 带 flare/sunburst 变体后缀",
+        "options": [
+          "gpt-image-2",
+          "gpt-image-2.5-flare",
+          "gpt-image-2.5-sunburst"
+        ]
+      },
+      {
+        "key": "size",
+        "label": "分辨率",
+        "type": "TEXT",
+        "placeholder": "留空=按画布；auto 或 宽x高，如 2048x1152。约束：两边为 16 的倍数、单边≤3840、长短边比≤3:1、总像素 655360~8294400",
+        "tooltip": "gpt-image-2 系接受任意分辨率；不满足约束会被自动修正为最近合法值（WARN 留痕）。超过 2560x1440 为官方实验性区间，且像素越多成本越高"
+      },
+      {
+        "key": "maxSize",
+        "label": "最大分辨率（推导上限）",
+        "type": "TEXT",
+        "defaultValue": "2560x1440",
+        "placeholder": "默认 2560x1440（官方非实验区间上界）；填 off/none/0 表示不限，仅保留厂商单边 3840",
+        "tooltip": "只约束「未显式给 size 时按画布推导」的结果：超过该宽高会等比缩小再发，避免画布很大时悄悄生成 8MP 级别的高价图。显式填了 size 时以显式为准（超过上限会打 INFO）。上限必须 ≤ 厂商的 3840，否则超出部分无效"
+      },
+      {
+        "key": "quality",
+        "label": "生成质量",
+        "type": "SELECT",
+        "placeholder": "gpt-image-2：auto/low/medium/high；gpt-image-2.5：另有 xhigh/max",
+        "options": [
+          "auto",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      {
+        "key": "n",
+        "label": "生成张数",
+        "type": "NUMBER",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 10,
+        "interval": 1
+      },
+      {
+        "key": "outputFormat",
+        "label": "输出格式",
+        "type": "SELECT",
+        "defaultValue": "png",
+        "options": [
+          "png",
+          "jpeg",
+          "webp"
+        ]
+      },
+      {
+        "key": "background",
+        "label": "背景",
+        "type": "SELECT",
+        "defaultValue": "auto",
+        "tooltip": "transparent 需要 output_format 为 png/webp；配 jpeg 会 400，此时自动降级为 auto",
+        "options": [
+          "auto",
+          "opaque",
+          "transparent"
+        ]
+      }
+    ]
+  }
+}

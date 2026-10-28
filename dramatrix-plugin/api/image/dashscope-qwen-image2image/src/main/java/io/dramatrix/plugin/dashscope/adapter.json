@@ -1,0 +1,74 @@
+{
+  "name": "dashscope-qwen-image2image",
+  "displayName": "DashScope Qwen 图生图",
+  "baseModel": "Qwen-Image",
+  "type": "image2image_with_lora",
+  "category": "图生图",
+  "kind": "api",
+  "vendor": "dashscope",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.png"],
+  "description": "阿里云百炼 DashScope 的 Qwen-Image 图生图（HTTP API 直连，不依赖 ComfyUI、无 LoRA）。kind=api 故无需 workflow.json；需配套一条 type=API_SERVICE 且 extra.vendor=dashscope 的 backend。参考图取 sceneImage（宿主按 media-file:// 占位符读本地文件转 Base64）。",
+  "adapterClass": "io.dramatrix.plugin.dashscope.DashScopeImage2ImageAdapter",
+  "extra": {
+    "defaults": {
+      "modelName": "qwen-image-2.0-pro",
+      "promptExtend": "false",
+      "watermark": "false",
+      "n": 1
+    },
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…"
+      },
+      {
+        "key": "modelName",
+        "label": "模型名称",
+        "type": "SELECT",
+        "defaultValue": "qwen-image-2.0-pro",
+        "options": [
+          "qwen-image-3.0",
+          "qwen-image-2.0-pro",
+          "qwen-image-2.0",
+          "qwen-image-max",
+          "qwen-image-plus",
+          "qwen-image",
+          "wan2.7-image-pro",
+          "wan2.7-image",
+          "wan2.6-image"
+        ]
+      },
+      {
+        "key": "n",
+        "label": "生成张数",
+        "type": "NUMBER",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 4,
+        "interval": 1
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机"
+      },
+      {
+        "key": "promptExtend",
+        "label": "Prompt 智能改写",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      {
+        "key": "watermark",
+        "label": "水印",
+        "type": "BOOLEAN",
+        "defaultValue": false
+      }
+    ]
+  }
+}

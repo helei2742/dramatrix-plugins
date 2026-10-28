@@ -1,0 +1,141 @@
+{
+  "19": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载待扩图图像" }
+  },
+  "12": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.5,
+      "resolution_steps": 1,
+      "image": ["19", 0]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": { "title": "按总像素缩放（缩放率）" }
+  },
+  "26": {
+    "inputs": {
+      "left": 800,
+      "top": 0,
+      "right": 800,
+      "bottom": 0,
+      "feathering": 0,
+      "image": ["12", 0]
+    },
+    "class_type": "ImagePadForOutpaint",
+    "_meta": { "title": "扩充画板（左/上/右/下；出参1 = 扩边区遮罩，扩边区=1）" }
+  },
+  "8": {
+    "inputs": {
+      "image": ["26", 0],
+      "mask": ["26", 1],
+      "color": "0, 255, 0",
+      "device": "cpu"
+    },
+    "class_type": "DrawMaskOnImage",
+    "_meta": { "title": "扩边区涂填充色（Qwen 没有 mask 通道，只能靠这块颜色让模型看见扩边区）" }
+  },
+  "17": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "加载文本编码器" }
+  },
+  "18": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": { "title": "加载VAE" }
+  },
+  "25": {
+    "inputs": {
+      "prompt": "",
+      "negative_prompt": "",
+      "resolution": 0,
+      "clip": ["17", 0],
+      "vae": ["18", 0],
+      "images.image_1": ["8", 0]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": { "title": "文本编码（扩图指令 + image_1=涂色后的扩边图；★ 出参2 = 跟随 image_1 尺寸的空 latent = 采样画布）" }
+  },
+  "28": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": { "title": "【可选】显式输出画布（仅「输出宽 + 输出高」都显式给定才接进 KSampler.latent_image，否则整支被 prune）" }
+  },
+  "16": {
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": { "title": "加载主模型" }
+  },
+  "5": {
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": ["16", 0]
+    },
+    "class_type": "QwenImage21Cache",
+    "_meta": { "title": "Qwen Image 2.1 缓存" }
+  },
+  "6": {
+    "inputs": {
+      "seed": 0,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": ["5", 0],
+      "positive": ["25", 0],
+      "negative": ["25", 1],
+      "latent_image": ["25", 2]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "K采样器（画布=空 latent（跟随扩边图尺寸），整幅重画；原图内容靠 image_1 参考 + 指令保持）" }
+  },
+  "9": {
+    "inputs": {
+      "samples": ["6", 0],
+      "vae": ["18", 0]
+    },
+    "class_type": "VAEDecode",
+    "_meta": { "title": "VAE解码" }
+  },
+  "11": {
+    "inputs": {
+      "image_ref": ["12", 0],
+      "image_target": ["9", 0],
+      "method": "mkl",
+      "strength": 0.4,
+      "multithread": true
+    },
+    "class_type": "ColorMatch",
+    "_meta": { "title": "色彩校正（把结果色彩对齐回原图，消除整幅重画带来的色彩漂移）" }
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "qwen-image2.1-outpaint",
+      "format": "png",
+      "format.bit_depth": "8-bit",
+      "format.input_color_space": "sRGB",
+      "images": ["11", 0]
+    },
+    "class_type": "SaveImageAdvanced",
+    "_meta": { "title": "保存图像" }
+  }
+}

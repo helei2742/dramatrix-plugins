@@ -1,0 +1,60 @@
+{
+  "name": "qwen-image2.1-text2image",
+  "displayName": "Qwen Image 2.1 文生图",
+  "baseModel": "QwenImage",
+  "type": "text2image_with_lora",
+  "category": "文生图",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 Qwen Image 2.1（7B）的文生图工作流：单一 checkpoint 原生 2K 输出与 RGBA 透明通道，文字排版与人像光影表现优秀。TextEncodeQwenImage21 将 prompt/negative_prompt 编码为 KSampler 条件，EmptyLatentImage 提供画布。支持 LoRA 人物优化。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwenimage21.Qwen21Text2ImageAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "否定内容，如 低质量、畸形手部"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "interval": 1,
+        "defaultValue": 25,
+        "tooltip": "KSampler 步数；Qwen Image 2.1 通常 20~50 步，配合蒸馏 LoRA 可降至 8 步"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1,
+        "tooltip": "KSampler CFG；Qwen Image 2.1 推荐 1.0"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "saveFormat",
+        "label": "保存格式",
+        "type": "SELECT",
+        "options": ["png", "exr", "avif"],
+        "defaultValue": "png",
+        "tooltip": "输出图像格式：png 无损常规、exr 浮点高动态、avif 高压缩"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "bindings": [
+    { "parameter": "positivePrompt", "target": { "match": "nodeId", "nodeId": "213:3", "field": "text" } },
+    { "parameter": "negativePrompt", "target": { "match": "nodeId", "nodeId": "213:4", "field": "text" } },
+    { "parameter": "targetText", "target": { "match": "nodeId", "nodeId": "213:191", "field": "text" } },
+    { "parameter": "detectionThreshold", "target": { "match": "nodeId", "nodeId": "213:196", "field": "detection_threshold" }, "transform": "float" },
+    { "parameter": "maxObjects", "target": { "match": "nodeId", "nodeId": "213:196", "field": "max_objects" }, "transform": "int" },
+    { "parameter": "detectInterval", "target": { "match": "nodeId", "nodeId": "213:196", "field": "detect_interval" }, "transform": "int" },
+    { "parameter": "objectIndices", "target": { "match": "nodeId", "nodeId": "213:197", "field": "object_indices" } },
+    { "parameter": "sortBy", "target": { "match": "nodeId", "nodeId": "213:197", "field": "sort_by" } },
+    { "parameter": "width", "target": { "match": "nodeId", "nodeId": "213:178", "field": "value" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "nodeId", "nodeId": "213:179", "field": "value" }, "transform": "int" },
+    { "parameter": "poseStrength", "target": { "match": "nodeId", "nodeId": "213:114", "field": "pose_strength" }, "transform": "float" },
+    { "parameter": "poseStart", "target": { "match": "nodeId", "nodeId": "213:114", "field": "pose_start" }, "transform": "float" },
+    { "parameter": "poseEnd", "target": { "match": "nodeId", "nodeId": "213:114", "field": "pose_end" }, "transform": "float" },
+    { "parameter": "frameOffset", "target": { "match": "nodeId", "nodeId": "213:114", "field": "video_frame_offset" }, "transform": "int" },
+    { "parameter": "fastMode", "target": { "match": "nodeId", "nodeId": "213:172", "field": "value" }, "transform": "bool" },
+    { "parameter": "fastLoraStrength", "target": { "match": "nodeId", "nodeId": "213:11", "field": "strength_model" }, "transform": "float" },
+    { "parameter": "detailLoraStrength", "target": { "match": "nodeId", "nodeId": "213:318", "field": "strength_model" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "nodeId", "nodeId": "213:19", "field": "noise_seed" }, "transform": "int" }
+  ],
+  "modelSlots": [
+    {
+      "group": "scail2-diffusion",
+      "title": "SCAIL-2 扩散模型",
+      "default": "wan2.1_14B_SCAIL_2_int8_convrot.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:154", "field": "unet_name" },
+        { "match": "nodeId", "nodeId": "262:223", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "scail2-segmentation",
+      "title": "角色识别模型",
+      "default": "sam3.1_multiplex_fp16.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:193", "field": "ckpt_name" },
+        { "match": "nodeId", "nodeId": "262:243", "field": "ckpt_name" }
+      ]
+    },
+    {
+      "group": "scail2-text-encoder",
+      "title": "文本编码器",
+      "default": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:9", "field": "clip_name" },
+        { "match": "nodeId", "nodeId": "262:221", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "scail2-vision-encoder",
+      "title": "视觉编码器",
+      "default": "clip_vision_h.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:75", "field": "clip_name" },
+        { "match": "nodeId", "nodeId": "262:222", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "scail2-vae",
+      "title": "视频 VAE",
+      "default": "Wan2_1_VAE_bf16.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:7", "field": "vae_name" },
+        { "match": "nodeId", "nodeId": "262:217", "field": "vae_name" }
+      ]
+    },
+    {
+      "group": "scail2-fast-lora",
+      "title": "快速模式",
+      "default": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:11", "field": "lora_name" },
+        { "match": "nodeId", "nodeId": "262:216", "field": "lora_name" }
+      ]
+    },
+    {
+      "group": "scail2-detail-lora",
+      "title": "细节增强",
+      "default": "wan2.1_SCAIL_2_DPO_lora_bf16.safetensors",
+      "targets": [
+        { "match": "nodeId", "nodeId": "213:318", "field": "lora_name" },
+        { "match": "nodeId", "nodeId": "262:319", "field": "lora_name" }
+      ]
+    }
+  ]
+}

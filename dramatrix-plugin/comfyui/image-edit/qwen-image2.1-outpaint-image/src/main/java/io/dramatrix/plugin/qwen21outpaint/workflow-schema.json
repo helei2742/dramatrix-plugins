@@ -1,0 +1,35 @@
+{
+  "parameters": [
+    { "key": "image", "type": "string", "required": true, "desc": "输入图像 ComfyUI 文件名（input 目录下，由服务端上传后注入）" },
+    { "key": "prompt", "type": "string", "desc": "扩图指令。⚠️ 必须指代扩边区填充色（默认指令「重新绘制图像：用场景的无缝延续替换绿色区域，保持现有图片不变。」即指代绿色），否则填充色会残留在结果里；可在其后追加内容描述。缺省沿用工作流默认值" },
+    { "key": "negativePrompt", "type": "string", "desc": "反向提示词（TextEncodeQwenImage21.negative_prompt）；⚠️ cfg=1 时不生效" },
+    { "key": "megapixels", "type": "float", "desc": "缩放率（按目标总像素，单位 MP）。作用于 ImageScaleToTotalPixels.megapixels，缩放发生在扩边之前：最终画布 = 缩放后尺寸 + 四边扩边。缺省 1.5" },
+    { "key": "padLeft", "type": "int", "desc": "向左扩充的画板像素（≥0，缺省 800）" },
+    { "key": "padTop", "type": "int", "desc": "向上扩充的画板像素（≥0，缺省 0）" },
+    { "key": "padRight", "type": "int", "desc": "向右扩充的画板像素（≥0，缺省 800）" },
+    { "key": "padBottom", "type": "int", "desc": "向下扩充的画板像素（≥0，缺省 0）" },
+    { "key": "padFeathering", "type": "int", "desc": "扩边羽化半径（ImagePadForOutpaint.feathering，0 = 硬边，节点上限 64，缺省 0）。羽化作用于**扩边区涂色范围**（接缝过渡更软）" },
+    { "key": "width", "type": "int", "desc": "采样画布宽度（EmptyLatentImage.width）。⚠️ 留空（推荐）= 画布跟随「缩放 + 扩边」后的尺寸；**宽高都填**才切到独立画布，此时画布与参考图尺寸不再一致、扩边内容不会按扩边位置对齐。必须能被 16 整除" },
+    { "key": "height", "type": "int", "desc": "采样画布高度；语义见 width（宽高都填才生效）" },
+    { "key": "maskColor", "type": "string", "desc": "扩边区填充色（DrawMaskOnImage.color）：\"0, 255, 0\"（RGB(A) 数值）或 \"#00FF00\"。缺省 \"0, 255, 0\"（绿）。改色后 prompt 必须同步改指代对象" },
+    { "key": "steps", "type": "int", "desc": "采样步数（KSampler.steps），缺省 25（Qwen Image 2.1 官方 25~50）" },
+    { "key": "cfg", "type": "float", "desc": "CFG 强度（KSampler.cfg；官方路径固定 1，调高后反向提示词才生效），缺省 1" },
+    { "key": "samplerName", "type": "string", "desc": "采样器名（KSampler.sampler_name），缺省 euler" },
+    { "key": "seed", "type": "int", "desc": "随机种子；null 或 0 表示随机" },
+    { "key": "cacheDevice", "type": "string", "desc": "QwenImage21Cache.device：auto（默认）/ gpu / cpu / off" },
+    { "key": "dtype", "type": "string", "desc": "QwenImage21Cache.dtype：default（默认）/ int8 / int4" },
+    { "key": "upscaleMethod", "type": "string", "options": ["nearest-exact", "bilinear", "area", "bicubic", "lanczos"], "desc": "缩放插值算法（ImageScaleToTotalPixels.upscale_method），缺省 lanczos。⚠️ 是 COMBO 输入，非法值会让 ComfyUI 拒收整条 prompt，故适配器做白名单校验并回退缺省" },
+    { "key": "colorMatchMethod", "type": "string", "options": ["mkl", "hm", "reinhard", "mvgd", "hm-mvgd-hm", "hm-mkl-hm"], "desc": "输出色彩校正算法（ColorMatch.method，把结果色彩对齐回原图），缺省 mkl。同为 COMBO 输入，白名单校验" },
+    { "key": "colorMatchStrength", "type": "float", "desc": "输出色彩校正强度（ColorMatch.strength，0 = 不做校正，1 = 完全按算法结果，>1 过校正），缺省 0.4" },
+    { "key": "saveFormat", "type": "string", "desc": "输出图像格式（SaveImageAdvanced.format）：png（默认）/ exr / avif" },
+    { "key": "unetName", "type": "string", "desc": "主模型文件名（models/diffusion_models/ 下，缺省走模型槽 / qwen_image_2.1_int8_convrot.safetensors）" },
+    { "key": "vaeName", "type": "string", "desc": "VAE 文件名（models/vae/ 下，缺省走模型槽 / qwen_image_2.1_vae_bf16.safetensors）" },
+    { "key": "loraNames", "type": "string[]", "desc": "LoRA 名称列表。走既有 ComfyResultSubscribe.loraNames 通道，不属于 ImageEditInput；插件按 binding 的 lora.startNodes（UNETLoader）在 UNETLoader 与 QwenImage21Cache 之间动态串联 LoraLoaderModelOnly，工作流本身不预置 LoRA 节点。置空 = 不加 LoRA" }
+  ],
+  "extra": [
+    { "key": "clipName", "type": "string", "desc": "（adapter.json extra，非请求参数）文本编码器文件名（models/text_encoders/ 下），缺省 qwen3vl_8b_int8_convrot.safetensors。模型槽（UI 选择）优先于本项" },
+    { "key": "resolutionSteps", "type": "int", "desc": "（adapter.json extra，非请求参数）尺寸对齐步长（ImageScaleToTotalPixels.resolution_steps，1 = 不对齐），缺省 1" },
+    { "key": "referenceResolution", "type": "int", "desc": "（adapter.json extra，非请求参数）TextEncodeQwenImage21.resolution（参考图缩放预算），**必须为 0**：采样画布 = 该节点出参 2（尺寸跟随 image_1），非 0 会把 image_1 二次缩放 ⇒ 画布尺寸跟着变、四边扩边与实际输出像素对不上（适配器会打 WARN）" }
+  ],
+  "output": { "kind": "image" }
+}

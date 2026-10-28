@@ -1,0 +1,30 @@
+{
+  "name": "wan-bernini-i2v",
+  "displayName": "WAN Bernini 图生视频(参考图)",
+  "baseModel": "WanVideo22_I2V_A14B",
+  "type": "image2video_ref",
+  "category": "图生视频",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 WAN 2.2 + Bernini Studio 的参考图生成视频工作流，支持多图参考及首尾帧控制。参数配置sageAttention：true开启加速。",
+  "workflowFile": "workflow.json",
+  "promptFiles": [],
+  "promptVariables": ["STORY_DIRECTOR_STYLE", "STORY_VISUAL_STYLE"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.wanbernini.WanBerniniAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "sageAttention",
+        "label": "Sage Attention 加速",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "tooltip": "开启后 PathchSageAttentionKJ 用 auto kernel 加速注意力；关闭则回退标准 attention。需指定具体 kernel（如 sageattn_qk_int8_pv_fp16_cuda）时请直接改插件 extra"
+      }
+    ],
+
+    "sageAttention": true,
+    "maxRefImages": 6
+  }
+}

@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.dramatrix.plugins</groupId>
+        <artifactId>dramatrix-plugin</artifactId>
+        <relativePath>../../../pom.xml</relativePath>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>dramatrix-plugin-flux2-klein-outpaint-image</artifactId>
+    <packaging>jar</packaging>
+
+    <name>flux2-klein-outpaint-image</name>
+    <description>Flux.2 Klein 9B 扩图插件（ImagePadForOutpaint + 绿色遮罩提示词 + ReferenceLatent，带提示词的参数化图片编辑）</description>
+
+    <properties>
+        <plugin.name>flux2-klein-outpaint-image</plugin.name>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.dramatrix</groupId>
+            <artifactId>dramatrix-plugin-api</artifactId>
+            <version>${plugin.api.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>deploy-comfyui-plugin</id>
+                        <phase>package</phase>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <mkdir dir="../../../../plugins/comfyui/image-edit/flux2-klein-outpaint-image"/>
+                                <copy file="target/${plugin.name}.jar" todir="../../../../plugins/comfyui/image-edit/flux2-klein-outpaint-image" overwrite="true"/>
+                                <copy todir="../../../../plugins/comfyui/image-edit/flux2-klein-outpaint-image" overwrite="true" flatten="true" includeemptydirs="false">
+                                    <fileset dir="src/main/java" excludes="**/*.java" erroronmissingdir="false"/>
+                                </copy>
+                                <echo message="Deployed ${plugin.name} to ../../../../plugins/comfyui/image-edit/flux2-klein-outpaint-image/"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

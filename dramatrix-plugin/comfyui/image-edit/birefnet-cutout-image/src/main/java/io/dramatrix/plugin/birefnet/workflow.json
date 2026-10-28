@@ -1,0 +1,102 @@
+{
+  "1": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像（待抠图）"
+    }
+  },
+  "2": {
+    "inputs": {
+      "bg_removal_name": "birefnet.safetensors"
+    },
+    "class_type": "LoadBackgroundRemovalModel",
+    "_meta": {
+      "title": "加载背景移除模型"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "bg_removal_model": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "RemoveBackground",
+    "_meta": {
+      "title": "移除背景（输出前景遮罩）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": [
+        "4",
+        0
+      ],
+      "height": [
+        "4",
+        1
+      ],
+      "batch_size": 1,
+      "color": 16777215
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "纯色背景"
+    }
+  },
+  "6": {
+    "inputs": {
+      "destination": [
+        "5",
+        0
+      ],
+      "source": [
+        "1",
+        0
+      ],
+      "mask": [
+        "3",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": false
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "合成（人像 + 纯色背景）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "cutout",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

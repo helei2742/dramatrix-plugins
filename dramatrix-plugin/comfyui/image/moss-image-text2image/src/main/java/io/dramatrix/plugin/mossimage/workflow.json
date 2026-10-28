@@ -1,0 +1,140 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "moss_image_sft_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": { "title": "MOSS-Image 扩散模型" }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3.5_9b_w4a8_gptq.safetensors",
+      "type": "moss_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "MOSS-Image 文本编码器" }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "flux2-vae_small.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": { "title": "加载 VAE" }
+  },
+  "4": {
+    "inputs": {
+      "clip": ["2", 0],
+      "system_prompt": "You are MOSS-Image's prompt enhancer. Turn the user's image idea into a concrete, self-contained caption that can be sent directly to an image model. Preserve the requested subjects, counts, relationships, action, medium, style, composition, exclusions, and all intended visible wording. Keep visible text verbatim in its original language, including punctuation and requested line breaks. Default to clear English descriptive prose unless the user requests another language. Describe visible choices such as subject and action, relevant appearance and materials, setting, framing, medium, lighting, palette, and mood. For designed images, compose text and imagery together and state the exact supplied copy. Fill ordinary creative gaps without inventing factual details, real names, brands, extra subjects, watermarks, or unrequested story elements. Avoid redundant quality tags, generic templates, arbitrary length targets, coordinates, and invisible process notes. Output only the caption, with no title, preamble, explanation, alternatives, or questions.",
+      "prompt": "",
+      "max_length": 4096,
+      "sampling_mode": "on",
+      "sampling_mode.temperature": 0.7,
+      "sampling_mode.top_k": 64,
+      "sampling_mode.top_p": 0.95,
+      "sampling_mode.min_p": 0.05,
+      "sampling_mode.repetition_penalty": 1,
+      "sampling_mode.seed": 0,
+      "sampling_mode.presence_penalty": 0,
+      "thinking": false,
+      "use_default_template": true,
+      "mtp": "auto"
+    },
+    "class_type": "TextGenerate",
+    "_meta": { "title": "MOSS-Image 提示词扩写" }
+  },
+  "5": {
+    "inputs": {
+      "switch": true,
+      "on_false": "",
+      "on_true": ["4", 0]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": { "title": "启用提示词扩写" }
+  },
+  "6": {
+    "inputs": {
+      "source": ["5", 0]
+    },
+    "class_type": "PreviewAny",
+    "_meta": { "title": "Caption 预览（最终提示词）" }
+  },
+  "7": {
+    "inputs": {
+      "clip": ["2", 0],
+      "text": ["6", 0]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "正向提示词（MOSS-Image caption）" }
+  },
+  "8": {
+    "inputs": {
+      "clip": ["2", 0],
+      "text": "nsfw, worst quality, bad anatomy, watermark, jpeg artifact"
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "Negative Prompt" }
+  },
+  "9": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": { "title": "MOSS-Image latent 尺寸" }
+  },
+  "10": {
+    "inputs": {
+      "model": ["1", 0],
+      "double_layers": "",
+      "single_layers": "22",
+      "start_percent": 0,
+      "end_percent": 0.5
+    },
+    "class_type": "SkipLayerGuidanceDiTSimple",
+    "_meta": { "title": "Skip Layer Guidance（Layer 22）" }
+  },
+  "11": {
+    "inputs": {
+      "switch": false,
+      "on_false": ["1", 0],
+      "on_true": ["10", 0]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": { "title": "SLG 开关（默认关闭）" }
+  },
+  "12": {
+    "inputs": {
+      "seed": 0,
+      "steps": 25,
+      "cfg": 2.5,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": ["11", 0],
+      "positive": ["7", 0],
+      "negative": ["8", 0],
+      "latent_image": ["9", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "KSampler" }
+  },
+  "13": {
+    "inputs": {
+      "samples": ["12", 0],
+      "vae": ["3", 0]
+    },
+    "class_type": "VAEDecode",
+    "_meta": { "title": "VAE 解码" }
+  },
+  "14": {
+    "inputs": {
+      "filename_prefix": "MOSS-Image",
+      "images": ["13", 0]
+    },
+    "class_type": "SaveImage",
+    "_meta": { "title": "保存图像" }
+  }
+}

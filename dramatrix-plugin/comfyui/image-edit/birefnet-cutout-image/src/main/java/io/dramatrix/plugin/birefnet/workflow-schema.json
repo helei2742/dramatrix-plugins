@@ -1,0 +1,11 @@
+{
+  "parameters": [
+    { "key": "image", "type": "string", "required": true, "desc": "输入图像 ComfyUI 文件名（input 目录下，由服务端上传后注入）" },
+    { "key": "mode", "type": "string", "options": ["solid", "remove_person", "replace_background"], "desc": "抠图模式：solid=去除背景（人像+纯色背景，默认）；remove_person=去除人物（保留原背景）；replace_background=合成到指定背景图" },
+    { "key": "backgroundColor", "type": "string", "desc": "背景颜色：#RRGGBB / 0xRRGGBB / RRGGBB / 十进制 / 颜色名（white|black|red|green|blue|gray|chroma）；transparent|none=透明。solid 模式缺省纯白，remove_person 模式缺省透明" },
+    { "key": "backgroundImage", "type": "string", "desc": "背景图 ComfyUI 文件名（input 目录下），replace_background 模式使用；由服务端按 backgroundImageAssetId 上传后回填" },
+    { "key": "backgroundImageAssetId", "type": "long", "desc": "背景图图片资产 id，replace_background 模式使用（服务端解析为本地路径并上传 ComfyUI）" },
+    { "key": "bgRemovalModel", "type": "string", "desc": "抠图模型文件名（models/background_removal/ 下，如 birefnet.safetensors）；null 保留模型槽/工作流默认" }
+  ],
+  "output": { "kind": "image" }
+}

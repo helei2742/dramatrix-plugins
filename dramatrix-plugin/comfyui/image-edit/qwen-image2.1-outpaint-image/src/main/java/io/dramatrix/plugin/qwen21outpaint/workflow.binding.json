@@ -1,0 +1,64 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "title", "title": "加载待扩图图像", "field": "image" } },
+    { "parameter": "megapixels", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "megapixels" }, "transform": "float" },
+    { "parameter": "upscale_method", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "upscale_method" } },
+    { "parameter": "resolution_steps", "target": { "match": "classType", "classType": "ImageScaleToTotalPixels", "field": "resolution_steps" }, "transform": "int" },
+    { "parameter": "pad_left", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "left" }, "transform": "int" },
+    { "parameter": "pad_top", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "top" }, "transform": "int" },
+    { "parameter": "pad_right", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "right" }, "transform": "int" },
+    { "parameter": "pad_bottom", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "bottom" }, "transform": "int" },
+    { "parameter": "pad_feathering", "target": { "match": "classType", "classType": "ImagePadForOutpaint", "field": "feathering" }, "transform": "int" },
+    { "parameter": "mask_color", "target": { "match": "classType", "classType": "DrawMaskOnImage", "field": "color" } },
+    { "parameter": "canvas_width", "target": { "match": "classType", "classType": "EmptyLatentImage", "field": "width" }, "transform": "int" },
+    { "parameter": "canvas_height", "target": { "match": "classType", "classType": "EmptyLatentImage", "field": "height" }, "transform": "int" },
+    { "parameter": "reference_resolution", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "resolution" }, "transform": "int" },
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "prompt" } },
+    { "parameter": "negative_prompt", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "negative_prompt" } },
+    { "parameter": "cache_device", "target": { "match": "classType", "classType": "QwenImage21Cache", "field": "device" } },
+    { "parameter": "dtype", "target": { "match": "classType", "classType": "QwenImage21Cache", "field": "dtype" } },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSampler", "field": "sampler_name" } },
+    { "parameter": "scheduler", "target": { "match": "classType", "classType": "KSampler", "field": "scheduler" } },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "color_match_method", "target": { "match": "classType", "classType": "ColorMatch", "field": "method" } },
+    { "parameter": "color_match_strength", "target": { "match": "classType", "classType": "ColorMatch", "field": "strength" }, "transform": "float" },
+    { "parameter": "save_format", "target": { "match": "classType", "classType": "SaveImageAdvanced", "field": "format" } },
+    { "parameter": "unet_name", "target": { "match": "classType", "classType": "UNETLoader", "field": "unet_name" } },
+    { "parameter": "clip_name", "target": { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" } },
+    { "parameter": "vae_name", "target": { "match": "classType", "classType": "VAELoader", "field": "vae_name" } }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "classType", "classType": "UNETLoader" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "qwen-image-2.1-diffusion",
+      "title": "扩散主干模型（Qwen Image 2.1）",
+      "default": "qwen_image_2.1_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "qwen-image-2.1-clip",
+      "title": "文本编码器（Qwen3-VL 8B）",
+      "default": "qwen3vl_8b_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "qwen-image-2.1-vae",
+      "title": "VAE",
+      "default": "qwen_image_2.1_vae_bf16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

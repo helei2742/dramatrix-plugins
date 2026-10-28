@@ -1,0 +1,88 @@
+{
+  "1000": {
+    "inputs": {
+      "unet_name": "minimax_music3_dit_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": { "title": "UNet加载器" }
+  },
+  "1001": {
+    "inputs": {
+      "clip_name": "minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "CLIP加载器" }
+  },
+  "1002": {
+    "inputs": {
+      "clip": ["1001", 0],
+      "caption": "",
+      "lyrics": "",
+      "seed": 0,
+      "max_duration": 30.0,
+      "cfg_scale": 1.7,
+      "top_k": 50
+    },
+    "class_type": "MiniMaxMusic3TextEncode",
+    "_meta": { "title": "MiniMax Music 3 文本编码" }
+  },
+  "1003": {
+    "inputs": {
+      "conditioning": ["1002", 0]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": { "title": "条件零化" }
+  },
+  "1004": {
+    "inputs": {
+      "seconds": 30.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyMiniMaxMusic3LatentAudio",
+    "_meta": { "title": "Empty MiniMax Music 3 Latent Audio" }
+  },
+  "1005": {
+    "inputs": {
+      "seed": 0,
+      "steps": 30,
+      "cfg": 1.7,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": ["1000", 0],
+      "positive": ["1002", 0],
+      "negative": ["1003", 0],
+      "latent_image": ["1004", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "K采样器" }
+  },
+  "1006": {
+    "inputs": {
+      "vae_name": "minimax_music3_dav.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": { "title": "加载VAE" }
+  },
+  "1007": {
+    "inputs": {
+      "samples": ["1005", 0],
+      "vae": ["1006", 0]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": { "title": "VAE解码（音频）" }
+  },
+  "1008": {
+    "inputs": {
+      "audio": ["1007", 0],
+      "filename_prefix": "audio/audio_minimax_music3",
+      "format": "mp3",
+      "format.quality": "V0"
+    },
+    "class_type": "SaveAudioAdvanced",
+    "_meta": { "title": "保存音频 (MP3)" }
+  }
+}

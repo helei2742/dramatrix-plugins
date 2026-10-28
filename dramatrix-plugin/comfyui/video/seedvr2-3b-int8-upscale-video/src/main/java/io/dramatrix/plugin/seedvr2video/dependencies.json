@@ -1,0 +1,33 @@
+{
+  "models": [
+    {
+      "name": "seedvr2_3b_int8_convrot.safetensors",
+      "displayName": "SeedVR2 3B（INT8 convrot 量化）",
+      "kind": "diffusion_model",
+      "group": "seedvr2-diffusion",
+      "workflowValue": "seedvr2_3b_int8_convrot.safetensors",
+      "sort": 1,
+      "version": "int8",
+      "baseModel": "Upscaler",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/SeedVR2/resolve/master/seedvr2_3b_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/SeedVR2/resolve/main/seedvr2_3b_int8_convrot.safetensors"
+      ],
+      "description": "SeedVR2 3B 主模型（INT8 量化，显存友好），放入 ComfyUI/models/diffusion_models/。需较新版 ComfyUI（原生 SeedVR2 节点）。与 seedvr2-3b-int8-upscale-image 共用同一份模型。"
+    },
+    {
+      "name": "seedvr2_ema_vae_fp16.safetensors",
+      "displayName": "SeedVR2 EMA VAE（FP16）",
+      "kind": "vae",
+      "group": "seedvr2-vae",
+      "workflowValue": "seedvr2_ema_vae_fp16.safetensors",
+      "baseModel": "Upscaler",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/SeedVR2/resolve/master/seedvr2_ema_vae_fp16.safetensors",
+        "https://huggingface.co/Comfy-Org/SeedVR2/resolve/main/seedvr2_ema_vae_fp16.safetensors"
+      ],
+      "description": "SeedVR2 EMA VAE，放入 ComfyUI/models/vae/。与 seedvr2-3b-int8-upscale-image 共用同一份模型。"
+    }
+  ],
+  "comfyuiPlugins": []
+}

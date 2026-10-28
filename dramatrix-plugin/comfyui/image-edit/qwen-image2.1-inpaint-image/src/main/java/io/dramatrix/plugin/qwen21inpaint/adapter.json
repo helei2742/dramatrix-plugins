@@ -1,0 +1,167 @@
+{
+  "name": "qwen-image2.1-inpaint-image",
+  "displayName": "Qwen Image 2.1 局部重绘",
+  "baseModel": "QwenImage",
+  "type": "image_edit",
+  "category": "inpaint",
+  "version": "1.1",
+  "icon": "icon.svg",
+  "displayImage": ["display1.webp", "display2.webp"],
+  "description": "Qwen Image 2.1 局部重绘：上传原图 + 遮罩图，用一句指令描述遮罩区域要改成什么，其余画面保持不变。按官方 image-edit 口径把「干净裁剪图」作为 image_1 参考图送模型（遮罩只通过 SetLatentNoiseMask 生效，提示词按正常语义描述即可，不必指代任何颜色），并可选再追加一张额外参考图接到 image_2。支持遮罩膨胀、边缘羽化、采样分辨率、去噪强度、采样步数等参数调节。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwen21inpaint.Qwen21InpaintImageAdapter",
+  "extra": {
+    "clipName": "qwen3vl_8b_int8_convrot.safetensors",
+    "outputPadding": "32",
+    "deviceMode": "cpu (compatible)",
+    "referenceResolution": 0,
+    "contextExtendFactor": 1.2,
+    "paramSchema": [
+      {
+        "key": "cropTargetSize",
+        "label": "采样分辨率",
+        "type": "NUMBER",
+        "min": 256,
+        "max": 2048,
+        "step": 32,
+        "defaultValue": 768,
+        "tooltip": "把裁剪出来的重绘区缩放到该边长（正方形）再送模型采样，官方工作流用 768。Qwen Image 2.1 的原生训练分辨率约 1MP，固定这个值可避免大图被按原尺寸送进去导致糊/重复；值越大越吃显存。必须能被 32 整除（会自动向上对齐）"
+      },
+      {
+        "key": "maskChannel",
+        "label": "遮罩通道",
+        "type": "SELECT",
+        "options": [
+          "red",
+          "green",
+          "blue",
+          "alpha",
+          "luminance"
+        ],
+        "defaultValue": "red",
+        "tooltip": "从遮罩图取选区的通道；黑白遮罩保持默认 red 即可"
+      },
+      {
+        "key": "maskExpandPixels",
+        "label": "遮罩膨胀像素",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1024,
+        "step": 1,
+        "defaultValue": 50,
+        "tooltip": "重绘范围向外扩展的像素数，便于模型参考周边；过大可能改动周边内容（官方工作流用 50）"
+      },
+      {
+        "key": "maskBlendPixels",
+        "label": "遮罩边缘羽化",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 256,
+        "step": 1,
+        "defaultValue": 32,
+        "tooltip": "重绘区边缘的过渡柔和度，越大衔接越自然（官方工作流用 32）"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 25,
+        "tooltip": "采样步数，官方建议 25~50；越高越精细、越慢"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1,
+        "tooltip": "提示词遵循强度，官方路径保持 1；调高后反向提示词才生效"
+      },
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "不希望出现的内容；需先把 CFG 调大于 1 才生效"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "重绘强度；保持 1 才会完全重绘遮罩区域"
+      },
+      {
+        "key": "samplerName",
+        "label": "采样器",
+        "type": "SELECT",
+        "options": [
+          "euler",
+          "euler_ancestral",
+          "heun",
+          "heunpp2",
+          "dpmpp_2m",
+          "dpmpp_2m_sde",
+          "dpmpp_2s_ancestral",
+          "dpmpp_sde",
+          "ddim_uniform",
+          "lcm"
+        ],
+        "defaultValue": "euler",
+        "tooltip": "采样算法，官方推荐 euler"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "固定后结果可复现；留空则每次随机"
+      },
+      {
+        "key": "cacheDevice",
+        "label": "缓存设备",
+        "type": "SELECT",
+        "options": [
+          "auto",
+          "gpu",
+          "cpu",
+          "off"
+        ],
+        "defaultValue": "auto",
+        "tooltip": "缓存计算设备，auto 即可"
+      },
+      {
+        "key": "dtype",
+        "label": "量化精度",
+        "type": "SELECT",
+        "options": [
+          "default",
+          "int8",
+          "int4"
+        ],
+        "defaultValue": "default",
+        "tooltip": "缓存精度，显存紧张可降到 int8 或 int4"
+      },
+      {
+        "key": "saveFormat",
+        "label": "保存格式",
+        "type": "SELECT",
+        "options": [
+          "png",
+          "exr",
+          "avif"
+        ],
+        "defaultValue": "png",
+        "tooltip": "输出图片格式，png 最常用"
+      }
+    ]
+  }
+}

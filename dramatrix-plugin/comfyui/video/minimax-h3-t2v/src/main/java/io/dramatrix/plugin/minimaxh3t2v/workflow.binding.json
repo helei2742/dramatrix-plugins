@@ -1,0 +1,53 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "MiniMaxH3ImageToVideo", "field": "prompt" } },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "RandomNoise", "field": "noise_seed" }, "transform": "int" },
+    { "parameter": "fps", "target": { "match": "classType", "classType": "CreateVideo", "field": "fps" }, "transform": "int" },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "BasicScheduler", "field": "steps" }, "transform": "int" },
+    { "parameter": "sage_node", "target": { "match": "classType", "classType": "PathchSageAttentionKJ" } }
+  ],
+  "anchor": {
+    "id": "video_node",
+    "schema": { "match": "classType", "classType": "MiniMaxH3ImageToVideo" },
+    "groups": []
+  },
+  "lora": {
+    "startNodes": [
+      { "match": "classType", "classType": "UNETLoader" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "minimax-h3-fl2va",
+      "title": "MiniMax H3 扩散模型（fl2va）",
+      "default": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "minimax-h3-te",
+      "title": "MiniMax H3 文本编码器",
+      "default": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "minimax-h3-video-vae",
+      "title": "视频 VAE",
+      "default": "minimax_h3_video_vae_fp16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name", "order": 0 }
+      ]
+    },
+    {
+      "group": "minimax-h3-audio-vae",
+      "title": "音频 VAE",
+      "default": "minimax_h3_audio_vae_fp32.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name", "order": 1 }
+      ]
+    }
+  ]
+}

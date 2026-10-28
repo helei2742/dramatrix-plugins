@@ -1,0 +1,126 @@
+{
+  "name": "minimax-music3",
+  "displayName": "MiniMax Music 3 音乐生成",
+  "baseModel": "MiniMax Music 3",
+  "type": "music_gen",
+  "category": "音乐生成",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 MiniMax Music 3 的歌曲/音乐生成工作流。输入为结构化 Caption（官方 music-caption-rewriter skill 的三段式：全局元信息/人声细节/编曲）+ 带段落标签的 Lyrics，最长约 5 分钟。适配器自动将描述与 bpm/keyscale 等拼装为三段式 Caption",
+  "workflowFile": "workflow.json",
+  "promptFiles": ["bgm-prompt.md", "sfx-prompt.md", "ambient-prompt.md"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.minimaxmusic3.MiniMaxMusic3Adapter",
+  "order": 10,
+  "extra": {
+    "categoryOrder": {
+      "BGM": 100,
+      "AMBIENT": 50,
+      "SFX": 1
+    },
+    "maxDuration": 240,
+
+    "paramSchema": [
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 30,
+        "tooltip": "KSampler 步数；MiniMax Music 3 推荐 30 步"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.1,
+        "defaultValue": 1.7,
+        "tooltip": "KSampler CFG；MiniMax Music 3 推荐 1.7"
+      },
+      {
+        "key": "bpm",
+        "label": "节拍速度",
+        "type": "NUMBER",
+        "min": 40,
+        "max": 240,
+        "step": 1,
+        "placeholder": "自动",
+        "tooltip": "BPM，写进三段式 Caption 的 Tempo；留空由模型自适应"
+      },
+      {
+        "key": "keyScale",
+        "label": "调式",
+        "type": "SELECT",
+        "placeholder": "自动",
+        "tooltip": "调式/音阶，写进三段式 Caption 的 Key and scale；选项由服务端下发"
+      },
+      {
+        "key": "timeSignature",
+        "label": "拍号",
+        "type": "SELECT",
+        "placeholder": "自动",
+        "tooltip": "拍号，写进三段式 Caption 的 Meter；选项由服务端下发"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "min": 0,
+        "step": 1,
+        "placeholder": "随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "topK",
+        "label": "Top-K",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 200,
+        "step": 1,
+        "defaultValue": 50,
+        "tooltip": "MiniMaxMusic3TextEncode 的 top_k；0 = 关闭"
+      },
+      {
+        "key": "sampler",
+        "label": "采样器",
+        "type": "SELECT",
+        "options": ["euler", "euler_ancestral", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_sde", "heun", "ddim", "uni_pc"],
+        "defaultValue": "euler",
+        "tooltip": "KSampler 的 sampler_name"
+      },
+      {
+        "key": "scheduler",
+        "label": "调度器",
+        "type": "SELECT",
+        "options": ["simple", "normal", "karras", "exponential", "sgm_uniform", "ddim_uniform", "beta"],
+        "defaultValue": "simple",
+        "tooltip": "KSampler 的 scheduler"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1.0,
+        "tooltip": "KSampler denoise；音频生成一般保持 1.0"
+      },
+      {
+        "key": "timeout",
+        "label": "生成超时",
+        "type": "NUMBER",
+        "min": 60,
+        "max": 3600,
+        "step": 60,
+        "defaultValue": 300,
+        "tooltip": "单次生成的等待上限（秒）；超时判定为失败"
+      }
+    ]
+  }
+}

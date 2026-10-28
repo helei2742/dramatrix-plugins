@@ -1,0 +1,47 @@
+{
+  "models": [
+    {
+      "name": "Qwen2.5-Omni-7B",
+      "kind": "vlm",
+      "folder": "Qwen",
+      "directory": true,
+      "group": "qwen25-omni-model",
+      "workflowValue": "Qwen2.5-Omni-7B",
+      "default": true,
+      "version": "main",
+      "baseModel": "Qwen2.5-Omni",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen2.5-Omni-7B",
+        "https://huggingface.co/Qwen/Qwen2.5-Omni-7B"
+      ],
+      "description": "Qwen2.5-Omni 7B 全模态模型（文本/图像/音频/视频理解 + 语音生成），放入 ComfyUI/models（按 ComfyUI-Qwen-Omni 节点要求放置）。"
+    },
+    {
+      "name": "Qwen2.5-Omni-3B",
+      "kind": "vlm",
+      "folder": "Qwen",
+      "directory": true,
+      "group": "qwen25-omni-model",
+      "workflowValue": "Qwen2.5-Omni-3B",
+      "version": "main",
+      "baseModel": "Qwen2.5-Omni",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Qwen/Qwen2.5-Omni-3B",
+        "https://huggingface.co/Qwen/Qwen2.5-Omni-3B"
+      ],
+      "description": "Qwen2.5-Omni 3B 全模态模型（轻量版），按需下载。"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "ComfyUI-Qwen-Omni",
+      "version": "main",
+      "repository": "https://github.com/SXQBW/ComfyUI-Qwen-Omni",
+      "downloadUrls": [
+        "https://github.com/SXQBW/ComfyUI-Qwen-Omni",
+        "https://github.com/SXQBW/ComfyUI-Qwen-Omni/archive/refs/heads/main.zip"
+      ],
+      "description": "SXQBW 的 Qwen-Omni ComfyUI 节点，支持 Qwen2.5-Omni 系列全模态理解/生成。"
+    }
+  ]
+}

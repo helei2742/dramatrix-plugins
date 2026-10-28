@@ -1,0 +1,61 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "title", "title": "加载重绘原图（LoadImage 原图）", "field": "image" } },
+    { "parameter": "mask_image", "target": { "match": "title", "title": "加载遮罩源图（LoadImage 遮罩）", "field": "image" } },
+    { "parameter": "reference_image", "target": { "match": "title", "title": "加载参考图（LoadImage 参考图）", "field": "image" } },
+    { "parameter": "mask_channel", "target": { "match": "classType", "classType": "ImageToMask", "field": "channel" } },
+    { "parameter": "mask_expand_pixels", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "mask_expand_pixels" }, "transform": "int" },
+    { "parameter": "mask_blend_pixels", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "mask_blend_pixels" }, "transform": "int" },
+    { "parameter": "context_extend_factor", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "context_from_mask_extend_factor" }, "transform": "float" },
+    { "parameter": "crop_target_width", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "output_target_width" }, "transform": "int" },
+    { "parameter": "crop_target_height", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "output_target_height" }, "transform": "int" },
+    { "parameter": "output_padding", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "output_padding" } },
+    { "parameter": "device_mode", "target": { "match": "classType", "classType": "InpaintCropImproved", "field": "device_mode" } },
+    { "parameter": "reference_resolution", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "resolution" }, "transform": "int" },
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "prompt" } },
+    { "parameter": "negative_prompt", "target": { "match": "classType", "classType": "TextEncodeQwenImage21", "field": "negative_prompt" } },
+    { "parameter": "cache_device", "target": { "match": "classType", "classType": "QwenImage21Cache", "field": "device" } },
+    { "parameter": "dtype", "target": { "match": "classType", "classType": "QwenImage21Cache", "field": "dtype" } },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "sampler_name", "target": { "match": "classType", "classType": "KSampler", "field": "sampler_name" } },
+    { "parameter": "scheduler", "target": { "match": "classType", "classType": "KSampler", "field": "scheduler" } },
+    { "parameter": "denoise", "target": { "match": "classType", "classType": "KSampler", "field": "denoise" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "save_format", "target": { "match": "classType", "classType": "SaveImageAdvanced", "field": "format" } },
+    { "parameter": "unet_name", "target": { "match": "classType", "classType": "UNETLoader", "field": "unet_name" } },
+    { "parameter": "clip_name", "target": { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" } },
+    { "parameter": "vae_name", "target": { "match": "classType", "classType": "VAELoader", "field": "vae_name" } }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "classType", "classType": "UNETLoader" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "qwen-image-2.1-diffusion",
+      "title": "扩散主干模型（Qwen Image 2.1）",
+      "default": "qwen_image_2.1_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "qwen-image-2.1-clip",
+      "title": "文本编码器（Qwen3-VL 8B）",
+      "default": "qwen3vl_8b_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "qwen-image-2.1-vae",
+      "title": "VAE",
+      "default": "qwen_image_2.1_vae_bf16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

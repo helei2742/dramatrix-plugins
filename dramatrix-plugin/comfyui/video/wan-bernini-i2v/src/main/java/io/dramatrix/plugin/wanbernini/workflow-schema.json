@@ -1,0 +1,13 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "正向提示词" },
+    { "key": "negative_prompt", "type": "string", "desc": "负向提示词（缺省用默认负向词）" },
+    { "key": "length", "type": "int", "desc": "总帧数（WAN 换算）" },
+    { "key": "fps", "type": "int", "desc": "帧率" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "width", "type": "int", "desc": "生成宽度（缺省 848）" },
+    { "key": "height", "type": "int", "desc": "生成高度（缺省 480）" }
+  ],
+  "output": { "kind": "video" },
+  "anchor": { "id": "bernini_node" }
+}

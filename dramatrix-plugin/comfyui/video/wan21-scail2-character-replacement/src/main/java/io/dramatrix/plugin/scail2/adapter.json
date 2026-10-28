@@ -1,0 +1,185 @@
+{
+  "name": "wan21-scail2-character-replacement",
+  "displayName": "Wan 2.1 SCAIL-2 角色替换",
+  "baseModel": "WanVideo14B_I2V_480p",
+  "type": "video_edit",
+  "category": "character_replacement",
+  "version": "1.0",
+  "description": "用参考图替换输入视频中的角色，并保留原有动作与场景。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.scail2.Wan21Scail2CharacterReplacementAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "positivePrompt",
+        "label": "画面描述",
+        "type": "TEXTAREA",
+        "defaultValue": "Replace the selected person in the driving video with the character shown in the reference image. Preserve the original movement, pose, camera, and background.",
+        "tooltip": "补充替换后角色和画面的描述。"
+      },
+      {
+        "key": "negativePrompt",
+        "label": "避免内容",
+        "type": "TEXTAREA",
+        "defaultValue": "Avoid duplicate people, flicker, distorted anatomy, and changes to the background or camera.",
+        "tooltip": "填写不希望出现在结果里的内容。"
+      },
+      {
+        "key": "targetText",
+        "label": "识别对象",
+        "type": "TEXT",
+        "defaultValue": "person",
+        "tooltip": "填写视频和参考图中要替换的对象，如 person 或 dog。"
+      },
+      {
+        "key": "detectionThreshold",
+        "label": "识别灵敏度",
+        "type": "NUMBER",
+        "min": 0.05,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0.5,
+        "tooltip": "调高可减少误识别，调低可发现更多对象。"
+      },
+      {
+        "key": "maxObjects",
+        "label": "识别数量上限",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 16,
+        "step": 1,
+        "defaultValue": 4,
+        "tooltip": "限制同时识别的对象数量。"
+      },
+      {
+        "key": "detectInterval",
+        "label": "检测间隔",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 1,
+        "tooltip": "调整视频中对象的检测频率。"
+      },
+      {
+        "key": "objectIndices",
+        "label": "替换对象序号",
+        "type": "TEXT",
+        "placeholder": "留空替换全部",
+        "defaultValue": "",
+        "tooltip": "指定对象序号，例如 0 或 0,2。"
+      },
+      {
+        "key": "sortBy",
+        "label": "对象排序",
+        "type": "SELECT",
+        "options": [
+          { "value": "left_to_right", "label": "从左到右" },
+          { "value": "area", "label": "按面积排序" },
+          { "value": "none", "label": "默认顺序" }
+        ],
+        "defaultValue": "left_to_right",
+        "tooltip": "选择多个对象的排列方式。"
+      },
+      {
+        "key": "width",
+        "label": "输出宽度",
+        "type": "NUMBER",
+        "min": 256,
+        "max": 1536,
+        "step": 32,
+        "defaultValue": 896,
+        "tooltip": "设置处理视频的宽度。"
+      },
+      {
+        "key": "height",
+        "label": "输出高度",
+        "type": "NUMBER",
+        "min": 256,
+        "max": 1536,
+        "step": 32,
+        "defaultValue": 512,
+        "tooltip": "设置处理视频的高度。"
+      },
+      {
+        "key": "poseStrength",
+        "label": "动作保持",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "调整结果对原视频动作的保持程度。"
+      },
+      {
+        "key": "poseStart",
+        "label": "动作起点",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0,
+        "tooltip": "设置从视频哪个位置开始参考原动作。"
+      },
+      {
+        "key": "poseEnd",
+        "label": "动作终点",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "设置原动作参考到视频的哪个位置。"
+      },
+      {
+        "key": "frameOffset",
+        "label": "起始帧偏移",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 4096,
+        "step": 1,
+        "defaultValue": 0,
+        "tooltip": "从指定帧开始处理视频。"
+      },
+      {
+        "key": "fastMode",
+        "label": "快速模式",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "tooltip": "开启后处理更快。"
+      },
+      {
+        "key": "fastLoraStrength",
+        "label": "快速模式强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2,
+        "step": 0.05,
+        "defaultValue": 0.8,
+        "tooltip": "调整快速模式对结果的影响。"
+      },
+      {
+        "key": "detailLoraStrength",
+        "label": "角色细节强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "调整角色细节优化的程度。"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1,
+        "defaultValue": 0,
+        "placeholder": "0 为随机",
+        "tooltip": "使用固定数值可重复生成相近结果。"
+      }
+    ]
+  }
+}

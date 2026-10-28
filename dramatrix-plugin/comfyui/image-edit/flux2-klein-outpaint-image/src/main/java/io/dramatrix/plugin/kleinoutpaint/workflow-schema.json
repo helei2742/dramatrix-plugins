@@ -1,0 +1,30 @@
+{
+  "parameters": [
+    { "key": "image", "type": "string", "required": true, "desc": "输入图像 ComfyUI 文件名（input 目录下，由服务端上传后注入）" },
+    { "key": "prompt", "type": "string", "desc": "扩图指令。⚠️ 必须指代扩边区填充色（如默认「去除绿色部分」），否则填充色会残留在结果里；可在其后追加内容描述，如「去除绿色部分，向两侧延展为夜晚城市街道」。缺省沿用工作流默认值" },
+    { "key": "megapixels", "type": "float", "desc": "放大倍数（按目标总像素，单位 MP）。作用于 ImageScaleToTotalPixels.megapixels，缩放发生在扩边之前：最终画布 = 缩放后尺寸 + 四边扩边。缺省 1.5" },
+    { "key": "padLeft", "type": "int", "desc": "向左扩充的画板像素（≥0，缺省 800）" },
+    { "key": "padTop", "type": "int", "desc": "向上扩充的画板像素（≥0，缺省 0）" },
+    { "key": "padRight", "type": "int", "desc": "向右扩充的画板像素（≥0，缺省 800）" },
+    { "key": "padBottom", "type": "int", "desc": "向下扩充的画板像素（≥0，缺省 0）" },
+    { "key": "padFeathering", "type": "int", "desc": "扩边羽化半径（ImagePadForOutpaint.feathering，0 = 硬边，节点上限 64，缺省 0）。羽化值过大时 ComfyUI 会跳过羽化" },
+    { "key": "width", "type": "int", "desc": "采样画布宽度（EmptyFlux2LatentImage.width / Flux2Scheduler.width）。⚠️ 留空（推荐）= 跟随「缩放 + 扩边」后的画布尺寸；显式指定会覆盖它，此时画布与参考图（扩边后的图）尺寸不再一致，扩边内容不会按扩边位置对齐。必须能被 16 整除" },
+    { "key": "height", "type": "int", "desc": "采样画布高度。⚠️ 留空（推荐）= 跟随「缩放 + 扩边」后的画布尺寸；语义见 width" },
+    { "key": "maskColor", "type": "string", "desc": "扩边区填充色：\"0, 255, 0\"（RGB(A) 数值）或 \"#00FF00\"。缺省 \"0, 255, 0\"（绿）。改色后 prompt 必须同步改指代对象" },
+    { "key": "steps", "type": "int", "desc": "采样步数（Flux2Scheduler.steps），缺省 4" },
+    { "key": "cfg", "type": "float", "desc": "CFG 强度（Flux.2 Klein 蒸馏模型固定 1），缺省 1" },
+    { "key": "samplerName", "type": "string", "desc": "采样器名（KSamplerSelect），缺省 euler" },
+    { "key": "seed", "type": "int", "desc": "随机种子；null 或 0 表示随机" },
+    { "key": "unetName", "type": "string", "desc": "主模型文件名（models/diffusion_models/ 下，缺省走模型槽 / flux-2-klein-9b-fp8.safetensors）" },
+    { "key": "vaeName", "type": "string", "desc": "VAE 文件名（models/vae/ 下，缺省走模型槽 / flux2-vae.safetensors）" },
+    { "key": "loraNames", "type": "string[]", "desc": "LoRA 名称列表。走既有 ComfyResultSubscribe.loraNames 通道，不属于 ImageEditInput；插件按 binding 的 lora.startNodes（UNETLoader）在 UNETLoader 与 CFGGuider 之间动态串联 LoraLoaderModelOnly，工作流本身不预置 LoRA 节点。置空 = 不加 LoRA" },
+    { "key": "upscaleMethod", "type": "string", "options": ["nearest-exact", "bilinear", "area", "bicubic", "lanczos"], "desc": "缩放插值算法（ImageScaleToTotalPixels.upscale_method），缺省 lanczos。⚠️ 是 COMBO 输入，非法值会让 ComfyUI 拒收整条 prompt，故适配器做白名单校验并回退缺省" },
+    { "key": "colorMatchMethod", "type": "string", "options": ["mkl", "hm", "reinhard", "mvgd", "hm-mvgd-hm", "hm-mkl-hm"], "desc": "输出色彩校正算法（ColorMatch.method），缺省 mkl。同为 COMBO 输入，白名单校验" },
+    { "key": "colorMatchStrength", "type": "float", "desc": "输出色彩校正强度（ColorMatch.strength，0 = 不做校正，1 = 完全按算法结果，>1 过校正），缺省 0.4" }
+  ],
+  "extra": [
+    { "key": "resolutionSteps", "type": "int", "desc": "（adapter.json extra，非请求参数）尺寸对齐步长（1 = 不对齐），缺省 1" },
+    { "key": "clipName", "type": "string", "desc": "（adapter.json extra，非请求参数）文本编码器文件名（models/text_encoders/ 下），缺省 qwen_3_8b.safetensors。模型槽（UI 选择）优先于本项" }
+  ],
+  "output": { "kind": "image" }
+}

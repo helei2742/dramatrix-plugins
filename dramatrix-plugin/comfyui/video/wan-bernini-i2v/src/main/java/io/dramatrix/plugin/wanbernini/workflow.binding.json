@@ -1,0 +1,52 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "classType", "classType": "BerniniStudio", "field": "prompt" } },
+    { "parameter": "negative_prompt", "target": { "match": "classType", "classType": "BerniniStudio", "field": "negative_prompt" } },
+    { "parameter": "length", "target": { "match": "classType", "classType": "BerniniStudio", "field": "length" }, "transform": "int" },
+    { "parameter": "fps", "target": { "match": "classType", "classType": "CreateVideo", "field": "fps" }, "transform": "int" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSamplerAdvanced", "field": "noise_seed", "order": 0 }, "transform": "int" },
+    { "parameter": "width", "target": { "match": "nodeId", "nodeId": "227", "field": "value" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "nodeId", "nodeId": "228", "field": "value" }, "transform": "int" }
+  ],
+  "anchor": { "id": "bernini_node", "schema": { "match": "classType", "classType": "BerniniStudio" } },
+  "lora": {
+    "startNodes": [
+      { "match": "nodeId", "nodeId": "5" },
+      { "match": "nodeId", "nodeId": "12" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "wan-bernini-high",
+      "title": "高噪声 DiT",
+      "default": "Bernini_HIGH_fp8_e4m3fn_scaled.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name", "order": 0 }
+      ]
+    },
+    {
+      "group": "wan-bernini-low",
+      "title": "低噪声 DiT",
+      "default": "Bernini_LOW_fp8_e4m3fn_scaled.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name", "order": 1 }
+      ]
+    },
+    {
+      "group": "wan-bernini-vae",
+      "title": "视频 VAE",
+      "default": "wan_2.1_vae.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    },
+    {
+      "group": "wan-bernini-clip",
+      "title": "文本编码器（UMT5-XXL）",
+      "default": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    }
+  ]
+}

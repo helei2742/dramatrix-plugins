@@ -1,0 +1,104 @@
+{
+  "name": "flux2-klein-inpaint-image",
+  "displayName": "Flux.2 Klein 9B 局部重绘",
+  "baseModel": "Flux2Klein_9B",
+  "type": "image_edit",
+  "category": "inpaint",
+  "version": "1.1",
+  "icon": "icon.svg",
+  "displayImage": ["display1.webp", "display2.webp"],
+  "description": "使用 Flux.2 Klein 9B 模型对图片进行局部重绘。输入原图和遮罩区域，即可只改写指定部分，保留其余画面不变。按官方工作流把裁剪区重采样到固定采样边长（默认 1024）后从空 latent 重画，支持遮罩膨胀、边缘羽化等精细调节；并可另传一张参考图（经 ReferenceLatent 链注入，作全局风格/主体参考）。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.kleininpaint.Flux2KleinInpaintImageAdapter",
+  "extra": {
+    "clipName": "qwen_3_8b_fp8mixed.safetensors",
+    "defaultMaskChannel": "red",
+    "deviceMode": "cpu (compatible)",
+    "paramSchema": [
+      {
+        "key": "cropTargetSize",
+        "label": "采样分辨率",
+        "type": "NUMBER",
+        "min": 256,
+        "max": 2048,
+        "step": 32,
+        "defaultValue": 1024,
+        "tooltip": "把裁剪出来的重绘区缩放到该边长（正方形）再送模型采样，官方 F2K 工作流用 1024。同时决定重绘画布（EmptyFlux2LatentImage）的边长 —— 两者必须一致，否则缝合几何错位。必须能被 32 整除（会自动向上对齐）"
+      },
+      {
+        "key": "maskChannel",
+        "label": "遮罩通道",
+        "type": "SELECT",
+        "options": ["red", "green", "blue", "alpha", "luminance"],
+        "defaultValue": "red",
+        "tooltip": "遮罩图选区通道（ImageToMask）。遮罩为不透明 RGB 黑白（白=重绘）时取 red 最稳，避免上传丢 alpha 后索引越界"
+      },
+      {
+        "key": "maskExpandPixels",
+        "label": "遮罩膨胀像素",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1024,
+        "step": 1,
+        "defaultValue": 120,
+        "tooltip": "把重绘区向外扩张以纳入上下文（InpaintCropImproved.mask_expand_pixels），过大易吞掉周边内容"
+      },
+      {
+        "key": "maskBlendPixels",
+        "label": "遮罩边缘羽化",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 512,
+        "step": 1,
+        "defaultValue": 64,
+        "tooltip": "遮罩边缘羽化像素（InpaintCropImproved.mask_blend_pixels），越大与周边过渡越柔和"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 6,
+        "tooltip": "KSampler 步数；Flux.2 Klein 蒸馏模型 6 步已足够，调高收益有限"
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1,
+        "tooltip": "KSampler CFG；Flux.2 Klein 蒸馏模型固定 1，一般无需改"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 1,
+        "tooltip": "KSampler 去噪强度；局部重绘从空 latent 重画，保持 1"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "随机种子；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "samplerName",
+        "label": "采样器",
+        "type": "SELECT",
+        "options": ["euler", "euler_ancestral", "heun", "heunpp2", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2s_ancestral", "dpmpp_sde", "ddim_uniform", "lcm"],
+        "defaultValue": "euler",
+        "tooltip": "KSampler 采样器；Flux.2 Klein 推荐 euler"
+      }
+    ]
+  }
+}

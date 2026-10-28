@@ -1,0 +1,72 @@
+{
+  "name": "dashscope-voice-clone-tts",
+  "displayName": "DashScope 声音复刻 TTS",
+  "baseModel": "DashScopeVoiceClone",
+  "type": "text2audio",
+  "category": "文生音频",
+  "kind": "api",
+  "vendor": "dashscope",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "使用阿里云百炼 DashScope 声音复刻能力，用一段参考音频复制出新的音色，再让文字自然朗读出来。支持多种语音合成模型和语种，适合制作拟真配音。",
+  "adapterClass": "io.dramatrix.plugin.dashscope.DashScopeVoiceCloneTtsAdapter",
+  "extra": {
+    "defaults": {
+      "modelName": "qwen3-tts-vc-2026-01-22",
+      "languageType": "Auto",
+      "voiceName": "dramatrix",
+      "format": "wav",
+      "sampleRate": 24000
+    },
+    "paramSchema": [
+      {
+        "key": "modelName",
+        "label": "合成模型",
+        "type": "SELECT",
+        "defaultValue": "qwen3-tts-vc-2026-01-22",
+        "options": [
+          "qwen3-tts-vc-2026-01-22",
+          "qwen-audio-3.0-tts-plus",
+          "qwen-audio-3.0-tts-flash",
+          "cosyvoice-v3.5-plus",
+          "cosyvoice-v3.5-flash",
+          "cosyvoice-v3-plus",
+          "cosyvoice-v3-flash"
+        ]
+      },
+      {
+        "key": "languageType",
+        "label": "语种（仅 qwen3-tts-* 系生效）",
+        "type": "SELECT",
+        "defaultValue": "Auto",
+        "options": [
+          "Auto",
+          "Chinese",
+          "English",
+          "Japanese",
+          "Korean",
+          "French",
+          "German",
+          "Italian",
+          "Portuguese",
+          "Spanish",
+          "Russian"
+        ]
+      },
+      {
+        "key": "voiceName",
+        "label": "复刻音色名",
+        "type": "TEXT",
+        "defaultValue": "dramatrix",
+        "placeholder": "Qwen 侧 ≤16 位字母数字下划线；CosyVoice 侧仅字母数字且 ≤10 位，超出会自动截断"
+      },
+      {
+        "key": "defaultVoice",
+        "label": "默认音色",
+        "type": "TEXT",
+        "placeholder": "分段未给参考音色时使用：系统音色名（如 Cherry）或已复刻的 voice id"
+      }
+    ]
+  }
+}

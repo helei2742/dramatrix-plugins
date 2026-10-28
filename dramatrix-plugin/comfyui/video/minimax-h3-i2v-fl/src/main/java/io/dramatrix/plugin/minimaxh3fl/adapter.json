@@ -1,0 +1,57 @@
+{
+  "name": "minimax-h3-i2v-fl",
+  "displayName": "MiniMax H3 图生视频(首尾帧)",
+  "baseModel": "MiniMaxH3",
+  "type": "image2video_ref",
+  "category": "图生视频",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "routable": false,
+  "description": "基于 MiniMax H3 fl2va 底座的首尾帧生成视频工作流：首帧 / 尾帧作为关键帧直接约束画面首末像素，成片自带音轨；帧数由工作流内的表达式对齐到 17k+5 网格。只给首帧是合法用法（视频从首帧起生成）。",
+  "workflowFile": "workflow.json",
+  "promptFiles": [],
+  "promptVariables": [],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.minimaxh3fl.MiniMaxH3FlAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 20,
+        "placeholder": "留空用工作流默认",
+        "tooltip": "BasicScheduler 采样步数；留空则用工作流自带值（20）。填得越高越精细、耗时越长"
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机",
+        "tooltip": "固定后可复现同一段视频；留空（或 0）由服务端随机生成"
+      },
+      {
+        "key": "width",
+        "label": "生成宽度",
+        "type": "NUMBER",
+        "min": 128,
+        "max": 2048,
+        "step": 32,
+        "tooltip": "输出视频宽度；需为 32 的倍数。留空则用工作流内 ResolutionSelector 算出的值（1:1 / 0.4MP / 32 对齐）"
+      },
+      {
+        "key": "height",
+        "label": "生成高度",
+        "type": "NUMBER",
+        "min": 128,
+        "max": 2048,
+        "step": 32,
+        "tooltip": "输出视频高度；需为 32 的倍数。留空则用工作流内 ResolutionSelector 算出的值（1:1 / 0.4MP / 32 对齐）"
+      }
+    ]
+  }
+}

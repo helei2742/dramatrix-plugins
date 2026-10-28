@@ -1,0 +1,15 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "正向提示词（描述编辑目标与构图，可引用 <imageN>）" },
+    { "key": "negative_prompt", "type": "string", "desc": "反向提示词" },
+    { "key": "width", "type": "int", "desc": "生成宽度" },
+    { "key": "height", "type": "int", "desc": "生成高度" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "steps", "type": "int", "desc": "采样步数" },
+    { "key": "cfg", "type": "float", "desc": "CFG" },
+    { "key": "denoise", "type": "float", "desc": "去噪强度（0~1，默认 1）" },
+    { "key": "cache_device", "type": "string", "desc": "QwenImage21Cache 设备：auto/gpu/cpu/off" },
+    { "key": "dtype", "type": "string", "desc": "QwenImage21Cache 精度：default/int8/int4" }
+  ],
+  "output": { "kind": "image" }
+}

@@ -1,0 +1,28 @@
+{
+  "modelSlots": [
+    {
+      "group": "minimax-music3-dit",
+      "title": "MiniMax Music 3 扩散模型",
+      "default": "minimax_music3_dit_fp16.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "minimax-music3-te",
+      "title": "文本编码器",
+      "default": "minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "minimax-music3-vae",
+      "title": "VAE",
+      "default": "minimax_music3_dav.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

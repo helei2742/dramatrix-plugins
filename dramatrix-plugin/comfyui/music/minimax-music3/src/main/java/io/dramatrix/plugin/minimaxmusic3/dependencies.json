@@ -1,0 +1,67 @@
+{
+  "models": [
+    {
+      "name": "minimax_music3_dit_fp16.safetensors",
+      "displayName": "MiniMax Music 3 DiT (FP16)",
+      "kind": "unet",
+      "group": "minimax-music3-dit",
+      "workflowValue": "minimax_music3_dit_fp16.safetensors",
+      "default": true,
+      "sort": 1,
+      "version": "3.0",
+      "baseModel": "MiniMax Music 3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-Music-3/resolve/master/diffusion_models/minimax_music3_dit_fp16.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-Music-3/resolve/main/diffusion_models/minimax_music3_dit_fp16.safetensors"
+      ],
+      "description": "MiniMax Music 3 扩散模型主干（DiT）。放置于 ComfyUI/models/diffusion_models/，由 UNETLoader 加载。高质量默认选择。",
+      "folder": "diffusion_models"
+    },
+    {
+      "name": "minimax_music3_dit_int8_convrot.safetensors",
+      "displayName": "MiniMax Music 3 DiT (INT8 ConvRot, 低显存)",
+      "kind": "unet",
+      "group": "minimax-music3-dit",
+      "workflowValue": "minimax_music3_dit_int8_convrot.safetensors",
+      "sort": 2,
+      "version": "3.0",
+      "baseModel": "MiniMax Music 3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-Music-3/resolve/master/diffusion_models/minimax_music3_dit_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-Music-3/resolve/main/diffusion_models/minimax_music3_dit_int8_convrot.safetensors"
+      ],
+      "description": "MiniMax Music 3 扩散模型主干（INT8 ConvRot 量化，低显存优化）。放置于 ComfyUI/models/diffusion_models/，由 UNETLoader 加载。",
+      "folder": "diffusion_models"
+    },
+    {
+      "name": "minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+      "displayName": "MiniMax Music 3 Text Encoder",
+      "kind": "clip",
+      "group": "minimax-music3-te",
+      "workflowValue": "minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+      "version": "3.0",
+      "baseModel": "MiniMax Music 3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-Music-3/resolve/master/text_encoders/minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-Music-3/resolve/main/text_encoders/minimax_music3_text_encoder_pruned_int8_convrot.safetensors"
+      ],
+      "description": "MiniMax Music 3 文本编码器。放置于 ComfyUI/models/text_encoders/，由 CLIPLoader（type=minimax）加载。",
+      "folder": "text_encoders"
+    },
+    {
+      "name": "minimax_music3_dav.safetensors",
+      "displayName": "MiniMax Music 3 DAV VAE",
+      "kind": "vae",
+      "group": "minimax-music3-vae",
+      "workflowValue": "minimax_music3_dav.safetensors",
+      "version": "3.0",
+      "baseModel": "MiniMax Music 3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-Music-3/resolve/master/vae/minimax_music3_dav.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-Music-3/resolve/main/vae/minimax_music3_dav.safetensors"
+      ],
+      "description": "MiniMax Music 3 音频 VAE 解码器。放置于 ComfyUI/models/vae/，由 VAELoader 加载。"
+    }
+  ],
+  "comfyuiPlugins": []
+}

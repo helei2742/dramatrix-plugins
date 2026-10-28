@@ -1,0 +1,28 @@
+{
+  "1": {
+    "inputs": { "image": "" },
+    "class_type": "LoadImage",
+    "_meta": { "title": "加载图像" }
+  },
+  "2": {
+    "inputs": {
+      "model_name": "Qwen2.5-Omni-7B",
+      "quantization": "👍 4-bit (VRAM-friendly)",
+      "prompt": "",
+      "audio_output": "🔇None (No Audio)",
+      "audio_source": "🎧 Separate Audio Input",
+      "max_tokens": 2048,
+      "temperature": 0.4,
+      "top_p": 0.9,
+      "repetition_penalty": 1.0,
+      "image": ["1", 0]
+    },
+    "class_type": "QwenOmniCombined",
+    "_meta": { "title": "Qwen Omni Combined🐼" }
+  },
+  "3": {
+    "inputs": { "text": ["2", 0] },
+    "class_type": "ShowText|pysssss",
+    "_meta": { "title": "Show Text 🐍" }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "models": [
+    {
+      "name": "IndexTTS-2",
+      "displayName": "IndexTTS2 完整模型包",
+      "kind": "tts_model",
+      "folder": "IndexTTS-2",
+      "directory": true,
+      "group": "indextts2",
+      "workflowValue": "IndexTTS-2",
+      "default": true,
+      "version": "main",
+      "baseModel": "IndexTTS2",
+      "downloadUrls": [
+        "https://modelscope.cn/models/IndexTeam/IndexTTS-2",
+        "https://huggingface.co/IndexTeam/IndexTTS-2/tree/main"
+      ],
+      "description": "IndexTTS2 运行必需的多文件模型包，放入 ComfyUI/models/IndexTTS-2。包含 gpt.pth / s2mel.pth / bpe.model / config.yaml / bigvgan / w2v-bert-2.0 / semantic_codec 等。另需子组件：semantic_codec(amphion/MaskGCT)、campplus(funasr/campplus)、w2v-bert-2.0(facebook/w2v-bert-2.0)、BigVGAN(nvidia/bigvgan_v2_22khz_80band_256x)。"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "ComfyUI-Index-TTS",
+      "version": "main",
+      "repository": "https://github.com/helei2742/ComfyUI-Index-TTS",
+      "downloadUrls": [
+        "https://github.com/helei2742/ComfyUI-Index-TTS",
+        "https://github.com/helei2742/ComfyUI-Index-TTS/archive/refs/heads/main.zip"
+      ],
+      "description": "yolain 的 IndexTTS2 ComfyUI 节点（v3 范式，需较新版本 ComfyUI）。无正式 Release Tag，以 main 分支最新提交为准。"
+    }
+  ]
+}

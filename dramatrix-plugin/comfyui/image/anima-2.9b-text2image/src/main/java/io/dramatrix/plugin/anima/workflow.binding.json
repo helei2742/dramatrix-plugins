@@ -1,0 +1,40 @@
+{
+  "bindings": [
+    { "parameter": "prompt", "target": { "match": "title", "title": "正向提示词", "field": "text" } },
+    { "parameter": "negative_prompt", "target": { "match": "title", "title": "负向提示词", "field": "text" } },
+    { "parameter": "unet_name", "target": { "match": "title", "title": "加载扩散模型", "field": "unet_name" } },
+    { "parameter": "steps", "target": { "match": "classType", "classType": "KSampler", "field": "steps" }, "transform": "int" },
+    { "parameter": "cfg", "target": { "match": "classType", "classType": "KSampler", "field": "cfg" }, "transform": "float" },
+    { "parameter": "seed", "target": { "match": "classType", "classType": "KSampler", "field": "seed" }, "transform": "int" },
+    { "parameter": "width", "target": { "match": "title", "title": "空Latent图像", "field": "width" }, "transform": "int" },
+    { "parameter": "height", "target": { "match": "title", "title": "空Latent图像", "field": "height" }, "transform": "int" }
+  ],
+  "lora": {
+    "startNodes": [
+      { "match": "nodeId", "nodeId": "13" }
+    ]
+  },
+  "modelSlots": [
+    {
+      "group": "anima-diffusion",
+      "title": "扩散主干模型",
+      "targets": [
+        { "match": "classType", "classType": "UNETLoader", "field": "unet_name" }
+      ]
+    },
+    {
+      "group": "anima-clip",
+      "title": "文本编码器",
+      "targets": [
+        { "match": "classType", "classType": "CLIPLoader", "field": "clip_name" }
+      ]
+    },
+    {
+      "group": "anima-vae",
+      "title": "VAE",
+      "targets": [
+        { "match": "classType", "classType": "VAELoader", "field": "vae_name" }
+      ]
+    }
+  ]
+}

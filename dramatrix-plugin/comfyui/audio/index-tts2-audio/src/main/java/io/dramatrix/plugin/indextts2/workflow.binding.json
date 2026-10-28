@@ -1,0 +1,11 @@
+{
+  "modelSlots": [
+    {
+      "group": "indextts2",
+      "title": "IndexTTS 引擎模型",
+      "targets": [
+        { "match": "classType", "classType": "easy downloadIndexTTSAndLoadModel", "field": "model" }
+      ]
+    }
+  ]
+}

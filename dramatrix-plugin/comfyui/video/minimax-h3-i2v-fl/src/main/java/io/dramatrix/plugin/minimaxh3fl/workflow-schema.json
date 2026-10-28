@@ -1,0 +1,13 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "画面提示词（H3 普通模式格式；首尾帧只约束画面首末像素，内容仍由提示词驱动）" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "fps", "type": "int", "desc": "帧率" },
+    { "key": "duration", "type": "float", "optional": true, "desc": "时长（秒）；写入工作流内的 PrimitiveFloat，由数学表达式对齐到 17k+5 帧网格（5 / 22 / 39 …）" },
+    { "key": "steps", "type": "int", "optional": true, "desc": "采样步数（不配置则沿用工作流默认值 20）" },
+    { "key": "first_frame", "type": "image", "optional": true, "desc": "首帧图（单张，已上传到 ComfyUI 的文件名）；不配置则工作流退化为「只给尾帧 / 纯文本」" },
+    { "key": "last_frame", "type": "image", "optional": true, "desc": "尾帧图（单张，已上传到 ComfyUI 的文件名）；不配置即 fl2va 的「只给首帧」合法用法" }
+  ],
+  "output": { "kind": "video" },
+  "anchor": { "id": "video_node" }
+}

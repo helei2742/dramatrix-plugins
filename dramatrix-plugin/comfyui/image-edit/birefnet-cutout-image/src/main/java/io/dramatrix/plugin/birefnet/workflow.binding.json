@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    { "parameter": "image", "target": { "match": "classType", "classType": "LoadImage", "field": "image" } }
+  ],
+  "modelSlots": [
+    {
+      "group": "birefnet-bg-removal",
+      "default": "birefnet.safetensors",
+      "targets": [
+        { "match": "classType", "classType": "LoadBackgroundRemovalModel", "field": "bg_removal_name" }
+      ]
+    }
+  ]
+}

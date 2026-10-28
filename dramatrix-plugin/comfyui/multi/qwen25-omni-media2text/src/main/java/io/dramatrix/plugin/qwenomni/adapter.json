@@ -1,0 +1,111 @@
+{
+  "name": "qwen25-omni-media2text",
+  "displayName": "Qwen2.5-Omni 多模态理解",
+  "baseModel": "Qwen2.5-Omni",
+  "type": "media2text",
+  "category": "understanding",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.png"],
+  "description": "基于 QwenOmniCombined 节点的多模态理解，支持文本/图像/音频/视频输入，输出文本描述",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwenomni.Qwen25OmniMedia2TextAdapter",
+  "extra": {
+    "modalities": [
+      "TEXT",
+      "IMAGE",
+      "AUDIO",
+      "VIDEO"
+    ],
+    "features": {
+      "videoSupport": "AUTO"
+    },
+    "defaults": {
+      "modelType": "Qwen2.5-Omni-7B",
+      "quantization": "👍 4-bit (VRAM-friendly)",
+      "maxTokens": 2048,
+      "temperature": 0.4,
+      "topP": 0.9,
+      "repetitionPenalty": 1.0,
+      "audioOutputMode": "🔇None (No Audio)",
+      "audioSource": "🎧 Separate Audio Input"
+    },
+    "configSchema": [
+      {
+        "key": "modelType",
+        "label": "模型类型",
+        "type": "SELECT",
+        "options": [
+          "Qwen2.5-Omni-3B",
+          "Qwen2.5-Omni-7B"
+        ]
+      },
+      {
+        "key": "quantization",
+        "label": "量化类型",
+        "type": "SELECT",
+        "options": [
+          "👍 4-bit (VRAM-friendly)",
+          "⚖️ 8-bit (Balanced Precision)",
+          "🚫 None (Original Precision)"
+        ]
+      },
+      {
+        "key": "maxTokens",
+        "label": "Max Tokens",
+        "type": "NUMBER",
+        "defaultValue": 2048,
+        "min": 1,
+        "max": 2048,
+        "interval": 1
+      },
+      {
+        "key": "temperature",
+        "label": "温度",
+        "type": "NUMBER",
+        "defaultValue": 0.4,
+        "min": 0.1,
+        "max": 1.0,
+        "interval": 0.1
+      },
+      {
+        "key": "topP",
+        "label": "Top P",
+        "type": "NUMBER",
+        "defaultValue": 0.9,
+        "min": 0.1,
+        "max": 1.0,
+        "interval": 0.1
+      },
+      {
+        "key": "repetitionPenalty",
+        "label": "重复惩罚",
+        "type": "NUMBER",
+        "defaultValue": 1.0,
+        "min": 1.0,
+        "max": 2.0,
+        "interval": 0.1
+      },
+      {
+        "key": "audioOutputMode",
+        "label": "音频输出模式",
+        "type": "SELECT",
+        "options": [
+          "🔇None (No Audio)",
+          "👱‍♀️Chelsie (Female)",
+          "👨‍🦰Ethan (Male)"
+        ]
+      },
+      {
+        "key": "audioSource",
+        "label": "音频来源",
+        "type": "SELECT",
+        "options": [
+          "🎧 Separate Audio Input",
+          "🎬 Video Built-in Audio"
+        ]
+      }
+    ]
+  }
+}

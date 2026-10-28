@@ -1,0 +1,147 @@
+{
+  "name": "qwen3-asr-media2text",
+  "displayName": "Qwen3-ASR 语音转文本",
+  "baseModel": "Qwen3-ASR",
+  "type": "media2text",
+  "category": "speech2text",
+  "version": "1.2",
+  "icon": "icon.svg",
+  "displayImage": ["display.jpeg"],
+  "description": "语音转文本（ASR）：音频 → 文本，支持 30 语种自动识别。可选择输出纯转写原文，或带词级时间戳的字幕。",
+  "workflowFile": "workflow.json",
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.qwen3asr.Qwen3AsrMedia2TextAdapter",
+  "extra": {
+    "modalities": [
+      "AUDIO"
+    ],
+    "defaults": {
+      "outputMode": "text",
+      "precision": "bf16",
+      "language": "auto",
+      "device": "cuda",
+      "flashAttention2": false,
+      "chunkSize": 30,
+      "overlap": 2,
+      "maxNewTokens": 256,
+      "forcedAligner": "Qwen3-ASR/Qwen3-ForcedAligner-0.6B"
+    },
+    "configSchema": [
+      {
+        "key": "outputMode",
+        "label": "输出模式",
+        "type": "SELECT",
+        "options": [
+          "text",
+          "subtitle"
+        ],
+        "description": "text = 纯转写原文（只建转写节点，不加载强制对齐器，快且省显存）；subtitle = 词级时间戳行「[起 - 止] 文本」（需已安装 Qwen3-ForcedAligner，否则自动回落 text 并告警）"
+      },
+      {
+        "key": "precision",
+        "label": "推理精度",
+        "type": "SELECT",
+        "options": [
+          "bf16",
+          "fp16",
+          "fp32"
+        ]
+      },
+      {
+        "key": "language",
+        "label": "语言",
+        "type": "SELECT",
+        "options": [
+          "auto",
+          "Chinese",
+          "English",
+          "Cantonese",
+          "Arabic",
+          "German",
+          "French",
+          "Spanish",
+          "Portuguese",
+          "Indonesian",
+          "Italian",
+          "Korean",
+          "Russian",
+          "Thai",
+          "Vietnamese",
+          "Japanese",
+          "Turkish",
+          "Hindi",
+          "Malay",
+          "Dutch",
+          "Swedish",
+          "Danish",
+          "Finnish",
+          "Polish",
+          "Czech",
+          "Filipino",
+          "Persian",
+          "Greek",
+          "Romanian",
+          "Hungarian",
+          "Macedonian"
+        ],
+        "description": "auto = 自动识别语种（推荐）。指定语言可减少短音频的误判，但不是强制约束"
+      },
+      {
+        "key": "device",
+        "label": "推理设备",
+        "type": "SELECT",
+        "options": [
+          "cuda",
+          "cpu"
+        ],
+        "description": "节点只接受 cuda / cpu 两值（ComfyUI 处于 CPU 模式时节点会自行改判为 cpu）"
+      },
+      {
+        "key": "flashAttention2",
+        "label": "FlashAttention 2",
+        "type": "BOOLEAN",
+        "description": "需环境已装 flash-attn 且精度为 bf16/fp16；未装时开启会导致模型加载失败，默认关闭"
+      },
+      {
+        "key": "chunkSize",
+        "label": "分块时长(s)",
+        "type": "NUMBER",
+        "defaultValue": 30,
+        "min": 0,
+        "max": 300,
+        "interval": 1,
+        "description": "长音频按该秒数切块转写，0 = 不分块。超限会被夹到节点允许区间（0~300）并告警"
+      },
+      {
+        "key": "overlap",
+        "label": "分块重叠(s)",
+        "type": "NUMBER",
+        "defaultValue": 2,
+        "min": 0,
+        "max": 10,
+        "interval": 1,
+        "description": "相邻分块的重叠秒数，用于保持跨块上下文；必须小于分块时长，否则会被夹到「分块时长 - 1」并告警"
+      },
+      {
+        "key": "maxNewTokens",
+        "label": "单块最大 token",
+        "type": "NUMBER",
+        "defaultValue": 256,
+        "min": 1,
+        "max": 4096,
+        "interval": 1,
+        "description": "分块后每块的生成上限。超限会被夹到节点允许区间（1~4096）并告警"
+      },
+      {
+        "key": "forcedAligner",
+        "label": "强制对齐器",
+        "type": "SELECT",
+        "options": [
+          "Qwen3-ASR/Qwen3-ForcedAligner-0.6B",
+          "None"
+        ],
+        "description": "仅 outputMode=subtitle 生效：产出词级时间戳必需。选 None 则不建对齐器节点，并自动回落为 text 模式（节点在没有对齐器时只会回一句 'No timestamps generated.'）"
+      }
+    ]
+  }
+}

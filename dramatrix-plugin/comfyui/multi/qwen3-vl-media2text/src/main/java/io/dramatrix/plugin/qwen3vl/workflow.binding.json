@@ -1,0 +1,12 @@
+{
+  "modelSlots": [
+    {
+      "group": "qwen-vl",
+      "title": "Qwen3-VL 模型",
+      "default": "Qwen3-VL-8B-Instruct",
+      "targets": [
+        { "match": "classType", "classType": "AILab_QwenVL_Advanced", "field": "model_name" }
+      ]
+    }
+  ]
+}

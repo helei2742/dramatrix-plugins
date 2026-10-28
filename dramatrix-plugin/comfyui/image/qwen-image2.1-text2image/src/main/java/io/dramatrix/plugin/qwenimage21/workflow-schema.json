@@ -1,0 +1,13 @@
+{
+  "parameters": [
+    { "key": "prompt", "type": "string", "required": true, "desc": "正向提示词" },
+    { "key": "negative_prompt", "type": "string", "desc": "反向提示词" },
+    { "key": "width", "type": "int", "desc": "生成宽度" },
+    { "key": "height", "type": "int", "desc": "生成高度" },
+    { "key": "seed", "type": "int", "desc": "随机种子" },
+    { "key": "steps", "type": "int", "desc": "采样步数" },
+    { "key": "cfg", "type": "float", "desc": "CFG" },
+    { "key": "lora", "type": "string", "desc": "LoRA 模型" }
+  ],
+  "output": { "kind": "image" }
+}

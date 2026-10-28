@@ -1,0 +1,141 @@
+{
+  "2": {
+    "inputs": {
+      "ckpt_name": "Krea2-turbo-White_Marble-AIO_V1_BF16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": "a female human cultivator, young adult, willowy, jade like, Slender face, straight, sleeping phoenix, hanging gall, pouty, beauty spot, wearing sapphire silk gown, flowing long jet black hair, black eyes, fair skin, wild aura\n\nmasterpiece, best quality, ultra-detailed, 8k, photorealistic skin texture, cinematic lighting, soft golden hour glow, shallow depth of field, volumetric light rays,ancient Chinese xianxia fantasy style, elegant hanfu robes with intricate embroidery, ornate armor details, traditional courtyard background with wooden lattice windows",
+      "clip": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 699503406346513,
+      "steps": 6,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "2",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多",
+      "clip": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "6": {
+    "inputs": {
+      "SD1.5": "关",
+      "SDXL": "关",
+      "FLUX": "1280×720 (16:9)",
+      "WAN": "关",
+      "QWEN": "关",
+      "启用自定义尺寸": true,
+      "宽度": 1024,
+      "高度": 1024
+    },
+    "class_type": "EasySizeSimpleSetting",
+    "_meta": {
+      "title": "简单尺寸设置"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": [
+        "6",
+        0
+      ],
+      "height": [
+        "6",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "8": {
+    "inputs": {
+      "anything": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "2",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

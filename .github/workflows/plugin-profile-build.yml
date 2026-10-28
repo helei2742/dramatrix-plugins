@@ -8,12 +8,14 @@ on:
       - "dramatrix-plugin/**"
       - "release/**"
       - ".github/workflows/plugin-profile-build.yml"
+      - ".github/workflows/plugin-media-build.yml"
   pull_request:
     paths:
       - "pom.xml"
       - "dramatrix-plugin/**"
       - "release/**"
       - ".github/workflows/plugin-profile-build.yml"
+      - ".github/workflows/plugin-media-build.yml"
 
 permissions:
   contents: read
@@ -40,7 +42,7 @@ jobs:
           if [[ -z "$base" || "$base" =~ ^0+$ ]]; then
             base="$(git rev-parse "$HEAD_SHA^" 2>/dev/null || echo "$HEAD_SHA")"
           fi
-          plugins="$(python3 release/plugin_build_matrix.py --base "$base" --head "$HEAD_SHA")"
+          plugins="$(python3 release/plugin_build_matrix.py --type profile --base "$base" --head "$HEAD_SHA")"
           echo "plugins=$plugins" >> "$GITHUB_OUTPUT"
 
   build:
@@ -64,12 +66,12 @@ jobs:
 
       - name: Build plugin package
         env:
-          PLUGIN_ID: ${{ matrix.plugin }}
+          PLUGIN_ID: ${{ matrix.plugin.id }}
+          PLUGIN_MODULE: ${{ matrix.plugin.module }}
         run: |
           set -euo pipefail
-          module="dramatrix-plugin/profile/profile-plugin-$PLUGIN_ID"
-          mvn --batch-mode --no-transfer-progress --file pom.xml \
-            --projects ":profile-plugin-$PLUGIN_ID" clean package \
+          module="$PLUGIN_MODULE"
+          mvn --batch-mode --no-transfer-progress --file "$module/pom.xml" clean package \
             -Dplugin.deploy.skip=true \
             -Dproject.build.outputTimestamp=1980-01-01T00:00:02Z
           python3 release/plugin_package.py package \
@@ -82,7 +84,7 @@ jobs:
       - name: Upload unsigned validation package
         uses: actions/upload-artifact@v4
         with:
-          name: profile-${{ matrix.plugin }}
+          name: profile-${{ matrix.plugin.id }}
           path: ${{ runner.temp }}/plugin-packages/*.zip
           if-no-files-found: error
           retention-days: 7

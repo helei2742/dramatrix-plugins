@@ -1,0 +1,76 @@
+{
+  "models": [
+    {
+      "name": "acestep_v1.5_turbo.safetensors",
+      "displayName": "AceStep 1.5 Turbo UNet",
+      "kind": "unet",
+      "group": "ace15-diffusion",
+      "workflowValue": "acestep_v1.5_turbo.safetensors",
+      "default": true,
+      "version": "1.5",
+      "baseModel": "AceStep 1.5",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/master/split_files/diffusion_models/acestep_v1.5_turbo.safetensors",
+        "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/diffusion_models/acestep_v1.5_turbo.safetensors"
+      ],
+      "description": "ACE-Step 1.5 Turbo 扩散模型主干（DiT）。ACE-Step 1.5 分离文件布局中放置于 ComfyUI/models/diffusion_models/，由 UNETLoader 加载。",
+      "folder": "diffusion_models"
+    },
+    {
+      "name": "qwen_0.6b_ace15.safetensors",
+      "displayName": "Qwen 0.6B AceStep 1.5 CLIP",
+      "kind": "clip",
+      "group": "ace15-clip1",
+      "workflowValue": "qwen_0.6b_ace15.safetensors",
+      "version": "1.5",
+      "baseModel": "AceStep 1.5",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/master/split_files/text_encoders/qwen_0.6b_ace15.safetensors",
+        "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_0.6b_ace15.safetensors"
+      ],
+      "description": "Qwen 0.6B 文本编码器（CLIP 1）。放置于 ComfyUI/models/text_encoders/，由 DualCLIPLoader 的 clip_name1 加载。",
+      "folder": "text_encoders"
+    },
+    {
+      "name": "qwen_1.7b_ace15.safetensors",
+      "displayName": "Qwen 1.7B AceStep 1.5 CLIP",
+      "kind": "clip",
+      "group": "ace15-clip2",
+      "workflowValue": "qwen_1.7b_ace15.safetensors",
+      "version": "1.5",
+      "baseModel": "AceStep 1.5",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/master/split_files/text_encoders/qwen_1.7b_ace15.safetensors",
+        "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_1.7b_ace15.safetensors"
+      ],
+      "description": "Qwen 1.7B 文本编码器（CLIP 2）。放置于 ComfyUI/models/text_encoders/，由 DualCLIPLoader 的 clip_name2 加载。",
+      "folder": "text_encoders"
+    },
+    {
+      "name": "ace_1.5_vae.safetensors",
+      "displayName": "AceStep 1.5 VAE",
+      "kind": "vae",
+      "group": "ace15-vae",
+      "workflowValue": "ace_1.5_vae.safetensors",
+      "version": "1.5",
+      "baseModel": "AceStep 1.5",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/master/split_files/vae/ace_1.5_vae.safetensors",
+        "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/vae/ace_1.5_vae.safetensors"
+      ],
+      "description": "ACE-Step 1.5 音频 VAE 解码器。放置于 ComfyUI/models/vae/，由 VAELoader 加载。"
+    }
+  ],
+  "comfyuiPlugins": [
+    {
+      "name": "ACE-Step-ComfyUI",
+      "version": "main",
+      "repository": "https://github.com/ace-step/ACE-Step-ComfyUI",
+      "downloadUrls": [
+        "https://github.com/ace-step/ACE-Step-ComfyUI",
+        "https://github.com/ace-step/ACE-Step-ComfyUI/archive/refs/heads/main.zip"
+      ],
+      "description": "ACE-Step 1.5 官方 ComfyUI 节点仓库（ace-step/ACE-Step-ComfyUI）。注意：本工作流使用的 TextEncodeAceStepAudio1.5 / EmptyAceStep1.5LatentAudio / VAEDecodeAudio / SaveAudioMP3 为较新版本 ComfyUI 内置核心节点（comfy_extras），需将 ComfyUI 更新到支持 ACE-Step 1.5 的版本；该仓库另提供 AceStepText2musicServer 等云端/本地推理节点。"
+    }
+  ]
+}

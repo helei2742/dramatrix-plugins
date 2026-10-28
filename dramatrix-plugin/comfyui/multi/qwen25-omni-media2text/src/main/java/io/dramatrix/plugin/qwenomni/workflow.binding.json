@@ -1,0 +1,25 @@
+{
+  "modelSlots": [
+    {
+      "group": "qwen25-omni-model",
+      "title": "Qwen2.5-Omni 模型规格",
+      "default": "Qwen2.5-Omni-7B",
+      "targets": [
+        { "match": "classType", "classType": "QwenOmniCombined", "field": "model_name" }
+      ]
+    },
+    {
+      "group": "qwen25-omni-quant",
+      "title": "官方量化精度",
+      "default": "4-bit",
+      "targets": [
+        { "match": "classType", "classType": "QwenOmniCombined", "field": "quantization" }
+      ],
+      "variants": [
+        { "name": "4-bit", "label": "4-bit（省显存）", "value": "👍 4-bit (VRAM-friendly)", "default": true },
+        { "name": "8-bit", "label": "8-bit（均衡精度）", "value": "⚖️ 8-bit (Balanced Precision)" },
+        { "name": "none", "label": "None（原始精度）", "value": "🚫 None (Original Precision)" }
+      ]
+    }
+  ]
+}

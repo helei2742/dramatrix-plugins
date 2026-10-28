@@ -1,0 +1,142 @@
+{
+  "models": [
+    {
+      "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "displayName": "MiniMax H3 fl2va 检查点（精简 + int8）",
+      "kind": "diffusion_model",
+      "group": "minimax-h3-fl2va",
+      "workflowValue": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "default": true,
+      "sort": 3,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors"
+      ],
+      "description": "fl2va（首尾帧 → 视频+音频）检查点，精简版 + int8（约 20.97 GB），放入 ComfyUI/models/diffusion_models。文生视频即「不接首尾帧」的 fl2va 用法。"
+    },
+    {
+      "name": "minimax_h3_fl2va_pruned_fp8_scaled.safetensors",
+      "displayName": "MiniMax H3 fl2va (Pruned FP8 Scaled)",
+      "kind": "diffusion_model",
+      "group": "minimax-h3-fl2va",
+      "workflowValue": "minimax_h3_fl2va_pruned_fp8_scaled.safetensors",
+      "sort": 4,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/diffusion_models/minimax_h3_fl2va_pruned_fp8_scaled.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_fp8_scaled.safetensors"
+      ],
+      "description": "MiniMax H3 fl2va 扩散模型，放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "minimax_h3_fl2va_int8_convrot.safetensors",
+      "displayName": "MiniMax H3 fl2va (INT8 ConvRot)",
+      "kind": "diffusion_model",
+      "group": "minimax-h3-fl2va",
+      "workflowValue": "minimax_h3_fl2va_int8_convrot.safetensors",
+      "sort": 2,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/diffusion_models/minimax_h3_fl2va_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_int8_convrot.safetensors"
+      ],
+      "description": "MiniMax H3 fl2va 扩散模型（未精简，约 34 GB），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "minimax_h3_fl2va_pruned_bf16.safetensors",
+      "displayName": "MiniMax H3 fl2va (Pruned BF16, 最高质量)",
+      "kind": "diffusion_model",
+      "group": "minimax-h3-fl2va",
+      "workflowValue": "minimax_h3_fl2va_pruned_bf16.safetensors",
+      "sort": 1,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors"
+      ],
+      "description": "MiniMax H3 fl2va 扩散模型（精简 BF16，约 40 GB），放入 ComfyUI/models/diffusion_models/。"
+    },
+    {
+      "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "displayName": "MiniMax H3 文本编码器（Qwen3-VL-32B, nvfp4 AWQ）",
+      "kind": "text_encoder",
+      "group": "minimax-h3-te",
+      "workflowValue": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "default": true,
+      "sort": 1,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"
+      ],
+      "description": "文本编码器（4-bit AWQ，约 15.69 GB），放入 ComfyUI/models/text_encoders。与图生视频插件共用同一份权重。"
+    },
+    {
+      "name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+      "displayName": "MiniMax H3 文本编码器 (INT8 ConvRot)",
+      "kind": "text_encoder",
+      "group": "minimax-h3-te",
+      "workflowValue": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+      "sort": 2,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+      ],
+      "description": "MiniMax H3 文本编码器（Qwen3-VL-32B），放入 ComfyUI/models/text_encoders/。"
+    },
+    {
+      "name": "qwen3vl_32b_minimax_h3_bf16.safetensors",
+      "displayName": "MiniMax H3 文本编码器 (BF16)",
+      "kind": "text_encoder",
+      "group": "minimax-h3-te",
+      "workflowValue": "qwen3vl_32b_minimax_h3_bf16.safetensors",
+      "sort": 3,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/text_encoders/qwen3vl_32b_minimax_h3_bf16.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_bf16.safetensors"
+      ],
+      "description": "MiniMax H3 文本编码器（Qwen3-VL-32B），放入 ComfyUI/models/text_encoders/。"
+    },
+    {
+      "name": "minimax_h3_video_vae_fp16.safetensors",
+      "displayName": "MiniMax H3 视频 VAE",
+      "kind": "vae",
+      "group": "minimax-h3-video-vae",
+      "workflowValue": "minimax_h3_video_vae_fp16.safetensors",
+      "default": true,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/vae/minimax_h3_video_vae_fp16.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "description": "视频解码 VAE（约 5.21 GB），放入 ComfyUI/models/vae。"
+    },
+    {
+      "name": "minimax_h3_audio_vae_fp32.safetensors",
+      "displayName": "MiniMax H3 音频 VAE",
+      "kind": "vae",
+      "group": "minimax-h3-audio-vae",
+      "workflowValue": "minimax_h3_audio_vae_fp32.safetensors",
+      "default": true,
+      "version": "main",
+      "baseModel": "MiniMaxH3",
+      "downloadUrls": [
+        "https://modelscope.cn/models/Comfy-Org/MiniMax-H3/resolve/master/vae/minimax_h3_audio_vae_fp32.safetensors",
+        "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "description": "音频解码 VAE（约 0.61 GB），放入 ComfyUI/models/vae。两个 VAE 均放 models/vae 目录。"
+    }
+  ],
+  "comfyuiPlugins": []
+}

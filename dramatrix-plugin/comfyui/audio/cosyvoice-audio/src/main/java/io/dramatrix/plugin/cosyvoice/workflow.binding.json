@@ -1,0 +1,11 @@
+{
+  "modelSlots": [
+    {
+      "group": "cosyvoice3",
+      "title": "CosyVoice3 引擎模型",
+      "targets": [
+        { "match": "classType", "classType": "CosyVoiceEngineNode", "field": "model_path" }
+      ]
+    }
+  ]
+}

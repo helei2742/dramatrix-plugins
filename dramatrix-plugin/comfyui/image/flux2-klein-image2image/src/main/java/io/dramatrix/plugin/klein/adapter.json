@@ -1,0 +1,61 @@
+{
+  "name": "flux2-klein-image2image",
+  "displayName": "Flux2 Klein 图生图",
+  "baseModel": "Flux2Klein_9B",
+  "type": "image2image_with_lora",
+  "category": "图生图",
+  "version": "1.0",
+  "icon": "icon.svg",
+  "displayImage": ["display.webp"],
+  "description": "基于 Klein 模型的图生图工作流，支持场景图作为 image0 环境参考、可选 latentImage 初始 latent、角色多参考图动态组合与 LoRA 人物优化",
+  "workflowFile": "workflow.json",
+  "promptFiles": [],
+  "promptVariables": ["STORY_VISUAL_STYLE"],
+  "dependenciesFile": "dependencies.json",
+  "adapterClass": "io.dramatrix.plugin.klein.KleinImage2ImageAdapter",
+  "extra": {
+    "paramSchema": [
+      {
+        "key": "negativePrompt",
+        "label": "反向提示词",
+        "type": "TEXTAREA",
+        "placeholder": "不希望出现的元素…",
+        "tooltip": "否定内容，如 低质量、畸形手部"
+      },
+      {
+        "key": "steps",
+        "label": "采样步数",
+        "type": "NUMBER",
+        "min": 1,
+        "max": 100,
+        "interval": 1,
+        "defaultValue": 6
+      },
+      {
+        "key": "cfg",
+        "label": "CFG",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 1.0
+      },
+      {
+        "key": "seed",
+        "label": "随机种子",
+        "type": "NUMBER",
+        "placeholder": "留空随机"
+      },
+      {
+        "key": "denoise",
+        "label": "去噪强度",
+        "type": "NUMBER",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "defaultValue": 0.75,
+        "tooltip": "0~1，越低越贴近参考图"
+      }
+    ]
+  }
+}

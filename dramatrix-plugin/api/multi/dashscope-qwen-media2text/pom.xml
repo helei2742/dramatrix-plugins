@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.dramatrix.plugins</groupId>
+        <artifactId>dramatrix-plugin</artifactId>
+        <relativePath>../../../pom.xml</relativePath>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>dramatrix-plugin-dashscope-qwen-media2text</artifactId>
+    <packaging>jar</packaging>
+
+    <name>dashscope-qwen-media2text</name>
+    <description>DashScope Qwen3.8/3.7 多模态理解插件（kind=api，HTTP 直连，不依赖 ComfyUI）</description>
+
+    <properties>
+        <plugin.name>dashscope-qwen-media2text</plugin.name>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- 仅依赖 plugin-api：本插件不发 HTTP、不持凭据，媒体取回/鉴权/超时全在宿主侧 -->
+        <dependency>
+            <groupId>io.dramatrix</groupId>
+            <artifactId>dramatrix-plugin-api</artifactId>
+            <version>${plugin.api.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!--
+                          部署到 plugins/comfyui/api/<name>/：
+                          PluginRegistry.scanAndLoad() 只按 plugins.types 的【一级子目录名】扫描，
+                          故 type 名 = api（不是 multi）。multi 只是源码树里的分类层级。
+                        -->
+                        <id>deploy-api-plugin</id>
+                        <phase>package</phase>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <mkdir dir="../../../../plugins/comfyui/api/dashscope-qwen-media2text"/>
+                                <copy file="target/${plugin.name}.jar" todir="../../../../plugins/comfyui/api/dashscope-qwen-media2text" overwrite="true"/>
+                                <copy todir="../../../../plugins/comfyui/api/dashscope-qwen-media2text" overwrite="true" flatten="true" includeemptydirs="false">
+                                    <fileset dir="src/main/java" excludes="**/*.java" erroronmissingdir="false"/>
+                                </copy>
+                                <echo message="Deployed ${plugin.name} to ../../../../plugins/comfyui/api/dashscope-qwen-media2text/"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
